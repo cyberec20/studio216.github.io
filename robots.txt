@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Mapa del sitio para los bots
+Sitemap: https://studios216.com/sitemap.xml
