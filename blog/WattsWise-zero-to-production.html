@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero to Production: The Blueprint Behind WattsWise | Studios 216</title>
+    <meta name="description" content="Case Study: How an AI Architect built a professional engineering app in 216 hours, reducing costs by 100% and disrupting the traditional software agency model.">
+    
+    <meta property="og:title" content="Zero to Production: The Blueprint Behind WattsWise">
+    <meta property="og:description" content="How Studios 216 built a production-grade engineering tool in 216 hours using AI-Augmented Architecture.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/logo.jpg"> <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #d1d5db; }
+        
+        /* Estilos para el artículo */
+        article h2 { color: white; font-weight: 800; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        article h3 { color: #e5e7eb; font-weight: 600; font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+        article p { margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.05rem; }
+        article ul { margin-bottom: 1.5rem; list-style-type: disc; padding-left: 1.5rem; }
+        article li { margin-bottom: 0.5rem; }
+        article strong { color: white; font-weight: 600; }
+        
+        /* Enlaces dentro del texto */
+        .text-link {
+            color: #3b82f6;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+        }
+        .text-link:hover {
+            color: #60a5fa;
+            border-bottom-color: #60a5fa;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+    
+<body class="min-h-screen flex flex-col">
+
+    <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/50">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html">
+                    <img src="../assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-16 w-auto rounded-md object-contain hover:opacity-80 transition-opacity">
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../about.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">About Us</a>
+                <a href="./index.html" class="text-sm font-medium text-white">Blog</a>
+                <a href="mailto:contact@studios216.com" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow px-6 py-12">
+        <div class="max-w-3xl mx-auto">
+            
+            <div class="mb-8">
+                <a href="./index.html" class="inline-flex items-center text-sm text-gray-500 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Back to Blog
+                </a>
+            </div>
+
+            <header class="mb-12 text-center sm:text-left">
+                <div class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-blue-400 uppercase bg-blue-400/10 rounded-full">
+                    Case Study
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-6">
+                    Zero to Production: The Blueprint Behind WattsWise
+                </h1>
+                
+                <div class="flex items-center justify-center sm:justify-start space-x-4 text-sm text-gray-500 border-t border-gray-800 pt-6 mt-6">
+                    <span>&bull;</span>
+                    <time datetime="2025-12-06">Dec 6, 2025</time>
+                    <span>&bull;</span>
+                    <span>5 min read</span>
+                </div>
+            </header>
+
+            <article class="prose prose-invert max-w-none">
+                
+                <p class="text-xl text-gray-300 font-medium leading-relaxed border-l-4 border-blue-500 pl-6 my-8 italic">
+                    "They tell you it requires a minimum of 16 weeks and a $50,000 budget. They were wrong."
+                </p>
+
+                <h2>The Market Consensus</h2>
+                <p>
+                    If you ask the industry what it takes to build a professional, production-grade mobile utility today, the answer is intimidating. For a specialized engineering tool with complex math, local persistence, and a robust monetization system, the market benchmark sits comfortably between <strong>$35,000 and $55,000 USD</strong>.
+                </p>
+                <p>
+                    They tell you it requires a minimum of 16 weeks. They tell you that you need a "Squad": a Product Manager to define the scope, a UI/UX Designer for the screens, a DevOps engineer for the infrastructure, and a QA team to catch the bugs.
+                </p>
+                <p>
+                    That is the standard belief. It’s the "Telephone Game" of software development: information degrades as it passes from person to person.
+                </p>
+                <p>
+                    But at <strong>Studios 216</strong>, we proved that standard is obsolete.
+                </p>
+                <p>
+                    We launched <a href="#GetTheApp" onclick="window.open('https://play.google.com/store/apps/details?id=com.franklinrodriguez.wattwise', '_blank'); return false;" class="text-link">WattsWise</a>, a comprehensive electrical calculator ecosystem, to the global market. We did it with <strong>$0 in external capital</strong>. We did it without a traditional squad. And we did it in <strong>216 hours</strong>.
+                </p>
+
+                <h2>The "Why": Beyond the Spreadsheet</h2>
+				<p>
+                    I didn't set out to start a software company. I set out to solve a problem. As an electrical engineer, I found myself in a ridiculous cycle: I would open a blank Excel sheet to run the same calculations I did last week.
+                </p>
+                <p>
+                    You might ask: <em>"Why didn't you just save the template?"</em>
+                </p>
+                <p>
+                    Great question. I probably did. But finding <code>Calc_Project_Final_v3.xlsx</code> buried in a nested folder, waiting for Excel to load, and then hunting for the right tab took longer than my patience allowed. So, I’d just type the formulas from scratch. Again.
+                </p>
+                <p>
+                    I tried free online calculators too, but they were frustratingly rigid. Most were locked into specific <strong>NEC</strong> or <strong>IEC</strong> standards, or forced me to use fixed voltages that didn't match reality.
+                </p>
+                <p>
+                    I realized that sticking to the spreadsheet wasn't efficient; it was just familiar. I needed a tool that was instant, not one that required a search party to find in my documents folder. And honestly? I also wanted to prove that with modern AI, an engineer could build something better than a spreadsheet.
+                </p>
+				<p>
+                    I needed a tool that was <strong>standard-agnostic</strong>—capable of handling custom parameters without forcing a specific workflow. I needed an <strong>electrical calculator</strong> with a "Digital Brain" that understood context.
+                </p>
+                <p>
+                    Unlike static forms, <a href="#GetTheApp" onclick="window.open('https://play.google.com/store/apps/details?id=com.franklinrodriguez.wattwise', '_blank'); return false;" class="text-link">WattsWise</a> is dynamic. If I update the <em>Voltage</em>, the <em>Current</em> recalculates instantly. If I adjust the <em>Power Factor</em>, the <em>Reactive Power</em> shifts automatically.
+                </p>
+                <p>
+                    I can jump from calculating Power to checking <strong>Voltage Drop</strong>, and the values travel with me. No more writing numbers on the back of your hand or re-typing values between tabs. It’s a living ecosystem where every module talks to the others.
+                </p>
+                <p>
+                    I had the vision. I had the domain expertise. What I didn't have was six months or a massive budget to waste.
+                </p>
+
+                <h2>The Methodology: AI-Augmented Architecture</h2>
+				
+				<div class="my-12">
+                    <h3 class="text-2xl font-bold text-white mb-6 text-center">The Efficiency Gap</h3>
+                    
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-blue-500/20">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            
+                            <div class="space-y-2">
+                                <h4 class="text-lg font-bold text-white">Traditional Agency</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">VS</p>
+                                <h4 class="text-xl font-black text-blue-500">AI-Augmented Architect</h4>
+                                <p class="text-sm text-gray-400 mt-4 leading-relaxed">
+                                    By replacing the "Squad" structure with an AI-Augmented workflow, we eliminated communication latency and overhead costs.
+                                </p>
+                            </div>
+
+                            <div class="space-y-6">
+                                
+                                <div>
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="text-gray-400">Development Time</span>
+                                        <span class="text-white font-bold">216h <span class="text-gray-600 font-normal">vs 800h</span></span>
+                                    </div>
+                                    <div class="h-4 bg-gray-800 rounded-full overflow-hidden relative">
+                                        <div class="absolute top-0 left-0 h-full bg-gray-700 w-full opacity-30"></div>
+                                        <div class="absolute top-0 left-0 h-full bg-blue-600 rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)]" style="width: 27%;"></div>
+                                    </div>
+                                    <div class="text-right mt-1 text-xs text-blue-400 font-semibold">73% Faster</div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="text-gray-400">Est. Budget</span>
+                                        <span class="text-white font-bold">$0 <span class="text-gray-600 font-normal">vs $50k</span></span>
+                                    </div>
+                                    <div class="h-4 bg-gray-800 rounded-full overflow-hidden relative">
+                                        <div class="absolute top-0 left-0 h-full bg-gray-700 w-full opacity-30"></div>
+                                        <div class="absolute top-0 left-0 h-full bg-emerald-500 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)]" style="width: 2%;"></div>
+                                    </div>
+                                    <div class="text-right mt-1 text-xs text-emerald-400 font-semibold">99% Savings</div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="text-gray-400">Team Size</span>
+                                        <span class="text-white font-bold">1 Person <span class="text-gray-600 font-normal">vs 6 People</span></span>
+                                    </div>
+                                    <div class="h-4 bg-gray-800 rounded-full overflow-hidden relative">
+                                        <div class="absolute top-0 left-0 h-full bg-gray-700 w-full opacity-30"></div>
+                                        <div class="absolute top-0 left-0 h-full bg-purple-500 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)]" style="width: 16%;"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+                <p>
+                    How do you compress months of work into weeks? You stop writing code and start architecting logic.
+                </p>
+                <p>
+                    In the traditional model, the Architect is just one voice in the room. In our model, the Architect is the <strong>Single Source of Truth</strong>. I defined the mathematical models and business rules, and then I orchestrated a swarm of powerful AI models to execute the vision.
+                </p>
+                <p>
+                    We established a rigorous digital protocol: <strong>The Executor vs. The Auditor</strong>.
+                </p>
+                <div class="glass-panel p-6 rounded-xl my-6">
+                    <ul class="mb-0">
+                        <li><strong>The Executor:</strong> Tasked with generating the Flutter code based on strict architectural constraints.</li>
+                        <li><strong>The Auditor:</strong> Tasked with reviewing that code, searching for logic errors, memory leaks, or deviations from electrical standards.</li>
+                    </ul>
+                </div>
+                <p>
+                    If the Auditor found a flaw, the Executor had to fix it. This adversarial process, guided by a human Architect with a clear product vision, eliminated the "bloat" and miscommunication of traditional development.
+                </p>
+
+                <h2>The Metric: Why 216?</h2>
+                <p>
+                    We tracked the effort for science.
+                </p>
+                <p>
+                    We started the timer at the first concept sketch. We stopped it the moment we uploaded <strong>Version 1.0.0</strong> to the Google Play Console for its first review.
+                </p>
+                <p>
+                    That sprint—spanning architecture, core logic, UI design, and branding—took <strong>216 hours</strong>.
+                </p>
+                <p>
+                    We didn't count the waiting days for review or the passive time. We counted the <em>creation</em>. <strong>Studios 216</strong> is named after that metric. It stands as proof that specialized domain knowledge (Electrical Engineering), when amplified by AI Architecture, creates a multiplier effect that no traditional agency can match.
+                </p>
+
+                <h2>The Result: WattsWise</h2>
+                <p>
+                    The result isn't a prototype. It is <a href="#GetTheApp" onclick="window.open('https://play.google.com/store/apps/details?id=com.franklinrodriguez.wattwise', '_blank'); return false;" class="text-link">WattsWise</a>, a robust, professional-grade engineering suite available now.
+                </p>
+                <ul>
+                    <li><strong>Smart Interconnection:</strong> Change variables in the Power module, and watch them ripple through Voltage Drop and Short Circuit calculations instantly.</li>
+                    <li><strong>Diagnostic Tools:</strong> From Insulation Resistance (DAR/PI) to Current Unbalance, built for field professionals.</li>
+                    <li><strong>Global Compliance:</strong> Whether you work with AWG or mm², 60Hz or 50Hz, <a href="#GetTheApp" onclick="window.open('https://play.google.com/store/apps/details?id=com.franklinrodriguez.wattwise', '_blank'); return false;" class="text-link">WattsWise</a> adapts to your reality.</li>
+                </ul>
+
+                <h2>Conclusion</h2>
+                <p>
+                    We built <a href="#GetTheApp" onclick="window.open('https://play.google.com/store/apps/details?id=com.franklinrodriguez.wattwise', '_blank'); return false;" class="text-link">WattsWise</a> to prove a thesis: The barrier to entry for high-quality software has collapsed. You no longer need a venture capital check to build world-class tools. You need domain expertise, a clear vision, and the ability to orchestrate intelligence.
+                </p>
+                <p>
+                    We spent 216 hours building the ultimate engineering tool, so you don't have to spend 10 minutes recalculating a circuit ever again.
+                </p>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-900 py-8 text-center text-sm text-gray-600">
+        &copy; 2025 Studios 216. All rights reserved.
+    </footer>
+
+</body>
+</html>

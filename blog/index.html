@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Studios 216</title>
+  <meta name="description" content="Studios 216 blog: engineering use cases, case studies, and product notes." />
+
+  <link rel="canonical" href="https://studios216.com/blog/" />
+  <meta property="og:title" content="Blog | Studios 216" />
+  <meta property="og:description" content="Engineering use cases + case studies + product notes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://studios216.com/assets/logo.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #050505; }
+    .glass-panel { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
+    .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); }
+    .card:hover { border-color: rgba(59,130,246,0.8); background: rgba(255,255,255,0.04); transform: translateY(-2px); }
+    .chip { border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color: rgba(255,255,255,0.82); }
+    .chip:hover { border-color: rgba(255,255,255,0.25); }
+    .chip-active { border-color: rgba(59,130,246,0.9); box-shadow: 0 0 0 3px rgba(59,130,246,0.18); }
+    .muted { color: rgba(255,255,255,0.55); }
+    .cover { background: radial-gradient(1200px 600px at 15% 15%, rgba(59,130,246,0.35), rgba(0,0,0,0)), linear-gradient(135deg, rgba(15,23,42,1), rgba(0,0,0,1)); }
+  </style>
+</head>
+
+<body class="text-gray-300 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="../index.html" class="flex items-center" aria-label="Studios 216 Home">
+        <img src="../assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-12 w-auto rounded-md object-contain hover:opacity-80 transition-opacity">
+      </a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="../about.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">About Us</a>
+        <a href="./index.html" class="text-sm font-medium text-white">Blog</a>
+        <a href="mailto:contact@studios216.com" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-grow px-6 py-14">
+    <div class="max-w-6xl mx-auto space-y-10">
+
+      <!-- Hero -->
+      <section class="glass-panel rounded-2xl p-8 sm:p-10 cover">
+        <div class="max-w-4xl">
+          <div class="inline-flex items-center gap-2 text-xs text-gray-300/80 px-3 py-1 rounded-full border border-white/10 bg-black/20 mb-4">
+            <span>Studios 216</span><span class="muted">•</span><span>Blog</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-black text-white">Studios 216 Blog</h1>
+          <p class="mt-3 muted max-w-3xl">
+            Practical posts for shipping and using engineering software.
+          </p>
+
+          <div class="mt-6 flex flex-col lg:flex-row gap-4 lg:items-center">
+            <input id="q" type="search"
+                   placeholder="Search posts (voltage drop, IEEE 43, power factor, Flutter...)"
+                   class="w-full lg:flex-1 px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-gray-100 outline-none focus:border-blue-500" />
+
+            <div class="flex flex-wrap gap-2">
+              <button data-filter="all" class="chip chip-active px-3 py-2 rounded-full text-xs font-semibold">All</button>
+              <button data-filter="usecase" class="chip px-3 py-2 rounded-full text-xs font-semibold">Use Cases</button>
+              <button data-filter="case-study" class="chip px-3 py-2 rounded-full text-xs font-semibold">Case Studies</button>
+              <button data-filter="saas" class="chip px-3 py-2 rounded-full text-xs font-semibold">SaaS</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest posts -->
+      <section class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold text-white">Latest posts</h2>
+          <div id="count" class="text-sm muted"></div>
+        </div>
+
+        <div id="grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+        <div id="empty" class="hidden glass-panel rounded-xl p-6 muted">
+          No posts match your search.
+        </div>
+
+        <div id="error" class="hidden glass-panel rounded-xl p-6 muted">
+          Could not load posts. (Check <code class="text-gray-200">./posts.json</code>)
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="border-t border-gray-900 py-8 text-center text-sm text-gray-600">
+    &copy; 2025 Studios 216. All rights reserved.
+  </footer>
+
+  <script>
+    // Fallback (used only if posts.json can't be fetched in local file preview).
+    const FALLBACK_POSTS = [
+      {
+        title: "Zero to Production: The Blueprint Behind WattsWise",
+        url: "./WattsWise-zero-to-production.html",
+        date: "2025-12-06",
+        minutes: 5,
+        category: "build",
+        badge: "Case Study",
+        excerpt: "How we architected a complex engineering tool in just 216 hours using AI-driven development.",
+        cover: "./assets/covers/wattswise-zero-to-production.svg",
+        tags: ["WattsWise", "Architecture", "AI-Augmented"]
+      }
+    ];
+
+    let POSTS = [];
+    let active = "all";
+
+    const grid = document.getElementById("grid");
+    const empty = document.getElementById("empty");
+    const error = document.getElementById("error");
+    const count = document.getElementById("count");
+    const q = document.getElementById("q");
+    const filterBtns = [...document.querySelectorAll("[data-filter]")];
+
+    const normalize = (s) => (s || "").toString().toLowerCase();
+
+    function matchesFilter(p, filter) {
+      if (filter === "all") return true;
+
+      const badge = normalize(p.badge);
+      const cat = normalize(p.category);
+
+      if (filter === "usecase") {
+        return badge.includes("use case") || cat === "wattswise" || cat === "usecase" || cat === "use-case";
+      }
+      if (filter === "case-study") {
+        return badge.includes("case study") || cat === "build" || cat === "case-study" || cat === "case-studies";
+      }
+      if (filter === "saas") {
+        return badge.includes("saas") || cat === "saas";
+      }
+      return true;
+    }
+
+    function matchesQuery(p, query) {
+      if (!query) return true;
+      const haystack = normalize(
+        (p.title || "") + " " +
+        (p.excerpt || "") + " " +
+        (p.badge || "") + " " +
+        (p.category || "") + " " +
+        ((p.tags || []).join(" "))
+      );
+      return haystack.includes(query);
+    }
+
+    function render() {
+      const query = normalize((q.value || "").trim());
+
+      const items = POSTS
+        .filter(p => matchesFilter(p, active))
+        .filter(p => matchesQuery(p, query))
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      count.textContent = `${items.length} post${items.length === 1 ? "" : "s"}`;
+
+      grid.innerHTML = items.map(p => {
+        const cover = p.cover ? `<img src="${p.cover}" alt="" class="absolute inset-0 w-full h-full object-cover opacity-90" />` : "";
+        const coverOverlay = `<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>`;
+        const badge = p.badge ? `<span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">${p.badge}</span>` : "";
+
+        const dateText = (() => {
+          try {
+            return new Date(p.date).toLocaleDateString(undefined, {year: "numeric", month: "short", day: "numeric"});
+          } catch { return p.date || ""; }
+        })();
+
+        return `
+          <article class="card rounded-xl overflow-hidden group flex flex-col transition-all">
+            <div class="h-44 relative overflow-hidden ${p.cover ? "" : "cover"}">
+              ${cover}
+              ${coverOverlay}
+              ${badge}
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <div class="text-xs text-gray-500 mb-2">${dateText}${p.minutes ? ` • ${p.minutes} min` : ""}</div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">${p.title || ""}</h3>
+              <p class="text-gray-400 text-sm mb-6 flex-grow">${p.excerpt || ""}</p>
+              <a href="${p.url || "#"}" class="inline-flex items-center text-sm font-semibold text-blue-500 hover:text-blue-400">
+                Read Article
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      const hasItems = items.length > 0;
+      empty.classList.toggle("hidden", hasItems);
+    }
+
+    function setActiveFilter(filter) {
+      active = filter;
+      filterBtns.forEach(b => b.classList.remove("chip-active"));
+      const btn = filterBtns.find(b => b.dataset.filter === filter);
+      if (btn) btn.classList.add("chip-active");
+      render();
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => setActiveFilter(btn.dataset.filter));
+    });
+
+    q.addEventListener("input", render);
+
+    async function loadPosts() {
+      try {
+        const res = await fetch("./posts.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        POSTS = Array.isArray(data) ? data : [];
+        error.classList.add("hidden");
+      } catch (e) {
+        // Silent UI: keep the page clean. (Dev hint only)
+        console.info("[blog] posts.json fetch failed, using fallback. Reason:", e?.message || e);
+        POSTS = FALLBACK_POSTS;
+        error.classList.remove("hidden");
+      }
+      render();
+    }
+
+    loadPosts();
+  </script>
+</body>
+</html>
