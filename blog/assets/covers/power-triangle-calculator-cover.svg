@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#E5E7EB" stroke-opacity="0.045" stroke-width="1"/>
+      <path d="M 24 0 L 24 48 M 0 24 L 48 24" fill="none" stroke="#E5E7EB" stroke-opacity="0.022" stroke-width="1"/>
+    </pattern>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Center card -->
+  <g filter="url(#shadow)" opacity="0.96">
+    <rect x="150" y="95" width="900" height="440" rx="28" fill="#0F172A" stroke="#334155" stroke-opacity="0.55"/>
+    <rect x="150" y="95" width="900" height="440" rx="28" fill="none" stroke="#22D3EE" stroke-opacity="0.10"/>
+  </g>
+
+  <!-- Power triangle -->
+  <g>
+    <!-- Neutral outline -->
+    <path d="M 360 440 L 840 440 L 840 190 Z"
+          fill="none" stroke="#E5E7EB" stroke-opacity="0.18" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- P base -->
+    <path d="M 360 440 L 840 440"
+          stroke="#22D3EE" stroke-width="12" stroke-linecap="round" opacity="0.95"/>
+
+    <!-- Q vertical -->
+    <path d="M 840 440 L 840 190"
+          stroke="#F59E0B" stroke-width="12" stroke-linecap="round" opacity="0.95"/>
+
+    <!-- S hypotenuse -->
+    <path d="M 360 440 L 840 190"
+          stroke="#34D399" stroke-width="12" stroke-linecap="round" opacity="0.95"/>
+
+    <!-- Right angle marker at B -->
+    <path d="M 804 440 L 804 404 L 840 404"
+          fill="none" stroke="#E5E7EB" stroke-opacity="0.40" stroke-width="4" stroke-linejoin="round"/>
+
+    <!-- Angle arc at A (correct direction) -->
+    <path d="M 406.00 440.00
+             A 46 46 0 0 0 400.80 418.75"
+          fill="none" stroke="#E5E7EB" stroke-opacity="0.55" stroke-width="4"/>
+
+    <!-- Labels (minimal) -->
+    <text x="600.0" y="495" text-anchor="middle"
+          fill="#E5E7EB" font-size="32" font-weight="900"
+          font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">P</text>
+
+    <text x="885" y="315.0" dominant-baseline="middle"
+          fill="#E5E7EB" font-size="32" font-weight="900"
+          font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">Q</text>
+
+    <text x="580.0" y="295.0" text-anchor="middle"
+          fill="#E5E7EB" font-size="32" font-weight="900"
+          font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">S</text>
+
+    <text x="418" y="402" text-anchor="middle"
+          fill="#CBD5E1" font-size="22" font-weight="800"
+          font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">φ</text>
+  </g>
+
+  <!-- Tiny footer mark -->
+  <text x="150" y="575" fill="#94A3B8" opacity="0.50" font-size="14" font-weight="700"
+        font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+    studios216.com
+  </text>
+</svg>
