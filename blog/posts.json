@@ -26,5 +26,17 @@
 	  "excerpt": "A bidirectional power triangle workflow: edit kW, kVAR, kVA, PF, V or I and everything updates instantly — including efficiency (η) and Excel formulas.",
 	  "cover": "./assets/covers/power-triangle-calculator-cover.svg",
 	  "tags": ["WattsWise", "Power Triangle", "kW", "kVAR", "kVA", "Power Factor", "3-Phase", "Single-Phase", "Efficiency", "Current"]
+	},
+	{
+	  "title": "From “Local LLM” to Agentic Systems: A Hands-On Lab You Can Actually Run",
+	  "url": "./local-ai-engineering-lab.html",
+	  "date": "2025-12-26",
+	  "minutes": 7,
+	  "category": "build",
+	  "categoryLabel": "Build Notes",
+	  "badge": "Build Notes",
+	  "excerpt": "A local-first AI engineering lab that progresses from a clean LLM API to research operators, multi-agent orchestration, and an MT5-connected MCP Trading Desk—built to run, inspect, and iterate.",
+	  "cover": "./assets/covers/local-ai-engineering-lab.svg",
+	  "tags": ["AI Engineering", "Local LLMs", "Agents", "LangGraph", "Observability", "MCP", "MetaTrader 5", "RAG"]
 	}
 ]
