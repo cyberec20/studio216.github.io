@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIF Docs | Document Comparison Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #f093fb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 16px;
+            background: #f8f9fa;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .benefit-number {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .benefit-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .benefit-desc {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #f0f0f0;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            background: white;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            background: #667eea;
+            color: white;
+        }
+
+        .faq-toggle {
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">DIF<span>Docs</span></a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#benefits">Benefits</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="refund-policy.html">Refund Policy</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Colors tell the <span>story</span></h1>
+            <p>Understand changes between document versions with visual cues that highlight additions, deletions, modifications, and movements.</p>
+            <a href="pricing.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Powerful Document Comparison</h2>
+                <p>See exactly what changed between document versions with precision and clarity</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Visual Comparison</h3>
+                    <p>Colors highlight additions (green), deletions (red), modifications (blue), and movements (purple) for instant understanding.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Multiple Formats</h3>
+                    <p>Supports Word (.docx), Excel (.xlsx, .csv), and text-based PDF files. No scanned documents required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Processing</h3>
+                    <p>Get comparison results in seconds. Upload, process, download — it's that simple.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>Documents are processed temporarily and automatically deleted. We never store or analyze your content.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Credit System</h3>
+                    <p>1 credit = 1 comparison. Flexible plans for individuals and teams with pay-as-you-go options.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Web-Based</h3>
+                    <p>No downloads required. Access from any device with a modern browser — desktop, tablet, or mobile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Why Professionals Choose DIF Docs</h2>
+                <p style="color: rgba(255,255,255,0.9);">Save time and reduce errors in document review workflows</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="benefit-number">99%</span>
+                    <div class="benefit-title">Accuracy</div>
+                    <div class="benefit-desc">Precise change detection with minimal false positives</div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-number">80%</span>
+                    <div class="benefit-title">Time Saved</div>
+                    <div class="benefit-desc">Reduce manual review time significantly</div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-number">24/7</span>
+                    <div class="benefit-title">Access</div>
+                    <div class="benefit-desc">Available anytime, anywhere with internet</div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-number">100%</span>
+                    <div class="benefit-title">Private</div>
+                    <div class="benefit-desc">Your documents never leave our secure servers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about DIF Docs</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What file types does DIF Docs support?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        DIF Docs supports Word documents (.docx), Excel files (.xlsx, .csv), and text-based PDF files. Scanned documents or image-only files are not supported as they require OCR processing.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How does the credit system work?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        One credit equals one document comparison (one job). Subscription plans include a fixed number of credits per billing period. Pay-as-you-go credits never expire and accumulate over time. Subscription credits are consumed first.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are my documents stored permanently?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No. DIF Docs processes files temporarily and automatically deletes them after processing. We do not permanently store user documents or generated results to protect your privacy.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What happens if Word/Excel shows a warning?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Documents generated by DIF Docs may trigger warnings in Word or Excel due to programmatic regeneration. These warnings do not indicate malware or unsafe content — they're normal for programmatically created files.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I get a refund?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Full refunds are available within 14 days of purchase if zero credits have been consumed and no document comparisons have been performed. Once you use any credit, refunds are not available. Contact contact@studios216.com for refund requests.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="refund-policy.html">Refund Policy</a>
+                <a href="pricing.html">Pricing</a>
+            </div>
+            <div class="copyright">
+                © 2026 DIF Docs | Developed by Studios216<br>
+                A brand owned by FRANKLIN ANIBAL RODRIGUEZ ACOSTA
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

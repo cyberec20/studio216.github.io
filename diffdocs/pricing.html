@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - DIF Docs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #f093fb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .plan-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .plan-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .plan-card.popular {
+            border-color: #667eea;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+            position: relative;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .plan-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .plan-price {
+            font-size: 42px;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .plan-price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .plan-credits {
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .plan-features {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .plan-features li {
+            margin-bottom: 12px;
+            color: #555;
+            list-style: none;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .plan-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .plan-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .plan-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .plan-button.secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .plan-button.secondary:hover {
+            background: #f8f9fa;
+        }
+
+        .price-per-credit {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .step-desc {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #f0f0f0;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            background: white;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            background: #667eea;
+            color: white;
+        }
+
+        .faq-toggle {
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .plan-card {
+                padding: 30px 20px;
+            }
+
+            .plan-price {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">DIF<span>Docs</span></a>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#benefits">Benefits</a>
+                    <a href="index.html#faq">FAQ</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="refund-policy.html">Refund Policy</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Plans that save you hours of review</h1>
+            <p>Choose the perfect plan for your document comparison needs. All plans include unlimited access to our powerful comparison engine.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>1 credit = 1 document comparison. No hidden fees.</p>
+            </div>
+            <div class="pricing-container">
+                <div class="pricing-grid">
+                    <!-- Pay-As-You-Go Plan -->
+                    <div class="plan-card">
+                        <div class="plan-name">Pay As You Go</div>
+                        <div class="plan-price">$9.99<span> / 25 credits</span></div>
+                        <div class="plan-credits">25 Credits</div>
+                        <div class="price-per-credit">($0.40 per credit)</div>
+                        <ul class="plan-features">
+                            <li>One-time purchase</li>
+                            <li class="highlight">Credits never expire</li>
+                            <li class="highlight">Accumulate over time</li>
+                            <li>No subscription required</li>
+                        </ul>
+                        <a href="#" class="plan-button secondary">Purchase Credits</a>
+                    </div>
+
+                    <!-- Monthly Plan -->
+                    <div class="plan-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="plan-name">Monthly Plan</div>
+                        <div class="plan-price">$12.99<span> / month</span></div>
+                        <div class="plan-credits">300 Credits / Month</div>
+                        <div class="price-per-credit">($0.043 per credit)</div>
+                        <ul class="plan-features">
+                            <li>Recurring monthly billing</li>
+                            <li class="highlight">300 credits per month</li>
+                            <li>Unused credits do not roll over</li>
+                            <li>Cancel anytime</li>
+                        </ul>
+                        <a href="#" class="plan-button">Subscribe Monthly</a>
+                    </div>
+
+                    <!-- Annual Plan -->
+                    <div class="plan-card">
+                        <div class="value-badge">Best Value</div>
+                        <div class="plan-name">Annual Plan</div>
+                        <div class="plan-price">$119<span> / year</span></div>
+                        <div class="plan-credits">5,000 Credits / Year</div>
+                        <div class="price-per-credit">($0.024 per credit)</div>
+                        <ul class="plan-features">
+                            <li class="highlight">Save 64% vs monthly plan</li>
+                            <li class="highlight">~416 credits per month</li>
+                            <li>Unused credits do not roll over</li>
+                            <li>Cancel anytime</li>
+                        </ul>
+                        <a href="#" class="plan-button secondary">Subscribe Annually</a>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <section class="how-it-works">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>How Credits Work</h2>
+                            <p>Simple and flexible credit system for all your document comparison needs</p>
+                        </div>
+                        <div class="steps-grid">
+                            <div class="step-card">
+                                <div class="step-number">1</div>
+                                <div class="step-title">Purchase Credits</div>
+                                <div class="step-desc">Buy credits one-time or subscribe for monthly credits</div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-number">2</div>
+                                <div class="step-title">Upload Documents</div>
+                                <div class="step-desc">Select two document versions to compare</div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-number">3</div>
+                                <div class="step-title">Consume 1 Credit</div>
+                                <div class="step-desc">Each comparison uses exactly 1 credit</div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-number">4</div>
+                                <div class="step-title">Download Results</div>
+                                <div class="step-desc">Get your highlighted comparison instantly</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="faq">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>Pricing FAQ</h2>
+                            <p>Everything you need to know about our pricing plans</p>
+                        </div>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    What is a credit and how is it consumed?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    One credit equals one document comparison (one job). Each time you upload two documents and generate a comparison, exactly 1 credit is consumed.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    What's the difference between subscription and pay-as-you-go credits?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <strong>Pay-as-you-go credits ($9.99 for 25 credits):</strong> One-time purchase, credits never expire, and accumulate over time. Perfect for occasional users.<br><br>
+                                    <strong>Subscription credits ($12.99/month or $119/year):</strong> Included with monthly/annual plans, provide much better value per credit, but unused credits do not roll over to the next period. Ideal for regular users.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    Which credits are used first?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    Subscription credits are always consumed before pay-as-you-go credits. This ensures you use your monthly allowance first before dipping into your permanent credit balance.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    Do my credits expire?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <strong>Pay-as-you-go credits:</strong> Never expire. Once purchased, they remain in your account indefinitely.<br><br>
+                                    <strong>Subscription credits:</strong> Do not roll over. Each month (or year) you receive a fresh allocation of credits. Any unused credits from the previous period are lost.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    Can I cancel my subscription anytime?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    Yes! You can cancel your subscription at any time. You'll retain access to any remaining subscription credits until the end of your current billing period.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    What payment methods do you accept?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    We accept all major credit cards (Visa, Mastercard, American Express) and PayPal through our secure payment processor.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    Do you offer refunds?
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    Full refunds are available within 14 days of purchase if zero credits have been consumed. Once you use any credit, refunds are not available. See our <a href="refund-policy.html">Refund Policy</a> for details.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="refund-policy.html">Refund Policy</a>
+                <a href="pricing.html">Pricing</a>
+            </div>
+            <div class="copyright">
+                © 2026 DIF Docs | Developed by Studios216<br>
+                A brand owned by FRANKLIN ANIBAL RODRIGUEZ ACOSTA
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
