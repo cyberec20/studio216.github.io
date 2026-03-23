@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f4a"/>
+      <stop offset="0.5" stop-color="#050505"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="20%" r="70%">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.9 0" />
+    </filter>
+    <!-- Document icon gradient -->
+    <linearGradient id="docGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <!-- Check mark gradient -->
+    <linearGradient id="checkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Accent line -->
+  <rect x="80" y="120" width="6" height="390" fill="#3b82f6" opacity="0.9"/>
+
+  <!-- Badge -->
+  <g transform="translate(96,92)">
+    <rect x="0" y="0" width="140" height="36" rx="10" fill="#3b82f6" opacity="0.92"/>
+    <text x="70" y="24" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="14" font-weight="700" fill="#ffffff">CASE STUDY</text>
+  </g>
+
+  <!-- Title -->
+  <text x="110" y="200" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+        font-size="48" font-weight="800" fill="#ffffff">
+    <tspan x="110" dy="0">From Idea to Production:</tspan>
+    <tspan x="110" dy="58">Building DiffDocs with</tspan>
+    <tspan x="110" dy="58" fill="#93c5fd">Agentic AI</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="110" y="380" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+        font-size="20" font-weight="500" fill="#cbd5e1" opacity="0.95">
+    <tspan x="110" dy="0">Building a $400k SaaS in 3.5 months</tspan>
+    <tspan x="110" dy="30">with 1 person + AI orchestration.</tspan>
+  </text>
+
+  <!-- Document comparison icon (two documents with check) -->
+  <g transform="translate(750, 280)">
+    <!-- Back document -->
+    <rect x="0" y="0" width="180" height="220" rx="12" fill="url(#docGradient)" opacity="0.3"/>
+    <rect x="20" y="30" width="100" height="12" rx="4" fill="#ffffff" opacity="0.2"/>
+    <rect x="20" y="55" width="140" height="8" rx="3" fill="#ffffff" opacity="0.15"/>
+    <rect x="20" y="75" width="120" height="8" rx="3" fill="#ffffff" opacity="0.15"/>
+    <rect x="20" y="95" width="130" height="8" rx="3" fill="#ffffff" opacity="0.15"/>
+    
+    <!-- Front document (offset) -->
+    <rect x="40" y="40" width="180" height="220" rx="12" fill="url(#docGradient)" opacity="0.6"/>
+    <rect x="60" y="70" width="100" height="12" rx="4" fill="#ffffff" opacity="0.3"/>
+    <rect x="60" y="95" width="140" height="8" rx="3" fill="#ffffff" opacity="0.25"/>
+    <rect x="60" y="115" width="120" height="8" rx="3" fill="#ffffff" opacity="0.25"/>
+    
+    <!-- Check mark badge -->
+    <circle cx="170" cy="40" r="35" fill="url(#checkGradient)" opacity="0.95"/>
+    <path d="M 155 40 L 165 50 L 185 28" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(110,560)">
+    <text x="0" y="0" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          font-size="16" font-weight="600" fill="#94a3b8">studios216.com</text>
+  </g>
+
+  <!-- Decorative blob -->
+  <circle cx="1020" cy="180" r="110" fill="#3b82f6" opacity="0.18" filter="url(#soft)"/>
+  <circle cx="1040" cy="210" r="70" fill="#60a5fa" opacity="0.14" filter="url(#soft)"/>
+</svg>
