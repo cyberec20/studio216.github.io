@@ -1,5 +1,17 @@
 [
 	{
+	  "title": "From Idea to Production: Building DiffDocs with Agentic AI",
+	  "url": "./diffdocs-zero-to-production.html",
+	  "date": "2026-03-23",
+	  "minutes": 8,
+	  "category": "build",
+	  "categoryLabel": "Build Notes",
+	  "badge": "Case Study",
+	  "excerpt": "How one person built a production-grade document comparison SaaS in 3.5 months using AI-augmented development—vs. the traditional $400k, 8-12 month route.",
+	  "cover": "./assets/covers/diffdocs-zero-to-production.svg",
+	  "tags": ["DiffDocs", "AI-Augmented", "SaaS", "Case Study", "Agentic AI", "MCP"]
+	},
+	{
 	"title": "Zero to Production: The Blueprint Behind WattsWise",
 	"url": "./WattsWise-zero-to-production.html",
 	"date": "2025-12-06",
