@@ -1,17 +1,26 @@
 # Studios216 article assets
 
-This directory is the canonical visual-asset registry for articles migrated from LinkedIn.
+This directory is the canonical mapping between article families and the artwork originally used on LinkedIn.
 
-## Structure
+## What is committed here
 
-- One folder per article family.
-- `reference-es.webp` and `reference-en.webp` preserve the visual association for language-specific artwork.
-- `manifest.json` is the source of truth for which source image belongs to which article, including source filename, SHA-256, dimensions, intended usage, and pending production work.
+Each article family has a tiny language-specific WebP thumbnail:
 
-## Important
+- `reference-es.webp`
+- `reference-en.webp`
 
-The committed reference files are deliberately lightweight. They are **not** the final full-resolution hero or Open Graph images. During each article editorial pass we will create the production hero and a dedicated 1200×630 social/Open Graph card from the best available master.
+These thumbnails are **identity references only**. They exist so the article/image relationship cannot be lost while the editorial migration is still in progress. They are not intended to be the final hero image shown in the published article.
 
-Alt text is also written during the final editorial pass, when the surrounding article context is known.
+The original PNG filenames, SHA-256 hashes, original dimensions, language, and intended future use are recorded in `manifest.json`.
 
-The legacy prompting article has no imported image by design: it will be rewritten first and then receive new ES/EN artwork.
+## Production rule
+
+When an article is rebuilt for Studios216, use the source master associated in `manifest.json` to create:
+
+1. a production hero image at web quality;
+2. a dedicated Open Graph/social image when useful;
+3. contextual alt text written for the final article, not copied mechanically from the title.
+
+If an article is substantially rewritten, the old artwork can remain only as historical reference and a new ES/EN visual can be created.
+
+The legacy prompting article intentionally has no imported image: it will be rewritten first, then receive new Spanish and English artwork.
