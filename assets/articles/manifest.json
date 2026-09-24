@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Canonical association registry for the LinkedIn-era article artwork imported into Studios216.",
+  "asset_policy": {
+    "committed_asset_role": "lightweight visual reference / listing preview; not the final full-resolution article hero",
+    "production_rule": "During each article editorial pass, generate a production hero and a dedicated 1200x630 Open Graph/social card from the best available master.",
+    "source_master_rule": "Original PNG files remain the source masters outside this repo for now; their filename, dimensions and SHA-256 are recorded here so the association cannot be lost.",
+    "alt_text_rule": "Write alt text during the final article editorial pass, because it must describe the image in article context rather than repeat the title.",
+    "language_rule": "Artwork containing text is stored separately for Spanish and English.",
+    "reference_format": "webp",
+    "reference_max_width_px": 340,
+    "reference_quality": 16
+  },
+  "articles": {
+    "ai-does-not-eliminate-engineering": {
+      "article_key": "ai-does-not-eliminate-engineering",
+      "title_hint_en": "AI Does Not Eliminate Engineering",
+      "title_hint_es": "La IA no elimina la ingeniería",
+      "association_status": "mapped from user-provided LinkedIn publication artwork; final article title to be confirmed during migration",
+      "assets": {
+        "es": {
+          "source_filename": "Ingenieria tradicional vs Orquestar con IA.png",
+          "source_sha256": "fc425e80c841a0f902322cdf3afc6a369eb4250bd93968a899824fa022a00273",
+          "source_dimensions_px": [1280, 719],
+          "reference_path": "/assets/articles/ai-does-not-eliminate-engineering/reference-es.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        },
+        "en": {
+          "source_filename": "AI orchestration and engineering workflow.png",
+          "source_sha256": "e244f9fd3d1e95e383cbc0617066d96931a0b54e63c5b8b896cc4ae1e5990278",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        }
+      }
+    },
+    "ai-said-done": {
+      "article_key": "ai-said-done",
+      "title_hint_en": "AI Said Done",
+      "title_hint_es": "La IA dijo “terminado”",
+      "association_status": "mapped from user-provided LinkedIn article/image pairing; final title to be confirmed during migration",
+      "assets": {
+        "es": {
+          "source_filename": "La IA en el ciclo de validaci#U00f3n.png",
+          "source_sha256": "7bdf9b9a148232ae85391920dca7867386c8d9af8b8738f470e1a3046a6ae718",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/ai-said-done/reference-es.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        },
+        "en": {
+          "source_filename": "AI workflow and validation stages.png",
+          "source_sha256": "7e5bb36e9a318d0a93a857fc41f6939a599090c0adc53ed853807ac45dfd941b",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/ai-said-done/reference-en.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        }
+      }
+    },
+    "from-idea-to-functional-product": {
+      "article_key": "from-idea-to-functional-product",
+      "title_hint_en": "From an Idea to a Functional Product",
+      "title_hint_es": "De una idea a un producto funcional",
+      "association_status": "mapped from user-provided LinkedIn article/image pairing; final title to be confirmed during migration",
+      "assets": {
+        "es": {
+          "source_filename": "IA para construir software.png",
+          "source_sha256": "c496f90ef82c005ab91108b2a70764f0c7bb053a6e9f886f9df0c00bd602e6f6",
+          "source_dimensions_px": [1280, 719],
+          "reference_path": "/assets/articles/from-idea-to-functional-product/reference-es.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        },
+        "en": {
+          "source_filename": "AI-powered software development roadmap.png",
+          "source_sha256": "f4be7274dba73d7913f5c98e1f741ab06625693873f2e9dbfaf816c02aaf0d7f",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/from-idea-to-functional-product/reference-en.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        }
+      }
+    },
+    "do-we-really-need-another-agent": {
+      "article_key": "do-we-really-need-another-agent",
+      "title_hint_en": "Do We Really Need Another Agent… or Should the System Know This Already?",
+      "title_hint_es": "¿Realmente necesitamos otro agente… o el sistema debería saberlo ya?",
+      "association_status": "mapped from user-provided LinkedIn article/image pairing; final title to be confirmed during migration",
+      "assets": {
+        "es": {
+          "source_filename": "Antes y Despu#U00e9s_ IA con Prop#U00f3sito.png",
+          "source_sha256": "05139ca35b85d7ce4b72116c394fb86e308aa50c57cb72053a728b916cfd9646",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/do-we-really-need-another-agent/reference-es.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        },
+        "en": {
+          "source_filename": "Before and After_ Smarter AI Workflows.png",
+          "source_sha256": "56f36512cbef02d44e67980348781894da71131c7749048def5d476270b5f5e0",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/do-we-really-need-another-agent/reference-en.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        }
+      }
+    },
+    "after-8901-commands": {
+      "article_key": "after-8901-commands",
+      "title_hint_en": "After 8,901 Commands",
+      "title_hint_es": "Después de 8.901 comandos",
+      "association_status": "mapped from user-provided LinkedIn article/image pairing; final title to be confirmed during migration",
+      "assets": {
+        "es": {
+          "source_filename": "De pantalla negra a sistemas confiables.png",
+          "source_sha256": "4eb74190760a497c49907bab3c551235f09e92086714d7a86d5a3ed5c782f6ca",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/after-8901-commands/reference-es.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        },
+        "en": {
+          "source_filename": "From Black Screen to Reliable Systems.png",
+          "source_sha256": "9dbf297b74849c8160f7cbc71d4b7f12fa68531bc9e69efd3ad302f8cd8d1e02",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/after-8901-commands/reference-en.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        }
+      }
+    },
+    "more-agents-or-better-specifications": {
+      "article_key": "more-agents-or-better-specifications",
+      "title_hint_en": "More Agents or Better Specifications?",
+      "title_hint_es": "¿Más agentes o mejores especificaciones?",
+      "association_status": "mapped from user-provided LinkedIn article/image pairing; final title to be confirmed during migration",
+      "assets": {
+        "es": {
+          "source_filename": "M#U00e1s no siempre es mejor_ agentes optimizados.png",
+          "source_sha256": "cd2444e580de5828005bf8647bd48c57d7bb228a401cb438e937b191096a93c0",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/more-agents-or-better-specifications/reference-es.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        },
+        "en": {
+          "source_filename": "More Is Not Always Better.png",
+          "source_sha256": "8ec90ea1cd7571ebf4d1c65b5808c57f33bb02acd0dc984e50a5d6cefd28ff22",
+          "source_dimensions_px": [1672, 941],
+          "reference_path": "/assets/articles/more-agents-or-better-specifications/reference-en.webp",
+          "reference_dimensions_px": [340, 191],
+          "current_usage": ["asset association reference", "article listing/card preview during migration"],
+          "planned_usage": ["production hero after editorial review", "dedicated 1200x630 social/Open Graph card"],
+          "contains_language_specific_text": true,
+          "alt_text_status": "pending final article editorial pass",
+          "production_hero_status": "pending",
+          "social_card_status": "pending"
+        }
+      }
+    }
+  },
+  "pending_articles": {
+    "prompting-article-refresh": {
+      "status": "intentionally no imported image",
+      "reason": "User chose to rewrite/update the old prompting article first, then create new Spanish and English artwork.",
+      "planned_assets": ["hero-es", "hero-en", "social-card-es-1200x630", "social-card-en-1200x630"]
+    }
+  }
+}
