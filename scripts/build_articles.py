@@ -225,7 +225,7 @@ def render_indexes(posts: list[dict]) -> None:
         rendered = replace_tokens(template, {
             "HTML_LANG":lang,"PAGE_TITLE":html.escape(title),"META_DESCRIPTION":html.escape(desc,quote=True),
             "ROBOTS":page_robots,"CANONICAL":canonical,"HREFLANG_LINKS":hreflang_links,
-            "HEADING":html.escape(heading),"INTRO":html.escape(intro),"FILTER_LANG":filter_lang,
+            "HEADING":html.escape(heading),"INTRO":html.escape(intro),"FILTER_LANG_JSON":json.dumps(filter_lang),
             "LANGUAGE_FILTERS":language_filters,"SEARCH_PLACEHOLDER":html.escape(search_label,quote=True),
             "ALL_TOPICS_LABEL":html.escape(topics_label),"EMPTY_STATE":html.escape("No se encontraron artículos." if lang=="es" else "No articles found."),
         })
