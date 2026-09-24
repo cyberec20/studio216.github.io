@@ -132,11 +132,17 @@ if POSTS_JSON.exists():
     except json.JSONDecodeError as exc:
         fail("articles/posts.json", f"invalid JSON: {exc}")
 
-# Empty article indexes remain intentionally noindex until the first article is published.
+article_indexes=(ROOT/"articles"/"index.html", ROOT/"articles"/"es"/"index.html", ROOT/"articles"/"en"/"index.html")
 if not posts:
-    for index_path in (ROOT/"articles"/"index.html", ROOT/"articles"/"es"/"index.html", ROOT/"articles"/"en"/"index.html"):
+    for index_path in article_indexes:
         if index_path.exists() and not has_noindex(index_path.read_text(encoding="utf-8")):
             fail(index_path.relative_to(ROOT), "empty article index must remain noindex")
+else:
+    for index_path in article_indexes:
+        if not index_path.exists():
+            fail(index_path.relative_to(ROOT), "published article library requires this index")
+        elif has_noindex(index_path.read_text(encoding="utf-8")):
+            fail(index_path.relative_to(ROOT), "non-empty article index must be indexable")
 
 sitemap_urls: set[str] = set()
 if not SITEMAP.exists():
@@ -163,6 +169,10 @@ else:
 if "https://studios216.com/about/founder/" not in sitemap_urls:
     fail("sitemap.xml", "founder profile page must be present in sitemap")
 
+if posts:
+    for hub in ("https://studios216.com/articles/","https://studios216.com/articles/es/","https://studios216.com/articles/en/"):
+        if hub not in sitemap_urls:
+            fail("sitemap.xml", f"article hub missing from sitemap: {hub}")
 for post in posts:
     url = "https://studios216.com" + str(post.get("url", ""))
     if url not in sitemap_urls:

@@ -12,17 +12,17 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Validate SEO
-        run: python scripts/validate_seo.py
-
-      - name: Validate editorial foundation
-        run: python scripts/validate_editorial.py
-
+      - name: Install editorial build dependency
+        run: pip install -r requirements-editorial.txt
       - name: Validate article metadata and publishing gates
         run: python scripts/build_articles.py --check
+      - name: Smoke-build article library
+        run: python scripts/build_articles.py
+      - name: Validate SEO
+        run: python scripts/validate_seo.py
+      - name: Validate editorial foundation
+        run: python scripts/validate_editorial.py
