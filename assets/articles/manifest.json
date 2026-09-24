@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "purpose": "Canonical association registry for LinkedIn-era article artwork imported into Studios216.",
   "asset_policy": {
     "committed_asset_role": "tiny visual identity reference only; never use as the final article hero",
@@ -7,7 +7,7 @@
     "reference_max_width_px": 120,
     "reference_quality": 14,
     "source_master_rule": "Original PNG files are not committed yet. Their filenames, hashes and dimensions are recorded so the mapping cannot be lost.",
-    "production_rule": "During each article editorial pass, create a production hero from the associated source master and a dedicated Open Graph/social image when useful.",
+    "production_rule": "During each article editorial pass, recover the associated source master, create an optimized article-width derivative, show it in the article, and retain a lightweight listing thumbnail.",
     "alt_text_rule": "Write alt text during the final editorial pass, in article context.",
     "language_rule": "Artwork containing text remains separate for Spanish and English."
   },
@@ -142,8 +142,19 @@
       "publication": {
         "status": "published",
         "published_at": "2026-09-24",
-        "listing_cover_rule": "Use the registered tiny WebP reference at native/small display size only; do not upscale it as an article hero.",
-        "production_hero_status": "deferred until a full-resolution web asset can be committed without degrading repository hygiene.",
+        "source_masters_recovered": true,
+        "source_dimensions_px": [
+          1672,
+          941
+        ],
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "base64 payload committed in-repo and inlined by the static builder",
+        "es_hero_payload": "/assets/articles/do-we-really-need-another-agent/hero-es.b64",
+        "en_hero_payload": "/assets/articles/do-we-really-need-another-agent/hero-en.b64",
         "es_listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-es.webp",
         "en_listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-en.webp"
       }
