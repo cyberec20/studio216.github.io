@@ -57,12 +57,6 @@ for meta_path in sorted((ROOT/"content"/"articles"/"meta").glob("*.json")):
             hero_b64=version.get("hero_b64")
             if hero_b64 and not (ROOT/hero_b64).exists(): fail(f"{meta_path.relative_to(ROOT)} {lang}: hero_b64 payload missing")
 
-if errors:
-    print("Editorial validation failed:")
-    for item in errors: print(f"  - {item}")
-    sys.exit(1)
-print("Editorial validation passed.")
-
 try:
     legacy=json.loads((ROOT/"data"/"legacy_articles.json").read_text(encoding="utf-8"))
     if not isinstance(legacy,list): fail("data/legacy_articles.json must contain a JSON array")
@@ -71,3 +65,9 @@ try:
             if not item.get(key): fail(f"legacy article {item.get('id','<unknown>')}: missing {key}")
 except Exception as exc:
     fail(f"invalid data/legacy_articles.json: {exc}")
+
+if errors:
+    print("Editorial validation failed:")
+    for item in errors: print(f"  - {item}")
+    sys.exit(1)
+print("Editorial validation passed.")
