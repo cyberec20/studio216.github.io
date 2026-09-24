@@ -194,6 +194,7 @@ def render_indexes(posts: list[dict]) -> None:
     template = INDEX_TEMPLATE.read_text(encoding="utf-8")
     count = len(posts)
     robots = "index, follow" if count else "noindex, follow"
+    hreflang_links = '<link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/">\n  <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/">\n  <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/">'
     pages = [
       (ROOT/"articles"/"index.html", "en", "Articles | Studios 216", "Bilingual articles from Studios 216 on AI systems, engineering, data, software and communication.", "https://studios216.com/articles/", "Ideas worth developing in full.", "A bilingual library of engineering, AI, software, data and communication.", "", '<div class="language-switch mt-7"><a href="/articles/es/">Español</a><a href="/articles/en/">English</a></div>', "The first article has not been published yet."),
       (ROOT/"articles"/"es"/"index.html", "es", "Artículos en español | Studios 216", "Artículos de Studios 216 sobre sistemas de IA, ingeniería, datos, software y comunicación.", "https://studios216.com/articles/es/", "Artículos", "Ideas desarrolladas en profundidad, en español.", "es", '<div class="language-switch mt-7"><span class="active">Español</span><a href="/articles/en/">English</a></div>', "Todavía no se ha publicado el primer artículo con el nuevo flujo."),
@@ -204,7 +205,7 @@ def render_indexes(posts: list[dict]) -> None:
         page_robots = "index, follow" if page_posts else "noindex, follow"
         rendered = replace_tokens(template, {
             "HTML_LANG":lang, "PAGE_TITLE":html.escape(title), "META_DESCRIPTION":html.escape(desc,quote=True),
-            "ROBOTS":page_robots, "CANONICAL":canonical, "HEADING":html.escape(heading), "INTRO":html.escape(intro),
+            "ROBOTS":page_robots, "CANONICAL":canonical, "HREFLANG_LINKS":hreflang_links, "HEADING":html.escape(heading), "INTRO":html.escape(intro),
             "LANGUAGE_NAV":language_nav, "FILTER_LANG":filter_lang, "EMPTY_STATE":html.escape(empty_state)
         })
         path.parent.mkdir(parents=True, exist_ok=True)
