@@ -10,7 +10,10 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML_FILES = sorted(ROOT.rglob("*.html"))
+HTML_FILES = sorted(
+    p for p in ROOT.rglob("*.html")
+    if "templates" not in p.relative_to(ROOT).parts
+)
 SITEMAP = ROOT / "sitemap.xml"
 POSTS_JSON = ROOT / "articles" / "posts.json"
 
