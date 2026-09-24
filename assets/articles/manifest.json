@@ -152,11 +152,11 @@
           428
         ],
         "production_format": "webp",
-        "storage": "base64 payload committed in-repo and inlined by the static builder",
-        "es_hero_payload": "/assets/articles/do-we-really-need-another-agent/hero-es.b64",
-        "en_hero_payload": "/assets/articles/do-we-really-need-another-agent/hero-en.b64",
+        "storage": "binary WebP assets committed directly in the repository",
         "es_listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-es.webp",
-        "en_listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-en.webp"
+        "en_listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-en.webp",
+        "es_hero_path": "/assets/articles/do-we-really-need-another-agent/hero-es.webp",
+        "en_hero_path": "/assets/articles/do-we-really-need-another-agent/hero-en.webp"
       }
     },
     "after-8901-commands": {

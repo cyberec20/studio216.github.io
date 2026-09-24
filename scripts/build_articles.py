@@ -51,9 +51,9 @@ def validate_version(meta_path: Path, lang: str, version: dict, published: bool)
         for key in ("hero", "hero_alt", "og_image"):
             if not version.get(key):
                 raise BuildError(f"{meta_path}: published {lang}.{key} is required")
-        hero_b64 = version.get("hero_b64")
-        if hero_b64 and not (ROOT / hero_b64).exists():
-            raise BuildError(f"{meta_path}: published {lang}.hero_b64 source not found: {hero_b64}")
+        hero = version.get("hero")
+        if isinstance(hero, str) and hero.startswith("/") and not (ROOT / hero.lstrip("/")).exists():
+            raise BuildError(f"{meta_path}: published {lang}.hero asset not found: {hero}")
         editorial = version.get("editorial") or {}
         ddc = editorial.get("desire_driven_copy") or {}
         if editorial.get("profile") != "thought-leadership":
@@ -121,14 +121,6 @@ def replace_tokens(template: str, values: dict[str, str]) -> str:
 def public_url(lang: str, slug: str) -> str:
     return f"https://studios216.com/articles/{lang}/{slug}/"
 
-def hero_source(version: dict) -> str:
-    hero_b64 = version.get("hero_b64")
-    if not hero_b64:
-        return version["hero"]
-    payload = (ROOT / hero_b64).read_text(encoding="utf-8").strip()
-    mime = version.get("hero_mime", "image/webp")
-    return f"data:{mime};base64,{payload}"
-
 def load_legacy_posts() -> list[dict]:
     if not LEGACY_POSTS_JSON.exists():
         return []
@@ -187,7 +179,7 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
     }
     hero_block = ""
     if version.get("show_hero", True):
-        hero_src = hero_source(version)
+        hero_src = version["hero"]
         hero_width = int(version.get("hero_width", 760))
         hero_height = int(version.get("hero_height", 428))
         hero_block = f'<figure class="article-hero"><img src="{html.escape(hero_src, quote=True)}" alt="{html.escape(version["hero_alt"], quote=True)}" width="{hero_width}" height="{hero_height}" loading="eager" decoding="async"></figure>'
