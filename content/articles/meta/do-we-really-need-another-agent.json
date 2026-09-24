@@ -12,7 +12,7 @@
       "updated": "2026-09-24",
       "hero": "/assets/articles/do-we-really-need-another-agent/reference-es.webp",
       "hero_alt": "Infografía antes y después: un flujo donde todo pasa por agentes frente a otro que usa reglas y software determinístico y reserva la IA para ambigüedad y excepciones.",
-      "show_hero": false,
+      "show_hero": true,
       "og_image": "https://studios216.com/assets/logo.jpg",
       "topics": [
         "Sistemas de IA",
@@ -38,7 +38,12 @@
         "punctuation_review": "passed",
         "human_read_aloud_review": "passed",
         "human_approval": "approved"
-      }
+      },
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_b64": "assets/articles/do-we-really-need-another-agent/hero-es.b64",
+      "hero_mime": "image/webp",
+      "listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-es.webp"
     },
     "en": {
       "slug": "do-we-really-need-another-agent",
@@ -49,7 +54,7 @@
       "updated": "2026-09-24",
       "hero": "/assets/articles/do-we-really-need-another-agent/reference-en.webp",
       "hero_alt": "Before-and-after infographic: a workflow where everything goes through agents versus one that uses known rules and deterministic software, reserving AI for ambiguity and exceptions.",
-      "show_hero": false,
+      "show_hero": true,
       "og_image": "https://studios216.com/assets/logo.jpg",
       "topics": [
         "AI systems",
@@ -75,7 +80,12 @@
         "punctuation_review": "passed",
         "human_read_aloud_review": "passed",
         "human_approval": "approved"
-      }
+      },
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_b64": "assets/articles/do-we-really-need-another-agent/hero-en.b64",
+      "hero_mime": "image/webp",
+      "listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-en.webp"
     }
   }
 }

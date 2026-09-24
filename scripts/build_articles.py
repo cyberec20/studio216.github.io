@@ -17,6 +17,7 @@ INDEX_TEMPLATE = ROOT / "templates" / "articles-index.html"
 POSTS_JSON = ROOT / "articles" / "posts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SITE_CONFIG = ROOT / "data" / "site.json"
+LEGACY_POSTS_JSON = ROOT / "data" / "legacy_articles.json"
 
 VALID_LANGS = {"es", "en"}
 VALID_STATUS = {"draft", "ready", "published"}
@@ -50,6 +51,9 @@ def validate_version(meta_path: Path, lang: str, version: dict, published: bool)
         for key in ("hero", "hero_alt", "og_image"):
             if not version.get(key):
                 raise BuildError(f"{meta_path}: published {lang}.{key} is required")
+        hero_b64 = version.get("hero_b64")
+        if hero_b64 and not (ROOT / hero_b64).exists():
+            raise BuildError(f"{meta_path}: published {lang}.hero_b64 source not found: {hero_b64}")
         editorial = version.get("editorial") or {}
         ddc = editorial.get("desire_driven_copy") or {}
         if editorial.get("profile") != "thought-leadership":
@@ -117,6 +121,22 @@ def replace_tokens(template: str, values: dict[str, str]) -> str:
 def public_url(lang: str, slug: str) -> str:
     return f"https://studios216.com/articles/{lang}/{slug}/"
 
+def hero_source(version: dict) -> str:
+    hero_b64 = version.get("hero_b64")
+    if not hero_b64:
+        return version["hero"]
+    payload = (ROOT / hero_b64).read_text(encoding="utf-8").strip()
+    mime = version.get("hero_mime", "image/webp")
+    return f"data:{mime};base64,{payload}"
+
+def load_legacy_posts() -> list[dict]:
+    if not LEGACY_POSTS_JSON.exists():
+        return []
+    data = load_json(LEGACY_POSTS_JSON)
+    if not isinstance(data, list):
+        raise BuildError("data/legacy_articles.json must contain a JSON array")
+    return data
+
 def optional_link_sections(site: dict) -> tuple[str, str]:
     explore_items = []
     for item in site.get("navigation", {}).get("future_editorial", []):
@@ -167,7 +187,10 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
     }
     hero_block = ""
     if version.get("show_hero", True):
-        hero_block = f'<figure class="article-hero"><img src="{html.escape(version["hero"], quote=True)}" alt="{html.escape(version["hero_alt"], quote=True)}" width="1200" height="630" loading="eager" decoding="async"></figure>'
+        hero_src = hero_source(version)
+        hero_width = int(version.get("hero_width", 760))
+        hero_height = int(version.get("hero_height", 428))
+        hero_block = f'<figure class="article-hero"><img src="{html.escape(hero_src, quote=True)}" alt="{html.escape(version["hero_alt"], quote=True)}" width="{hero_width}" height="{hero_height}" loading="eager" decoding="async"></figure>'
     explore_links, social_links = optional_link_sections(site)
     rendered = replace_tokens(template, {
         "HTML_LANG": lang,
@@ -202,7 +225,7 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         "title": version["title"], "description": version["description"],
         "url": f"/articles/{lang}/{version['slug']}/", "date": version["updated"],
         "topics": version.get("topics") or [], "topic_ids": version.get("topic_ids") or [],
-        "cover": version["hero"], "cover_alt": version["hero_alt"],
+        "cover": version.get("listing_cover", version["hero"]), "cover_alt": version["hero_alt"],
         "reading_time": reading_time(source, lang),
     }
 
@@ -247,10 +270,15 @@ def update_sitemap(posts: list[dict]) -> None:
             url=ET.SubElement(root, ns+"url")
             ET.SubElement(url, ns+"loc").text=hub
             ET.SubElement(url, ns+"lastmod").text=latest
+    existing_locs={node.findtext(ns+"loc") for node in root.findall(ns+"url")}
     for post in posts:
+        absolute="https://studios216.com"+post["url"]
+        if absolute in existing_locs:
+            continue
         url=ET.SubElement(root, ns+"url")
-        ET.SubElement(url, ns+"loc").text="https://studios216.com"+post["url"]
+        ET.SubElement(url, ns+"loc").text=absolute
         ET.SubElement(url, ns+"lastmod").text=post["date"]
+        existing_locs.add(absolute)
     tree.write(SITEMAP, encoding="utf-8", xml_declaration=True)
 
 def main() -> int:
@@ -262,7 +290,7 @@ def main() -> int:
     if args.check:
         print(f"Editorial metadata check passed ({len(loaded)} article families).")
         return 0
-    posts=[]
+    posts=load_legacy_posts()
     for _,meta in loaded:
         if meta["status"]!="published":
             continue

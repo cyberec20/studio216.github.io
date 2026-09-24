@@ -1,49 +1,5 @@
 [
   {
-    "id": "do-we-really-need-another-agent",
-    "translation_key": "do-we-really-need-another-agent",
-    "lang": "es",
-    "title": "¿Realmente necesitamos otro agente… o el sistema ya debería saberlo?",
-    "description": "Cuándo usar agentes de IA y cuándo convertir lo aprendido en software determinístico: reglas, pruebas, validación y conocimiento que permanece.",
-    "url": "/articles/es/realmente-necesitamos-otro-agente/",
-    "date": "2026-09-24",
-    "topics": [
-      "Sistemas de IA",
-      "Agentes",
-      "Ingeniería de software"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "agents",
-      "software-engineering"
-    ],
-    "cover": "/assets/articles/do-we-really-need-another-agent/reference-es.webp",
-    "cover_alt": "Infografía antes y después: un flujo donde todo pasa por agentes frente a otro que usa reglas y software determinístico y reserva la IA para ambigüedad y excepciones.",
-    "reading_time": "7 min de lectura"
-  },
-  {
-    "id": "do-we-really-need-another-agent",
-    "translation_key": "do-we-really-need-another-agent",
-    "lang": "en",
-    "title": "Do We Really Need Another Agent—or Should the System Know This Already?",
-    "description": "When should an AI agent keep reasoning, and when should what you learned become deterministic software? A practical framework for rules, tests and durable system knowledge.",
-    "url": "/articles/en/do-we-really-need-another-agent/",
-    "date": "2026-09-24",
-    "topics": [
-      "AI systems",
-      "Agents",
-      "Software engineering"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "agents",
-      "software-engineering"
-    ],
-    "cover": "/assets/articles/do-we-really-need-another-agent/reference-en.webp",
-    "cover_alt": "Before-and-after infographic: a workflow where everything goes through agents versus one that uses known rules and deterministic software, reserving AI for ambiguity and exceptions.",
-    "reading_time": "7 min read"
-  },
-  {
     "id": "diffdocs-zero-to-production",
     "translation_key": "diffdocs-zero-to-production",
     "lang": "en",
