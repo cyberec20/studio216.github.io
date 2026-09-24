@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "site": {
+    "name": "Studios 216",
+    "url": "https://studios216.com/",
+    "language": "en",
+    "articles_url": "https://studios216.com/articles/"
+  },
+  "organization": {
+    "id": "https://studios216.com/#organization",
+    "name": "Studios 216",
+    "url": "https://studios216.com/",
+    "founder_id": "https://studios216.com/about/founder/#person"
+  },
+  "founder": {
+    "id": "https://studios216.com/about/founder/#person",
+    "name": "Franklin Rodriguez",
+    "url": "https://studios216.com/about/founder/",
+    "job_title": "Founder & CEO",
+    "roles": [
+      "Engineer",
+      "Author",
+      "Instructor"
+    ],
+    "descriptor": "Engineer, author, instructor and AI systems builder",
+    "social": {}
+  },
+  "navigation": {
+    "primary": [
+      {
+        "label": "About",
+        "href": "/about.html"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog/"
+      }
+    ],
+    "future_editorial": [
+      {
+        "label": "Articles",
+        "href": "/articles/",
+        "enabled": false
+      },
+      {
+        "label": "Projects",
+        "href": "/#projects",
+        "enabled": false
+      },
+      {
+        "label": "Courses",
+        "href": "/#courses",
+        "enabled": false
+      },
+      {
+        "label": "Books",
+        "href": "/#books",
+        "enabled": false
+      }
+    ]
+  }
+}

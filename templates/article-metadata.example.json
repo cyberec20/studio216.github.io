@@ -1,0 +1,51 @@
+{
+  "id": "example-article",
+  "translation_key": "example-article",
+  "status": "draft",
+  "versions": {
+    "es": {
+      "slug": "ejemplo-articulo",
+      "title": "Título del artículo",
+      "description": "Descripción SEO y editorial.",
+      "source": "content/articles/es/ejemplo-articulo.md",
+      "published": null,
+      "updated": null,
+      "hero": "/assets/articles/example-article/hero-es.webp",
+      "og_image": "/assets/articles/example-article/og-es.webp",
+      "topics": [
+        "ai-systems"
+      ],
+      "editorial": {
+        "desire_driven_copy": {
+          "status": "pending",
+          "report": null,
+          "validated_at": null
+        },
+        "seo_review": "pending",
+        "human_approval": "pending"
+      }
+    },
+    "en": {
+      "slug": "example-article",
+      "title": "Article title",
+      "description": "SEO and editorial description.",
+      "source": "content/articles/en/example-article.md",
+      "published": null,
+      "updated": null,
+      "hero": "/assets/articles/example-article/hero-en.webp",
+      "og_image": "/assets/articles/example-article/og-en.webp",
+      "topics": [
+        "ai-systems"
+      ],
+      "editorial": {
+        "desire_driven_copy": {
+          "status": "pending",
+          "report": null,
+          "validated_at": null
+        },
+        "seo_review": "pending",
+        "human_approval": "pending"
+      }
+    }
+  }
+}

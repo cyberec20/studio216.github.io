@@ -1,4 +1,4 @@
-name: SEO validation
+name: SEO and editorial validation
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  validate-seo:
+  validate-site:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -18,5 +18,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate SEO metadata and sitemap
+      - name: Validate SEO
         run: python scripts/validate_seo.py
+
+      - name: Validate editorial foundation
+        run: python scripts/validate_editorial.py
+
+      - name: Validate article metadata and publishing gates
+        run: python scripts/build_articles.py --check

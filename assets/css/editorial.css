@@ -1,0 +1,117 @@
+:root {
+  color-scheme: dark;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #050505;
+  color: #d1d5db;
+}
+.editorial-shell {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+.editorial-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 760px);
+  gap: 3rem;
+  justify-content: center;
+}
+.author-rail {
+  position: sticky;
+  top: 7rem;
+  align-self: start;
+}
+.author-rail-card,
+.editorial-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 1rem;
+}
+.author-rail-card { padding: 1.25rem; }
+.author-rail a,
+.editorial-link {
+  color: #93c5fd;
+  text-decoration: none;
+}
+.author-rail a:hover,
+.editorial-link:hover { color: #bfdbfe; }
+.article-body {
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+.article-body p,
+.article-body ul,
+.article-body ol,
+.article-body blockquote,
+.article-body pre { margin: 1.25rem 0; }
+.article-body h2 {
+  margin-top: 2.8rem;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #fff;
+}
+.article-body h3 {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f3f4f6;
+}
+.article-body ul,
+.article-body ol { padding-left: 1.4rem; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 1rem;
+  color: #cbd5e1;
+}
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+.article-body pre {
+  overflow-x: auto;
+  background: rgba(0,0,0,.45);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 1rem;
+  border-radius: .8rem;
+}
+.language-switch {
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.language-switch a,
+.language-switch span {
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  padding: .35rem .7rem;
+  font-size: .78rem;
+}
+.language-switch .active {
+  border-color: rgba(59,130,246,.85);
+  color: #bfdbfe;
+}
+.article-list {
+  display: grid;
+  gap: 1rem;
+}
+.article-list-card {
+  display: block;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.025);
+  transition: .2s ease;
+}
+.article-list-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(59,130,246,.6);
+}
+@media (max-width: 900px) {
+  .editorial-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .author-rail { position: static; order: 2; }
+}
