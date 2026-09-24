@@ -107,6 +107,24 @@ def replace_tokens(template: str, values: dict[str, str]) -> str:
 def public_url(lang: str, slug: str) -> str:
     return f"https://studios216.com/articles/{lang}/{slug}/"
 
+def optional_link_sections(site: dict) -> tuple[str, str]:
+    explore_items = []
+    for item in site.get("navigation", {}).get("future_editorial", []):
+        if item.get("enabled") and item.get("href") and item.get("label"):
+            explore_items.append(f'<a class="block" href="{html.escape(item["href"], quote=True)}">{html.escape(item["label"])}</a>')
+    explore = ""
+    if explore_items:
+        explore = '<div class="mt-6"><p class="text-xs uppercase tracking-[.16em] text-gray-600 mb-2">Explore</p><div class="space-y-2 text-sm">' + "".join(explore_items) + "</div></div>"
+
+    social_items = []
+    for label, href in site.get("founder", {}).get("social", {}).items():
+        if href:
+            social_items.append(f'<a class="block" rel="me noopener" href="{html.escape(href, quote=True)}">{html.escape(label.title())}</a>')
+    social = ""
+    if social_items:
+        social = '<div class="mt-6"><p class="text-xs uppercase tracking-[.16em] text-gray-600 mb-2">Social</p><div class="space-y-2 text-sm">' + "".join(social_items) + "</div></div>"
+    return explore, social
+
 def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
     template = TEMPLATE.read_text(encoding="utf-8")
     source = ROOT / version["source"]
@@ -141,6 +159,7 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
 
     topics = " · ".join(version.get("topics") or [])
     body = markdown_to_html(source)
+    explore_links, social_links = optional_link_sections(site)
     rendered = replace_tokens(template, {
         "HTML_LANG": lang,
         "PAGE_TITLE": html.escape(version["title"] + " | Studios 216"),
@@ -152,7 +171,8 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         "PUBLISHED": version["published"],
         "MODIFIED": version["updated"],
         "JSON_LD": json.dumps(json_ld, ensure_ascii=False),
-        "AUTHOR_EXTRA_LINKS": "",
+        "EXPLORE_LINKS": explore_links,
+        "SOCIAL_LINKS": social_links,
         "LANGUAGE_SWITCH": '<div class="language-switch">' + "".join(switch) + "</div>",
         "TOPICS": html.escape(topics),
         "ARTICLE_TITLE": html.escape(version["title"]),
