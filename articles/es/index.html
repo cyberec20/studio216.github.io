@@ -1,30 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Meta Pixel + Google Analytics (GA4) -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init','1210026194345632');fbq('track','PageView');
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9F4QMVWNPC"></script>
-  <script>
-    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-    gtag('js',new Date());gtag('config','G-9F4QMVWNPC');
-  </script>
-
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artículos en español | Studios 216</title>
   <meta name="description" content="Artículos de Studios 216 sobre sistemas de IA, ingeniería, datos, software y comunicación.">
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://studios216.com/articles/es/">
   <link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/">
   <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/">
   <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/">
-  <script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/editorial.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Artículos en español | Studios 216">
+  <meta property="og:description" content="Artículos de Studios 216 sobre sistemas de IA, ingeniería, datos, software y comunicación.">
+  <meta property="og:url" content="https://studios216.com/articles/es/">
+  <meta property="og:image" content="https://studios216.com/assets/logo.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/editorial.css">
 </head>
-<body class="min-h-screen"><header class="p-6 border-b border-gray-900"><div class="max-w-6xl mx-auto flex justify-between items-center"><a href="/"><img src="/assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-12 w-auto rounded-md"></a><a href="/articles/" class="text-sm text-gray-400 hover:text-white">Articles</a></div></header><main class="editorial-shell py-14"><p class="text-xs uppercase tracking-[.18em] text-blue-400">Español</p><h1 class="text-4xl sm:text-5xl font-black text-white mt-3">Artículos</h1><p class="text-lg text-gray-400 mt-5">La biblioteca editorial en español está preparada, pero todavía no hemos seleccionado el primer artículo que pasará por el nuevo flujo completo.</p><div class="language-switch mt-7"><span class="active">Español</span><a href="/articles/en/">English</a></div></main></body>
+<body class="min-h-screen">
+  <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/70">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="/"><img src="/assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-12 w-auto rounded-md"></a>
+      <nav class="flex gap-5 text-sm"><a href="/about.html" class="text-gray-400 hover:text-white">About</a><a href="/articles/" class="text-white">Articles</a></nav>
+    </div>
+  </header>
+  <main class="editorial-shell py-14">
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[.18em] text-blue-400">Studios216 Articles</p>
+      <h1 class="text-4xl sm:text-5xl font-black text-white mt-3">Artículos</h1>
+      <p class="text-lg text-gray-400 mt-5">Ideas sobre IA, ingeniería, software, datos y comunicación, desarrolladas en profundidad.</p>
+    </div>
+    <section class="article-toolbar mt-9" aria-label="Article filters">
+      <input id="article-search" class="article-search" type="search" placeholder="Buscar artículos" autocomplete="off">
+      <select id="topic-filter" class="topic-select" aria-label="Todos los temas"><option value="">Todos los temas</option></select>
+      <div class="language-switch"><a href="/articles/">Todos</a><span class="active">Español</span><a href="/articles/en/">English</a></div>
+    </section>
+    <div id="article-list" class="article-list mt-10"></div>
+    <p id="empty-state" class="text-gray-500 mt-10 hidden">No se encontraron artículos.</p>
+  </main>
+  <script>
+    const fixedLanguage="es";
+    let activeLanguage=fixedLanguage;
+    let allPosts=[];
+    const search=document.getElementById("article-search");
+    const topic=document.getElementById("topic-filter");
+    const list=document.getElementById("article-list");
+    const empty=document.getElementById("empty-state");
+
+    const normalize=value => (value||"").toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+    function rebuildTopics(){
+      const selected=allPosts.filter(p=>!activeLanguage||p.lang===activeLanguage);
+      const labels=[...new Set(selected.flatMap(p=>p.topics||[]))].sort((a,b)=>a.localeCompare(b));
+      const current=topic.value;
+      while(topic.options.length>1) topic.remove(1);
+      labels.forEach(label=>{const opt=document.createElement("option");opt.value=label;opt.textContent=label;topic.appendChild(opt);});
+      if(labels.includes(current)) topic.value=current;
+    }
+    function render(){
+      const q=normalize(search.value);
+      const t=topic.value;
+      const selected=allPosts.filter(post=>{
+        const languageOK=!activeLanguage||post.lang===activeLanguage;
+        const topicOK=!t||(post.topics||[]).includes(t);
+        const haystack=normalize([post.title,post.description,...(post.topics||[])].join(" "));
+        return languageOK&&topicOK&&(!q||haystack.includes(q));
+      });
+      list.replaceChildren();
+      empty.classList.toggle("hidden",selected.length>0);
+      selected.forEach(post=>{
+        const a=document.createElement("a"); a.href=post.url; a.className="article-list-card";
+        if(post.cover){
+          const img=document.createElement("img"); img.src=post.cover; img.alt=post.cover_alt||""; img.width=120; img.height=68; img.loading="lazy"; img.className="article-list-cover"; a.appendChild(img);
+        }
+        const body=document.createElement("div"); body.className="article-list-body";
+        const meta=document.createElement("p"); meta.className="text-xs uppercase tracking-wider text-blue-400"; meta.textContent=(post.lang==="es"?"ES":"EN")+" · "+post.date+" · "+post.reading_time; body.appendChild(meta);
+        const h=document.createElement("h2"); h.className="text-xl font-bold text-white mt-2"; h.textContent=post.title; body.appendChild(h);
+        const d=document.createElement("p"); d.className="text-gray-400 mt-2"; d.textContent=post.description; body.appendChild(d);
+        const tags=document.createElement("div"); tags.className="topic-pills mt-4";
+        (post.topics||[]).forEach(label=>{const s=document.createElement("span");s.className="topic-pill";s.textContent=label;tags.appendChild(s);});
+        body.appendChild(tags); a.appendChild(body); list.appendChild(a);
+      });
+    }
+    document.querySelectorAll("[data-lang]").forEach(btn=>btn.addEventListener("click",()=>{
+      activeLanguage=btn.dataset.lang;
+      document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b===btn));
+      rebuildTopics(); render();
+    }));
+    search.addEventListener("input",render); topic.addEventListener("change",render);
+    fetch("/articles/posts.json").then(r=>r.json()).then(posts=>{allPosts=posts;rebuildTopics();render();});
+  </script>
+</body>
 </html>

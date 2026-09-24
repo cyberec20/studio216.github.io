@@ -109,8 +109,8 @@
       }
     },
     "do-we-really-need-another-agent": {
-      "title_hint_es": "¿Realmente necesitamos otro agente… o el sistema debería saberlo ya?",
-      "title_hint_en": "Do We Really Need Another Agent… or Should the System Know This Already?",
+      "title_hint_es": "¿Realmente necesitamos otro agente… o el sistema ya debería saberlo?",
+      "title_hint_en": "Do We Really Need Another Agent—or Should the System Know This Already?",
       "assets": {
         "es": {
           "source_filename": "Antes y Despu#U00e9s_ IA con Prop#U00f3sito.png",
@@ -138,6 +138,14 @@
             68
           ]
         }
+      },
+      "publication": {
+        "status": "published",
+        "published_at": "2026-09-24",
+        "listing_cover_rule": "Use the registered tiny WebP reference at native/small display size only; do not upscale it as an article hero.",
+        "production_hero_status": "deferred until a full-resolution web asset can be committed without degrading repository hygiene.",
+        "es_listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-es.webp",
+        "en_listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-en.webp"
       }
     },
     "after-8901-commands": {
