@@ -39,19 +39,23 @@
     "future_editorial": [
       {
         "label": "Articles",
-        "href": "/articles/"
+        "href": "/articles/",
+        "enabled": false
       },
       {
         "label": "Projects",
-        "href": "/#projects"
+        "href": "/#projects",
+        "enabled": false
       },
       {
         "label": "Courses",
-        "href": "/#courses"
+        "href": "/#courses",
+        "enabled": false
       },
       {
         "label": "Books",
-        "href": "/#books"
+        "href": "/#books",
+        "enabled": false
       }
     ]
   }
