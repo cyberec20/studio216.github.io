@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: normalize-builder-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   normalize:
     if: ${{ !contains(github.event.head_commit.message, '[normalize-builder]') }}
