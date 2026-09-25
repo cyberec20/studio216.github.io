@@ -121,14 +121,18 @@ def expected_sitemap_entries() -> list[dict[str, str]]:
     config = json.loads(SITEMAP_CONFIG.read_text(encoding="utf-8"))
     posts = json.loads(POSTS_JSON.read_text(encoding="utf-8"))
     entries = [dict(item) for item in config.get("static", [])]
-    if posts:
-        latest = max(str(post["date"]) for post in posts)
+    generated_posts = [
+        post for post in posts
+        if str(post.get("url") or "").startswith("/articles/")
+    ]
+    if generated_posts:
+        latest = max(str(post["date"]) for post in generated_posts)
         for hub in config.get("article_hubs", []):
             item = dict(hub)
             item["lastmod"] = latest
             entries.append(item)
         priority = str(config.get("article_priority") or "0.8")
-        for post in sorted(posts, key=lambda item: str(item.get("url") or "")):
+        for post in sorted(generated_posts, key=lambda item: str(item.get("url") or "")):
             entries.append({
                 "loc": "https://studios216.com" + str(post["url"]),
                 "lastmod": str(post["date"]),
