@@ -2,6 +2,7 @@
   "root_files": [
     "index.html",
     "about.html",
+    "privacy.html",
     "robots.txt",
     "sitemap.xml",
     "CNAME"
