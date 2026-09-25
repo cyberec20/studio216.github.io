@@ -222,18 +222,57 @@
           ]
         }
       }
+    },
+    "working-with-ai": {
+      "title_hint_es": "Interactuando con la IA: del “prompt perfecto” a una mejor forma de trabajar",
+      "title_hint_en": "Working with AI: From Better Prompts to Better Collaboration",
+      "assets": {
+        "es": {
+          "source_filename": "Anatomia_prompt_util.png",
+          "source_sha256": "fdefcd26526dc03530b9fab028e7badc0e69c6009fc2218a77e8c5069a6f72d5",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/working-with-ai/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "be1b7631fe589ef0dcf0a5107a338a73d81f4a04af781c35cb169109d722d2b7"
+        },
+        "en": {
+          "source_filename": "Useful_prompt_anatomy.png",
+          "source_sha256": "91a2cd0d7dcf870036db8d9829d527292b5f0527f4771c83fa075449d4216ed8",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/working-with-ai/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "0834a8a2ba839a6cf33b7c704cdeb6eeea90af6949eb50f446c924a2ebf6ae44"
+        }
+      },
+      "publication": {
+        "status": "published",
+        "published_at": "2026-09-25",
+        "production_format": "webp",
+        "source_masters_recovered": true,
+        "source_dimensions_px": [
+          1672,
+          941
+        ],
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "storage": "binary WebP assets committed directly in the repository",
+        "original_linkedin_article": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7141807641848152064/"
+      }
     }
   },
-  "pending_articles": {
-    "prompting-article-refresh": {
-      "status": "intentionally no imported image",
-      "reason": "The old prompting article will be rewritten first, then receive new Spanish and English artwork.",
-      "planned_assets": [
-        "hero-es",
-        "hero-en",
-        "og-es",
-        "og-en"
-      ]
-    }
-  }
+  "pending_articles": {}
 }
