@@ -39,6 +39,7 @@ forbidden_roots = {
 required_files = {
     "index.html",
     "about.html",
+    "privacy.html",
     "about/founder/index.html",
     "articles/index.html",
     "articles/es/index.html",

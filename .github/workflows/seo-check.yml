@@ -45,6 +45,9 @@ jobs:
       - name: Validate explicit publication boundary
         run: python scripts/validate_public_site.py --root _site --require-nojekyll
 
+      - name: Validate global analytics and consent
+        run: python scripts/validate_analytics.py --root _site
+
       - name: Validate explicit artifact SEO
         run: python scripts/validate_seo.py --root _site
 
