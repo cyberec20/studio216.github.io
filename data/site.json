@@ -58,5 +58,14 @@
         "enabled": false
       }
     ]
+  },
+  "discoverability": {
+    "goals": {
+      "google_search": true,
+      "bing_search": true,
+      "chatgpt_search": true
+    },
+    "article_x_default_language": "en",
+    "gptbot_policy": "inherit"
   }
 }
