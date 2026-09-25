@@ -369,15 +369,20 @@ def update_sitemap(posts: list[dict]) -> None:
     for entry in config.get("static", []):
         entries.append(dict(entry))
 
-    if posts:
-        latest = max(str(post["date"]) for post in posts)
+    generated_posts = [
+        post for post in posts
+        if str(post.get("url") or "").startswith("/articles/")
+    ]
+
+    if generated_posts:
+        latest = max(str(post["date"]) for post in generated_posts)
         for hub in config.get("article_hubs", []):
             item = dict(hub)
             item["lastmod"] = latest
             entries.append(item)
 
         article_priority = str(config.get("article_priority") or "0.8")
-        for post in sorted(posts, key=lambda item: str(item.get("url") or "")):
+        for post in sorted(generated_posts, key=lambda item: str(item.get("url") or "")):
             entries.append({
                 "loc": "https://studios216.com" + str(post["url"]),
                 "lastmod": str(post["date"]),
