@@ -63,6 +63,22 @@ for asset in (asset_js, asset_css, root / "privacy.html"):
     if not asset.is_file():
         errors.append(f"required analytics asset missing: {asset.relative_to(root)}")
 
+if asset_js.is_file():
+    runtime = asset_js.read_text(encoding="utf-8", errors="ignore")
+    required_runtime_markers = (
+        '"consent", "default"',
+        '"analytics_storage": "denied"',
+        'readChoice() !== "accepted"',
+        'googletagmanager.com/gtag/js',
+        'connect.facebook.net/en_US/fbevents.js',
+        'clarity.ms/tag/',
+        'data-analytics-event',
+        'data-analytics-impression',
+    )
+    for marker in required_runtime_markers:
+        if marker not in runtime:
+            errors.append(f"analytics runtime missing consent/event marker: {marker}")
+
 html_files = sorted(root.rglob("*.html")) if root.exists() else []
 if not html_files:
     errors.append("no public HTML files found")
@@ -86,6 +102,13 @@ for path in html_files:
     if "/assets/css/site-analytics.css" not in text:
         errors.append(f"{rel}: analytics consent stylesheet missing")
         continue
+    if "/assets/js/site-analytics.js" not in text:
+        errors.append(f"{rel}: centralized analytics runtime missing")
+        continue
+    for provider_name, field_name in fields.items():
+        value = str((providers.get(provider_name) or {}).get(field_name) or "")
+        if value not in text:
+            errors.append(f"{rel}: centralized config missing {provider_name} identifier")
     for signature in legacy_signatures:
         if signature in text:
             errors.append(f"{rel}: legacy/direct provider loader leaked into public HTML: {signature}")
