@@ -156,7 +156,8 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         alternates.append(f'  <link rel="alternate" hreflang="{alt_lang}" href="{html.escape(alt_url)}">')
         label = "Español" if alt_lang == "es" else "English"
         switch.append(f'<span class="active">{label}</span>' if alt_lang == lang else f'<a href="{html.escape(alt_url)}">{label}</a>')
-    default_lang = "en" if "en" in versions else next(iter(versions))
+    configured_default = str(site.get("discoverability", {}).get("article_x_default_language") or "en")
+    default_lang = configured_default if configured_default in versions else next(iter(versions))
     default_url = public_url(default_lang, versions[default_lang]["slug"])
     alternates.append(f'  <link rel="alternate" hreflang="x-default" href="{html.escape(default_url)}">')
 
