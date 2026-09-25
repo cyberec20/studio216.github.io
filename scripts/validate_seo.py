@@ -92,6 +92,15 @@ for path in HTML_FILES:
         if "__invalid__" in block:
             fail(relative, f"invalid JSON-LD: {block['__invalid__']}")
 
+    for href in re.findall(r'<a\\b[^>]*href=["\\']([^"\\']+)["\\']', text, flags=re.I):
+        parsed_href = urlparse(href)
+        if parsed_href.scheme in {"mailto", "tel", "javascript", "data"}:
+            continue
+        if parsed_href.netloc and parsed_href.netloc.lower() not in {"studios216.com", "www.studios216.com"}:
+            continue
+        if parsed_href.path.lower().endswith("index.html"):
+            fail(relative, f"internal link should use the clean canonical URL instead of index.html: {href}")
+
     if has_noindex(text):
         continue
 
