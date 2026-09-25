@@ -3,7 +3,7 @@
     "id": "working-with-ai",
     "translation_key": "working-with-ai",
     "lang": "en",
-    "title": "Working with AI: From Better Prompts to Better Collaboration",
+    "title": "How to Work Better with AI: From Better Prompts to Better Collaboration",
     "description": "A practical introduction to working better with AI through context, iteration, examples, verification and human judgment—not magic prompt formulas.",
     "url": "/articles/en/working-with-ai/",
     "date": "2026-09-25",
@@ -21,13 +21,13 @@
     ],
     "cover": "/assets/articles/working-with-ai/hero-en.webp",
     "cover_alt": "Infographic titled Anatomy of a Useful Prompt, connecting objective, context, audience, expected format, and constraints to a sample prompt.",
-    "reading_time": "8 min read"
+    "reading_time": "9 min read"
   },
   {
     "id": "working-with-ai",
     "translation_key": "working-with-ai",
     "lang": "es",
-    "title": "Interactuando con la IA: del “prompt perfecto” a una mejor forma de trabajar",
+    "title": "Cómo trabajar mejor con la IA: del «prompt perfecto» a una mejor colaboración",
     "description": "Cómo pasar de perseguir el prompt perfecto a trabajar mejor con la IA: contexto, iteración, ejemplos, verificación y criterio humano.",
     "url": "/articles/es/interactuando-con-la-ia/",
     "date": "2026-09-25",
@@ -45,7 +45,7 @@
     ],
     "cover": "/assets/articles/working-with-ai/hero-es.webp",
     "cover_alt": "Infografía titulada Anatomía de un prompt útil, con objetivo, contexto, audiencia, formato esperado y restricciones conectados a un ejemplo de prompt.",
-    "reading_time": "8 min de lectura"
+    "reading_time": "9 min de lectura"
   },
   {
     "id": "do-we-really-need-another-agent",
