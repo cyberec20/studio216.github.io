@@ -15,6 +15,11 @@ parser.add_argument(
     default=str(REPO_ROOT / "data" / "public_site.json"),
     help="Public-site whitelist JSON.",
 )
+parser.add_argument(
+    "--require-nojekyll",
+    action="store_true",
+    help="Require .nojekyll for an explicitly built, non-Jekyll Pages artifact.",
+)
 args = parser.parse_args()
 
 root = Path(args.root).resolve()
@@ -41,8 +46,9 @@ required_files = {
     "robots.txt",
     "sitemap.xml",
     "CNAME",
-    ".nojekyll",
 }
+if args.require_nojekyll:
+    required_files.add(".nojekyll")
 
 if not config_path.exists():
     errors.append(f"public-site config not found: {config_path}")
