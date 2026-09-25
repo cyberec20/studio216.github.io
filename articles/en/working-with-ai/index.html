@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working with AI: From Better Prompts to Better Collaboration | Studios 216</title>
+  <meta name="description" content="A practical introduction to working better with AI through context, iteration, examples, verification and human judgment—not magic prompt formulas.">
+  <meta name="author" content="Franklin Rodriguez">
+  <link rel="canonical" href="https://studios216.com/articles/en/working-with-ai/">
+  <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/working-with-ai/">
+  <link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/interactuando-con-la-ia/">
+  <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Working with AI: From Better Prompts to Better Collaboration">
+  <meta property="og:description" content="A practical introduction to working better with AI through context, iteration, examples, verification and human judgment—not magic prompt formulas.">
+  <meta property="og:url" content="https://studios216.com/articles/en/working-with-ai/">
+  <meta property="og:image" content="https://studios216.com/assets/articles/working-with-ai/hero-en.webp">
+  <meta property="article:published_time" content="2026-09-25">
+  <meta property="article:modified_time" content="2026-09-25">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Working with AI: From Better Prompts to Better Collaboration">
+  <meta name="twitter:description" content="A practical introduction to working better with AI through context, iteration, examples, verification and human judgment—not magic prompt formulas.">
+  <meta name="twitter:image" content="https://studios216.com/assets/articles/working-with-ai/hero-en.webp">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Working with AI: From Better Prompts to Better Collaboration","description":"A practical introduction to working better with AI through context, iteration, examples, verification and human judgment—not magic prompt formulas.","image":"https://studios216.com/assets/articles/working-with-ai/hero-en.webp","datePublished":"2026-09-25","dateModified":"2026-09-25","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://studios216.com/articles/en/working-with-ai/"},"author":{"@type":"Person","@id":"https://studios216.com/about/founder/#person","name":"Franklin Rodriguez","url":"https://studios216.com/about/founder/"},"publisher":{"@type":"Organization","@id":"https://studios216.com/#organization","name":"Studios 216","url":"https://studios216.com/"}}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/editorial.css">
+</head>
+<body class="min-h-screen">
+  <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/70">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="/" aria-label="Studios 216 Home"><img src="/assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-12 w-auto rounded-md"></a>
+      <nav class="flex items-center gap-5 text-sm">
+        <a href="/about.html" class="text-gray-400 hover:text-white">About</a>
+        <a href="/articles/" class="text-white">Articles</a>
+      </nav>
+    </div>
+  </header>
+  <main class="editorial-shell py-12">
+    <div class="editorial-grid">
+      <aside class="author-rail">
+        <div class="author-rail-card">
+          <p class="text-xs uppercase tracking-[.18em] text-gray-500 mb-3">Written by</p>
+          <h2 class="text-lg font-bold text-white">Franklin Rodriguez</h2>
+          <p class="text-sm text-gray-400 mt-1">Founder &amp; CEO · Engineer · Author · Instructor</p>
+          <div class="mt-5 space-y-2 text-sm">
+            <a class="block" href="/about/founder/">About Franklin</a>
+            <a class="block" href="/articles/">Articles</a>
+          </div>
+          
+          
+        </div>
+      </aside>
+      <article>
+        <header class="mb-8">
+          <div class="language-switch"><a href="https://studios216.com/articles/es/interactuando-con-la-ia/">Español</a><span class="active">English</span></div>
+          <p class="mt-5 text-xs uppercase tracking-[.18em] text-blue-400">Generative AI · Prompting · Human-AI collaboration · AI literacy</p>
+          <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mt-3">Working with AI: From Better Prompts to Better Collaboration</h1>
+          <p class="text-lg text-gray-400 mt-5">A practical introduction to working better with AI through context, iteration, examples, verification and human judgment—not magic prompt formulas.</p>
+          <p class="text-sm text-gray-500 mt-5">2026-09-25 · 8 min read</p>
+        </header>
+        <figure class="article-hero"><img src="/assets/articles/working-with-ai/hero-en.webp" alt="Infographic titled Anatomy of a Useful Prompt, connecting objective, context, audience, expected format, and constraints to a sample prompt." width="760" height="428" loading="eager" decoding="async"></figure>
+        <div class="article-body"><p>In December 2023, I published an article in Spanish called <a class="editorial-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7141807641848152064/" rel="noopener" title="Original Spanish-language article on LinkedIn"><strong>“Interactuando con la IA: ¿Cómo Mejoré Mis Prompts?”</strong></a>—roughly, “Working with AI: How I Improved My Prompts.” At the time, I was writing about GPT-3.5, BARD, and Bing. Prompting felt like a new practical skill: learning how to phrase instructions so an AI system would give you better answers.</p>
+<p>The core idea was not wrong. If you explain your request better, the model usually has a better chance of helping you well. What I would change today is the center of gravity. After several years of working with far more capable models, files, search, code, tools, and agents, I would not begin by teaching someone how to craft the “perfect prompt.” I would start somewhere more durable. The real skill is <strong>working with AI as a process of communication, review, and refinement</strong>.</p>
+<p>Most of the time, the missing ingredient is not a special phrase. It is information that you know about the task and the model does not—because you have not given it that information.</p>
+<h2>A prompt is not an incantation</h2>
+<p>For a while, formulas such as “Act as an expert in…” or “You are a senior specialist in…” became almost synonymous with prompt engineering. A role can be useful; current guidance from Anthropic and Google still treats roles or system instructions as valid ways to steer perspective, tone, and behavior. But a role cannot replace context, and it does not turn an underspecified request into a well-defined task.</p>
+<p>Imagine asking a capable colleague, “Make me a presentation.” They would probably ask questions. Who is it for? What should the audience understand? How much time do you have? Which information is available? What kind of presentation do you expect? Now compare that with: “I need to present this project to a non-technical client. I have ten minutes. I want them to understand the problem, our proposed approach, and the next steps. Give me six slides with very little text.”</p>
+<p>The second request is not better because it contains special wording. It simply leaves fewer important decisions to guesswork. That is also where current guidance from OpenAI, Anthropic, and Google tends to converge: <strong>be clear, provide relevant context, describe the output you want, and use examples when examples can communicate the target better than more instructions</strong>.</p>
+<h2>Tell the AI what you want—and what “good” means</h2>
+<p>A useful request often answers a few basic questions: What am I trying to achieve? What does the model need to know? Which constraints matter? What should the result look like? What would make me reject the answer even if it sounds polished?</p>
+<p>This does not mean every prompt should become a template. If you ask for 18 percent of 450, five paragraphs of context would only make the interaction worse. But once a task contains judgment, audience, tradeoffs, or constraints, context stops being decoration and becomes part of the problem.</p>
+<p>“Write an email asking for a job interview” may produce something acceptable. It becomes a different task when you explain that you have already spoken with the recruiter and that the role is in engineering. You also want a professional but human tone, you do not want to exaggerate experience you do not have, and the email should fit on one screen. You are no longer searching for a sophisticated prompt; you are making your criteria explicit.</p>
+<p>The distinction matters because <strong>the model can infer your intention, but inference is not the same as knowing it</strong>.</p>
+<h2>When you do not know what context to provide, ask</h2>
+<p>One idea from my 2023 article is still worth keeping, although I would use it differently today. I used to recommend asking the AI, “What should the prompt be for…?” That was useful because it let the model help structure a request I did not yet know how to structure.</p>
+<p>Today I would make the interaction more direct: “I want this result. Before doing the task, tell me what important information is missing and ask me the questions you need.” The conversation now completes the brief before the model attempts the final deliverable.</p>
+<p>Suppose you want to tailor your résumé to a job posting but you are not sure what matters. You might write:</p>
+<blockquote><p>I want to adapt my résumé to this role without inventing experience. I will give you the job description and my current résumé. Before rewriting anything, identify what information is missing, which requirements appear important, and which points you need me to verify.</p></blockquote>
+<p>Now the first response is not the final deliverable. It is a step that improves the problem before the model attempts to solve it. For a beginner, that is a powerful shift: <strong>you do not have to get everything right in the first message</strong>.</p>
+<h2>A good conversation usually beats a heroic first prompt</h2>
+<p>OpenAI describes iterative refinement as a general prompting practice; Google similarly presents prompt design as a process of defining objectives, testing outputs, and refining what you provide. This is close to something I had already discovered in 2023 when I recommended using multiple prompts for complex work.</p>
+<p>What changed is how I think about that idea. I no longer see it merely as “split one large prompt into several smaller prompts.” I see a loop:</p>
+<p><strong>ask → inspect → find what is missing → correct → ask again</strong>.</p>
+<p>If the first answer drifts, you do not need to restart every time. Tell the model what was useful, what was wrong, which assumption failed, or which criterion was missing. Your correction becomes additional context.</p>
+<p>For complex tasks, it is often useful to separate planning from execution. Before asking an AI system to produce twenty pages, modify a large codebase, or design an entire solution, you can ask it to restate the objective, list assumptions, identify missing information, and propose a plan. The value is not in a ritual phrase such as “confirm that you understand.” The value is that assumptions become visible while they are still cheap to correct.</p>
+<h2>Sometimes an example is worth more than another paragraph of instructions</h2>
+<p>“Talking to AI” no longer means typing text into an empty box. Depending on the product, you may be able to provide documents, screenshots, images, audio, tables, code, or links. Current OpenAI, Anthropic, and Google guidance also emphasizes examples as an effective way to steer format, tone, and structure.</p>
+<p>If you want a report to follow a certain pattern, showing a strong example may work better than spending fifteen lines describing every section. If you want help analyzing a spreadsheet, sharing the spreadsheet is better than reconstructing it from memory. If something looks wrong in an interface, a screenshot can remove several rounds of explanation.</p>
+<p>A useful rule is simple: <strong>if you already have the context, provide it; if you already have a good example, show it</strong>. Do not make the model reconstruct information you could have supplied directly.</p>
+<h2>A confident answer can still be wrong</h2>
+<p>This is one part of the original article that I would emphasize much more today. AI can be fast, useful, and remarkably capable. None of that makes it infallible.</p>
+<p>OpenAI currently warns that ChatGPT can produce incorrect or misleading information and can sound confident while being wrong. NIST uses the term <em>confabulation</em> for false or erroneous content that a generative system may present confidently. The models have improved enormously since 2023, but the need for verification did not disappear with those improvements.</p>
+<p>Your verification effort should grow with the consequences of the answer. For brainstorming, reading and choosing may be enough. For a date, citation, regulation, technical claim, calculation, financial decision, or production code change, you may need the original source, the underlying data, an appropriate tool, or an objective test.</p>
+<p>You can ask the AI to search for sources, separate facts from assumptions, or flag uncertainty. Those are useful behaviors. But <strong>important verification should not collapse into asking the same system whether its previous answer was correct</strong>.</p>
+<h2>A simple way to start today</h2>
+<p>If you are new to this and do not know what to type, you do not need a library of one hundred prompts. Start with something like this:</p>
+<blockquote><p>I want <strong>[result]</strong>. The important context is <strong>[context]</strong>. Please respect <strong>[constraints or criteria]</strong>. Give me the result as <strong>[format]</strong>. If important information is missing, ask me before making assumptions.</p></blockquote>
+<p>For example:</p>
+<blockquote><p>I want to understand this technical report without losing its important ideas. I am an engineer, but not a specialist in this topic. Explain it in clear language, keep technical terms when they are necessary, and organize the answer into: main idea, concepts I need to understand, risks, and questions I should investigate next. If a conclusion is not supported by the document, say so instead of filling the gap yourself.</p></blockquote>
+<p>That simple request already contains much of what matters: objective, context, criteria, output, and a boundary for unsupported assumptions. Then comes the part no prompt template can do for you: read the answer and decide whether it is actually useful.</p>
+<h2>From better prompts to better collaboration</h2>
+<p>If I had to summarize what changed since that 2023 article, I would say that <strong>improving the prompt was only the first rung of the ladder</strong>. The next step was learning to provide context; then to work in stages, review assumptions, use examples, bring in tools, and verify results. At higher levels, the same discipline eventually becomes specifications, tests, workflows, and agents.</p>
+<p>You do not need to begin there. If you are just starting with AI, begin with something simpler: make your goal visible and share what the other side needs to know. Define what a useful result looks like; then treat the first answer as the beginning of the conversation rather than a verdict.</p>
+<p>Do not hunt for a special sentence that forces the model to understand you. <strong>Make your intention visible, improve the context, and keep your judgment in the loop.</strong> That skill will remain useful even as the models, interfaces, and vocabulary around AI continue to change.</p>
+<hr>
+<h2>References</h2>
+<ul><li>OpenAI, <strong>Prompt engineering best practices for ChatGPT</strong>: <a class="editorial-link" href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt" rel="noopener">https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt</a></li><li>OpenAI, <strong>Best practices for prompt engineering with the OpenAI API</strong>: <a class="editorial-link" href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" rel="noopener">https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api</a></li><li>Anthropic, <strong>Prompting best practices</strong>: <a class="editorial-link" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-templates-and-variables" rel="noopener">https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-templates-and-variables</a></li><li>Google Cloud, <strong>Overview of prompting strategies</strong>: <a class="editorial-link" href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies" rel="noopener">https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies</a></li><li>OpenAI, <strong>Does ChatGPT tell the truth?</strong>: <a class="editorial-link" href="https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth" rel="noopener">https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth</a></li><li>NIST, <strong>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)</strong>: <a class="editorial-link" href="https://doi.org/10.6028/NIST.AI.600-1" rel="noopener">https://doi.org/10.6028/NIST.AI.600-1</a></li></ul>
+<p><em>This article updates <a class="editorial-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7141807641848152064/" rel="noopener" title="Original Spanish-language article on LinkedIn">“Interactuando con la IA: ¿Cómo Mejoré Mis Prompts?”</a>, originally published on December 16, 2023.</em></p></div>
+      </article>
+    </div>
+  </main>
+  <footer class="border-t border-gray-900 py-8 text-center text-sm text-gray-600 mt-12">&copy; 2025-2026 Studios 216. All rights reserved.</footer>
+</body>
+</html>

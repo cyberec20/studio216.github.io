@@ -1,0 +1,96 @@
+{
+  "id": "working-with-ai",
+  "translation_key": "working-with-ai",
+  "status": "published",
+  "provenance": {
+    "relationship": "substantial_update",
+    "original_title": "Interactuando con la IA: ¿Cómo Mejoré Mis Prompts?",
+    "original_url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7141807641848152064/",
+    "original_language": "es",
+    "original_published": "2023-12-16"
+  },
+  "versions": {
+    "es": {
+      "slug": "interactuando-con-la-ia",
+      "title": "Interactuando con la IA: del “prompt perfecto” a una mejor forma de trabajar",
+      "description": "Cómo pasar de perseguir el prompt perfecto a trabajar mejor con la IA: contexto, iteración, ejemplos, verificación y criterio humano.",
+      "source": "content/articles/es/interactuando-con-la-ia.md",
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "hero": "/assets/articles/working-with-ai/hero-es.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Infografía titulada Anatomía de un prompt útil, con objetivo, contexto, audiencia, formato esperado y restricciones conectados a un ejemplo de prompt.",
+      "listing_cover": "/assets/articles/working-with-ai/hero-es.webp",
+      "og_image": "https://studios216.com/assets/articles/working-with-ai/hero-es.webp",
+      "topics": [
+        "IA generativa",
+        "Prompting",
+        "Colaboración humano-IA",
+        "Alfabetización en IA"
+      ],
+      "topic_ids": [
+        "generative-ai",
+        "prompting",
+        "human-ai-collaboration",
+        "ai-literacy"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/working-with-ai/es-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/working-with-ai/es-full.md",
+          "validated_at": "2026-09-25",
+          "raw_overall": 67.7,
+          "editorial_panel": 89.6
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    },
+    "en": {
+      "slug": "working-with-ai",
+      "title": "Working with AI: From Better Prompts to Better Collaboration",
+      "description": "A practical introduction to working better with AI through context, iteration, examples, verification and human judgment—not magic prompt formulas.",
+      "source": "content/articles/en/working-with-ai.md",
+      "published": "2026-09-25",
+      "updated": "2026-09-25",
+      "hero": "/assets/articles/working-with-ai/hero-en.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Infographic titled Anatomy of a Useful Prompt, connecting objective, context, audience, expected format, and constraints to a sample prompt.",
+      "listing_cover": "/assets/articles/working-with-ai/hero-en.webp",
+      "og_image": "https://studios216.com/assets/articles/working-with-ai/hero-en.webp",
+      "topics": [
+        "Generative AI",
+        "Prompting",
+        "Human-AI collaboration",
+        "AI literacy"
+      ],
+      "topic_ids": [
+        "generative-ai",
+        "prompting",
+        "human-ai-collaboration",
+        "ai-literacy"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/working-with-ai/en-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/working-with-ai/en-full.md",
+          "validated_at": "2026-09-25",
+          "raw_overall": 75.5,
+          "editorial_panel": 89.2
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    }
+  }
+}
