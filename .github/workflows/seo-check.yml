@@ -58,3 +58,23 @@ jobs:
 
       - name: Validate AI discoverability
         run: python scripts/validate_ai_discoverability.py --root _site
+
+      - name: Build explicit public artifact
+        run: python scripts/build_public_site.py --destination _public
+
+      - name: Validate explicit publication boundary
+        run: python scripts/validate_public_site.py --root _public
+
+      - name: Validate explicit artifact SEO
+        run: python scripts/validate_seo.py --root _public
+
+      - name: Validate explicit artifact AI discoverability
+        run: python scripts/validate_ai_discoverability.py --root _public
+
+      - name: Upload explicit public artifact for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: explicit-public-site
+          path: _public/
+          include-hidden-files: true
+          retention-days: 1
