@@ -9,6 +9,7 @@ import sys
 import xml.etree.ElementTree as ET
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 META_DIR = ROOT / "content" / "articles" / "meta"
@@ -18,6 +19,7 @@ POSTS_JSON = ROOT / "articles" / "posts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SITE_CONFIG = ROOT / "data" / "site.json"
 LEGACY_POSTS_JSON = ROOT / "data" / "legacy_articles.json"
+SITEMAP_CONFIG = ROOT / "data" / "sitemap.json"
 
 VALID_LANGS = {"es", "en"}
 VALID_STATUS = {"draft", "ready", "published"}
@@ -93,6 +95,37 @@ def load_metadata() -> list[tuple[Path, dict]]:
         loaded.append((path, data))
     return loaded
 
+def _merge_html_attr(attrs: str, name: str, value: str) -> str:
+    match = re.search(rf'\\b{name}=["\\']([^"\\']*)["\\']', attrs, flags=re.I)
+    if match:
+        existing = match.group(1).split()
+        values = list(existing)
+        for item in value.split():
+            if item not in values:
+                values.append(item)
+        replacement = f'{name}="' + " ".join(values) + '"'
+        return attrs[:match.start()] + replacement + attrs[match.end():]
+    return attrs.rstrip() + f' {name}="{value}"'
+
+
+def decorate_external_links(rendered: str) -> str:
+    pattern = re.compile(
+        r'<a\\b(?P<attrs>[^>]*\\bhref=["\\'](?P<href>https?://[^"\\']+)["\\'][^>]*)>',
+        flags=re.I,
+    )
+
+    def replace(match: re.Match[str]) -> str:
+        href = html.unescape(match.group("href"))
+        host = (urlparse(href).hostname or "").lower()
+        if host in {"studios216.com", "www.studios216.com"}:
+            return match.group(0)
+        attrs = _merge_html_attr(match.group("attrs"), "class", "editorial-link")
+        attrs = _merge_html_attr(attrs, "rel", "noopener")
+        return "<a" + attrs + ">"
+
+    return pattern.sub(replace, rendered)
+
+
 def markdown_to_html(source: Path) -> str:
     try:
         import markdown
@@ -101,7 +134,8 @@ def markdown_to_html(source: Path) -> str:
     text = source.read_text(encoding="utf-8")
     text = re.sub(r"\A#\s+[^\n]+\n+", "", text, count=1)
     text = re.sub(r"(?<![<(])(https://[^\s)]+)", r"<\1>", text)
-    return markdown.markdown(text, extensions=["extra", "sane_lists", "smarty"])
+    rendered = markdown.markdown(text, extensions=["extra", "sane_lists", "smarty"])
+    return decorate_external_links(rendered)
 
 def reading_time(source: Path, lang: str) -> str:
     text = source.read_text(encoding="utf-8")
@@ -151,7 +185,8 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
     source = ROOT / version["source"]
     versions = meta["versions"]
     alternates, switch = [], []
-    for alt_lang, alt_version in versions.items():
+    for alt_lang in sorted(versions):
+        alt_version = versions[alt_lang]
         alt_url = public_url(alt_lang, alt_version["slug"])
         alternates.append(f'  <link rel="alternate" hreflang="{alt_lang}" href="{html.escape(alt_url)}">')
         label = "Español" if alt_lang == "es" else "English"
@@ -197,7 +232,7 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         "OG_IMAGE": html.escape(version["og_image"], quote=True),
         "PUBLISHED": version["published"],
         "MODIFIED": version["updated"],
-        "JSON_LD": json.dumps(json_ld, ensure_ascii=False),
+        "JSON_LD": json.dumps(json_ld, ensure_ascii=False, separators=(",", ":")),
         "NAV_ABOUT": labels["about"],
         "NAV_ARTICLES": labels["articles"],
         "WRITTEN_BY": labels["written"],
@@ -304,31 +339,62 @@ def render_indexes(posts: list[dict]) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(rendered, encoding="utf-8")
 
+def _append_sitemap_entry(root: ET.Element, ns: str, entry: dict) -> None:
+    loc = str(entry.get("loc") or "")
+    if not loc.startswith("https://studios216.com/"):
+        raise BuildError(f"Invalid sitemap URL: {loc}")
+    node = ET.SubElement(root, ns + "url")
+    ET.SubElement(node, ns + "loc").text = loc
+    for key in ("lastmod", "changefreq", "priority"):
+        value = entry.get(key)
+        if value is not None and value != "":
+            if key == "lastmod":
+                try:
+                    date.fromisoformat(str(value))
+                except ValueError as exc:
+                    raise BuildError(f"Invalid sitemap lastmod for {loc}: {value}") from exc
+            ET.SubElement(node, ns + key).text = str(value)
+
+
 def update_sitemap(posts: list[dict]) -> None:
-    ET.register_namespace("", "http://www.sitemaps.org/schemas/sitemap/0.9")
-    tree = ET.parse(SITEMAP)
-    root = tree.getroot()
-    ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
-    for node in list(root):
-        loc = node.find(ns+"loc")
-        if loc is not None and loc.text and loc.text.startswith("https://studios216.com/articles/"):
-            root.remove(node)
+    config = load_json(SITEMAP_CONFIG)
+    namespace = "http://www.sitemaps.org/schemas/sitemap/0.9"
+    ns = "{" + namespace + "}"
+    ET.register_namespace("", namespace)
+    root = ET.Element(ns + "urlset")
+
+    seen: set[str] = set()
+    entries: list[dict] = []
+
+    for entry in config.get("static", []):
+        entries.append(dict(entry))
+
     if posts:
-        latest=max(p["date"] for p in posts)
-        for hub in ("https://studios216.com/articles/","https://studios216.com/articles/es/","https://studios216.com/articles/en/"):
-            url=ET.SubElement(root, ns+"url")
-            ET.SubElement(url, ns+"loc").text=hub
-            ET.SubElement(url, ns+"lastmod").text=latest
-    existing_locs={node.findtext(ns+"loc") for node in root.findall(ns+"url")}
-    for post in posts:
-        absolute="https://studios216.com"+post["url"]
-        if absolute in existing_locs:
-            continue
-        url=ET.SubElement(root, ns+"url")
-        ET.SubElement(url, ns+"loc").text=absolute
-        ET.SubElement(url, ns+"lastmod").text=post["date"]
-        existing_locs.add(absolute)
-    tree.write(SITEMAP, encoding="utf-8", xml_declaration=True)
+        latest = max(str(post["date"]) for post in posts)
+        for hub in config.get("article_hubs", []):
+            item = dict(hub)
+            item["lastmod"] = latest
+            entries.append(item)
+
+        article_priority = str(config.get("article_priority") or "0.8")
+        for post in sorted(posts, key=lambda item: str(item.get("url") or "")):
+            entries.append({
+                "loc": "https://studios216.com" + str(post["url"]),
+                "lastmod": str(post["date"]),
+                "priority": article_priority,
+            })
+
+    for entry in entries:
+        loc = str(entry.get("loc") or "")
+        if loc in seen:
+            raise BuildError(f"Duplicate sitemap URL: {loc}")
+        seen.add(loc)
+        _append_sitemap_entry(root, ns, entry)
+
+    tree = ET.ElementTree(root)
+    ET.indent(tree, space="  ")
+    xml = ET.tostring(root, encoding="utf-8", xml_declaration=True)
+    SITEMAP.write_bytes(xml + b"\n")
 
 def main() -> int:
     parser=argparse.ArgumentParser()
@@ -343,7 +409,8 @@ def main() -> int:
     for _,meta in loaded:
         if meta["status"]!="published":
             continue
-        for lang,version in meta["versions"].items():
+        for lang in sorted(meta["versions"]):
+            version = meta["versions"][lang]
             posts.append(render_article(meta,lang,version,site))
     posts.sort(key=lambda p:p["date"],reverse=True)
     POSTS_JSON.write_text(json.dumps(posts,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
