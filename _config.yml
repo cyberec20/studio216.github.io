@@ -1,0 +1,12 @@
+# GitHub Pages publication boundary.
+# The repository contains editorial sources and build tooling that are not public site content.
+exclude:
+  - .github/
+  - content/
+  - data/
+  - editorial/
+  - scripts/
+  - templates/
+  - README.md
+  - requirements-editorial.txt
+  - assets/articles/README.md
