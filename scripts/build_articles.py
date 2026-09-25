@@ -296,7 +296,8 @@ def render_indexes(posts: list[dict]) -> None:
             "ROBOTS":page_robots,"CANONICAL":canonical,"HREFLANG_LINKS":hreflang_links,
             "HEADING":html.escape(heading),"INTRO":html.escape(intro),"FILTER_LANG_JSON":json.dumps(filter_lang),
             "LANGUAGE_FILTERS":language_filters,"SEARCH_PLACEHOLDER":html.escape(search_label,quote=True),
-            "ALL_TOPICS_LABEL":html.escape(topics_label),"TOPIC_OPTIONS":render_topic_options(page_posts, topics_label),
+            "ALL_TOPICS_LABEL":html.escape(topics_label),"ALL_TOPICS_LABEL_JSON":json.dumps(topics_label, ensure_ascii=False),
+            "TOPIC_OPTIONS":render_topic_options(page_posts, topics_label),
             "ARTICLE_CARDS":render_index_cards(page_posts),"EMPTY_STATE":html.escape("No se encontraron artículos." if lang=="es" else "No articles found."),
         })
         path.parent.mkdir(parents=True, exist_ok=True)
