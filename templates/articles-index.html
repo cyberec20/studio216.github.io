@@ -32,54 +32,46 @@
     </div>
     <section class="article-toolbar mt-9" aria-label="Article filters">
       <input id="article-search" class="article-search" type="search" placeholder="{{SEARCH_PLACEHOLDER}}" autocomplete="off">
-      <select id="topic-filter" class="topic-select" aria-label="{{ALL_TOPICS_LABEL}}"><option value="">{{ALL_TOPICS_LABEL}}</option></select>
+      <select id="topic-filter" class="topic-select" aria-label="{{ALL_TOPICS_LABEL}}">{{TOPIC_OPTIONS}}</select>
       {{LANGUAGE_FILTERS}}
     </section>
-    <div id="article-list" class="article-list mt-10"></div>
+    <div id="article-list" class="article-list mt-10">{{ARTICLE_CARDS}}</div>
     <p id="empty-state" class="text-gray-500 mt-10 hidden">{{EMPTY_STATE}}</p>
   </main>
   <script>
     const fixedLanguage={{FILTER_LANG_JSON}};
     let activeLanguage=fixedLanguage;
-    let allPosts=[];
     const search=document.getElementById("article-search");
     const topic=document.getElementById("topic-filter");
     const list=document.getElementById("article-list");
     const empty=document.getElementById("empty-state");
+    const cards=[...list.querySelectorAll(".article-list-card")];
 
     const normalize=value => (value||"").toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+    const cardTopics=card => (card.dataset.topics||"").split("||").filter(Boolean);
     function rebuildTopics(){
-      const selected=allPosts.filter(p=>!activeLanguage||p.lang===activeLanguage);
-      const labels=[...new Set(selected.flatMap(p=>p.topics||[]))].sort((a,b)=>a.localeCompare(b));
+      const labels=[...new Set(cards
+        .filter(card=>!activeLanguage||card.dataset.lang===activeLanguage)
+        .flatMap(card=>cardTopics(card)))].sort((a,b)=>a.localeCompare(b));
       const current=topic.value;
-      while(topic.options.length>1) topic.remove(1);
+      topic.replaceChildren();
+      const all=document.createElement("option"); all.value=""; all.textContent={{ALL_TOPICS_LABEL_JSON}}; topic.appendChild(all);
       labels.forEach(label=>{const opt=document.createElement("option");opt.value=label;opt.textContent=label;topic.appendChild(opt);});
       if(labels.includes(current)) topic.value=current;
     }
     function render(){
       const q=normalize(search.value);
       const t=topic.value;
-      const selected=allPosts.filter(post=>{
-        const languageOK=!activeLanguage||post.lang===activeLanguage;
-        const topicOK=!t||(post.topics||[]).includes(t);
-        const haystack=normalize([post.title,post.description,...(post.topics||[])].join(" "));
-        return languageOK&&topicOK&&(!q||haystack.includes(q));
+      let visible=0;
+      cards.forEach(card=>{
+        const languageOK=!activeLanguage||card.dataset.lang===activeLanguage;
+        const topicOK=!t||cardTopics(card).includes(t);
+        const searchOK=!q||normalize(card.textContent).includes(q);
+        const show=languageOK&&topicOK&&searchOK;
+        card.classList.toggle("hidden",!show);
+        if(show) visible+=1;
       });
-      list.replaceChildren();
-      empty.classList.toggle("hidden",selected.length>0);
-      selected.forEach(post=>{
-        const a=document.createElement("a"); a.href=post.url; a.className="article-list-card";
-        if(post.cover){
-          const img=document.createElement("img"); img.src=post.cover; img.alt=post.cover_alt||""; img.width=120; img.height=68; img.loading="lazy"; img.className="article-list-cover"; a.appendChild(img);
-        }
-        const body=document.createElement("div"); body.className="article-list-body";
-        const meta=document.createElement("p"); meta.className="text-xs uppercase tracking-wider text-blue-400"; meta.textContent=(post.lang==="es"?"ES":"EN")+" · "+post.date+" · "+post.reading_time; body.appendChild(meta);
-        const h=document.createElement("h2"); h.className="text-xl font-bold text-white mt-2"; h.textContent=post.title; body.appendChild(h);
-        const d=document.createElement("p"); d.className="text-gray-400 mt-2"; d.textContent=post.description; body.appendChild(d);
-        const tags=document.createElement("div"); tags.className="topic-pills mt-4";
-        (post.topics||[]).forEach(label=>{const s=document.createElement("span");s.className="topic-pill";s.textContent=label;tags.appendChild(s);});
-        body.appendChild(tags); a.appendChild(body); list.appendChild(a);
-      });
+      empty.classList.toggle("hidden",visible>0);
     }
     document.querySelectorAll("[data-lang]").forEach(btn=>btn.addEventListener("click",()=>{
       activeLanguage=btn.dataset.lang;
@@ -87,7 +79,7 @@
       rebuildTopics(); render();
     }));
     search.addEventListener("input",render); topic.addEventListener("change",render);
-    fetch("/articles/posts.json").then(r=>r.json()).then(posts=>{allPosts=posts;rebuildTopics();render();});
+    rebuildTopics(); render();
   </script>
 </body>
 </html>

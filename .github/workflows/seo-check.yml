@@ -27,6 +27,12 @@ jobs:
       - name: Smoke-build article library
         run: python scripts/build_articles.py
 
+      - name: Verify structural editorial outputs are committed
+        run: git diff --exit-code -- articles/index.html articles/es/index.html articles/en/index.html articles/posts.json
+
+      - name: Restore smoke-build outputs
+        run: git restore -- articles sitemap.xml
+
       - name: Validate source SEO
         run: python scripts/validate_seo.py
 
@@ -49,3 +55,6 @@ jobs:
 
       - name: Validate built-site SEO
         run: python scripts/validate_seo.py --root _site
+
+      - name: Validate AI discoverability
+        run: python scripts/validate_ai_discoverability.py --root _site

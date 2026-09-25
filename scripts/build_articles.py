@@ -156,7 +156,10 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         alternates.append(f'  <link rel="alternate" hreflang="{alt_lang}" href="{html.escape(alt_url)}">')
         label = "Español" if alt_lang == "es" else "English"
         switch.append(f'<span class="active">{label}</span>' if alt_lang == lang else f'<a href="{html.escape(alt_url)}">{label}</a>')
-    alternates.append('  <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/">')
+    configured_default = str(site.get("discoverability", {}).get("article_x_default_language") or "en")
+    default_lang = configured_default if configured_default in versions else next(iter(versions))
+    default_url = public_url(default_lang, versions[default_lang]["slug"])
+    alternates.append(f'  <link rel="alternate" hreflang="x-default" href="{html.escape(default_url)}">')
 
     labels = {
         "es": {"about":"Acerca de","articles":"Artículos","written":"Escrito por","about_franklin":"Sobre Franklin"},
@@ -221,6 +224,58 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         "reading_time": reading_time(source, lang),
     }
 
+def render_index_cards(posts: list[dict]) -> str:
+    cards: list[str] = []
+    for post in posts:
+        topics = [str(item) for item in (post.get("topics") or [])]
+        topic_attr = "||".join(topics)
+        lang = str(post.get("lang") or "")
+        lang_label = "ES" if lang == "es" else "EN"
+        url = html.escape(str(post.get("url") or ""), quote=True)
+        cover = str(post.get("cover") or "")
+        cover_alt = html.escape(str(post.get("cover_alt") or ""), quote=True)
+        title = html.escape(str(post.get("title") or ""))
+        description = html.escape(str(post.get("description") or ""))
+        date_value = html.escape(str(post.get("date") or ""))
+        reading = html.escape(str(post.get("reading_time") or ""))
+        attrs = (
+            f'data-lang="{html.escape(lang, quote=True)}" '
+            f'data-topics="{html.escape(topic_attr, quote=True)}"'
+        )
+        image = ""
+        if cover:
+            image = (
+                f'<img src="{html.escape(cover, quote=True)}" alt="{cover_alt}" '
+                'width="120" height="68" loading="lazy" class="article-list-cover">'
+            )
+        pills = "".join(
+            f'<span class="topic-pill">{html.escape(topic)}</span>' for topic in topics
+        )
+        cards.append(
+            f'<a class="article-list-card" href="{url}" {attrs}>'
+            f'{image}<div class="article-list-body">'
+            f'<p class="text-xs uppercase tracking-wider text-blue-400">{lang_label} · {date_value} · {reading}</p>'
+            f'<h2 class="text-xl font-bold text-white mt-2">{title}</h2>'
+            f'<p class="text-gray-400 mt-2">{description}</p>'
+            f'<div class="topic-pills mt-4">{pills}</div>'
+            '</div></a>'
+        )
+    return "".join(cards)
+
+
+def render_topic_options(posts: list[dict], all_label: str) -> str:
+    labels = sorted(
+        {str(topic) for post in posts for topic in (post.get("topics") or [])},
+        key=str.casefold,
+    )
+    options = [f'<option value="">{html.escape(all_label)}</option>']
+    options.extend(
+        f'<option value="{html.escape(label, quote=True)}">{html.escape(label)}</option>'
+        for label in labels
+    )
+    return "".join(options)
+
+
 def render_indexes(posts: list[dict]) -> None:
     template = INDEX_TEMPLATE.read_text(encoding="utf-8")
     hreflang_links = '<link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/">\n  <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/">\n  <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/">'
@@ -242,7 +297,9 @@ def render_indexes(posts: list[dict]) -> None:
             "ROBOTS":page_robots,"CANONICAL":canonical,"HREFLANG_LINKS":hreflang_links,
             "HEADING":html.escape(heading),"INTRO":html.escape(intro),"FILTER_LANG_JSON":json.dumps(filter_lang),
             "LANGUAGE_FILTERS":language_filters,"SEARCH_PLACEHOLDER":html.escape(search_label,quote=True),
-            "ALL_TOPICS_LABEL":html.escape(topics_label),"EMPTY_STATE":html.escape("No se encontraron artículos." if lang=="es" else "No articles found."),
+            "ALL_TOPICS_LABEL":html.escape(topics_label),"ALL_TOPICS_LABEL_JSON":json.dumps(topics_label, ensure_ascii=False),
+            "TOPIC_OPTIONS":render_topic_options(page_posts, topics_label),
+            "ARTICLE_CARDS":render_index_cards(page_posts),"EMPTY_STATE":html.escape("No se encontraron artículos." if lang=="es" else "No articles found."),
         })
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(rendered, encoding="utf-8")
