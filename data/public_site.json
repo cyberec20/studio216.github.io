@@ -1,0 +1,27 @@
+{
+  "root_files": [
+    "index.html",
+    "about.html",
+    "robots.txt",
+    "sitemap.xml",
+    "CNAME"
+  ],
+  "directories": [
+    "about",
+    "articles",
+    "assets",
+    "blog",
+    "diffdocs",
+    "wattswise"
+  ],
+  "excluded_names": [
+    "README.md",
+    ".gitkeep"
+  ],
+  "excluded_suffixes": [
+    ".md"
+  ],
+  "generated_files": [
+    ".nojekyll"
+  ]
+}
