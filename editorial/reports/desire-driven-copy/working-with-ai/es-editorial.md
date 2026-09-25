@@ -1,15 +1,15 @@
-# Auditoría editorial — Interactuando con la IA (2026)
+# Auditoría editorial — Interactuando con la IA (revisión SEO/DDC, 2026-09-25)
 
-- Editorial-priority panel: **89.6/100**.
-- Raw DesireDrivenCopy overall: **67.7/100**.
-- Raw SELF-CTA readiness: **58.7/100**.
+- Editorial-priority panel: **90.1/100**.
+- Raw DesireDrivenCopy overall: **69.7/100**.
+- Raw SELF-CTA readiness: **61.3/100**.
 - Truthfulness (article body): **PASS**.
 - Covert manipulation: **PASS**.
 - Autonomy: **70/100 — PASS**.
 
-## Editorial-priority validators
+## Validadores de prioridad editorial
 
-| Validator | Score | Status |
+| Validador | Puntuación | Estado |
 |---|---:|---|
 | Attention load | 79 | PASS |
 | Comprehension | 90 | CLEAR |
@@ -20,13 +20,15 @@
 | Message retention | 100 | READY |
 | Meaning compression | 98 | STRONG |
 | Narrative economy | 90 | PASS |
-| Story transmissibility | 73 | OK |
+| Story transmissibility | 79 | SHAREABLE |
 | Data-to-story proof | 70 | PASS |
 | Value-first/editorial route | 95 | PASS |
 
-## Interpretation
+## Interpretación
 
-- The article was evaluated as thought leadership / educational editorial copy, not as a sales letter.
-- The editorial-priority panel intentionally outranks the generic DDC Overall for this use case.
-- References are excluded from prose-level truth/comprehension diagnostics because URLs and bibliographic strings distort lexical heuristics.
-- Human read-aloud review remains the publication gate; validator scores are diagnostics, not a substitute for editorial judgment.
+- El artículo fue evaluado como thought leadership / contenido educativo editorial, no como carta de ventas.
+- El panel de prioridad editorial prevalece deliberadamente sobre el DDC Overall genérico para este caso de uso.
+- Las referencias y definiciones de enlaces se excluyen de los diagnósticos DDC de prosa porque las cadenas bibliográficas distorsionan las heurísticas léxicas.
+- La revisión SEO conserva el argumento y la voz mientras mejora claridad de intención de búsqueda, encabezados descriptivos, proximidad de fuentes y enlazado temático interno.
+- El autor realizó lectura spot de la revisión propuesta y aprobó explícitamente su publicación el 2026-09-25.
+- La revisión humana de lectura en voz alta permanece registrada como gate de publicación en la metadata; las puntuaciones son diagnósticos, no sustitutos del juicio editorial.
