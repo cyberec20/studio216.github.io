@@ -1,0 +1,50 @@
+name: Normalize editorial builder outputs
+
+on:
+  push:
+    branches:
+      - fix/builder-determinism
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    if: ${{ !contains(github.event.head_commit.message, '[normalize-builder]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/builder-determinism
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install editorial build dependency
+        run: pip install -r requirements-editorial.txt
+
+      - name: Rebuild canonical editorial outputs
+        run: python scripts/build_articles.py
+
+      - name: Validate canonical builder contract
+        run: python scripts/validate_builder_contract.py
+
+      - name: Check generated diff
+        run: git diff --check -- articles sitemap.xml
+
+      - name: Commit normalized generated outputs
+        shell: bash
+        run: |
+          git add articles sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No generated-output normalization was required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "[normalize-builder] Canonicalize generated editorial outputs"
+          git push origin HEAD:fix/builder-determinism
