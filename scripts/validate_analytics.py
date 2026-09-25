@@ -67,7 +67,7 @@ if asset_js.is_file():
     runtime = asset_js.read_text(encoding="utf-8", errors="ignore")
     required_runtime_markers = (
         '"consent", "default"',
-        '"analytics_storage": "denied"',
+        'analytics_storage: "denied"',
         'readChoice() !== "accepted"',
         'googletagmanager.com/gtag/js',
         'connect.facebook.net/en_US/fbevents.js',
