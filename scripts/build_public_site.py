@@ -93,7 +93,7 @@ def analytics_markup(site_config: dict) -> str:
     }
     encoded = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     return (
-        '\n  <link rel="stylesheet" href="/assets/css/site-analytics.css" data-studios216-analytics="v1">\n'
+        '\n  <link rel="stylesheet" href="/assets/css/site-analytics.css" data-studios216-analytics-style="v1">\n'
         f'  <script data-studios216-analytics="v1">window.Studios216AnalyticsConfig={encoded};</script>\n'
         '  <script defer src="/assets/js/site-analytics.js" data-studios216-analytics-loader="v1"></script>\n'
     )
