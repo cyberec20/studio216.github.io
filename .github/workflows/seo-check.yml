@@ -63,7 +63,7 @@ jobs:
         run: python scripts/build_public_site.py --destination _public
 
       - name: Validate explicit publication boundary
-        run: python scripts/validate_public_site.py --root _public
+        run: python scripts/validate_public_site.py --root _public --require-nojekyll
 
       - name: Validate explicit artifact SEO
         run: python scripts/validate_seo.py --root _public
