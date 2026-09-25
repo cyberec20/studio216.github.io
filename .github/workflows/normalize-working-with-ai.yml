@@ -1,0 +1,60 @@
+name: Normalize approved Working with AI revision
+
+on:
+  push:
+    branches:
+      - content/seo-working-with-ai
+
+permissions:
+  contents: write
+
+concurrency:
+  group: normalize-working-with-ai-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  normalize:
+    if: ${{ !contains(github.event.head_commit.message, '[normalize-working-with-ai]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: content/seo-working-with-ai
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install editorial build dependency
+        run: pip install -r requirements-editorial.txt
+
+      - name: Validate article metadata and publishing gates
+        run: python scripts/build_articles.py --check
+
+      - name: Rebuild canonical editorial outputs
+        run: python scripts/build_articles.py
+
+      - name: Validate builder contract
+        run: python scripts/validate_builder_contract.py
+
+      - name: Validate source SEO
+        run: python scripts/validate_seo.py
+
+      - name: Check generated diff
+        run: git diff --check -- articles sitemap.xml
+
+      - name: Commit regenerated outputs
+        shell: bash
+        run: |
+          git add articles sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No generated output changes were required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "[normalize-working-with-ai] Regenerate approved article outputs"
+          git push origin HEAD:content/seo-working-with-ai
