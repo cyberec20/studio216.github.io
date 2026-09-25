@@ -1,0 +1,76 @@
+name: Deploy explicit GitHub Pages artifact
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install editorial build dependency
+        run: pip install -r requirements-editorial.txt
+
+      - name: Validate article metadata and publishing gates
+        run: python scripts/build_articles.py --check
+
+      - name: Rebuild article library
+        run: python scripts/build_articles.py
+
+      - name: Verify generated editorial outputs are committed
+        run: git diff --exit-code -- articles sitemap.xml
+
+      - name: Validate builder source fidelity and sitemap contract
+        run: python scripts/validate_builder_contract.py
+
+      - name: Validate source SEO
+        run: python scripts/validate_seo.py
+
+      - name: Validate editorial foundation
+        run: python scripts/validate_editorial.py
+
+      - name: Build explicit public artifact
+        run: python scripts/build_public_site.py --destination _site
+
+      - name: Validate publication boundary
+        run: python scripts/validate_public_site.py --root _site --require-nojekyll
+
+      - name: Validate built-site SEO
+        run: python scripts/validate_seo.py --root _site
+
+      - name: Validate AI discoverability
+        run: python scripts/validate_ai_discoverability.py --root _site
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
