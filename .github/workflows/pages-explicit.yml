@@ -47,7 +47,7 @@ jobs:
         run: python scripts/build_public_site.py --destination _site
 
       - name: Validate publication boundary
-        run: python scripts/validate_public_site.py --root _site
+        run: python scripts/validate_public_site.py --root _site --require-nojekyll
 
       - name: Validate built-site SEO
         run: python scripts/validate_seo.py --root _site
