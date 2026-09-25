@@ -96,10 +96,10 @@ def load_metadata() -> list[tuple[Path, dict]]:
     return loaded
 
 def _merge_html_attr(attrs: str, name: str, value: str) -> str:
-    match = re.search(rf'\\b{name}=["\\']([^"\\']*)["\\']', attrs, flags=re.I)
+    pattern = rf"""\b{re.escape(name)}=["']([^"']*)["']"""
+    match = re.search(pattern, attrs, flags=re.I)
     if match:
-        existing = match.group(1).split()
-        values = list(existing)
+        values = match.group(1).split()
         for item in value.split():
             if item not in values:
                 values.append(item)
@@ -110,7 +110,7 @@ def _merge_html_attr(attrs: str, name: str, value: str) -> str:
 
 def decorate_external_links(rendered: str) -> str:
     pattern = re.compile(
-        r'<a\\b(?P<attrs>[^>]*\\bhref=["\\'](?P<href>https?://[^"\\']+)["\\'][^>]*)>',
+        r"""<a\b(?P<attrs>[^>]*\bhref=["'](?P<href>https?://[^"']+)["'][^>]*)>""",
         flags=re.I,
     )
 
