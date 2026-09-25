@@ -12,7 +12,7 @@
   "versions": {
     "es": {
       "slug": "interactuando-con-la-ia",
-      "title": "Interactuando con la IA: del “prompt perfecto” a una mejor forma de trabajar",
+      "title": "Cómo trabajar mejor con la IA: del «prompt perfecto» a una mejor colaboración",
       "description": "Cómo pasar de perseguir el prompt perfecto a trabajar mejor con la IA: contexto, iteración, ejemplos, verificación y criterio humano.",
       "source": "content/articles/es/interactuando-con-la-ia.md",
       "published": "2026-09-25",
@@ -42,8 +42,8 @@
           "report": "editorial/reports/desire-driven-copy/working-with-ai/es-editorial.md",
           "full_report": "editorial/reports/desire-driven-copy/working-with-ai/es-full.md",
           "validated_at": "2026-09-25",
-          "raw_overall": 67.7,
-          "editorial_panel": 89.6
+          "raw_overall": 69.7,
+          "editorial_panel": 90.1
         },
         "seo_review": "passed",
         "punctuation_review": "passed",
@@ -53,7 +53,7 @@
     },
     "en": {
       "slug": "working-with-ai",
-      "title": "Working with AI: From Better Prompts to Better Collaboration",
+      "title": "How to Work Better with AI: From Better Prompts to Better Collaboration",
       "description": "A practical introduction to working better with AI through context, iteration, examples, verification and human judgment—not magic prompt formulas.",
       "source": "content/articles/en/working-with-ai.md",
       "published": "2026-09-25",
@@ -84,7 +84,7 @@
           "full_report": "editorial/reports/desire-driven-copy/working-with-ai/en-full.md",
           "validated_at": "2026-09-25",
           "raw_overall": 75.5,
-          "editorial_panel": 89.2
+          "editorial_panel": 90.5
         },
         "seo_review": "passed",
         "punctuation_review": "passed",

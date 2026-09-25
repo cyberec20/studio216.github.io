@@ -1,16 +1,20 @@
 # Desire-Driven Copy — full diagnostic summary (ES)
 
-Article: **Interactuando con la IA: del “prompt perfecto” a una mejor forma de trabajar**
+Artículo: **Cómo trabajar mejor con la IA: del «prompt perfecto» a una mejor colaboración**
 
-This file preserves the full set of raw publication diagnostics that were explicitly retained from the editorial run. It does not invent unreported validator outputs.
+Revisión: **balance SEO + AI Discoverability / DDC, 2026-09-25**
 
-- Editorial-priority panel: **89.6/100**
-- Raw DesireDrivenCopy Overall: **67.7/100**
-- Raw SELF-CTA readiness: **58.7/100**
+Este archivo conserva los diagnósticos de publicación reproducidos sobre el cuerpo exacto del artículo aprobado usando Desire-Driven Copy v0.9.1. Las referencias se excluyen del scoring de prosa, siguiendo la metodología editorial establecida.
+
+- Editorial-priority panel: **90.1/100**
+- Raw DesireDrivenCopy Overall: **69.7/100**
+- Raw SELF-CTA readiness: **61.3/100**
 - Truthfulness, article body: **PASS**
 - Covert manipulation: **PASS**
 - Autonomy: **70/100 — PASS**
 
-The publication decision uses the thought-leadership profile: comprehension, pacing, glanceability, retention, narrative economy, evidence continuity, truthfulness and reader autonomy outrank sales-letter optimization. The human read-aloud review is the final gate.
+La decisión de publicación usa el perfil thought-leadership: comprensión, ritmo, escaneabilidad, retención, economía narrativa, continuidad de evidencia, veracidad y autonomía del lector prevalecen sobre la optimización propia de una carta de ventas.
 
-See `es-editorial.md` for the detailed editorial-priority validator table.
+El autor realizó lectura spot de la revisión propuesta y aprobó explícitamente su publicación el 2026-09-25.
+
+Ver `es-editorial.md` para la tabla detallada de validadores de prioridad editorial.
