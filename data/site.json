@@ -67,5 +67,45 @@
     },
     "article_x_default_language": "en",
     "gptbot_policy": "inherit"
+  },
+  "analytics": {
+    "consent": {
+      "required": true,
+      "default": "denied",
+      "storage_key": "studios216.analytics.consent.v1",
+      "policy_url": "/privacy.html"
+    },
+    "providers": {
+      "ga4": {
+        "enabled": true,
+        "measurement_id": "G-9F4QMVWNPC"
+      },
+      "meta_pixel": {
+        "enabled": true,
+        "pixel_id": "1210026194345632"
+      },
+      "clarity": {
+        "enabled": true,
+        "project_id": "vgak93wo90"
+      }
+    },
+    "events": {
+      "ga4": [
+        "product_impression",
+        "product_click",
+        "product_cta_click",
+        "external_product_visit"
+      ],
+      "meta_pixel": [
+        "product_cta_click",
+        "external_product_visit"
+      ],
+      "clarity": [
+        "product_impression",
+        "product_click",
+        "product_cta_click",
+        "external_product_visit"
+      ]
+    }
   }
 }
