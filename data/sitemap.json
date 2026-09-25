@@ -1,0 +1,66 @@
+{
+  "static": [
+    {
+      "loc": "https://studios216.com/",
+      "lastmod": "2026-09-24",
+      "changefreq": "weekly",
+      "priority": "1.0"
+    },
+    {
+      "loc": "https://studios216.com/about.html",
+      "lastmod": "2026-09-24",
+      "priority": "0.8"
+    },
+    {
+      "loc": "https://studios216.com/blog/",
+      "lastmod": "2026-03-23",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "loc": "https://studios216.com/blog/WattsWise-zero-to-production.html",
+      "lastmod": "2025-12-06",
+      "priority": "0.8"
+    },
+    {
+      "loc": "https://studios216.com/blog/power-triangle-calculator-kw-kvar-kva-pf-current.html",
+      "lastmod": "2025-12-13",
+      "priority": "0.8"
+    },
+    {
+      "loc": "https://studios216.com/wattswise/",
+      "lastmod": "2026-09-24",
+      "priority": "0.9"
+    },
+    {
+      "loc": "https://studios216.com/blog/local-ai-engineering-lab.html",
+      "lastmod": "2025-12-26",
+      "priority": "0.8"
+    },
+    {
+      "loc": "https://studios216.com/blog/diffdocs-zero-to-production.html",
+      "lastmod": "2026-03-23",
+      "priority": "0.8"
+    },
+    {
+      "loc": "https://studios216.com/about/founder/",
+      "lastmod": "2026-09-24",
+      "priority": "0.8"
+    }
+  ],
+  "article_hubs": [
+    {
+      "loc": "https://studios216.com/articles/",
+      "priority": "0.9"
+    },
+    {
+      "loc": "https://studios216.com/articles/es/",
+      "priority": "0.8"
+    },
+    {
+      "loc": "https://studios216.com/articles/en/",
+      "priority": "0.8"
+    }
+  ],
+  "article_priority": "0.8"
+}

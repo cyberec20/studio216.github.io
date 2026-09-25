@@ -7,8 +7,8 @@
   <meta name="description" content="Cuándo usar agentes de IA y cuándo convertir lo aprendido en software determinístico: reglas, pruebas, validación y conocimiento que permanece.">
   <meta name="author" content="Franklin Rodriguez">
   <link rel="canonical" href="https://studios216.com/articles/es/realmente-necesitamos-otro-agente/">
-  <link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/realmente-necesitamos-otro-agente/">
   <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/do-we-really-need-another-agent/">
+  <link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/realmente-necesitamos-otro-agente/">
   <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/en/do-we-really-need-another-agent/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="¿Realmente necesitamos otro agente… o el sistema ya debería saberlo?">
@@ -53,13 +53,12 @@
       </aside>
       <article>
         <header class="mb-8">
-          <div class="language-switch"><span class="active">Español</span><a href="https://studios216.com/articles/en/do-we-really-need-another-agent/">English</a></div>
+          <div class="language-switch"><a href="https://studios216.com/articles/en/do-we-really-need-another-agent/">English</a><span class="active">Español</span></div>
           <p class="mt-5 text-xs uppercase tracking-[.18em] text-blue-400">Sistemas de IA · Agentes · Ingeniería de software</p>
           <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mt-3">¿Realmente necesitamos otro agente… o el sistema ya debería saberlo?</h1>
           <p class="text-lg text-gray-400 mt-5">Cuándo usar agentes de IA y cuándo convertir lo aprendido en software determinístico: reglas, pruebas, validación y conocimiento que permanece.</p>
           <p class="text-sm text-gray-500 mt-5">2026-09-24 · 7 min de lectura</p>
         </header>
-        
         <figure class="article-hero"><img src="/assets/articles/do-we-really-need-another-agent/hero-es.webp" alt="Infografía antes y después: un flujo donde todo pasa por agentes frente a otro que usa reglas y software determinístico y reserva la IA para ambigüedad y excepciones." width="760" height="428" loading="eager" decoding="async"></figure>
         <div class="article-body"><p>Si trabajas con agentes, quizá ya te haya pasado: aparece una tarea nueva y piensas <strong>“si un agente puede hacerlo, usemos un agente”</strong>. Tiene lógica: hoy pueden leer documentos, interpretar estructuras, escribir código, llamar herramientas, comprobar resultados y corregirse. A veces incluso pueden pedir ayuda a otro agente y continuar. Pero la diferencia importante es ésta: capacidad no es lo mismo que necesidad.</p>
 <p>Y últimamente hay una pregunta que me parece más útil que “¿qué más puedo automatizar con IA?”: <strong>¿qué parte del problema conocemos ya suficientemente bien como para dejar de razonarla cada vez?</strong> Porque si la respuesta ya es estable, repetible y verificable, quizá el siguiente paso no sea añadir más inteligencia. Quizá sea convertir lo aprendido en sistema.</p>
@@ -72,7 +71,7 @@
 <p>La distinción importante no es “IA contra software tradicional”. Es otra: <strong>¿esto ya está suficientemente entendido o todavía contiene incertidumbre?</strong> En la misma factura pueden aparecer ambas cosas. Hay partes totalmente conocidas: un total debe cuadrar, un identificador debe cumplir una estructura, una regla fiscal conocida debe aplicarse de forma consistente, un workflow puede tener estados y transiciones explícitos.</p>
 <p>Y luego aparece algo diferente: una descripción ambigua, un gasto difícil de clasificar, una excepción que no habíamos visto o un caso para el que todavía no existe una regla. Ahora sí tenemos una pregunta. Ahí la IA resulta mucho más interesante: interpreta, propone, compara posibilidades, ayuda a investigar. Un humano valida el resultado y el proceso continúa. Hasta que ocurre algo todavía más interesante.</p>
 <p>La misma excepción vuelve a aparecer; después otra vez, y otra. En algún momento deja de ser realmente una excepción. <strong>Hemos aprendido algo.</strong> Entonces conviene preguntar si ese aprendizaje debe seguir viviendo únicamente en una conversación o si ya merece convertirse en una capacidad permanente. El patrón puede resumirse así:</p>
-<pre><code>conocido → software
+<pre><code class="language-text">conocido → software
 
 desconocido → IA
 
@@ -80,7 +79,8 @@ desconocido recurrente
 → aprendizaje
 → regla
 → prueba
-→ software</code></pre>
+→ software
+</code></pre>
 <p>El agente no desaparece; simplemente se desplaza hacia la siguiente frontera. Hay una frase que me ayuda a recordarlo: <strong>la IA explora la frontera; el software consolida el territorio.</strong></p>
 <h2>Aprender debería dejar algo detrás</h2>
 <p>Hablamos mucho de memoria de agentes, contextos persistentes, historiales y bases de conocimiento. Todo eso puede ser útil. Pero hay otra forma de memoria menos vistosa: <strong>hacer que lo aprendido cambie el sistema</strong>. Si resolvemos una excepción, encontramos una regla general y la convertimos en código con una prueba, la próxima vez no necesitamos reconstruir toda la conversación. El conocimiento quedó incorporado.</p>
@@ -98,13 +98,23 @@ desconocido recurrente
 <p>El agente puede cambiar; la capacidad permanece. Ésa es una distinción que considero cada vez más importante: <strong>la IA puede ayudar a construir el activo sin tener que convertirse ella misma en el activo</strong>. Un modelo puede ayudarnos a descubrir una regla. Pero una vez que esa regla es suficientemente clara y crítica, prefiero poder verla, probarla, versionarla y trasladarla.</p>
 <h2>Antes de añadir otro agente, probaría esto</h2>
 <p>Puede que te preguntes por dónde empezar la próxima vez que un proceso parezca pedir “otro agente”. Yo haría una comprobación rápida:</p>
-<ul><li><strong>¿La entrada ya viene estructurada?</strong> Si existe un campo, schema, API o formato explícito, quizá no haga falta volver a interpretar lo que ya está representado.</li><li><strong>¿La decisión depende de una regla conocida?</strong> Si la misma condición debería producir la misma respuesta, puede ser candidata a código.</li><li><strong>¿Existe una prueba objetiva del resultado?</strong> Si existe, conviene que esa verificación sea determinística aunque un modelo participe antes.</li><li><strong>¿La excepción sigue siendo realmente una excepción?</strong> Si aparece constantemente y ya comprendemos el patrón, quizá deba consolidarse.</li><li><strong>Si mañana cambio de modelo, qué conocimiento permanece?</strong> La respuesta revela cuánto aprendizaje pertenece realmente al sistema.</li></ul>
+<ul>
+<li><strong>¿La entrada ya viene estructurada?</strong> Si existe un campo, schema, API o formato explícito, quizá no haga falta volver a interpretar lo que ya está representado.</li>
+<li><strong>¿La decisión depende de una regla conocida?</strong> Si la misma condición debería producir la misma respuesta, puede ser candidata a código.</li>
+<li><strong>¿Existe una prueba objetiva del resultado?</strong> Si existe, conviene que esa verificación sea determinística aunque un modelo participe antes.</li>
+<li><strong>¿La excepción sigue siendo realmente una excepción?</strong> Si aparece constantemente y ya comprendemos el patrón, quizá deba consolidarse.</li>
+<li><strong>Si mañana cambio de modelo, qué conocimiento permanece?</strong> La respuesta revela cuánto aprendizaje pertenece realmente al sistema.</li>
+</ul>
 <p>No son mandamientos; son un filtro. A veces la respuesta seguirá siendo “necesito un agente”. Perfecto. Ese es exactamente el lugar donde quiero usarlo. Pero otras veces descubriremos que estábamos gastando inteligencia en volver a decidir algo que ya habíamos decidido muchas veces. Y ésa es la parte que me parece más interesante. Durante un tiempo, la pregunta dominante fue: <strong>¿qué más puedo hacer con agentes?</strong></p>
 <p>Hoy sigo haciéndomela. Pero junto a ella pongo otra: <strong>¿qué parte de lo que un agente hace hoy debería dejar de necesitar un agente mañana?</strong> No porque quiera usar menos IA. Porque quiero que cada ciclo deje algo detrás. Una regla más clara. Una prueba nueva. Un contrato más preciso. Una excepción menos ambigua. Una capacidad que permanezca cuando la conversación termine.</p>
 <p>La IA explora la frontera; nosotros verificamos lo aprendido; el software consolida el territorio. Y entonces la frontera vuelve a moverse. La próxima vez que pienses “aquí podría poner otro agente”, prueba primero con una pregunta más incómoda: <strong>¿aquí necesito realmente inteligencia… o ya conozco suficientemente bien la respuesta como para convertirla en software?</strong></p>
-<hr>
+<hr />
 <h2>Referencias</h2>
-<ul><li>Comisión Europea, <strong>EN 16931 / European standard on eInvoicing</strong>: modelo semántico y sintaxis estructuradas para facturas electrónicas. <a class="editorial-link" href="https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard" rel="noopener">https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard</a></li><li>NIST, <strong>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)</strong>: confabulación, supervisión humana y procesos de test, evaluation, validation and verification (TEVV). <a class="editorial-link" href="https://doi.org/10.6028/NIST.AI.600-1" rel="noopener">https://doi.org/10.6028/NIST.AI.600-1</a></li><li>ISO 9001, <strong>Plan-Do-Check-Act cycle</strong>. <a class="editorial-link" href="https://www.iso.org/iso/iso9001_2015_process_approach.pdf" rel="noopener">https://www.iso.org/iso/iso9001_2015_process_approach.pdf</a></li></ul></div>
+<ul>
+<li>Comisión Europea, <strong>EN 16931 / European standard on eInvoicing</strong>: modelo semántico y sintaxis estructuradas para facturas electrónicas. <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard" class="editorial-link" rel="noopener">https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard</a></li>
+<li>NIST, <strong>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)</strong>: confabulación, supervisión humana y procesos de test, evaluation, validation and verification (TEVV). <a href="https://doi.org/10.6028/NIST.AI.600-1" class="editorial-link" rel="noopener">https://doi.org/10.6028/NIST.AI.600-1</a></li>
+<li>ISO 9001, <strong>Plan-Do-Check-Act cycle</strong>. <a href="https://www.iso.org/iso/iso9001_2015_process_approach.pdf" class="editorial-link" rel="noopener">https://www.iso.org/iso/iso9001_2015_process_approach.pdf</a></li>
+</ul></div>
       </article>
     </div>
   </main>

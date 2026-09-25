@@ -24,14 +24,14 @@ jobs:
       - name: Validate article metadata and publishing gates
         run: python scripts/build_articles.py --check
 
-      - name: Smoke-build article library
+      - name: Rebuild article library
         run: python scripts/build_articles.py
 
-      - name: Verify structural editorial outputs are committed
-        run: git diff --exit-code -- articles/index.html articles/es/index.html articles/en/index.html articles/posts.json
+      - name: Verify all generated editorial outputs are committed
+        run: git diff --exit-code -- articles sitemap.xml
 
-      - name: Restore smoke-build outputs
-        run: git restore -- articles sitemap.xml
+      - name: Validate builder source fidelity and sitemap contract
+        run: python scripts/validate_builder_contract.py
 
       - name: Validate source SEO
         run: python scripts/validate_seo.py

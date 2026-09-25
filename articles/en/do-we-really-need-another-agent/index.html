@@ -53,13 +53,12 @@
       </aside>
       <article>
         <header class="mb-8">
-          <div class="language-switch"><a href="https://studios216.com/articles/es/realmente-necesitamos-otro-agente/">Español</a><span class="active">English</span></div>
+          <div class="language-switch"><span class="active">English</span><a href="https://studios216.com/articles/es/realmente-necesitamos-otro-agente/">Español</a></div>
           <p class="mt-5 text-xs uppercase tracking-[.18em] text-blue-400">AI systems · Agents · Software engineering</p>
           <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mt-3">Do We Really Need Another Agent—or Should the System Know This Already?</h1>
           <p class="text-lg text-gray-400 mt-5">When should an AI agent keep reasoning, and when should what you learned become deterministic software? A practical framework for rules, tests and durable system knowledge.</p>
           <p class="text-sm text-gray-500 mt-5">2026-09-24 · 7 min read</p>
         </header>
-        
         <figure class="article-hero"><img src="/assets/articles/do-we-really-need-another-agent/hero-en.webp" alt="Before-and-after infographic: a workflow where everything goes through agents versus one that uses known rules and deterministic software, reserving AI for ambiguity and exceptions." width="760" height="428" loading="eager" decoding="async"></figure>
         <div class="article-body"><p>If you build with agents, you may already recognize this temptation: <strong>if an agent can do it, let the agent do it</strong>. The instinct is understandable: agents can read documents, interpret structure, write code, call tools, inspect results, correct themselves, and keep going. Some can even hand part of the problem to another agent and come back with a better answer.</p>
 <p>But here is the distinction: capability is not the same thing as necessity. Lately, I have found a different question more useful than “What else can I automate with AI?” <strong>How much of this problem do we already understand well enough that we should stop reasoning through it every single time?</strong></p>
@@ -73,7 +72,7 @@
 <p>In short, the useful distinction is not “AI versus traditional software.” It is this: <strong>Is the problem already understood, or does it still contain uncertainty?</strong> The same invoice can contain both. Some parts are well known: totals must balance, identifiers must satisfy constraints, known business rules should be applied consistently, and workflows can have explicit states and transitions.</p>
 <p>Then something different appears: an ambiguous description, an expense that does not fit cleanly into a category, a new edge case, or an exception for which no rule exists yet. Now we actually have a question. That is where AI becomes more valuable. It can interpret, compare possibilities, search for patterns, and help investigate. A human validates the result, and the process moves on. Until something more interesting happens.</p>
 <p>The same exception comes back; then again, then again. At some point, it is not much of an exception anymore. <strong>We have learned something.</strong> The next question is whether that learning should continue to live only inside a conversation, or whether it is ready to become a permanent capability. The pattern can be compressed into this:</p>
-<pre><code>known → software
+<pre><code class="language-text">known → software
 
 unknown → AI
 
@@ -81,7 +80,8 @@ recurring unknown
 → learning
 → rule
 → test
-→ software</code></pre>
+→ software
+</code></pre>
 <p>The agent does not disappear; it moves to the next frontier. A simple phrase helps me remember the distinction: <strong>AI explores the frontier; software consolidates the territory.</strong></p>
 <h2>Learning should leave something behind</h2>
 <p>We talk a great deal about agent memory, persistent context, conversation history, and knowledge bases. All of them can be useful. But there is another form of memory that is less impressive in a demo and often more valuable in production: <strong>making what we learned change the system</strong>.</p>
@@ -99,13 +99,23 @@ recurring unknown
 <p>The agent can change; the capability remains. That distinction matters more to me the longer I build with these systems: <strong>AI can help create the asset without having to become the asset</strong>. A model may help us discover a rule. Once the rule is clear and important enough, I would rather be able to inspect it, test it, version it, and move it.</p>
 <h2>Before adding another agent, try this filter</h2>
 <p>The next time a workflow seems to need “another agent,” you may be wondering where to draw the line. I would start with five questions:</p>
-<ul><li><strong>Is the input already structured?</strong> If a field, schema, API, or explicit format already exists, we may not need to interpret what is already represented.</li><li><strong>Which part of the decision is governed by a known rule?</strong> If the same condition should produce the same response, it may be a candidate for code.</li><li><strong>Can the result be checked objectively?</strong> If yes, keep that verification deterministic even when a model participates earlier.</li><li><strong>Is the exception still an exception?</strong> If it keeps returning and we understand the pattern, it may be ready to consolidate.</li><li><strong>If I switch models tomorrow, what knowledge remains?</strong> The answer reveals how much learning actually belongs to the system.</li></ul>
+<ul>
+<li><strong>Is the input already structured?</strong> If a field, schema, API, or explicit format already exists, we may not need to interpret what is already represented.</li>
+<li><strong>Which part of the decision is governed by a known rule?</strong> If the same condition should produce the same response, it may be a candidate for code.</li>
+<li><strong>Can the result be checked objectively?</strong> If yes, keep that verification deterministic even when a model participates earlier.</li>
+<li><strong>Is the exception still an exception?</strong> If it keeps returning and we understand the pattern, it may be ready to consolidate.</li>
+<li><strong>If I switch models tomorrow, what knowledge remains?</strong> The answer reveals how much learning actually belongs to the system.</li>
+</ul>
 <p>These are not commandments; they are a filter. Sometimes the answer will still be “I need an agent.” Good. That is exactly where I want one. Other times, we may discover that we are spending intelligence to repeatedly make a decision we already understand. And that is the part I find most interesting. For a while, the dominant question was: <strong>What else can I do with agents?</strong></p>
 <p>I still ask it. But I now put another question beside it: <strong>What is an agent doing today that should no longer require an agent tomorrow?</strong> Not because I want less AI. Because I want every cycle to leave something behind. A clearer rule. A new test. A stronger contract. One less ambiguous exception. A capability that survives after the conversation ends.</p>
 <p>AI explores the frontier; we validate what we learn; software consolidates the territory. Then the frontier moves again. So the next time you think, “I could put another agent here,” try a more uncomfortable question first: <strong>Do you actually need intelligence here—or do you already understand the answer well enough to turn it into software?</strong></p>
-<hr>
+<hr />
 <h2>References</h2>
-<ul><li>European Commission, <strong>EN 16931 / European standard on eInvoicing</strong>: semantic data model and structured syntaxes for electronic invoices. <a class="editorial-link" href="https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard" rel="noopener">https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard</a></li><li>NIST, <strong>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)</strong>: confabulation, human oversight, and test, evaluation, validation and verification (TEVV). <a class="editorial-link" href="https://doi.org/10.6028/NIST.AI.600-1" rel="noopener">https://doi.org/10.6028/NIST.AI.600-1</a></li><li>ISO 9001, <strong>Plan-Do-Check-Act cycle</strong>. <a class="editorial-link" href="https://www.iso.org/iso/iso9001_2015_process_approach.pdf" rel="noopener">https://www.iso.org/iso/iso9001_2015_process_approach.pdf</a></li></ul></div>
+<ul>
+<li>European Commission, <strong>EN 16931 / European standard on eInvoicing</strong>: semantic data model and structured syntaxes for electronic invoices. <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard" class="editorial-link" rel="noopener">https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard</a></li>
+<li>NIST, <strong>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)</strong>: confabulation, human oversight, and test, evaluation, validation and verification (TEVV). <a href="https://doi.org/10.6028/NIST.AI.600-1" class="editorial-link" rel="noopener">https://doi.org/10.6028/NIST.AI.600-1</a></li>
+<li>ISO 9001, <strong>Plan-Do-Check-Act cycle</strong>. <a href="https://www.iso.org/iso/iso9001_2015_process_approach.pdf" class="editorial-link" rel="noopener">https://www.iso.org/iso/iso9001_2015_process_approach.pdf</a></li>
+</ul></div>
       </article>
     </div>
   </main>

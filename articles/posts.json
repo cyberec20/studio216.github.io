@@ -2,30 +2,6 @@
   {
     "id": "working-with-ai",
     "translation_key": "working-with-ai",
-    "lang": "es",
-    "title": "Interactuando con la IA: del “prompt perfecto” a una mejor forma de trabajar",
-    "description": "Cómo pasar de perseguir el prompt perfecto a trabajar mejor con la IA: contexto, iteración, ejemplos, verificación y criterio humano.",
-    "url": "/articles/es/interactuando-con-la-ia/",
-    "date": "2026-09-25",
-    "topics": [
-      "IA generativa",
-      "Prompting",
-      "Colaboración humano-IA",
-      "Alfabetización en IA"
-    ],
-    "topic_ids": [
-      "generative-ai",
-      "prompting",
-      "human-ai-collaboration",
-      "ai-literacy"
-    ],
-    "cover": "/assets/articles/working-with-ai/hero-es.webp",
-    "cover_alt": "Infografía titulada Anatomía de un prompt útil, con objetivo, contexto, audiencia, formato esperado y restricciones conectados a un ejemplo de prompt.",
-    "reading_time": "8 min de lectura"
-  },
-  {
-    "id": "working-with-ai",
-    "translation_key": "working-with-ai",
     "lang": "en",
     "title": "Working with AI: From Better Prompts to Better Collaboration",
     "description": "A practical introduction to working better with AI through context, iteration, examples, verification and human judgment—not magic prompt formulas.",
@@ -48,26 +24,28 @@
     "reading_time": "8 min read"
   },
   {
-    "id": "do-we-really-need-another-agent",
-    "translation_key": "do-we-really-need-another-agent",
+    "id": "working-with-ai",
+    "translation_key": "working-with-ai",
     "lang": "es",
-    "title": "¿Realmente necesitamos otro agente… o el sistema ya debería saberlo?",
-    "description": "Cuándo usar agentes de IA y cuándo convertir lo aprendido en software determinístico: reglas, pruebas, validación y conocimiento que permanece.",
-    "url": "/articles/es/realmente-necesitamos-otro-agente/",
-    "date": "2026-09-24",
+    "title": "Interactuando con la IA: del “prompt perfecto” a una mejor forma de trabajar",
+    "description": "Cómo pasar de perseguir el prompt perfecto a trabajar mejor con la IA: contexto, iteración, ejemplos, verificación y criterio humano.",
+    "url": "/articles/es/interactuando-con-la-ia/",
+    "date": "2026-09-25",
     "topics": [
-      "Sistemas de IA",
-      "Agentes",
-      "Ingeniería de software"
+      "IA generativa",
+      "Prompting",
+      "Colaboración humano-IA",
+      "Alfabetización en IA"
     ],
     "topic_ids": [
-      "ai-systems",
-      "agents",
-      "software-engineering"
+      "generative-ai",
+      "prompting",
+      "human-ai-collaboration",
+      "ai-literacy"
     ],
-    "cover": "/assets/articles/do-we-really-need-another-agent/reference-es.webp",
-    "cover_alt": "Infografía antes y después: un flujo donde todo pasa por agentes frente a otro que usa reglas y software determinístico y reserva la IA para ambigüedad y excepciones.",
-    "reading_time": "7 min de lectura"
+    "cover": "/assets/articles/working-with-ai/hero-es.webp",
+    "cover_alt": "Infografía titulada Anatomía de un prompt útil, con objetivo, contexto, audiencia, formato esperado y restricciones conectados a un ejemplo de prompt.",
+    "reading_time": "8 min de lectura"
   },
   {
     "id": "do-we-really-need-another-agent",
@@ -90,6 +68,28 @@
     "cover": "/assets/articles/do-we-really-need-another-agent/reference-en.webp",
     "cover_alt": "Before-and-after infographic: a workflow where everything goes through agents versus one that uses known rules and deterministic software, reserving AI for ambiguity and exceptions.",
     "reading_time": "7 min read"
+  },
+  {
+    "id": "do-we-really-need-another-agent",
+    "translation_key": "do-we-really-need-another-agent",
+    "lang": "es",
+    "title": "¿Realmente necesitamos otro agente… o el sistema ya debería saberlo?",
+    "description": "Cuándo usar agentes de IA y cuándo convertir lo aprendido en software determinístico: reglas, pruebas, validación y conocimiento que permanece.",
+    "url": "/articles/es/realmente-necesitamos-otro-agente/",
+    "date": "2026-09-24",
+    "topics": [
+      "Sistemas de IA",
+      "Agentes",
+      "Ingeniería de software"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "software-engineering"
+    ],
+    "cover": "/assets/articles/do-we-really-need-another-agent/reference-es.webp",
+    "cover_alt": "Infografía antes y después: un flujo donde todo pasa por agentes frente a otro que usa reglas y software determinístico y reserva la IA para ambigüedad y excepciones.",
+    "reading_time": "7 min de lectura"
   },
   {
     "id": "diffdocs-zero-to-production",
