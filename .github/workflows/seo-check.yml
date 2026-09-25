@@ -49,3 +49,6 @@ jobs:
 
       - name: Validate built-site SEO
         run: python scripts/validate_seo.py --root _site
+
+      - name: Validate AI discoverability
+        run: python scripts/validate_ai_discoverability.py --root _site
