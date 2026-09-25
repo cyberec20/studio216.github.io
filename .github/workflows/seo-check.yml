@@ -28,7 +28,7 @@ jobs:
         run: python scripts/build_articles.py
 
       - name: Verify generated editorial outputs are committed
-        run: git diff --exit-code -- articles sitemap.xml
+        run: git diff --exit-code -- articles/index.html articles/es/index.html articles/en/index.html articles/posts.json sitemap.xml
 
       - name: Validate source SEO
         run: python scripts/validate_seo.py
