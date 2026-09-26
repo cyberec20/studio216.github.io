@@ -13,7 +13,7 @@
   const copy = {
     en: {
       title: "Analytics choices",
-      body: "Studios216 uses GA4, Meta Pixel and Microsoft Clarity only if you accept non-essential analytics. This helps us understand traffic and product interest.",
+      body: "GA4 and Microsoft Clarity run in limited cookieless mode by default. Accept analytics to allow analytics storage and enable Meta Pixel for commercial measurement.",
       accept: "Accept analytics",
       reject: "Reject non-essential",
       privacy: "Privacy",
@@ -21,7 +21,7 @@
     },
     es: {
       title: "Preferencias de analítica",
-      body: "Studios216 usa GA4, Meta Pixel y Microsoft Clarity solo si aceptas la analítica no esencial. Esto nos ayuda a entender el tráfico y el interés en productos.",
+      body: "GA4 y Microsoft Clarity funcionan por defecto en modo limitado sin cookies. Acepta la analítica para permitir almacenamiento analítico y habilitar Meta Pixel para medición comercial.",
       accept: "Aceptar analítica",
       reject: "Rechazar no esenciales",
       privacy: "Privacidad",
@@ -65,15 +65,19 @@
     });
   }
 
-  function loadGA4() {
-    const ga = providers.ga4 || {};
-    if (!ga.enabled || !ga.measurement_id) return;
+  function applyGoogleConsent(choice) {
     window.gtag("consent", "update", {
-      analytics_storage: "granted",
+      analytics_storage: choice === "accepted" ? "granted" : "denied",
       ad_storage: "denied",
       ad_user_data: "denied",
       ad_personalization: "denied"
     });
+  }
+
+  function loadGA4(choice) {
+    const ga = providers.ga4 || {};
+    if (!ga.enabled || !ga.measurement_id) return;
+    applyGoogleConsent(choice);
     injectScript("https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(ga.measurement_id))
       .then(() => {
         window.gtag("js", new Date());
@@ -97,23 +101,38 @@
     window.fbq("track", "PageView");
   }
 
-  function loadClarity() {
+  function applyClarityConsent(choice) {
+    if (typeof window.clarity !== "function") return;
+    window.clarity("consentv2", {
+      ad_Storage: "denied",
+      analytics_Storage: choice === "accepted" ? "granted" : "denied"
+    });
+  }
+
+  function loadClarity(choice) {
     const clarityConfig = providers.clarity || {};
-    if (!clarityConfig.enabled || !clarityConfig.project_id || window.__studios216ClarityLoaded) return;
+    if (!clarityConfig.enabled || !clarityConfig.project_id || window.__studios216ClarityLoaded) {
+      applyClarityConsent(choice);
+      return;
+    }
     window.__studios216ClarityLoaded = true;
     (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", clarityConfig.project_id);
+    applyClarityConsent(choice);
   }
 
-  function loadProviders() {
-    if (providerLoadStarted) return;
+  function loadMeasurementProviders(choice) {
+    if (providerLoadStarted) {
+      applyGoogleConsent(choice);
+      applyClarityConsent(choice);
+      return;
+    }
     providerLoadStarted = true;
-    loadGA4();
-    loadMetaPixel();
-    loadClarity();
+    loadGA4(choice);
+    loadClarity(choice);
   }
 
   function sanitizedParams(params) {
@@ -146,8 +165,10 @@
     writeChoice(value);
     dismissBanner();
 
+    loadMeasurementProviders(value);
+
     if (value === "accepted") {
-      loadProviders();
+      loadMetaPixel();
       showChoicesButton();
       return;
     }
@@ -249,10 +270,16 @@
   };
 
   function start() {
-    const choice = readChoice();
-    if (!consent.required || choice === "accepted") {
-      if (!choice) writeChoice("accepted");
-      loadProviders();
+    let choice = readChoice();
+    if (!consent.required && !choice) {
+      choice = "accepted";
+      writeChoice(choice);
+    }
+
+    loadMeasurementProviders(choice || "rejected");
+
+    if (choice === "accepted") {
+      loadMetaPixel();
       showChoicesButton();
     } else if (choice === "rejected") {
       showChoicesButton();
