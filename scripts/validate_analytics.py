@@ -49,6 +49,15 @@ for name, pattern in patterns.items():
     if not re.match(pattern, value):
         errors.append(f"{name} has invalid {fields[name]}")
 
+if (providers.get("ga4") or {}).get("consent_mode") != "advanced":
+    errors.append("GA4 must use advanced consent mode")
+if (providers.get("meta_pixel") or {}).get("requires_consent") is not True:
+    errors.append("Meta Pixel must remain blocked until consent")
+if (providers.get("clarity") or {}).get("consent_mode") != "v2":
+    errors.append("Clarity must use ConsentV2")
+if (providers.get("clarity") or {}).get("no_consent_mode") is not True:
+    errors.append("Clarity no-consent mode must be enabled")
+
 expected_events = {"product_impression", "product_click", "product_cta_click", "external_product_visit"}
 if set(events.get("ga4") or []) != expected_events:
     errors.append("GA4 event taxonomy must contain exactly the four approved product events")
@@ -68,10 +77,12 @@ if asset_js.is_file():
     required_runtime_markers = (
         '"consent", "default"',
         'analytics_storage: "denied"',
-        'readChoice() !== "accepted"',
         'googletagmanager.com/gtag/js',
+        'consentv2',
+        'analytics_Storage: choice === "accepted" ? "granted" : "denied"',
         'connect.facebook.net/en_US/fbevents.js',
-        'clarity.ms/tag/',
+        'readChoice() !== "accepted"',
+        'loadMeasurementProviders(choice || "rejected")',
         'data-analytics-event',
         'data-analytics-impression',
     )
@@ -121,5 +132,6 @@ if errors:
     raise SystemExit(1)
 
 print(f"Analytics/consent validation passed for {covered}/{len(html_files)} public HTML pages.")
-print("Providers: GA4 + Meta Pixel + Microsoft Clarity; default consent: denied.")
-print("Meta Pixel custom events remain limited to commercial product-interest actions.")
+print("Providers: GA4 advanced Consent Mode + Clarity ConsentV2 + consent-gated Meta Pixel.")
+print("GA4 and Clarity retain limited cookieless/no-consent measurement; Meta Pixel remains blocked until consent.")
+print("Custom product events remain consent-gated; Meta Pixel custom events stay limited to commercial actions.")
