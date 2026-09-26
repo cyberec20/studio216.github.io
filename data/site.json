@@ -78,15 +78,19 @@
     "providers": {
       "ga4": {
         "enabled": true,
-        "measurement_id": "G-9F4QMVWNPC"
+        "measurement_id": "G-9F4QMVWNPC",
+        "consent_mode": "advanced"
       },
       "meta_pixel": {
         "enabled": true,
-        "pixel_id": "1210026194345632"
+        "pixel_id": "1210026194345632",
+        "requires_consent": true
       },
       "clarity": {
         "enabled": true,
-        "project_id": "vgak93wo90"
+        "project_id": "vgak93wo90",
+        "consent_mode": "v2",
+        "no_consent_mode": true
       }
     },
     "events": {
