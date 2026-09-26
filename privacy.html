@@ -18,18 +18,18 @@
 <main>
   <a href="/">&larr; Studios216</a>
   <h1>Privacy and analytics</h1>
-  <p>Last updated: September 25, 2026.</p>
+  <p>Last updated: September 26, 2026.</p>
 
-  <p>Studios216 uses non-essential analytics only after you choose <strong>Accept analytics</strong>. If you reject non-essential analytics, the website remains available and Google Analytics 4, Meta Pixel and Microsoft Clarity are not loaded by the Studios216 analytics layer.</p>
+  <p>Studios216 uses a mixed consent model. Google Analytics 4 and Microsoft Clarity load in limited, cookieless/no-consent modes by default so we can retain basic aggregate measurement. Meta Pixel remains blocked until you choose <strong>Accept analytics</strong>.</p>
 
   <h2>What we use</h2>
-  <p><strong>Google Analytics 4 (GA4)</strong> helps us understand website traffic and aggregate usage. <strong>Microsoft Clarity</strong> helps us understand interaction patterns and usability. <strong>Meta Pixel</strong> records consented page views; its custom events are limited to commercial actions such as product CTA or external product visits rather than mirroring every GA4 event.</p>
+  <p><strong>Google Analytics 4 (GA4)</strong> uses Google's advanced Consent Mode. With analytics storage denied, the Google tag can send measurements without analytics cookies for basic measurement and modeling. <strong>Microsoft Clarity</strong> uses ConsentV2 and can operate in no-consent mode without Clarity cookies, with limited tracking. <strong>Meta Pixel</strong> is not loaded until analytics consent is accepted; after acceptance it records page views and its custom events remain limited to commercial actions such as product CTA or external product visits.</p>
 
   <h2>Product-interest events</h2>
   <p>The site is prepared to measure a small event taxonomy when product components are introduced: <code>product_impression</code>, <code>product_click</code>, <code>product_cta_click</code> and <code>external_product_visit</code>. These events are used to understand which content leads readers to explore Studios216 products.</p>
 
   <h2>Your choice</h2>
-  <p>Your analytics choice is stored in your browser under a Studios216 consent key. You can reopen the consent panel at any time using the <strong>Privacy choices</strong> button shown on the site. Rejecting after previously accepting reloads the page so non-essential providers are not loaded again.</p>
+  <p>Your analytics choice is stored in your browser under a Studios216 consent key. You can reopen the consent panel at any time using the <strong>Privacy choices</strong> button shown on the site. Rejecting after previously accepting returns GA4 and Clarity to denied-storage mode and reloads the page so Meta Pixel is no longer loaded.</p>
 
   <div class="note">
     <p><strong>Important:</strong> provider-specific cookies or identifiers, retention periods and data processing are governed by the provider and by the settings of the corresponding Studios216 account. This page does not claim a retention period that cannot be verified from the public website repository.</p>
@@ -45,7 +45,7 @@
 
   <hr>
   <h2 lang="es">Resumen en español</h2>
-  <p lang="es">Studios216 carga GA4, Meta Pixel y Microsoft Clarity únicamente después de que aceptes la analítica no esencial. Puedes rechazarla sin perder acceso al sitio y cambiar tu elección posteriormente mediante el botón <strong>Preferencias de privacidad</strong>.</p>
+  <p lang="es">Studios216 usa un modelo intermedio de consentimiento: GA4 y Microsoft Clarity pueden operar en modo limitado sin cookies cuando no aceptas almacenamiento analítico; Meta Pixel permanece bloqueado hasta que aceptes. Puedes cambiar tu elección posteriormente mediante el botón <strong>Preferencias de privacidad</strong>.</p>
 </main>
 </body>
 </html>
