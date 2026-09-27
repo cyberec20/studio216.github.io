@@ -1,12 +1,12 @@
-# Editorial audit — punctuation and rhythm
+# Editorial audit — Do We Really Need Another AI Agent? (SEO/DDC revision, 2026-09-27)
 
-- Content integrity: **PASS** — same lexical token sequence; punctuation, capitalization and paragraph grouping only.
-- Body paragraphs: **86 → 28**.
-- Editorial panel average: **88.2/100**.
-- Raw DesireDrivenCopy overall: **75.8/100**.
-- Raw SELF-CTA: **Level 2 — Curiosity (68.5/100)**.
-- Truth-risk on article body (references excluded from regex scan): **PASS**.
-- Covert manipulation: **PASS**.
+- Desire-Driven Copy version: **v0.11.0**.
+- SEO + AI Discoverability version: **v0.3.0**.
+- Editorial-priority panel: **89.6/100**.
+- Raw DesireDrivenCopy overall: **66.7/100**.
+- Raw SELF-CTA readiness: **63.9/100 — Level 2: Curiosity**.
+- Truthfulness (article body): **PASS**.
+- Covert manipulation: **100/100 — PASS**.
 - Autonomy: **78/100 — PASS**.
 
 ## Editorial-priority validators
@@ -20,16 +20,23 @@
 | Repetition discipline | 100 | PASS |
 | Memory anchor | 100 | STRONG |
 | Message retention | 100 | READY |
-| Meaning compression | 74 | OK |
+| Meaning compression | 98 | STRONG |
 | Narrative economy | 90 | PASS |
-| Story transmissibility | 74 | OK |
-| Data-to-story proof | 94 | PASS |
-| Value-first/editorial route | 79 | PASS |
+| Story transmissibility | 79 | SHAREABLE |
+| Data-to-story proof | 74 | PASS |
+| Value-first/editorial route | 87 | PASS |
 
-## Raw-validator interpretation
+## SEO + AI Discoverability v0.3.0
 
-- The full raw audit may show **Truth-risk = REVIEW** because the generic regex treats the standalone `1` in bibliographic strings such as `NIST AI 600-1` as a verification flag. On the article body itself, the truthfulness validator returns **PASS**.
-- The full raw audit may show lower glanceability when it runs on normalized plain text, because normalization removes headings and bullet markers. Running the glanceability validator on the actual Markdown yields the score reported above.
-- No factual content was added, removed, or altered in this pass.
+Semantic editorial review: **15 PASS · 0 WARN · 0 FAIL · 2 INFO**.
 
-> Editorial scores are diagnostics, not substitutes for human read-aloud review. For this article type, rhythm, comprehension, pacing, memory, evidence continuity, and truthful reader engagement take priority over sales-letter metrics.
+The two INFO items are non-blocking publication-context checks: AI/how disclosure and final structured-data truthfulness. The latter is verified again after deterministic build.
+
+## Interpretation
+
+- This article is evaluated as thought leadership / educational editorial content, not as a sales letter.
+- The editorial-priority panel intentionally outranks the generic DDC overall for this use case.
+- The revision improves query clarity around AI agents versus deterministic software, descriptive headings, source proximity, explicit entities and internal topical linking.
+- No urgency, sales pressure or artificial desire escalation was introduced to increase heuristic scores.
+- Franklin reviewed the proposed revision and explicitly approved publication on **2026-09-27**.
+- Human read-aloud review remains a publication gate; automated metrics are diagnostic evidence, not a substitute for editorial judgment.
