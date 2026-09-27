@@ -1,26 +1,54 @@
-# ¿Realmente necesitamos otro agente… o el sistema ya debería saberlo?
+# ¿Realmente necesitamos otro agente de IA… o el sistema ya debería saberlo?
 
-Si trabajas con agentes, quizá ya te haya pasado: aparece una tarea nueva y piensas **“si un agente puede hacerlo, usemos un agente”**. Tiene lógica: hoy pueden leer documentos, interpretar estructuras, escribir código, llamar herramientas, comprobar resultados y corregirse. A veces incluso pueden pedir ayuda a otro agente y continuar. Pero la diferencia importante es ésta: capacidad no es lo mismo que necesidad.
+Si tú ya trabajas con agentes de IA, quizá reconozcas una tentación: **si un agente puede hacerlo, usemos un agente**. Tu flujo de trabajo gana otro ayudante capaz, y tu sistema parece avanzar al añadir un agente más.
 
-Y últimamente hay una pregunta que me parece más útil que “¿qué más puedo automatizar con IA?”: **¿qué parte del problema conocemos ya suficientemente bien como para dejar de razonarla cada vez?** Porque si la respuesta ya es estable, repetible y verificable, quizá el siguiente paso no sea añadir más inteligencia. Quizá sea convertir lo aprendido en sistema.
+Pero capacidad no es lo mismo que necesidad.
 
-## Una factura hace visible la diferencia
+La pregunta que ahora me resulta más útil es otra: **¿qué parte de tu problema ya conoces suficientemente bien como para dejar de razonarla cada vez**?
 
-Imaginemos una factura electrónica. Si solo recibimos un PDF, una máquina tiene que reconstruir bastante significado: localizar proveedor y cliente, reconocer filas, distinguir impuestos de descuentos, asociar números con conceptos y entender qué elementos dependen de cuáles. Un modelo multimodal puede ayudar mucho en ese escenario. Ahora añadamos otra pieza: junto al PDF recibimos también un XML estructurado.
+Por ejemplo, una tarea puede ser estable, repetible y verificable de forma objetiva. En ese caso, el software determinístico puede ser una mejor opción. Cuando todavía hay ambigüedad, contexto, excepciones o información no estructurada, un agente de IA empieza a ganarse su lugar.
+
+En otras palabras, no se trata de usar menos IA, sino de usar inteligencia donde todavía existe incertidumbre. Esa frontera se está convirtiendo en una de las decisiones de diseño que más valoro.
+
+## Una factura electrónica hace visible la diferencia
+
+Imaginemos una factura electrónica. Si solo recibimos un PDF, una máquina tiene que reconstruir bastante significado. Debe localizar proveedor y cliente, reconocer la tabla, separar impuestos de descuentos y relacionar cada valor con su concepto. Un modelo multimodal puede ayudar mucho en ese escenario.
+
+Ahora añadamos otra entrada: el XML estructurado que acompaña la factura.
 
 De pronto, una parte importante de la interpretación desaparece. El proveedor ya tiene un campo. La fecha tiene un campo. Los impuestos tienen campos definidos. Las líneas de producto tienen jerarquía. Los valores ya vienen asociados con aquello que significan.
 
-Esto no es una idea puramente teórica. El estándar europeo EN 16931 define precisamente un modelo semántico para los elementos centrales de una factura electrónica y contempla su transporte mediante sintaxis estructuradas como UBL y CII. En otras palabras, hay casos donde el significado ya viene formalizado para ser procesado por máquinas. Entonces la pregunta cambia: **¿por qué pedirle a un LLM que vuelva a descubrir algo que el sistema ya sabe?**
+Esto no es solo un ejemplo conveniente. El estándar europeo EN 16931 define un modelo semántico para los elementos centrales de una factura electrónica. También vincula ese significado con sintaxis estructuradas como UBL y CII. Eso significa que algunos procesos ya contienen buena parte del significado que una máquina necesita.
 
-Podemos parsear el XML, comprobar totales, validar reglas y transformar los datos a nuestro propio modelo. Si una condición debe producir de forma consistente la misma respuesta, el valor está precisamente en que podamos comprobarlo sin depender de una interpretación nueva cada vez. Ahí no necesito creatividad: necesito certeza.
+Entonces la pregunta cambia: **¿por qué pedirle a un LLM que vuelva a descubrir algo que el sistema ya sabe**?
 
-## La frontera es donde la IA empieza a ganar valor
+En lugar de pedirle al modelo que reinterprete esos campos, podemos parsear el XML, comprobar totales, aplicar reglas explícitas y transformar los datos a nuestro propio modelo. Si la misma condición debe producir de forma consistente la misma respuesta, podemos comprobarla directamente.
 
-La distinción importante no es “IA contra software tradicional”. Es otra: **¿esto ya está suficientemente entendido o todavía contiene incertidumbre?** En la misma factura pueden aparecer ambas cosas. Hay partes totalmente conocidas: un total debe cuadrar, un identificador debe cumplir una estructura, una regla fiscal conocida debe aplicarse de forma consistente, un workflow puede tener estados y transiciones explícitos.
+Ahí no necesito creatividad. Necesito certeza.
 
-Y luego aparece algo diferente: una descripción ambigua, un gasto difícil de clasificar, una excepción que no habíamos visto o un caso para el que todavía no existe una regla. Ahora sí tenemos una pregunta. Ahí la IA resulta mucho más interesante: interpreta, propone, compara posibilidades, ayuda a investigar. Un humano valida el resultado y el proceso continúa. Hasta que ocurre algo todavía más interesante.
+## Agentes de IA vs. software determinístico: dónde aporta valor cada uno
 
-La misma excepción vuelve a aparecer; después otra vez, y otra. En algún momento deja de ser realmente una excepción. **Hemos aprendido algo.** Entonces conviene preguntar si ese aprendizaje debe seguir viviendo únicamente en una conversación o si ya merece convertirse en una capacidad permanente. El patrón puede resumirse así:
+La distinción útil no es «IA contra software tradicional», sino **lógica conocida frente a incertidumbre relevante**. Software determinístico significa que la respuesta sigue reglas que ya entendemos y podemos probar.
+
+Un mismo workflow puede tener ambas cosas.
+
+Algunas partes pueden estar bien definidas. Podemos comprobar un identificador contra restricciones conocidas. Podemos aplicar una regla de negocio de forma consistente. Podemos verificar un cálculo. Un proceso también puede tener estados y transiciones explícitos.
+
+Luego aparece algo diferente: una descripción ambigua, una clasificación difícil o un caso nuevo para el que todavía no existe una regla. Ahora sí tenemos una pregunta. Ahí la IA resulta mucho más interesante. Puede interpretar, comparar posibilidades y ayudar a investigar información no estructurada. Un humano valida el resultado y el proceso continúa.
+
+Esta frontera también aparece en las guías actuales de quienes construyen estos sistemas. OpenAI recomienda agentes especialmente cuando los enfoques determinísticos o basados en reglas se quedan cortos. También señala que, en otros casos, una solución determinística puede ser suficiente.
+
+Anthropic traza una línea parecida. Los workflows predefinidos aportan previsibilidad y consistencia para tareas bien definidas. Los agentes cobran sentido cuando hacen falta flexibilidad y decisiones dinámicas del modelo.
+
+Eso no nos entrega una fórmula universal. Nos entrega una mejor pregunta.
+
+## Cuando una excepción vuelve una y otra vez, se convierte en conocimiento
+
+Supongamos que la misma excepción vuelve a aparecer. Después otra vez. Y otra.
+
+En algún momento deja de ser realmente una excepción. **Hemos aprendido algo.**
+
+Entonces conviene preguntar si ese aprendizaje debe seguir viviendo solo en una conversación o convertirse en una capacidad permanente del sistema. A eso lo llamamos **consolidación**: transformar una lección recurrente en algo que el sistema pueda reutilizar. Yo lo pienso así:
 
 ```text
 conocido → software
@@ -34,56 +62,93 @@ desconocido recurrente
 → software
 ```
 
-El agente no desaparece; simplemente se desplaza hacia la siguiente frontera. Hay una frase que me ayuda a recordarlo: **la IA explora la frontera; el software consolida el territorio.**
+El agente no desaparece; se desplaza hacia la siguiente frontera. Eso importa porque el sistema conserva la lección mientras el agente sigue explorando.
+
+Hay una frase que me ayuda a recordarlo: **la IA explora la frontera; el software consolida el territorio.**
 
 ## Aprender debería dejar algo detrás
 
-Hablamos mucho de memoria de agentes, contextos persistentes, historiales y bases de conocimiento. Todo eso puede ser útil. Pero hay otra forma de memoria menos vistosa: **hacer que lo aprendido cambie el sistema**. Si resolvemos una excepción, encontramos una regla general y la convertimos en código con una prueba, la próxima vez no necesitamos reconstruir toda la conversación. El conocimiento quedó incorporado.
+Hablamos mucho de memoria de agentes, contexto persistente, historiales y bases de conocimiento. Todo eso puede ser útil. Pero otra forma de memoria suele ser más valiosa en producción: **hacer que lo aprendido cambie el sistema**.
 
-Eso también cambia cómo entiendo la madurez de un sistema de IA. Un sistema inmaduro puede necesitar mucha interpretación porque todavía no ha formalizado lo que sabe. Uno que madura debería absorber parte de ese conocimiento en reglas, contratos, validaciones, tests, schemas y estados explícitos.
+Si resolvemos una excepción, descubrimos una regla general y la convertimos en código probado, la siguiente ejecución ya no necesita reconstruir toda la conversación. Ese conocimiento quedó absorbido en algo que podemos inspeccionar, probar, versionar y reutilizar.
 
-No se trata de sacar a la IA del sistema. Se trata de reservarla para donde todavía aporta algo que las reglas no pueden resolver por sí solas.
+Eso también cambia cómo entiendo la madurez de un sistema. Mientras todavía estamos explorando, es natural necesitar interpretación. Pero cuando una decisión recurrente se vuelve clara, parte de ese conocimiento puede pasar a reglas, contratos, validaciones, pruebas, schemas y estados explícitos.
 
-NIST da una razón práctica para ser cuidadosos con esa frontera: su perfil de riesgo para IA generativa trata la **confabulación** —respuestas falsas o inconsistentes presentadas con aparente confianza— como un riesgo inherente de estos sistemas y recomienda procesos de prueba, evaluación, validación y verificación, además de comparar resultados con datos conocidos cuando sea posible.
+No se trata de sacar a la IA del sistema. Se trata de reservarla para donde la inteligencia todavía está haciendo un trabajo real.
 
-Eso no significa que un LLM sea “malo” para automatizar. Significa algo más útil: **si existe una comprobación objetiva, úsala**. Podemos dejar que el modelo proponga y, al mismo tiempo, impedir que la validación dependa del modelo.
+NIST da una razón práctica para mantener visible esa frontera. Su perfil de riesgo para IA generativa define la **confabulación** como contenido falso o erróneo presentado con confianza. También recomienda prácticas de prueba y evaluación, incluidas comparaciones con datos conocidos de referencia cuando corresponde.
+
+Eso no convierte a los LLM en malas herramientas de automatización. Sugiere algo más útil: **si existe una comprobación objetiva, úsala**.
+
+El modelo puede proponer. El sistema todavía puede verificar.
 
 ## De una corrección humana a una regla del sistema
 
-Aquí aparece una consecuencia que me interesa especialmente por los agentes de programación. Durante años, muchas personas conocían procesos que podían automatizarse, pero existía una distancia enorme entre “sé cómo funciona” y “puedo convertirlo en software”. Había que traducir el conocimiento del dominio a requerimientos, luego a código, después probarlo y descubrir si lo implementado representaba realmente el proceso. Los agentes están acortando esa distancia.
+Los agentes de programación hacen que esto me resulte especialmente interesante.
 
-Un experto puede trabajar con un agente sin dominar cada librería ni recordar toda la sintaxis. Pero conserva algo que sigue siendo fundamental: **sabe cuándo el resultado está mal**. Puede decir: “Ésa no es la regla.” “En este caso hay una excepción.” “Ese dato no significa lo que estás suponiendo.” “El proceso debe detenerse aquí.” La parte realmente valiosa viene después.
+Durante años, muchos expertos de dominio conocían procesos técnicamente automatizables pero difíciles o costosos de traducir a software. Sabían qué debía ocurrir, qué excepciones importaban, cuándo un workflow debía detenerse y qué significaba un campo ausente. Llevar ese conocimiento a código funcional seguía exigiendo una larga cadena de traducción.
 
-Si esa corrección queda únicamente en el chat, aprendimos algo… pero el sistema no necesariamente lo aprendió. Si la convertimos en una regla, una prueba o un contrato, la siguiente ejecución empieza desde un nivel más alto. Eso se parece mucho a una idea clásica de ingeniería: **Plan, Do, Check, Act**. Probar, comprobar, corregir y consolidar la mejora antes de repetir el ciclo.
+En mi propio trabajo, los agentes de programación están acortando parte de esa distancia.
 
-La herramienta cambió; la lógica de mejora continua no tanto.
+Un experto puede colaborar con un agente sin dominar cada librería o detalle de implementación. Pero conserva algo que sigue siendo difícil de delegar: **saber cuándo el resultado está mal**.
+
+Puede decir: «Esa no es la regla». «Aquí existe una excepción». «Ese campo no significa lo que estás suponiendo». «El proceso debería detenerse aquí».
+
+La parte más valiosa viene después.
+
+Si esa corrección queda únicamente en el chat, aprendimos algo… pero el sistema no necesariamente lo aprendió. Si convertimos la corrección en una regla, prueba, validación o contrato, la siguiente ejecución comienza desde un nivel más alto.
+
+Eso se parece mucho a una idea clásica de ingeniería: **Plan, Do, Check, Act**. Probar, comprobar, corregir, consolidar y volver a ejecutar el ciclo. ISO describe precisamente PDCA como un ciclo de mejora continua para procesos y sistemas.
+
+La herramienta es nueva; la lógica de mejora continua no tanto.
+
+Esto también forma parte de la progresión que describí en [Cómo trabajar mejor con la IA](/articles/es/interactuando-con-la-ia/): mejores prompts terminan llevando a mejor contexto, criterios más claros, herramientas, pruebas, workflows y sistemas.
 
 ## El agente puede cambiar; la capacidad debería permanecer
 
-Hay otra ventaja de consolidar lo aprendido. Hoy puedo construir con un modelo. Mañana puedo cambiar de proveedor, aparecerá una herramienta mejor o simplemente decidiré usar otra arquitectura. Si el conocimiento operativo vive sobre todo en prompts, conversaciones y comportamientos particulares del agente, parte de mi sistema queda atada a esa herramienta. Pero si durante el trabajo convertimos ese conocimiento en código, pruebas, schemas, workflows y datos estructurados, la situación cambia.
+Hay otra ventaja de consolidar lo aprendido.
 
-El agente puede cambiar; la capacidad permanece. Ésa es una distinción que considero cada vez más importante: **la IA puede ayudar a construir el activo sin tener que convertirse ella misma en el activo**. Un modelo puede ayudarnos a descubrir una regla. Pero una vez que esa regla es suficientemente clara y crítica, prefiero poder verla, probarla, versionarla y trasladarla.
+Hoy puedo construir con un modelo y mañana cambiar de proveedor. Puede aparecer una herramienta mejor. La arquitectura puede cambiar. Si el conocimiento operativo vive principalmente en prompts, conversaciones y comportamientos particulares del agente, parte del sistema queda atada a esa herramienta.
 
-## Antes de añadir otro agente, probaría esto
+Pero si durante el trabajo convertimos ese conocimiento en reglas, código, pruebas, schemas, workflows y datos estructurados, la relación cambia.
 
-Puede que te preguntes por dónde empezar la próxima vez que un proceso parezca pedir “otro agente”. Yo haría una comprobación rápida:
+**El agente puede cambiar; la capacidad permanece.**
 
-- **¿La entrada ya viene estructurada?** Si existe un campo, schema, API o formato explícito, quizá no haga falta volver a interpretar lo que ya está representado.
-- **¿La decisión depende de una regla conocida?** Si la misma condición debería producir la misma respuesta, puede ser candidata a código.
-- **¿Existe una prueba objetiva del resultado?** Si existe, conviene que esa verificación sea determinística aunque un modelo participe antes.
-- **¿La excepción sigue siendo realmente una excepción?** Si aparece constantemente y ya comprendemos el patrón, quizá deba consolidarse.
+Esa distinción me importa cada vez más. La IA puede ayudar a construir el activo sin tener que convertirse ella misma en el activo. Un modelo puede ayudarnos a descubrir una regla. Cuando la regla ya está clara, prefiero verla, probarla, versionarla y trasladarla.
+
+## Antes de añadir otro agente de IA, probaría este filtro
+
+La próxima vez que un workflow parezca necesitar «otro agente», empezaría con cinco preguntas:
+
+- **¿La entrada ya viene estructurada**?
+  Si un campo, schema, API o formato explícito ya representa la información, quizá no necesitemos que un LLM vuelva a interpretarla.
+- **¿Qué parte de la decisión depende de una regla conocida**? Si la misma condición debería producir la misma respuesta, puede ser candidata a código determinístico.
+- **¿El resultado puede comprobarse objetivamente**? Si puede, conviene que esa verificación siga siendo determinística aunque un modelo participe antes.
+- **¿La excepción sigue siendo realmente una excepción**? Si aparece constantemente y ya comprendemos el patrón, quizá sea momento de consolidarla.
 - **Si mañana cambio de modelo, qué conocimiento permanece?** La respuesta revela cuánto aprendizaje pertenece realmente al sistema.
 
-No son mandamientos; son un filtro. A veces la respuesta seguirá siendo “necesito un agente”. Perfecto. Ese es exactamente el lugar donde quiero usarlo. Pero otras veces descubriremos que estábamos gastando inteligencia en volver a decidir algo que ya habíamos decidido muchas veces. Y ésa es la parte que me parece más interesante. Durante un tiempo, la pregunta dominante fue: **¿qué más puedo hacer con agentes?**
+No son mandamientos. Son un filtro.
 
-Hoy sigo haciéndomela. Pero junto a ella pongo otra: **¿qué parte de lo que un agente hace hoy debería dejar de necesitar un agente mañana?** No porque quiera usar menos IA. Porque quiero que cada ciclo deje algo detrás. Una regla más clara. Una prueba nueva. Un contrato más preciso. Una excepción menos ambigua. Una capacidad que permanezca cuando la conversación termine.
+A veces la respuesta seguirá siendo «necesito un agente». Perfecto. Ese es exactamente el lugar donde quiero usarlo. Pero otras veces descubriremos que estamos gastando inteligencia en volver a decidir algo que ya entendemos.
 
-La IA explora la frontera; nosotros verificamos lo aprendido; el software consolida el territorio. Y entonces la frontera vuelve a moverse. La próxima vez que pienses “aquí podría poner otro agente”, prueba primero con una pregunta más incómoda: **¿aquí necesito realmente inteligencia… o ya conozco suficientemente bien la respuesta como para convertirla en software?**
+Durante un tiempo, la pregunta dominante fue: **¿qué más puedo hacer con agentes?**
+
+Todavía me la hago. Pero ahora coloco otra a su lado: **¿qué parte de lo que un agente hace hoy debería dejar de necesitar un agente mañana?**
+
+No porque quiera usar menos IA. Porque quiero que cada ciclo deje algo detrás: una regla más clara, una prueba nueva, un contrato más fuerte, una excepción menos ambigua, una capacidad que permanezca cuando la conversación termine.
+
+En resumen, la diferencia no está en usar más o menos IA, sino en saber dónde todavía hace falta interpretar. La IA explora la frontera. Nosotros validamos lo aprendido. El software consolida el territorio. Y entonces la frontera vuelve a moverse.
+
+Así que la próxima vez que pienses «aquí podría poner otro agente», prueba primero con una pregunta más incómoda:
+
+**¿Aquí necesito realmente inteligencia… o ya conozco suficientemente bien la respuesta como para convertirla en software**?
 
 ---
 
 ## Referencias
 
 - Comisión Europea, **EN 16931 / European standard on eInvoicing**: modelo semántico y sintaxis estructuradas para facturas electrónicas. https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard
-- NIST, **Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)**: confabulación, supervisión humana y procesos de test, evaluation, validation and verification (TEVV). https://doi.org/10.6028/NIST.AI.600-1
-- ISO 9001, **Plan-Do-Check-Act cycle**. https://www.iso.org/iso/iso9001_2015_process_approach.pdf
+- OpenAI, **A practical guide to building agents**: guía sobre cuándo un enfoque con agentes aporta valor y cuándo una solución determinística puede ser suficiente. https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/
+- Anthropic, **Building Effective AI Agents**: distinción entre workflows predecibles y agentes para decisiones flexibles dirigidas por el modelo. https://www.anthropic.com/engineering/building-effective-agents
+- NIST, **Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)**: confabulación, supervisión humana y procesos de prueba, evaluación, validación y verificación. https://doi.org/10.6028/NIST.AI.600-1
+- ISO 9001, **The process approach in ISO 9001:2015**: Plan-Do-Check-Act como ciclo de mejora continua. https://www.iso.org/iso/iso9001_2015_process_approach.pdf
