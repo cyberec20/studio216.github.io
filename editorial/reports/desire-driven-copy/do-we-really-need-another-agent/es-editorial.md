@@ -1,36 +1,42 @@
-# Auditoría editorial — puntuación y ritmo
+# Auditoría editorial — ¿Realmente necesitamos otro agente de IA? (revisión SEO/DDC, 2026-09-27)
 
-- Content integrity: **PASS** — same lexical token sequence; punctuation, capitalization and paragraph grouping only.
-- Body paragraphs: **84 → 27**.
-- Editorial panel average: **89.2/100**.
-- Raw DesireDrivenCopy overall: **73.5/100**.
-- Raw SELF-CTA: **Level 2 — Curiosity (66.7/100)**.
-- Truth-risk on article body (references excluded from regex scan): **PASS**.
-- Covert manipulation: **PASS**.
-- Autonomy: **86/100 — PASS**.
+- Versión Desire-Driven Copy: **v0.11.0**.
+- Versión SEO + AI Discoverability: **v0.3.0**.
+- Panel de prioridad editorial: **89.6/100**.
+- DesireDrivenCopy overall genérico: **65.9/100**.
+- SELF-CTA genérico: **63.9/100 — Level 2: Curiosity**.
+- Veracidad (cuerpo del artículo): **PASS**.
+- Manipulación encubierta: **100/100 — PASS**.
+- Autonomía: **78/100 — PASS**.
 
-## Editorial-priority validators
+## Validadores de prioridad editorial
 
-| Validator | Score | Status |
+| Validador | Puntuación | Estado |
 |---|---:|---|
 | Attention load | 87 | PASS |
-| Comprehension | 83 | CLEAR |
+| Comprehension | 90 | CLEAR |
 | Information pacing | 80 | PASS |
 | Glanceability | 90 | STRONG |
 | Repetition discipline | 100 | PASS |
 | Memory anchor | 100 | STRONG |
 | Message retention | 100 | READY |
-| Meaning compression | 86 | STRONG |
+| Meaning compression | 98 | STRONG |
 | Narrative economy | 90 | PASS |
-| Story transmissibility | 82 | SHAREABLE |
-| Data-to-story proof | 94 | PASS |
-| Value-first/editorial route | 79 | PASS |
+| Story transmissibility | 79 | SHAREABLE |
+| Data-to-story proof | 74 | PASS |
+| Value-first/editorial route | 87 | PASS |
 
-## Raw-validator interpretation
+## SEO + AI Discoverability v0.3.0
 
-- The full raw audit may show **Truth-risk = REVIEW** because the generic regex treats the standalone `1` in bibliographic strings such as `NIST AI 600-1` as a verification flag. On the article body itself, the truthfulness validator returns **PASS**.
-- The raw Spanish Claim/Proof score is distorted by a lexical rule that treats `mejora` in `mejora continua` as a promotional claim. No wording was changed merely to game that heuristic.
-- The full raw audit may show lower glanceability when it runs on normalized plain text, because normalization removes headings and bullet markers. Running the glanceability validator on the actual Markdown yields the score reported above.
-- No factual content was added, removed, or altered in this pass.
+Revisión semántica editorial: **15 PASS · 0 WARN · 0 FAIL · 2 INFO**.
 
-> Editorial scores are diagnostics, not substitutes for human read-aloud review. For this article type, rhythm, comprehension, pacing, memory, evidence continuity, and truthful reader engagement take priority over sales-letter metrics.
+Los dos INFO son comprobaciones no bloqueantes ligadas al contexto de publicación: disclosure sobre IA/how y veracidad final del structured data. Esta última se vuelve a comprobar después del build determinístico.
+
+## Interpretación
+
+- El artículo se evalúa como thought leadership / contenido educativo editorial, no como carta de ventas.
+- El panel editorial prevalece deliberadamente sobre el DDC Overall genérico para este caso de uso.
+- La revisión mejora la claridad semántica alrededor de agentes de IA frente a software determinístico, encabezados descriptivos, proximidad de fuentes, entidades explícitas y enlazado temático interno.
+- No se introdujeron urgencia, presión comercial ni deseo artificial para aumentar métricas heurísticas.
+- Franklin revisó la propuesta y aprobó explícitamente su publicación el **2026-09-27**.
+- La lectura humana sigue siendo un gate de publicación; las métricas automáticas son evidencia diagnóstica, no sustitutos del juicio editorial.
