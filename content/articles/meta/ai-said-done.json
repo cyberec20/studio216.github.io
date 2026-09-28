@@ -1,0 +1,89 @@
+{
+  "id": "ai-said-done",
+  "translation_key": "ai-said-done",
+  "status": "published",
+  "provenance": {
+    "relationship": "substantial_update",
+    "source_platform": "LinkedIn",
+    "versions": {
+      "es": {
+        "original_title": "La IA dijo “terminado”. El producto tenía otra opinión",
+        "original_published": "2026-07-20"
+      },
+      "en": {
+        "original_title": "AI Said “Done”. The Product Had a Different Opinion",
+        "original_url": "https://www.linkedin.com/pulse/ai-said-done-product-had-different-opinion-franklin-rodriguez-acosta-orqhe",
+        "original_published": "2026-07-23"
+      }
+    }
+  },
+  "versions": {
+    "es": {
+      "slug": "la-ia-dijo-terminado",
+      "title": "La IA dijo «terminado». El producto tenía otra opinión",
+      "description": "Un agente puede cerrar su plan y pasar pruebas mientras la funcionalidad sigue incompleta. Cómo separar autonomía, validación y aceptación basada en evidencia.",
+      "source": "content/articles/es/la-ia-dijo-terminado.md",
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "hero": "/assets/articles/ai-said-done/reference-es.webp",
+      "hero_width": 120,
+      "hero_height": 68,
+      "hero_alt": "Infografía sobre el ciclo de validación de trabajo generado por IA, desde implementación y pruebas hasta revisión funcional, corrección y aceptación.",
+      "show_hero": false,
+      "listing_cover": "/assets/articles/ai-said-done/reference-es.webp",
+      "og_image": "https://studios216.com/assets/articles/ai-said-done/reference-es.webp",
+      "topics": ["Sistemas de IA","Agentes","Ingeniería de software","QA y validación"],
+      "topic_ids": ["ai-systems","agents","software-engineering","qa-validation"],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/ai-said-done/es-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/ai-said-done/es-full.md",
+          "validated_at": "2026-09-28",
+          "raw_overall": 60.9,
+          "editorial_panel": 90.6
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "idiomatic_spanish_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    },
+    "en": {
+      "slug": "ai-said-done",
+      "title": "AI Said “Done”. The Product Had a Different Opinion",
+      "description": "An agent can complete its plan and pass tests while a feature is still incomplete. How to separate autonomy, validation, and evidence-based acceptance.",
+      "source": "content/articles/en/ai-said-done.md",
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "hero": "/assets/articles/ai-said-done/reference-en.webp",
+      "hero_width": 120,
+      "hero_height": 68,
+      "hero_alt": "Infographic showing an AI validation cycle from implementation and testing through functional review, correction, and technical acceptance.",
+      "show_hero": false,
+      "listing_cover": "/assets/articles/ai-said-done/reference-en.webp",
+      "og_image": "https://studios216.com/assets/articles/ai-said-done/reference-en.webp",
+      "topics": ["AI systems","Agents","Software engineering","QA and validation"],
+      "topic_ids": ["ai-systems","agents","software-engineering","qa-validation"],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/ai-said-done/en-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/ai-said-done/en-full.md",
+          "validated_at": "2026-09-28",
+          "raw_overall": 62.1,
+          "editorial_panel": 91.3
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    }
+  }
+}

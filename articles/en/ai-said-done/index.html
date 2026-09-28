@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Said “Done”. The Product Had a Different Opinion | Studios 216</title>
+  <meta name="description" content="An agent can complete its plan and pass tests while a feature is still incomplete. How to separate autonomy, validation, and evidence-based acceptance.">
+  <meta name="author" content="Franklin Rodriguez">
+  <link rel="canonical" href="https://studios216.com/articles/en/ai-said-done/">
+  <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/ai-said-done/">
+  <link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/la-ia-dijo-terminado/">
+  <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/en/ai-said-done/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI Said “Done”. The Product Had a Different Opinion">
+  <meta property="og:description" content="An agent can complete its plan and pass tests while a feature is still incomplete. How to separate autonomy, validation, and evidence-based acceptance.">
+  <meta property="og:url" content="https://studios216.com/articles/en/ai-said-done/">
+  <meta property="og:image" content="https://studios216.com/assets/articles/ai-said-done/reference-en.webp">
+  <meta property="article:published_time" content="2026-09-28">
+  <meta property="article:modified_time" content="2026-09-28">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Said “Done”. The Product Had a Different Opinion">
+  <meta name="twitter:description" content="An agent can complete its plan and pass tests while a feature is still incomplete. How to separate autonomy, validation, and evidence-based acceptance.">
+  <meta name="twitter:image" content="https://studios216.com/assets/articles/ai-said-done/reference-en.webp">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AI Said “Done”. The Product Had a Different Opinion","description":"An agent can complete its plan and pass tests while a feature is still incomplete. How to separate autonomy, validation, and evidence-based acceptance.","image":"https://studios216.com/assets/articles/ai-said-done/reference-en.webp","datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://studios216.com/articles/en/ai-said-done/"},"author":{"@type":"Person","@id":"https://studios216.com/about/founder/#person","name":"Franklin Rodriguez","url":"https://studios216.com/about/founder/"},"publisher":{"@type":"Organization","@id":"https://studios216.com/#organization","name":"Studios 216","url":"https://studios216.com/"}}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/editorial.css">
+</head>
+<body class="min-h-screen">
+  <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/70">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="/" aria-label="Studios 216 Home"><img src="/assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-12 w-auto rounded-md"></a>
+      <nav class="flex items-center gap-5 text-sm">
+        <a href="/about.html" class="text-gray-400 hover:text-white">About</a>
+        <a href="/articles/" class="text-white">Articles</a>
+      </nav>
+    </div>
+  </header>
+  <main class="editorial-shell py-12">
+    <div class="editorial-grid">
+      <aside class="author-rail">
+        <div class="author-rail-card">
+          <p class="text-xs uppercase tracking-[.18em] text-gray-500 mb-3">Written by</p>
+          <h2 class="text-lg font-bold text-white">Franklin Rodriguez</h2>
+          <p class="text-sm text-gray-400 mt-1">Founder &amp; CEO · Engineer · Author · Instructor</p>
+          <div class="mt-5 space-y-2 text-sm">
+            <a class="block" href="/about/founder/">About Franklin</a>
+            <a class="block" href="/articles/">Articles</a>
+          </div>
+          
+          
+        </div>
+      </aside>
+      <article>
+        <header class="mb-8">
+          <div class="language-switch"><span class="active">English</span><a href="https://studios216.com/articles/es/la-ia-dijo-terminado/">Español</a></div>
+          <p class="mt-5 text-xs uppercase tracking-[.18em] text-blue-400">AI systems · Agents · Software engineering · QA and validation</p>
+          <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mt-3">AI Said “Done”. The Product Had a Different Opinion</h1>
+          <p class="text-lg text-gray-400 mt-5">An agent can complete its plan and pass tests while a feature is still incomplete. How to separate autonomy, validation, and evidence-based acceptance.</p>
+          <p class="text-sm text-gray-500 mt-5">2026-09-28 · 11 min read</p>
+        </header>
+        
+        <div class="article-body"><p>If you work with coding agents on your product, you probably recognize the scene; the hard part is avoiding one deceptively simple trap: visible progress can look like product acceptance. The terminal keeps moving while the agent opens files, analyzes the project, writes code, and runs tests. When it finds errors, it fixes them and moves to the next task. Sometimes it worked for ten minutes; other times, half an hour or more. I could watch for a while, step away, and return to find several files changed, new components created, and another phase marked complete. There was real evidence of progress.</p>
+<p>It was difficult not to feel that I was watching the future; it was equally difficult not to think that the product was making enormous progress without constant intervention from me. Technically, it was progressing. What I had not yet learned was how to avoid confusing implementation speed with product closure.</p>
+<p>The problem appeared when I opened the application.</p>
+<p>I did not find a disaster; in fact, that would have been easier. There were screens, working flows, reasonable components, and green tests. The agent had not done a bad job: it had built a plausible interpretation of what I had asked for. Yet there was still a distance between <strong>“the task is done”</strong> and <strong>“the feature is actually complete inside the product.”</strong> The difference between those two statements changed the way I work with agents.</p>
+<h2>“Done” is not a sufficient technical state</h2>
+<p>An agent can complete its plan, execute every expected step, and return a coherent result; it can even write tests that pass. None of that is useless. The problem begins when we mistake those signals for acceptance.</p>
+<p>Engineering offers a distinction that is especially useful here. <a href="https://www.nasa.gov/reference/5-4-product-validation/" class="editorial-link" rel="noopener">NASA separates verification from validation</a>: verification provides evidence that <strong>the product was done right</strong> against defined requirements, while validation asks whether <strong>the right product was done</strong> for the user’s expectations and intended operating environment.</p>
+<p>AI-generated software has the same boundary. A test may prove that a function returns the expected value; another may confirm that an endpoint responds correctly. That matters, but a different question remains: <strong>can the user complete the job they needed to complete, in the way the product was meant to support?</strong></p>
+<p>That question rarely fits inside one green CI line.</p>
+<p>This distinction deepens something I had already observed when moving <a href="/articles/en/from-idea-to-functional-product/">from an idea to a functional product</a>: a first implementation can be valuable without yet being an accepted product.</p>
+<h2>The agent can close its interpretation, not necessarily your intent</h2>
+<p>In my case, the agent was not starting from a vague request. It had a PRD, documentation, project files, rules, and enough context to understand what we were building. The work was also divided into phases: read the specification, plan, implement, run tests, and mark tasks complete.</p>
+<p>On paper, the process made sense; for a while, I trusted that context, planning, and tests would be enough to keep the product aligned.</p>
+<p>They helped a great deal, but they did not cover everything.</p>
+<p>Some parts of intent only become visible when the product is used. A document can define users, permissions, screens, actions, and rules; once someone walks through the flow, however, different questions appear. Should this action happen here or one step earlier? Will the user understand what to do next? Is the information sufficient? What happens outside the ideal case? Is the feature integrated with what came before or merely sitting beside it? Does it solve the complete problem or only its most obvious part?</p>
+<p>A specification reduces ambiguity; use reveals the ambiguity that remains.</p>
+<p>That is where I understood something important: <strong>an agent can correctly close the interpretation it built from the available context and still not have reached the product’s full intent.</strong></p>
+<h2>Green tests can be correct and still be insufficient</h2>
+<p>This does not mean tests have failed as a tool. It means a test can only verify what has been expressed as a verifiable condition.</p>
+<p><a href="https://docs.github.com/en/copilot/tutorials/review-ai-generated-code" class="editorial-link" rel="noopener">GitHub’s guidance for reviewing AI-generated code</a> recommends starting with automated tests and static analysis; it then asks reviewers to verify that the change fits the project’s purpose, requirements, and architecture. The sequence matters: first, verify that the code does what it claims to do; then, verify that this was actually what the product needed.</p>
+<p>The risk becomes clearer when the same loop produces interpretation, implementation, and test. In that setting, the model may read a requirement, interpret it partially, build according to that reading, and then generate tests that prove <strong>its own interpretation</strong> works.</p>
+<p>The circle can close perfectly and still be incomplete.</p>
+<p>That is why I no longer treat a green test as a synonym for an accepted feature. I treat it as one piece of evidence inside a larger decision.</p>
+<h2>The distance between “it works” and “it works as it should”</h2>
+<p>When I reviewed the product, the gaps were rarely dramatic. Some features reached a certain point and stopped; others covered the basic case but did not reach the depth the real workflow required. Some actions existed technically, yet still did not fit naturally into the full experience.</p>
+<p>This class of problem is harder to detect precisely because <strong>almost everything looks reasonable</strong>.</p>
+<p>A broken screen demands attention. A flow that works at 80% can survive several cycles before anyone notices what is missing.</p>
+<p>That is where functional review becomes different from code review. I do not need to inspect every variable to discover that a user cannot complete a task. I need to open the feature, walk through it as a user, force less comfortable cases, and compare what happens with the original intent.</p>
+<p>In another article, I explained why <a href="/articles/en/ai-does-not-eliminate-engineering/">AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit</a>. This is the practical reverse side of that idea: the faster an agent can implement, the more important it becomes to decide <strong>what evidence is sufficient to accept what it implemented</strong>.</p>
+<h2>Review too late and alignment debt begins to accumulate</h2>
+<p>The problem grows when several phases are allowed to accumulate before functional review.</p>
+<p>Each incomplete feature may leave one or two open points; individually, they look small. The next feature then starts building on previous decisions that have not yet been fully validated. One screen depends on a partial workflow; a new module assumes an earlier rule is already settled; an integration hardens an interpretation we had not actually accepted.</p>
+<p>The system keeps growing and, at the same time, the distance between what exists and what we intended keeps growing with it.</p>
+<p>I think of that distance as <strong>alignment debt</strong>: not necessarily bad code, but new work built on an understanding that had not yet been validated deeply enough.</p>
+<p>Technical debt usually describes implementation decisions that make future change more expensive; alignment debt is different. It can exist alongside clean code, good tests, and a reasonable architecture. Its source is elsewhere: <strong>we kept moving before confirming that the direction was correct</strong>.</p>
+<p>Agent speed can amplify it. If a human takes two days to build on a questionable decision, there is more time for the mismatch to become visible. If it builds several layers in an afternoon, more distance can accumulate before the next checkpoint.</p>
+<h2>The checkpoint changes where autonomy belongs</h2>
+<p>My response was not to remove autonomy from the agent; doing that would throw away one of its greatest advantages.</p>
+<p>The change was practical, which meant separating two things more clearly: <strong>autonomy to implement</strong> and <strong>authority to accept</strong>.</p>
+<p>Inside a feature, the agent can research, plan, write code, run tests, fix errors, and try again. Acceptance, however, does not happen automatically because the plan turned green; it happens when there is enough evidence that the feature behaves as it should inside the product.</p>
+<p>In practice, the cycle looks more like this:</p>
+<pre><code class="language-text">intent
+→ acceptance criteria
+→ agent implementation
+→ tests and validators
+→ functional review
+→ findings / punch list
+→ correction
+→ revalidation
+→ acceptance
+</code></pre>
+<p>The important word is not “human” versus “AI”; it is <strong>checkpoint</strong>.</p>
+<p>Some checkpoints can be deterministic: tests, schemas, contracts, type checking, linting, security rules, or non-regression checks. Others still require judgment: architecture, user experience, product coherence, ambiguous behavior, or side effects that are difficult to formalize.</p>
+<p>OpenAI’s <a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" class="editorial-link" rel="noopener">practical guide to building agents</a> recommends combining autonomy with guardrails and human intervention, particularly when failure thresholds are exceeded or actions are sensitive. For more mature workflows, its evaluation guidance also recommends examining traces, tool calls, handoffs, and end-to-end behavior rather than assuming that the final output tells the whole story. (<a href="https://developers.openai.com/api/docs/guides/agent-evals" class="editorial-link" rel="noopener">OpenAI — Evaluate agent workflows</a>)</p>
+<p>That general principle matches my experience: <strong>autonomy works better when the system knows where to stop and ask for evidence.</strong></p>
+<h2>The human last mile does not mean coding by hand</h2>
+<p>For a long time, I thought supervising an agent meant reviewing the code it wrote. I now see the job differently.</p>
+<p>My main intervention happens at the product level: open it, use it, compare it, exercise uncomfortable cases, and detect what is missing. When I find a gap, I do not need to say, “You programmed this function incorrectly.” I can describe the mismatch in terms of expected behavior. For example:</p>
+<ul>
+<li>
+<p>this feature still does not let the user complete this action.</p>
+</li>
+<li>
+<p>when this condition occurs, the flow should continue this way.</p>
+</li>
+<li>
+<p>this information is still missing from the decision.</p>
+</li>
+<li>
+<p>this action exists, but it is not yet integrated with the rest of the process.</p>
+</li>
+<li>
+<p>these points must be closed before we move forward.</p>
+</li>
+</ul>
+<p>The agent can translate those findings into tasks, implement the corrections, and generate new tests; then the cycle begins again.</p>
+<p>Human work is not necessarily writing the missing code. It is <strong>recognizing that something is still missing</strong>.</p>
+<p>This matters particularly for domain experts. A person may not know every detail of a framework, yet still recognize an incomplete business rule or a workflow that violates the real operation. They can also detect when the product technically “works” in a way nobody would actually use.</p>
+<h2>Acceptance needs evidence, not a final sentence</h2>
+<p>One of the most useful changes we can make when working with agents is to redefine what “done” means operationally.</p>
+<p>Instead of accepting a declaration, we can require evidence proportional to the type of work. The core idea is simple: the greater the impact, the stronger the evidence should be. For example:</p>
+<ul>
+<li>
+<p><strong>local change:</strong> clear diff + specific test + no relevant regression.</p>
+</li>
+<li>
+<p><strong>feature:</strong> acceptance criteria + tests + functional walkthrough.</p>
+</li>
+<li>
+<p><strong>integration:</strong> interface, state, and failure validation across components.</p>
+</li>
+<li>
+<p><strong>sensitive change:</strong> deterministic controls + human review + rollback path.</p>
+</li>
+<li>
+<p><strong>product feature:</strong> correct behavior inside the complete user flow, not merely technical existence.</p>
+</li>
+</ul>
+<p><a href="https://www.nasa.gov/reference/system-engineering-handbook-appendix/" class="editorial-link" rel="noopener">NASA’s systems engineering guidance</a> treats validation as a planned activity for demonstrating that a system satisfies user and stakeholder expectations. That logic is far more useful to me than treating “done” as an internal label produced by the agent.</p>
+<p>The agent may declare that its work is finished; <strong>the engineering system decides whether the result is accepted</strong>.</p>
+<h2>Seven questions before moving to the next phase</h2>
+<p>Before I let one feature become the foundation for the next, I now try to answer seven questions:</p>
+<ol>
+<li>
+<p><strong>What was the user supposed to be able to do at the end?</strong> Not which files had to change, but which capability had to exist.</p>
+</li>
+<li>
+<p><strong>What evidence proves the main case works?</strong> Tests, validators, a demonstration, or some combination of them.</p>
+</li>
+<li>
+<p><strong>What happens outside the happy path?</strong> Errors, partial states, permissions, retries, unexpected data.</p>
+</li>
+<li>
+<p><strong>Is the feature integrated or does it merely exist?</strong> Correct code can still sit outside the real workflow.</p>
+</li>
+<li>
+<p><strong>Which assumptions did the agent make that we have not yet validated?</strong> Especially around business logic, UX, or architecture.</p>
+</li>
+<li>
+<p><strong>Which findings remain open?</strong> If there is a punch list, the feature is not accepted even if the original plan is green.</p>
+</li>
+<li>
+<p><strong>Would I confidently build the next layer on top of this?</strong> If the answer is no, we are not done yet.</p>
+</li>
+</ol>
+<p>Not every task deserves the same level of ceremony; a small local change does not need the same process as payments, permissions, or clinical data. The underlying question remains the same: <strong>what evidence justifies building the next layer on top of this one?</strong></p>
+<h2>Speed needs checkpoints</h2>
+<p>I still find it impressive how much an agent can do without constant intervention. It can navigate a repository, understand relationships among files, build components, call tools, correct itself, and sustain work for increasingly long periods.</p>
+<p>I do not want to lose that capability; I want to use it without confusing movement with direction.</p>
+<p>That is why I now try to give agents autonomy inside clear boundaries and reserve acceptance for the points where the product itself needs to be checked. This also connects with another question I have been exploring: <a href="/articles/en/do-we-really-need-another-agent/">Do We Really Need Another AI Agent—or Should the System Know This Already?</a>. The more decisions we can turn into rules, tests, and validators, the less quality depends on someone—human or agent—remembering to check them manually.</p>
+<p>AI can travel most of the road, and it can travel it quickly; that is precisely why stopping in the right places matters.</p>
+<p>In short, “done” is a declaration; <strong>accepted is a conclusion backed by evidence</strong>.</p>
+<hr />
+<h2>References</h2>
+<ul>
+<li>
+<p>NASA, <strong>Product Validation</strong>: verification versus validation; requirements compliance versus user expectations and intended environment. <a href="https://www.nasa.gov/reference/5-4-product-validation/" class="editorial-link" rel="noopener">https://www.nasa.gov/reference/5-4-product-validation/</a></p>
+</li>
+<li>
+<p>NASA Systems Engineering Handbook, <strong>Verification and Validation Plan / Requirements Verification and Validation Matrices</strong>. <a href="https://www.nasa.gov/reference/system-engineering-handbook-appendix/" class="editorial-link" rel="noopener">https://www.nasa.gov/reference/system-engineering-handbook-appendix/</a></p>
+</li>
+<li>
+<p>GitHub Docs, <strong>Review AI-generated code</strong>: testing, static analysis, context, intent, and architecture. <a href="https://docs.github.com/en/copilot/tutorials/review-ai-generated-code" class="editorial-link" rel="noopener">https://docs.github.com/en/copilot/tutorials/review-ai-generated-code</a></p>
+</li>
+<li>
+<p>OpenAI, <strong>A practical guide to building agents</strong>: guardrails, human intervention, and escalation criteria. <a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" class="editorial-link" rel="noopener">https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/</a></p>
+</li>
+<li>
+<p>OpenAI API, <strong>Evaluate agent workflows</strong>: traces, graders, and end-to-end agent workflow evaluation. <a href="https://developers.openai.com/api/docs/guides/agent-evals" class="editorial-link" rel="noopener">https://developers.openai.com/api/docs/guides/agent-evals</a></p>
+</li>
+</ul></div>
+      </article>
+    </div>
+  </main>
+  <footer class="border-t border-gray-900 py-8 text-center text-sm text-gray-600 mt-12">&copy; 2025-2026 Studios 216. All rights reserved.</footer>
+</body>
+</html>

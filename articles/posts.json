@@ -48,6 +48,54 @@
     "reading_time": "9 min de lectura"
   },
   {
+    "id": "ai-said-done",
+    "translation_key": "ai-said-done",
+    "lang": "en",
+    "title": "AI Said “Done”. The Product Had a Different Opinion",
+    "description": "An agent can complete its plan and pass tests while a feature is still incomplete. How to separate autonomy, validation, and evidence-based acceptance.",
+    "url": "/articles/en/ai-said-done/",
+    "date": "2026-09-28",
+    "topics": [
+      "AI systems",
+      "Agents",
+      "Software engineering",
+      "QA and validation"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "software-engineering",
+      "qa-validation"
+    ],
+    "cover": "/assets/articles/ai-said-done/reference-en.webp",
+    "cover_alt": "Infographic showing an AI validation cycle from implementation and testing through functional review, correction, and technical acceptance.",
+    "reading_time": "11 min read"
+  },
+  {
+    "id": "ai-said-done",
+    "translation_key": "ai-said-done",
+    "lang": "es",
+    "title": "La IA dijo «terminado». El producto tenía otra opinión",
+    "description": "Un agente puede cerrar su plan y pasar pruebas mientras la funcionalidad sigue incompleta. Cómo separar autonomía, validación y aceptación basada en evidencia.",
+    "url": "/articles/es/la-ia-dijo-terminado/",
+    "date": "2026-09-28",
+    "topics": [
+      "Sistemas de IA",
+      "Agentes",
+      "Ingeniería de software",
+      "QA y validación"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "software-engineering",
+      "qa-validation"
+    ],
+    "cover": "/assets/articles/ai-said-done/reference-es.webp",
+    "cover_alt": "Infografía sobre el ciclo de validación de trabajo generado por IA, desde implementación y pruebas hasta revisión funcional, corrección y aceptación.",
+    "reading_time": "11 min de lectura"
+  },
+  {
     "id": "from-idea-to-functional-product",
     "translation_key": "from-idea-to-functional-product",
     "lang": "en",
