@@ -36,7 +36,7 @@
 
 Revisión semántica previa al build: **15 PASS · 0 WARN · 0 FAIL · 2 INFO**.
 
-Los INFO previos al build corresponden a disclosure/how y structured-data truthfulness. La veracidad de metadata/JSON-LD se verifica nuevamente sobre el HTML generado antes de publicar.
+Revisión posterior al build: **16 PASS · 0 WARN · 0 FAIL · 1 INFO**. `structured-data truthfulness` queda **PASS** después de verificar el HTML generado: canonical, hreflang ES/EN/x-default, `BlogPosting` JSON-LD, autor, fechas, `mainEntityOfPage` e imagen son coherentes con la metadata canónica. El único INFO restante es disclosure/how; no se introduce un párrafo artificial únicamente para satisfacer una heurística.
 
 ## Criterio editorial
 
