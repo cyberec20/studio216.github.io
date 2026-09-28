@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit | Studios 216</title>
+  <meta name="description" content="AI accelerates execution but does not eliminate engineering. Why specifications, acceptance criteria, audit, and evidence matter more than ever.">
+  <meta name="author" content="Franklin Rodriguez">
+  <link rel="canonical" href="https://studios216.com/articles/en/ai-does-not-eliminate-engineering/">
+  <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/ai-does-not-eliminate-engineering/">
+  <link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/la-ia-no-elimina-la-ingenieria/">
+  <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/en/ai-does-not-eliminate-engineering/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit">
+  <meta property="og:description" content="AI accelerates execution but does not eliminate engineering. Why specifications, acceptance criteria, audit, and evidence matter more than ever.">
+  <meta property="og:url" content="https://studios216.com/articles/en/ai-does-not-eliminate-engineering/">
+  <meta property="og:image" content="https://studios216.com/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp">
+  <meta property="article:published_time" content="2026-09-28">
+  <meta property="article:modified_time" content="2026-09-28">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit">
+  <meta name="twitter:description" content="AI accelerates execution but does not eliminate engineering. Why specifications, acceptance criteria, audit, and evidence matter more than ever.">
+  <meta name="twitter:image" content="https://studios216.com/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit","description":"AI accelerates execution but does not eliminate engineering. Why specifications, acceptance criteria, audit, and evidence matter more than ever.","image":"https://studios216.com/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp","datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://studios216.com/articles/en/ai-does-not-eliminate-engineering/"},"author":{"@type":"Person","@id":"https://studios216.com/about/founder/#person","name":"Franklin Rodriguez","url":"https://studios216.com/about/founder/"},"publisher":{"@type":"Organization","@id":"https://studios216.com/#organization","name":"Studios 216","url":"https://studios216.com/"}}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/editorial.css">
+</head>
+<body class="min-h-screen">
+  <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/70">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="/" aria-label="Studios 216 Home"><img src="/assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-12 w-auto rounded-md"></a>
+      <nav class="flex items-center gap-5 text-sm">
+        <a href="/about.html" class="text-gray-400 hover:text-white">About</a>
+        <a href="/articles/" class="text-white">Articles</a>
+      </nav>
+    </div>
+  </header>
+  <main class="editorial-shell py-12">
+    <div class="editorial-grid">
+      <aside class="author-rail">
+        <div class="author-rail-card">
+          <p class="text-xs uppercase tracking-[.18em] text-gray-500 mb-3">Written by</p>
+          <h2 class="text-lg font-bold text-white">Franklin Rodriguez</h2>
+          <p class="text-sm text-gray-400 mt-1">Founder &amp; CEO · Engineer · Author · Instructor</p>
+          <div class="mt-5 space-y-2 text-sm">
+            <a class="block" href="/about/founder/">About Franklin</a>
+            <a class="block" href="/articles/">Articles</a>
+          </div>
+          
+          
+        </div>
+      </aside>
+      <article>
+        <header class="mb-8">
+          <div class="language-switch"><span class="active">English</span><a href="https://studios216.com/articles/es/la-ia-no-elimina-la-ingenieria/">Español</a></div>
+          <p class="mt-5 text-xs uppercase tracking-[.18em] text-blue-400">AI systems · Engineering · Software engineering · Engineering governance</p>
+          <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mt-3">AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit</h1>
+          <p class="text-lg text-gray-400 mt-5">AI accelerates execution but does not eliminate engineering. Why specifications, acceptance criteria, audit, and evidence matter more than ever.</p>
+          <p class="text-sm text-gray-500 mt-5">2026-09-28 · 9 min read</p>
+        </header>
+        
+        <div class="article-body"><p>If you use AI to build software, you may already recognize one of its most attractive promises: <strong>“tell it what you want, and it will build it.”</strong></p>
+<p>And, in one sense, that promise is becoming real: an agent can read your repository, propose an approach, write code, run tests, fix errors, and prepare a deliverable very quickly.</p>
+<p>The problem comes next: <strong>producing a result is not the same as demonstrating that the result is acceptable</strong>.</p>
+<p>Engineers already know that distance well. An electrical installation is not accepted because the contractor says, “finished”; a system is not released because it looks complete; critical equipment does not enter service because someone says it works. We compare the result with drawings, specifications, acceptance criteria, tests, observations, and evidence.</p>
+<p>AI does not remove that logic; it makes it more important, because the faster we can produce a first version, the more important it becomes to define <strong>what it means for that version to be correct</strong>.</p>
+<h2>A first delivery is not technical acceptance</h2>
+<p>This was one of the first lessons I carried from traditional engineering into AI-assisted software work.</p>
+<p>In an industrial project, a vendor can deliver a panel, calculation report, drawing, or equipment package that looks perfectly reasonable and still contains a deviation. That is why technical review exists: the deliverable is compared with what was actually required.</p>
+<p>AI-generated software deserves the same distinction: the code may compile, existing tests may pass, and the interface may look right. The agent may even report that every item in its plan is complete; even so, we may still have the wrong problem solved beautifully.</p>
+<p><a href="https://docs.github.com/en/copilot/tutorials/review-ai-generated-code" class="editorial-link" rel="noopener">GitHub</a> makes this explicit in its own guidance for reviewing AI-generated code: automated tests and static analysis come first; reviewers should then check whether the change matches the project’s purpose, requirements, architecture, and design patterns. The question is not only whether the code runs, but whether it solves the right problem under the right constraints.</p>
+<p>That gives me a useful distinction: <strong>generation produces a proposal; acceptance demonstrates that the proposal meets a criterion</strong>. The second part is still engineering.</p>
+<h2>AI moves the bottleneck toward definition</h2>
+<p>When writing code was the most expensive part of the process, it made sense for implementation to consume much of our attention; that relationship is changing.</p>
+<p>If an agent can produce in minutes what once took hours, the main question is no longer only “How do I implement this?”; other questions become more important:</p>
+<ul>
+<li>What problem are we actually solving?</li>
+<li>Which behavior must remain unchanged?</li>
+<li>Which constraints cannot be violated?</li>
+<li>Which risks matter?</li>
+<li>What evidence would prove the change is complete?</li>
+<li>Which deviations are acceptable, and which are not?</li>
+</ul>
+<p>In other words, <strong>AI can make execution cheaper while making ambiguity more expensive</strong>.</p>
+<p>A vague instruction can quickly become a large amount of code, a wide diff, and an even larger review problem; speed amplifies a good definition, but it also amplifies a bad one.</p>
+<p>The <a href="https://dora.dev/research/2025/dora-report/" class="editorial-link" rel="noopener">2025 DORA report</a> on AI-assisted software development reaches a similar idea from an organizational perspective: it describes AI primarily as an <strong>amplifier</strong> of the strengths and weaknesses already present in a team and its system.</p>
+<p><a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report" class="editorial-link" rel="noopener">Google Cloud’s summary</a> reports that 90% of surveyed technology professionals use AI at work; more than 80% report productivity gains; at the same time, 30% report little or no trust in AI-generated code.</p>
+<p>Those are survey results, not a universal law of productivity; still, the combination is useful: <strong>using more AI and trusting it blindly are not the same thing</strong>.</p>
+<h2>When the specification becomes part of the system</h2>
+<p>In engineering, a useful specification is not documentation for its own sake; it reduces incompatible interpretations.</p>
+<p><a href="https://www.nasa.gov/reference/system-engineering-handbook-appendix/" class="editorial-link" rel="noopener">NASA’s <em>Systems Engineering Handbook</em></a>, for example, includes guidance on writing requirements and on defining how those requirements will later be verified; its verification matrix connects each requirement with the method used to demonstrate compliance.</p>
+<p>That idea becomes especially useful when agents are doing more of the implementation. It is not enough to say:</p>
+<blockquote>
+<p>Implement this feature.</p>
+</blockquote>
+<p>The system becomes much easier to direct when it also knows:</p>
+<ul>
+<li>the objective.</li>
+<li>the scope.</li>
+<li>the constraints.</li>
+<li>the interfaces that must not break.</li>
+<li>the acceptance criteria.</li>
+<li>the expected tests.</li>
+<li>the risks that require review.</li>
+<li>what is explicitly out of scope.</li>
+</ul>
+<p>This does not mean turning every task into a fifty-page specification; it means making visible whatever would otherwise force the model to guess. And the more autonomous the agent becomes, the less I want important decisions to depend on guesses.</p>
+<p>That is why I increasingly see a specification as more than the instruction that starts the work: it can become an <strong>interface between intent and execution</strong>. It can guide implementation, inform tests, and give the audit a stable reference point afterward.</p>
+<h2>My workflow looks more like a punch list than a prompt</h2>
+<p>The analogy that has helped me most comes from inspection and quality control.</p>
+<p>When an industrial project is approaching completion, the review is not a conversation about whether the contractor feels confident: we inspect the deliverable, and deviations become specific findings. Those findings enter a punch list; they are then corrected, checked again, and eventually closed.</p>
+<p>My AI workflow gradually started to look much more like that:</p>
+<pre><code class="language-text">plan
+→ implement with AI
+→ audit
+→ turn deviations into findings
+→ correct
+→ verify again
+→ accept
+</code></pre>
+<p>The value is that every stage leaves evidence. Planning makes the expected result explicit; implementation produces the change; audit compares reality with intent. Findings turn “something feels wrong” into verifiable issues; correction responds to those issues; re-audit checks that we did not merely change things, but actually closed what was pending.</p>
+<p>This also explains why using another model as a reviewer can help without solving governance by itself. One model can implement; another can audit; we can even use evaluation-and-refinement loops such as <a href="https://www.anthropic.com/engineering/building-effective-agents" class="editorial-link" rel="noopener">Anthropic’s <em>evaluator-optimizer</em> pattern</a>, where one output is evaluated against clear criteria and iterated. But then someone still has to define those criteria and decide when the evidence is sufficient.</p>
+<h2>Technical authority does not disappear; it moves</h2>
+<p>This is the shift I find most important: if AI writes a growing share of the code, human value does not disappear; it moves.</p>
+<p>Previously, a large part of the work involved producing each line, calculation, document, or procedure directly; we can now delegate more execution. That frees time, but it also exposes another kind of responsibility: <strong>define, constrain, verify, and accept</strong>.</p>
+<p>Someone still has to decide what should be built, what level of risk is acceptable, which architecture should be preserved, which information is trustworthy, which exception needs judgment, and which result can move into production.</p>
+<p><a href="https://airc.nist.gov/" class="editorial-link" rel="noopener">NIST</a> uses <strong>TEVV—testing, evaluation, verification, and validation—</strong> as a central part of its approach to managing AI risk. The lesson is not that every generative output should be distrusted, but something more practical: when a claim or behavior can be checked, design the check instead of replacing it with confidence.</p>
+<p>This connects directly with a question I explored later in <a href="/articles/en/do-we-really-need-another-agent/">Do We Really Need Another AI Agent—or Should the System Know This Already?</a>. Once a decision becomes stable, repeatable, and objectively verifiable, some of that knowledge can move out of conversations and into rules, tests, and deterministic software.</p>
+<p>AI can help us get there; technical acceptance, however, needs a reference point that exists outside the model’s own answer.</p>
+<h2>Engineering becomes more explicit because implicit knowledge scales poorly</h2>
+<p>When you work alone, many decisions can live comfortably in your head: you know which part of the system you do not want to touch, and you remember why a strange rule exists. You also recognize which exception matters; you can often tell when a solution “works” while violating the architecture.</p>
+<p>An agent does not automatically share that history; if the decision matters, it needs to leave your head and become context, a rule, a test, a contract, an example, or an acceptance criterion.</p>
+<p>That can feel like additional work at first, but it creates something valuable: <strong>knowledge stops depending exclusively on one person’s memory or one conversation</strong>.</p>
+<p>That is also why my approach to <a href="/articles/en/working-with-ai/">working better with AI</a> has moved away from the search for the “perfect prompt.” As the task becomes more complex, the challenge is no longer finding one brilliant sentence; instead, it becomes providing enough context and enough controls for the work to move quickly without losing intent.</p>
+<p>A specification does not eliminate judgment; it makes judgment visible. A test does not eliminate creativity; it defines what we do not want to break. An audit does not necessarily slow AI down; it prevents us from confusing speed with closure.</p>
+<h2>So what should become explicit?</h2>
+<p>There is no universal template; but, before I delegate an important task to an agent, I try to answer at least five questions:</p>
+<ul>
+<li><strong>What result do we want?</strong> Not only which file should change, but which behavior should exist afterward.</li>
+<li><strong>Which constraints matter?</strong> Architecture, security, data, compatibility, scope, cost, or any other real boundary.</li>
+<li><strong>How will we know it complies?</strong> Tests, observable criteria, comparisons, validators, or human review.</li>
+<li><strong>What evidence should remain?</strong> Logs, tests, diffs, reports, artifacts, or another trail that makes the work auditable.</li>
+<li><strong>Who accepts the result?</strong> An agent can declare its task complete; that does not mean the system should declare the result accepted.</li>
+</ul>
+<p>The difference seems small, but it changes the conversation we have with AI: we are no longer asking only <strong>“Can you do this?”</strong>; we are defining <strong>“This is what doing it well means.”</strong></p>
+<h2>Speed does not remove responsibility</h2>
+<p>AI can compress the time between an idea and a first implementation dramatically; that is valuable, and I see no reason to give up that advantage.</p>
+<p>But the faster execution becomes, the more expensive an ambiguous objective can become. That is why I do not see engineering and AI as competing forces, but as a redistribution of work. The machine can take on more production, exploration, and repetition; the human can spend more attention on intent, architecture, risk, evidence, and acceptance.</p>
+<p><strong>AI does not eliminate engineering; it makes visible the engineering decisions that once remained implicit: more explicit, more traceable, more verifiable.</strong></p>
+<p>For me, that is one of the most interesting changes in AI-assisted work: we do not stop thinking like engineers; we have to express much more clearly what it means for something to be truly well built.</p>
+<hr />
+<h2>References</h2>
+<ul>
+<li>DORA, <strong>State of AI-assisted Software Development 2025</strong>: <a href="https://dora.dev/research/2025/dora-report/" class="editorial-link" rel="noopener">https://dora.dev/research/2025/dora-report/</a></li>
+<li>Google Cloud, <strong>Announcing the 2025 DORA Report: State of AI-Assisted Software Development</strong>: <a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report" class="editorial-link" rel="noopener">https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report</a></li>
+<li>GitHub Docs, <strong>Review AI-generated code</strong>: <a href="https://docs.github.com/en/copilot/tutorials/review-ai-generated-code" class="editorial-link" rel="noopener">https://docs.github.com/en/copilot/tutorials/review-ai-generated-code</a></li>
+<li>NASA, <strong>Systems Engineering Handbook — Requirements Verification Matrix and Validation Plan</strong>: <a href="https://www.nasa.gov/reference/system-engineering-handbook-appendix/" class="editorial-link" rel="noopener">https://www.nasa.gov/reference/system-engineering-handbook-appendix/</a></li>
+<li>NIST, <strong>AI Risk Management Framework / AI Resource Center</strong>: <a href="https://airc.nist.gov/" class="editorial-link" rel="noopener">https://airc.nist.gov/</a></li>
+<li>Anthropic, <strong>Building Effective AI Agents — evaluator-optimizer workflow</strong>: <a href="https://www.anthropic.com/engineering/building-effective-agents" class="editorial-link" rel="noopener">https://www.anthropic.com/engineering/building-effective-agents</a></li>
+</ul></div>
+      </article>
+    </div>
+  </main>
+  <footer class="border-t border-gray-900 py-8 text-center text-sm text-gray-600 mt-12">&copy; 2025-2026 Studios 216. All rights reserved.</footer>
+</body>
+</html>
