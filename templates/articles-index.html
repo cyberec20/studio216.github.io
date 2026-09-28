@@ -35,20 +35,41 @@
       <select id="topic-filter" class="topic-select" aria-label="{{ALL_TOPICS_LABEL}}">{{TOPIC_OPTIONS}}</select>
       {{LANGUAGE_FILTERS}}
     </section>
-    <div id="article-list" class="article-list mt-10">{{ARTICLE_CARDS}}</div>
+    <div class="article-results-meta mt-5">
+      <p id="article-results-summary" class="text-sm text-gray-400" aria-live="polite"></p>
+    </div>
+    <div id="article-list" class="article-list mt-5">{{ARTICLE_CARDS}}</div>
     <p id="empty-state" class="text-gray-500 mt-10 hidden">{{EMPTY_STATE}}</p>
+    <nav id="article-pagination" class="article-pagination mt-7 hidden" aria-label="Article pages">
+      <button id="page-prev" class="article-page-button" type="button"></button>
+      <span id="page-status" class="article-page-status" aria-live="polite"></span>
+      <button id="page-next" class="article-page-button" type="button"></button>
+    </nav>
   </main>
   <script>
     const fixedLanguage={{FILTER_LANG_JSON}};
     let activeLanguage=fixedLanguage;
+    let currentPage=1;
+    const PAGE_SIZE=10;
     const search=document.getElementById("article-search");
     const topic=document.getElementById("topic-filter");
     const list=document.getElementById("article-list");
     const empty=document.getElementById("empty-state");
+    const summary=document.getElementById("article-results-summary");
+    const pagination=document.getElementById("article-pagination");
+    const prev=document.getElementById("page-prev");
+    const next=document.getElementById("page-next");
+    const pageStatus=document.getElementById("page-status");
     const cards=[...list.querySelectorAll(".article-list-card")];
 
     const normalize=value => (value||"").toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
     const cardTopics=card => (card.dataset.topics||"").split("||").filter(Boolean);
+    const labels=()=>{
+      const lang=(activeLanguage==="es"||fixedLanguage==="es")?"es":"en";
+      return lang==="es"
+        ? {previous:"Anterior",next:"Siguiente",page:"Página",of:"de",showing:"Mostrando",results:"resultados",total:"en total"}
+        : {previous:"Previous",next:"Next",page:"Page",of:"of",showing:"Showing",results:"results",total:"total"};
+    };
     function rebuildTopics(){
       const labels=[...new Set(cards
         .filter(card=>!activeLanguage||card.dataset.lang===activeLanguage)
@@ -59,26 +80,58 @@
       labels.forEach(label=>{const opt=document.createElement("option");opt.value=label;opt.textContent=label;topic.appendChild(opt);});
       if(labels.includes(current)) topic.value=current;
     }
-    function render(){
+    function matchingCards(){
       const q=normalize(search.value);
       const t=topic.value;
-      let visible=0;
-      cards.forEach(card=>{
+      return cards.filter(card=>{
         const languageOK=!activeLanguage||card.dataset.lang===activeLanguage;
         const topicOK=!t||cardTopics(card).includes(t);
         const searchOK=!q||normalize(card.textContent).includes(q);
-        const show=languageOK&&topicOK&&searchOK;
-        card.classList.toggle("hidden",!show);
-        if(show) visible+=1;
+        return languageOK&&topicOK&&searchOK;
       });
-      empty.classList.toggle("hidden",visible>0);
+    }
+    function render(){
+      const matches=matchingCards();
+      const totalMatches=matches.length;
+      const totalPages=Math.max(1,Math.ceil(totalMatches/PAGE_SIZE));
+      currentPage=Math.min(currentPage,totalPages);
+      const start=(currentPage-1)*PAGE_SIZE;
+      const end=Math.min(start+PAGE_SIZE,totalMatches);
+      const visibleSet=new Set(matches.slice(start,end));
+      cards.forEach(card=>card.classList.toggle("hidden",!visibleSet.has(card)));
+
+      empty.classList.toggle("hidden",totalMatches>0);
+      const copy=labels();
+      if(totalMatches===0){
+        summary.textContent=`0 ${copy.results} · ${cards.length} ${copy.total}`;
+      }else{
+        const range=totalMatches===1?"1":`${start+1}–${end}`;
+        const filteredSuffix=totalMatches===cards.length?"":` · ${cards.length} ${copy.total}`;
+        summary.textContent=`${copy.showing} ${range} ${copy.of} ${totalMatches} ${copy.results}${filteredSuffix}`;
+      }
+
+      prev.textContent=copy.previous;
+      next.textContent=copy.next;
+      pageStatus.textContent=`${copy.page} ${currentPage} ${copy.of} ${totalPages}`;
+      prev.disabled=currentPage<=1;
+      next.disabled=currentPage>=totalPages;
+      pagination.classList.toggle("hidden",totalPages<=1);
+    }
+    function resetAndRender(){ currentPage=1; render(); }
+    function goToPage(delta){
+      currentPage+=delta;
+      render();
+      list.scrollIntoView({behavior:"smooth",block:"start"});
     }
     document.querySelectorAll("[data-lang]").forEach(btn=>btn.addEventListener("click",()=>{
       activeLanguage=btn.dataset.lang;
       document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b===btn));
-      rebuildTopics(); render();
+      rebuildTopics(); resetAndRender();
     }));
-    search.addEventListener("input",render); topic.addEventListener("change",render);
+    search.addEventListener("input",resetAndRender);
+    topic.addEventListener("change",resetAndRender);
+    prev.addEventListener("click",()=>goToPage(-1));
+    next.addEventListener("click",()=>goToPage(1));
     rebuildTopics(); render();
   </script>
 </body>
