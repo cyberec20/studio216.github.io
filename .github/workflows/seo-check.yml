@@ -6,17 +6,12 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
   validate-site:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -32,15 +27,8 @@ jobs:
       - name: Rebuild article library
         run: python scripts/build_articles.py
 
-      - name: Synchronize builder-authoritative editorial outputs
-        run: |
-          if ! git diff --quiet -- articles sitemap.xml; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add articles sitemap.xml
-            git commit -m "Regenerate from-idea-to-product outputs"
-            git push origin HEAD:${{ github.head_ref }}
-          fi
+      - name: Verify all generated editorial outputs are committed
+        run: git diff --exit-code -- articles sitemap.xml
 
       - name: Validate builder source fidelity and sitemap contract
         run: python scripts/validate_builder_contract.py
