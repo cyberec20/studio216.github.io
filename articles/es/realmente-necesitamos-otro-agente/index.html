@@ -57,7 +57,7 @@
           <p class="mt-5 text-xs uppercase tracking-[.18em] text-blue-400">Sistemas de IA · Agentes · Ingeniería de software</p>
           <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mt-3">¿Realmente necesitamos otro agente de IA… o el sistema ya debería saberlo?</h1>
           <p class="text-lg text-gray-400 mt-5">Cuándo usar agentes de IA y cuándo convertir decisiones conocidas en software determinístico: reglas, pruebas, validación y conocimiento que permanece.</p>
-          <p class="text-sm text-gray-500 mt-5">2026-09-27 · 8 min de lectura</p>
+          <p class="text-sm text-gray-500 mt-5">2026-09-27 · 9 min de lectura</p>
         </header>
         <figure class="article-hero"><img src="/assets/articles/do-we-really-need-another-agent/hero-es.webp" alt="Infografía antes y después: un flujo donde todo pasa por agentes frente a otro que usa reglas y software determinístico y reserva la IA para ambigüedad y excepciones." width="760" height="428" loading="eager" decoding="async"></figure>
         <div class="article-body"><p>Si tú ya trabajas con agentes de IA, quizá reconozcas una tentación: <strong>si un agente puede hacerlo, usemos un agente</strong>. Tu flujo de trabajo gana otro ayudante capaz, y tu sistema parece avanzar al añadir un agente más.</p>
@@ -69,7 +69,7 @@
 <p>Imaginemos una factura electrónica. Si solo recibimos un PDF, una máquina tiene que reconstruir bastante significado. Debe localizar proveedor y cliente, reconocer la tabla, separar impuestos de descuentos y relacionar cada valor con su concepto. Un modelo multimodal puede ayudar mucho en ese escenario.</p>
 <p>Ahora añadamos otra entrada: el XML estructurado que acompaña la factura.</p>
 <p>De pronto, una parte importante de la interpretación desaparece. El proveedor ya tiene un campo. La fecha tiene un campo. Los impuestos tienen campos definidos. Las líneas de producto tienen jerarquía. Los valores ya vienen asociados con aquello que significan.</p>
-<p>Esto no es solo un ejemplo conveniente. El estándar europeo EN 16931 define un modelo semántico para los elementos centrales de una factura electrónica. También vincula ese significado con sintaxis estructuradas como UBL y CII. Eso significa que algunos procesos ya contienen buena parte del significado que una máquina necesita.</p>
+<p>Esto no es solo un ejemplo conveniente. El <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard" class="editorial-link" rel="noopener">estándar europeo EN 16931</a> define un modelo semántico para los elementos centrales de una factura electrónica. También vincula ese significado con sintaxis estructuradas como UBL y CII. Eso significa que algunos procesos ya contienen buena parte del significado que una máquina necesita.</p>
 <p>Entonces la pregunta cambia: <strong>¿por qué pedirle a un LLM que vuelva a descubrir algo que el sistema ya sabe</strong>?</p>
 <p>En lugar de pedirle al modelo que reinterprete esos campos, podemos parsear el XML, comprobar totales, aplicar reglas explícitas y transformar los datos a nuestro propio modelo. Si la misma condición debe producir de forma consistente la misma respuesta, podemos comprobarla directamente.</p>
 <p>Ahí no necesito creatividad. Necesito certeza.</p>
@@ -78,8 +78,8 @@
 <p>Un mismo workflow puede tener ambas cosas.</p>
 <p>Algunas partes pueden estar bien definidas. Podemos comprobar un identificador contra restricciones conocidas. Podemos aplicar una regla de negocio de forma consistente. Podemos verificar un cálculo. Un proceso también puede tener estados y transiciones explícitos.</p>
 <p>Luego aparece algo diferente: una descripción ambigua, una clasificación difícil o un caso nuevo para el que todavía no existe una regla. Ahora sí tenemos una pregunta. Ahí la IA resulta mucho más interesante. Puede interpretar, comparar posibilidades y ayudar a investigar información no estructurada. Un humano valida el resultado y el proceso continúa.</p>
-<p>Esta frontera también aparece en las guías actuales de quienes construyen estos sistemas. OpenAI recomienda agentes especialmente cuando los enfoques determinísticos o basados en reglas se quedan cortos. También señala que, en otros casos, una solución determinística puede ser suficiente.</p>
-<p>Anthropic traza una línea parecida. Los workflows predefinidos aportan previsibilidad y consistencia para tareas bien definidas. Los agentes cobran sentido cuando hacen falta flexibilidad y decisiones dinámicas del modelo.</p>
+<p>Esta frontera también aparece en las guías actuales de quienes construyen estos sistemas. <a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" class="editorial-link" rel="noopener">OpenAI</a> recomienda agentes especialmente cuando los enfoques determinísticos o basados en reglas se quedan cortos. También señala que, en otros casos, una solución determinística puede ser suficiente.</p>
+<p><a href="https://www.anthropic.com/engineering/building-effective-agents" class="editorial-link" rel="noopener">Anthropic</a> traza una línea parecida. Los workflows predefinidos aportan previsibilidad y consistencia para tareas bien definidas. Los agentes cobran sentido cuando hacen falta flexibilidad y decisiones dinámicas del modelo.</p>
 <p>Eso no nos entrega una fórmula universal. Nos entrega una mejor pregunta.</p>
 <h2>Cuando una excepción vuelve una y otra vez, se convierte en conocimiento</h2>
 <p>Supongamos que la misma excepción vuelve a aparecer. Después otra vez. Y otra.</p>
@@ -102,7 +102,7 @@ desconocido recurrente
 <p>Si resolvemos una excepción, descubrimos una regla general y la convertimos en código probado, la siguiente ejecución ya no necesita reconstruir toda la conversación. Ese conocimiento quedó absorbido en algo que podemos inspeccionar, probar, versionar y reutilizar.</p>
 <p>Eso también cambia cómo entiendo la madurez de un sistema. Mientras todavía estamos explorando, es natural necesitar interpretación. Pero cuando una decisión recurrente se vuelve clara, parte de ese conocimiento puede pasar a reglas, contratos, validaciones, pruebas, schemas y estados explícitos.</p>
 <p>No se trata de sacar a la IA del sistema. Se trata de reservarla para donde la inteligencia todavía está haciendo un trabajo real.</p>
-<p>NIST da una razón práctica para mantener visible esa frontera. Su perfil de riesgo para IA generativa define la <strong>confabulación</strong> como contenido falso o erróneo presentado con confianza. También recomienda prácticas de prueba y evaluación, incluidas comparaciones con datos conocidos de referencia cuando corresponde.</p>
+<p><a href="https://doi.org/10.6028/NIST.AI.600-1" class="editorial-link" rel="noopener">NIST</a> da una razón práctica para mantener visible esa frontera. Su perfil de riesgo para IA generativa define la <strong>confabulación</strong> como contenido falso o erróneo presentado con confianza. También recomienda prácticas de prueba y evaluación, incluidas comparaciones con datos conocidos de referencia cuando corresponde.</p>
 <p>Eso no convierte a los LLM en malas herramientas de automatización. Sugiere algo más útil: <strong>si existe una comprobación objetiva, úsala</strong>.</p>
 <p>El modelo puede proponer. El sistema todavía puede verificar.</p>
 <h2>De una corrección humana a una regla del sistema</h2>
@@ -113,7 +113,7 @@ desconocido recurrente
 <p>Puede decir: «Esa no es la regla». «Aquí existe una excepción». «Ese campo no significa lo que estás suponiendo». «El proceso debería detenerse aquí».</p>
 <p>La parte más valiosa viene después.</p>
 <p>Si esa corrección queda únicamente en el chat, aprendimos algo… pero el sistema no necesariamente lo aprendió. Si convertimos la corrección en una regla, prueba, validación o contrato, la siguiente ejecución comienza desde un nivel más alto.</p>
-<p>Eso se parece mucho a una idea clásica de ingeniería: <strong>Plan, Do, Check, Act</strong>. Probar, comprobar, corregir, consolidar y volver a ejecutar el ciclo. ISO describe precisamente PDCA como un ciclo de mejora continua para procesos y sistemas.</p>
+<p>Eso se parece mucho a una idea clásica de ingeniería: <strong>Plan, Do, Check, Act</strong>. Probar, comprobar, corregir, consolidar y volver a ejecutar el ciclo. <a href="https://www.iso.org/iso/iso9001_2015_process_approach.pdf" class="editorial-link" rel="noopener">ISO</a> describe precisamente PDCA como un ciclo de mejora continua para procesos y sistemas.</p>
 <p>La herramienta es nueva; la lógica de mejora continua no tanto.</p>
 <p>Esto también forma parte de la progresión que describí en <a href="/articles/es/interactuando-con-la-ia/">Cómo trabajar mejor con la IA</a>: mejores prompts terminan llevando a mejor contexto, criterios más claros, herramientas, pruebas, workflows y sistemas.</p>
 <h2>El agente puede cambiar; la capacidad debería permanecer</h2>

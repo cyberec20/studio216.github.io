@@ -18,7 +18,7 @@ Now add another input: the structured XML behind the invoice.
 
 A large part of the interpretation problem disappears. The supplier already has a field. The date has a field. Taxes have defined fields. Product lines have hierarchy. Values arrive associated with what they mean.
 
-This is not merely a convenient thought experiment. The European EN 16931 eInvoicing standard defines a semantic model for the core elements of an electronic invoice. It maps that meaning into structured syntaxes such as UBL and CII. That means some workflows already contain much of the meaning a machine needs.
+This is not merely a convenient thought experiment. The [European EN 16931 eInvoicing standard](https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard) defines a semantic model for the core elements of an electronic invoice. It maps that meaning into structured syntaxes such as UBL and CII. That means some workflows already contain much of the meaning a machine needs.
 
 So the question changes: **why ask an LLM to rediscover something the system already knows**?
 
@@ -36,9 +36,9 @@ Some parts may be well defined. We can check identifiers against known constrain
 
 Then something different appears: an ambiguous description, a difficult classification, or a new edge case with no rule yet. Now we actually have a question. That is where AI becomes more valuable. It can interpret, compare possibilities, and help investigate unstructured information. A human can validate the result, and the process moves on.
 
-Current guidance from the companies building these systems reflects the same boundary. OpenAI recommends agents especially when deterministic or rule-based approaches fall short. It also notes that a deterministic solution may be enough in other cases.
+Current guidance from the companies building these systems reflects the same boundary. [OpenAI](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/) recommends agents especially when deterministic or rule-based approaches fall short. It also notes that a deterministic solution may be enough in other cases.
 
-Anthropic draws a similar line. Predefined workflows provide predictability and consistency for well-defined tasks. Agents become useful when the task needs flexibility and model-driven decisions.
+[Anthropic](https://www.anthropic.com/engineering/building-effective-agents) draws a similar line. Predefined workflows provide predictability and consistency for well-defined tasks. Agents become useful when the task needs flexibility and model-driven decisions.
 
 That does not give us a universal formula. It gives us a better question.
 
@@ -76,7 +76,7 @@ That changes how I think about system maturity. A system that is still exploring
 
 This does not mean removing AI. It means reserving it for places where intelligence is still doing real work.
 
-NIST gives us a practical reason to keep that boundary visible. Its Generative AI Risk Management Profile defines **confabulation** as false or erroneous content presented with confidence. It also recommends testing and evaluation practices, including comparisons with known ground truth when appropriate.
+[NIST](https://doi.org/10.6028/NIST.AI.600-1) gives us a practical reason to keep that boundary visible. Its Generative AI Risk Management Profile defines **confabulation** as false or erroneous content presented with confidence. It also recommends testing and evaluation practices, including comparisons with known ground truth when appropriate.
 
 That does not make LLMs poor automation tools. It suggests something more useful: **when an objective check exists, use it**.
 
@@ -98,7 +98,7 @@ The most valuable part comes next.
 
 If that correction stays only in the chat, we learned something—but the system may not have learned it. If we turn the correction into a rule, test, validation, or contract, the next execution starts from a higher level.
 
-That resembles an old engineering idea: **Plan, Do, Check, Act**. Try, inspect, correct, consolidate, and run the cycle again. ISO describes PDCA precisely as a cycle of continual improvement for processes and systems.
+That resembles an old engineering idea: **Plan, Do, Check, Act**. Try, inspect, correct, consolidate, and run the cycle again. [ISO](https://www.iso.org/iso/iso9001_2015_process_approach.pdf) describes PDCA precisely as a cycle of continual improvement for processes and systems.
 
 The tool is new; the logic of continuous improvement is not.
 
