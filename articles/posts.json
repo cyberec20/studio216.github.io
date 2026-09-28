@@ -1,5 +1,53 @@
 [
   {
+    "id": "ai-does-not-eliminate-engineering",
+    "translation_key": "ai-does-not-eliminate-engineering",
+    "lang": "en",
+    "title": "AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit",
+    "description": "AI accelerates execution but does not eliminate engineering. Why specifications, acceptance criteria, audit, and evidence matter more than ever.",
+    "url": "/articles/en/ai-does-not-eliminate-engineering/",
+    "date": "2026-09-28",
+    "topics": [
+      "AI systems",
+      "Engineering",
+      "Software engineering",
+      "Engineering governance"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "engineering",
+      "software-engineering",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp",
+    "cover_alt": "Infographic connecting traditional engineering with AI orchestration through planning, auditing, correction, and final human technical acceptance.",
+    "reading_time": "9 min read"
+  },
+  {
+    "id": "ai-does-not-eliminate-engineering",
+    "translation_key": "ai-does-not-eliminate-engineering",
+    "lang": "es",
+    "title": "La IA no elimina la ingeniería; la obliga a volverse más explícita",
+    "description": "La IA acelera la ejecución, pero no elimina la ingeniería. Por qué especificaciones, criterios de aceptación, auditoría y evidencia importan más que nunca.",
+    "url": "/articles/es/la-ia-no-elimina-la-ingenieria/",
+    "date": "2026-09-28",
+    "topics": [
+      "Sistemas de IA",
+      "Ingeniería",
+      "Ingeniería de software",
+      "Gobernanza técnica"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "engineering",
+      "software-engineering",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-es.webp",
+    "cover_alt": "Infografía que relaciona el flujo de ingeniería tradicional con la orquestación de IA, destacando planificación, auditoría, corrección y aceptación técnica humana.",
+    "reading_time": "9 min de lectura"
+  },
+  {
     "id": "do-we-really-need-another-agent",
     "translation_key": "do-we-really-need-another-agent",
     "lang": "en",
