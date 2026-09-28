@@ -84,6 +84,16 @@
             68
           ]
         }
+      },
+      "publication": {
+        "status": "published",
+        "published_at": "2026-09-28",
+        "source_masters_recovered": false,
+        "hero_displayed": false,
+        "artwork_status": "Spanish source master recovered in Library; English master not recovered in this pass. Listing references preserved; hero deferred for visual parity.",
+        "es_listing_cover": "/assets/articles/ai-said-done/reference-es.webp",
+        "en_listing_cover": "/assets/articles/ai-said-done/reference-en.webp",
+        "original_linkedin_en": "https://www.linkedin.com/pulse/ai-said-done-product-had-different-opinion-franklin-rodriguez-acosta-orqhe"
       }
     },
     "from-idea-to-functional-product": {
