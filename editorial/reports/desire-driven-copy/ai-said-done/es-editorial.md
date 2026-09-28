@@ -35,6 +35,6 @@
 
 ## SEO + AI Discoverability
 
-Revisión previa al build: **15 PASS · 0 WARN · 0 FAIL · 2 INFO**. Los INFO son disclosure/how y structured-data truthfulness. Esta última se verificará sobre el HTML final.
+Revisión previa al build: **15 PASS · 0 WARN · 0 FAIL · 2 INFO**. Revisión posterior al build: **16 PASS · 0 WARN · 0 FAIL · 1 INFO**. `structured-data truthfulness` queda **PASS** después de verificar canonical, hreflang ES/EN/x-default, `BlogPosting` JSON-LD, autor, fechas, `mainEntityOfPage` e imagen en el HTML final. El único INFO restante es disclosure/how.
 
 Los enlaces contextuales del cuerpo son parte del source canónico y deben sobrevivir al HTML generado.
