@@ -36,7 +36,7 @@
 
 Pre-build semantic review: **15 PASS · 0 WARN · 0 FAIL · 2 INFO**.
 
-The pre-build INFO items are how/AI disclosure and structured-data truthfulness. Metadata/JSON-LD truthfulness is revalidated against generated HTML before publication.
+Post-build review: **16 PASS · 0 WARN · 0 FAIL · 1 INFO**. `structured-data truthfulness` is **PASS** after verifying generated HTML: canonical, ES/EN/x-default hreflang, `BlogPosting` JSON-LD, author, dates, `mainEntityOfPage`, and image are consistent with canonical metadata. The only remaining INFO item is how/AI disclosure; no artificial disclosure paragraph is added merely to satisfy a heuristic.
 
 ## Editorial criterion
 
