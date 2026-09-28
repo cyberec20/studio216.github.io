@@ -69,7 +69,7 @@
 <p>Imagine an electronic invoice. If all we receive is a PDF, a machine has to reconstruct a surprising amount of meaning. It must find the supplier and customer, recognize the table, separate taxes from discounts, and connect each value with its concept. A multimodal model can be extremely useful there.</p>
 <p>Now add another input: the structured XML behind the invoice.</p>
 <p>A large part of the interpretation problem disappears. The supplier already has a field. The date has a field. Taxes have defined fields. Product lines have hierarchy. Values arrive associated with what they mean.</p>
-<p>This is not merely a convenient thought experiment. The European EN 16931 eInvoicing standard defines a semantic model for the core elements of an electronic invoice. It maps that meaning into structured syntaxes such as UBL and CII. That means some workflows already contain much of the meaning a machine needs.</p>
+<p>This is not merely a convenient thought experiment. The <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108926/Compliance+with+eInvoicing+standard" class="editorial-link" rel="noopener">European EN 16931 eInvoicing standard</a> defines a semantic model for the core elements of an electronic invoice. It maps that meaning into structured syntaxes such as UBL and CII. That means some workflows already contain much of the meaning a machine needs.</p>
 <p>So the question changes: <strong>why ask an LLM to rediscover something the system already knows</strong>?</p>
 <p>Instead of asking a model to reinterpret those fields, we can parse the XML, verify totals, apply explicit rules, and transform the data into our own model. If the same condition should produce the same answer every time, we can test that answer directly.</p>
 <p>I do not need creativity there. I need certainty.</p>
@@ -78,8 +78,8 @@
 <p>The same workflow can contain both.</p>
 <p>Some parts may be well defined. We can check identifiers against known constraints. We can apply business rules consistently. We can verify calculations. A workflow can also have explicit states and transitions.</p>
 <p>Then something different appears: an ambiguous description, a difficult classification, or a new edge case with no rule yet. Now we actually have a question. That is where AI becomes more valuable. It can interpret, compare possibilities, and help investigate unstructured information. A human can validate the result, and the process moves on.</p>
-<p>Current guidance from the companies building these systems reflects the same boundary. OpenAI recommends agents especially when deterministic or rule-based approaches fall short. It also notes that a deterministic solution may be enough in other cases.</p>
-<p>Anthropic draws a similar line. Predefined workflows provide predictability and consistency for well-defined tasks. Agents become useful when the task needs flexibility and model-driven decisions.</p>
+<p>Current guidance from the companies building these systems reflects the same boundary. <a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" class="editorial-link" rel="noopener">OpenAI</a> recommends agents especially when deterministic or rule-based approaches fall short. It also notes that a deterministic solution may be enough in other cases.</p>
+<p><a href="https://www.anthropic.com/engineering/building-effective-agents" class="editorial-link" rel="noopener">Anthropic</a> draws a similar line. Predefined workflows provide predictability and consistency for well-defined tasks. Agents become useful when the task needs flexibility and model-driven decisions.</p>
 <p>That does not give us a universal formula. It gives us a better question.</p>
 <h2>When an exception keeps returning, it becomes knowledge</h2>
 <p>Suppose the same exception comes back. Then again. Then again.</p>
@@ -102,7 +102,7 @@ recurring unknown
 <p>If we solve an exception, discover a general rule, and turn it into tested code, the next run does not have to reconstruct the entire conversation. The knowledge has been absorbed into something we can inspect, test, version, and reuse.</p>
 <p>That changes how I think about system maturity. A system that is still exploring will naturally need interpretation. But once a recurring decision becomes understood, we can move part of that knowledge into rules, contracts, validations, tests, schemas, and explicit state.</p>
 <p>This does not mean removing AI. It means reserving it for places where intelligence is still doing real work.</p>
-<p>NIST gives us a practical reason to keep that boundary visible. Its Generative AI Risk Management Profile defines <strong>confabulation</strong> as false or erroneous content presented with confidence. It also recommends testing and evaluation practices, including comparisons with known ground truth when appropriate.</p>
+<p><a href="https://doi.org/10.6028/NIST.AI.600-1" class="editorial-link" rel="noopener">NIST</a> gives us a practical reason to keep that boundary visible. Its Generative AI Risk Management Profile defines <strong>confabulation</strong> as false or erroneous content presented with confidence. It also recommends testing and evaluation practices, including comparisons with known ground truth when appropriate.</p>
 <p>That does not make LLMs poor automation tools. It suggests something more useful: <strong>when an objective check exists, use it</strong>.</p>
 <p>The model can propose. The system can still verify.</p>
 <h2>From a human correction to a system rule</h2>
@@ -113,7 +113,7 @@ recurring unknown
 <p>The expert can say: “That is not the rule.” “There is an exception here.” “That field does not mean what you think it means.” “This process should stop now.”</p>
 <p>The most valuable part comes next.</p>
 <p>If that correction stays only in the chat, we learned something—but the system may not have learned it. If we turn the correction into a rule, test, validation, or contract, the next execution starts from a higher level.</p>
-<p>That resembles an old engineering idea: <strong>Plan, Do, Check, Act</strong>. Try, inspect, correct, consolidate, and run the cycle again. ISO describes PDCA precisely as a cycle of continual improvement for processes and systems.</p>
+<p>That resembles an old engineering idea: <strong>Plan, Do, Check, Act</strong>. Try, inspect, correct, consolidate, and run the cycle again. <a href="https://www.iso.org/iso/iso9001_2015_process_approach.pdf" class="editorial-link" rel="noopener">ISO</a> describes PDCA precisely as a cycle of continual improvement for processes and systems.</p>
 <p>The tool is new; the logic of continuous improvement is not.</p>
 <p>This is also part of the broader progression I described in <a href="/articles/en/working-with-ai/">How to Work Better with AI</a>: better prompts eventually become better context, clearer criteria, tools, tests, workflows, and systems.</p>
 <h2>The agent can change; the capability should remain</h2>
