@@ -1,0 +1,106 @@
+{
+  "id": "ai-does-not-eliminate-engineering",
+  "translation_key": "ai-does-not-eliminate-engineering",
+  "status": "published",
+  "provenance": {
+    "relationship": "substantial_update",
+    "source_platform": "LinkedIn",
+    "versions": {
+      "es": {
+        "original_title": "La IA no elimina la ingeniería. La obliga a volverse más explícita.",
+        "original_url": "https://es.linkedin.com/pulse/la-ia-elimina-ingenier%C3%ADa-obliga-volverse-m%C3%A1s-rodriguez-acosta-o3ihe",
+        "original_published": "2026-05-15"
+      },
+      "en": {
+        "original_title": "AI Does Not Eliminate Engineering. It Forces Engineering to Become More Explicit.",
+        "original_published": "2026-07-20"
+      }
+    }
+  },
+  "versions": {
+    "es": {
+      "slug": "la-ia-no-elimina-la-ingenieria",
+      "title": "La IA no elimina la ingeniería; la obliga a volverse más explícita",
+      "description": "La IA acelera la ejecución, pero no elimina la ingeniería. Por qué especificaciones, criterios de aceptación, auditoría y evidencia importan más que nunca.",
+      "source": "content/articles/es/la-ia-no-elimina-la-ingenieria.md",
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "hero": "/assets/articles/ai-does-not-eliminate-engineering/reference-es.webp",
+      "hero_width": 120,
+      "hero_height": 67,
+      "hero_alt": "Infografía que relaciona el flujo de ingeniería tradicional con la orquestación de IA, destacando planificación, auditoría, corrección y aceptación técnica humana.",
+      "show_hero": false,
+      "listing_cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-es.webp",
+      "og_image": "https://studios216.com/assets/articles/ai-does-not-eliminate-engineering/reference-es.webp",
+      "topics": [
+        "Sistemas de IA",
+        "Ingeniería",
+        "Ingeniería de software",
+        "Gobernanza técnica"
+      ],
+      "topic_ids": [
+        "ai-systems",
+        "engineering",
+        "software-engineering",
+        "engineering-governance"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/ai-does-not-eliminate-engineering/es-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/ai-does-not-eliminate-engineering/es-full.md",
+          "validated_at": "2026-09-28",
+          "raw_overall": 73.7,
+          "editorial_panel": 93.3
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    },
+    "en": {
+      "slug": "ai-does-not-eliminate-engineering",
+      "title": "AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit",
+      "description": "AI accelerates execution but does not eliminate engineering. Why specifications, acceptance criteria, audit, and evidence matter more than ever.",
+      "source": "content/articles/en/ai-does-not-eliminate-engineering.md",
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "hero": "/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp",
+      "hero_width": 120,
+      "hero_height": 68,
+      "hero_alt": "Infographic connecting traditional engineering with AI orchestration through planning, auditing, correction, and final human technical acceptance.",
+      "show_hero": false,
+      "listing_cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp",
+      "og_image": "https://studios216.com/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp",
+      "topics": [
+        "AI systems",
+        "Engineering",
+        "Software engineering",
+        "Engineering governance"
+      ],
+      "topic_ids": [
+        "ai-systems",
+        "engineering",
+        "software-engineering",
+        "engineering-governance"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/ai-does-not-eliminate-engineering/en-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/ai-does-not-eliminate-engineering/en-full.md",
+          "validated_at": "2026-09-28",
+          "raw_overall": 76.0,
+          "editorial_panel": 92.7
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    }
+  }
+}
