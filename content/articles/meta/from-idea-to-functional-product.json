@@ -1,0 +1,106 @@
+{
+  "id": "from-idea-to-functional-product",
+  "translation_key": "from-idea-to-functional-product",
+  "status": "published",
+  "provenance": {
+    "relationship": "substantial_update",
+    "source_platform": "LinkedIn",
+    "versions": {
+      "es": {
+        "original_title": "De una idea a un producto funcional: lo que he aprendido construyendo software con IA",
+        "original_url": "https://es.linkedin.com/pulse/de-una-idea-un-producto-funcional-lo-que-he-aprendido-franklin-cuyne",
+        "original_published": "2026-07-06"
+      },
+      "en": {
+        "original_title": "From an Idea to a Functional Product: What I Have Learned Building Software with AI",
+        "original_published": "2026-07-20"
+      }
+    }
+  },
+  "versions": {
+    "es": {
+      "slug": "de-una-idea-a-un-producto-funcional",
+      "title": "De una idea a un producto funcional: lo que he aprendido construyendo software con IA",
+      "description": "La IA puede llevar una idea a una primera implementación muy rápido. Qué hace falta después para convertir esa velocidad en un producto confiable y mantenible.",
+      "source": "content/articles/es/de-una-idea-a-un-producto-funcional.md",
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "hero": "/assets/articles/from-idea-to-functional-product/reference-es.webp",
+      "hero_width": 120,
+      "hero_height": 67,
+      "hero_alt": "Infografía sobre el recorrido desde una idea hasta un producto funcional mediante desarrollo asistido por IA, arquitectura, pruebas, validación y despliegue.",
+      "show_hero": false,
+      "listing_cover": "/assets/articles/from-idea-to-functional-product/reference-es.webp",
+      "og_image": "https://studios216.com/assets/articles/from-idea-to-functional-product/reference-es.webp",
+      "topics": [
+        "Sistemas de IA",
+        "Desarrollo de software",
+        "Producto",
+        "Gobernanza técnica"
+      ],
+      "topic_ids": [
+        "ai-systems",
+        "software-development",
+        "product-development",
+        "engineering-governance"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/from-idea-to-functional-product/es-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/from-idea-to-functional-product/es-full.md",
+          "validated_at": "2026-09-28",
+          "raw_overall": 66.2,
+          "editorial_panel": 92.8
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    },
+    "en": {
+      "slug": "from-idea-to-functional-product",
+      "title": "From an Idea to a Functional Product: What I Have Learned Building Software with AI",
+      "description": "AI can turn an idea into a first implementation remarkably fast. What still has to happen before that speed becomes a reliable, maintainable product.",
+      "source": "content/articles/en/from-idea-to-functional-product.md",
+      "published": "2026-09-28",
+      "updated": "2026-09-28",
+      "hero": "/assets/articles/from-idea-to-functional-product/reference-en.webp",
+      "hero_width": 120,
+      "hero_height": 68,
+      "hero_alt": "Infographic showing the path from an idea to a functional product through AI-assisted development, architecture, testing, validation, and deployment.",
+      "show_hero": false,
+      "listing_cover": "/assets/articles/from-idea-to-functional-product/reference-en.webp",
+      "og_image": "https://studios216.com/assets/articles/from-idea-to-functional-product/reference-en.webp",
+      "topics": [
+        "AI systems",
+        "Software development",
+        "Product development",
+        "Engineering governance"
+      ],
+      "topic_ids": [
+        "ai-systems",
+        "software-development",
+        "product-development",
+        "engineering-governance"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/from-idea-to-functional-product/en-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/from-idea-to-functional-product/en-full.md",
+          "validated_at": "2026-09-28",
+          "raw_overall": 70.8,
+          "editorial_panel": 91.8
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    }
+  }
+}

@@ -116,6 +116,16 @@
             68
           ]
         }
+      },
+      "publication": {
+        "status": "published",
+        "published_at": "2026-09-28",
+        "source_masters_recovered": false,
+        "hero_displayed": false,
+        "artwork_status": "listing references preserved; source-master recovery deferred to a dedicated artwork pass",
+        "es_listing_cover": "/assets/articles/from-idea-to-functional-product/reference-es.webp",
+        "en_listing_cover": "/assets/articles/from-idea-to-functional-product/reference-en.webp",
+        "original_linkedin_es": "https://es.linkedin.com/pulse/de-una-idea-un-producto-funcional-lo-que-he-aprendido-franklin-cuyne"
       }
     },
     "do-we-really-need-another-agent": {
