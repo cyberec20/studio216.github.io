@@ -103,6 +103,43 @@ def validate_articles() -> None:
         print(f"PASS builder source fidelity for {checked} generated article pages")
 
 
+
+def index_card_hrefs(page: str) -> list[str]:
+    return re.findall(
+        r'''<a\b[^>]*class=["'][^"']*\barticle-list-card\b[^"']*["'][^>]*href=["']([^"']+)["']''',
+        page,
+        flags=re.I,
+    )
+
+
+def validate_index_inventory() -> None:
+    posts = json.loads(POSTS_JSON.read_text(encoding="utf-8"))
+    expected_all = [str(post.get("url") or "") for post in posts]
+    expected_by_lang = {
+        lang: [str(post.get("url") or "") for post in posts if post.get("lang") == lang]
+        for lang in ("es", "en")
+    }
+    pages = {
+        "all": ROOT / "articles" / "index.html",
+        "es": ROOT / "articles" / "es" / "index.html",
+        "en": ROOT / "articles" / "en" / "index.html",
+    }
+    for key, path in pages.items():
+        if not path.exists():
+            fail(f"missing article index: {path.relative_to(ROOT)}")
+            continue
+        text = path.read_text(encoding="utf-8")
+        actual = index_card_hrefs(text)
+        expected = expected_all if key == "all" else expected_by_lang[key]
+        if actual != expected:
+            fail(f"{path.relative_to(ROOT)}: article card inventory/order does not match posts.json")
+        for marker in ('id="article-results-summary"', 'id="article-pagination"', 'const PAGE_SIZE=10;'):
+            if marker not in text:
+                fail(f"{path.relative_to(ROOT)}: missing pagination contract marker: {marker}")
+    if not errors:
+        print(f"PASS article index inventory/pagination contract for {len(expected_all)} total entries")
+
+
 def sitemap_entries(path: Path) -> list[dict[str, str]]:
     namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     tree = ET.parse(path)
@@ -152,6 +189,7 @@ def validate_sitemap() -> None:
 
 def main() -> int:
     validate_articles()
+    validate_index_inventory()
     validate_sitemap()
 
     if errors:
