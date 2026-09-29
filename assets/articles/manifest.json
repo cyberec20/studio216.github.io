@@ -194,8 +194,8 @@
       "title_hint_en": "After 8,901 Commands",
       "assets": {
         "es": {
-          "source_filename": "De pantalla negra a sistemas confiables.png",
-          "source_sha256": "4eb74190760a497c49907bab3c551235f09e92086714d7a86d5a3ed5c782f6ca",
+          "source_filename": "Más no siempre es mejor_ agentes optimizados.png",
+          "source_sha256": "40047070cd52a56b5c55422804be331517c5845ca050855b80b2df735030f831",
           "source_dimensions_px": [
             1672,
             941
@@ -204,11 +204,18 @@
           "reference_dimensions_px": [
             120,
             68
-          ]
+          ],
+          "production_path": "/assets/articles/after-8901-commands/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "16083dabbcc23e36df401133e9faab09633e7df7b4c511a2e8ee7c87e741ffcb",
+          "reference_sha256": "9ae7161a960915d2f39a7000ea3a8312242d5a8771f51c34aa5bcd0d2011639c"
         },
         "en": {
-          "source_filename": "From Black Screen to Reliable Systems.png",
-          "source_sha256": "9dbf297b74849c8160f7cbc71d4b7f12fa68531bc9e69efd3ad302f8cd8d1e02",
+          "source_filename": "More Is Not Always Better.png",
+          "source_sha256": "422988fb122a8783d1809843fc4f394e5d45a84b67715da38383d43bc3485e09",
           "source_dimensions_px": [
             1672,
             941
@@ -217,19 +224,38 @@
           "reference_dimensions_px": [
             120,
             68
-          ]
+          ],
+          "production_path": "/assets/articles/after-8901-commands/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "de5c2cc4054309d1f0559d653e40f3b5c576787c1bcf148cf132e6f0fbed104d",
+          "reference_sha256": "0f7e2dd01653bd12c6f1a5608648434bcb6dd5895b12de81db034716357f04c0"
         }
       },
       "publication": {
         "status": "published",
         "published_at": "2026-09-29",
-        "source_masters_recovered": false,
-        "hero_displayed": false,
-        "artwork_status": "listing references preserved; source-master recovery deferred to a dedicated artwork pass",
+        "source_masters_recovered": true,
+        "hero_displayed": true,
+        "artwork_status": "Verified against the original LinkedIn publication by the user on 2026-09-29; production heroes and listing references updated from the supplied masters.",
         "es_listing_cover": "/assets/articles/after-8901-commands/reference-es.webp",
         "en_listing_cover": "/assets/articles/after-8901-commands/reference-en.webp",
         "original_linkedin_es": "https://es.linkedin.com/pulse/m%C3%A1s-memoria-herramientas-contexto-y-necesariamente-rodriguez-acosta-hkl8e",
-        "original_linkedin_en": "https://www.linkedin.com/pulse/after-8901-commands-i-changed-way-work-ai-agents-rodriguez-acosta-wtyye"
+        "original_linkedin_en": "https://www.linkedin.com/pulse/after-8901-commands-i-changed-way-work-ai-agents-rodriguez-acosta-wtyye",
+        "source_dimensions_px": [
+          1672,
+          941
+        ],
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "binary WebP assets committed directly in the repository",
+        "es_hero_path": "/assets/articles/after-8901-commands/hero-es.webp",
+        "en_hero_path": "/assets/articles/after-8901-commands/hero-en.webp"
       }
     },
     "more-agents-or-better-specifications": {
@@ -262,7 +288,9 @@
             68
           ]
         }
-      }
+      },
+      "mapping_status": "needs_reverification",
+      "mapping_note": "The artwork previously recorded for this family was reassigned to after-8901-commands after the user verified it against the original LinkedIn publication on 2026-09-29. Recover and verify the correct artwork during the #5 editorial pass."
     },
     "working-with-ai": {
       "title_hint_es": "Interactuando con la IA: del “prompt perfecto” a una mejor forma de trabajar",
