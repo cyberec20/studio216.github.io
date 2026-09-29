@@ -48,150 +48,6 @@
     "reading_time": "10 min de lectura"
   },
   {
-    "id": "ai-does-not-eliminate-engineering",
-    "translation_key": "ai-does-not-eliminate-engineering",
-    "lang": "en",
-    "title": "AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit",
-    "description": "AI accelerates execution but does not eliminate engineering. Why specifications, acceptance criteria, audit, and evidence matter more than ever.",
-    "url": "/articles/en/ai-does-not-eliminate-engineering/",
-    "date": "2026-09-29",
-    "topics": [
-      "AI systems",
-      "Engineering",
-      "Software engineering",
-      "Engineering governance"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "engineering",
-      "software-engineering",
-      "engineering-governance"
-    ],
-    "cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp",
-    "cover_alt": "Infographic connecting traditional engineering with AI orchestration through planning, auditing, correction, and final human technical acceptance.",
-    "reading_time": "9 min read"
-  },
-  {
-    "id": "ai-does-not-eliminate-engineering",
-    "translation_key": "ai-does-not-eliminate-engineering",
-    "lang": "es",
-    "title": "La IA no elimina la ingeniería; la obliga a volverse más explícita",
-    "description": "La IA acelera la ejecución, pero no elimina la ingeniería. Por qué especificaciones, criterios de aceptación, auditoría y evidencia importan más que nunca.",
-    "url": "/articles/es/la-ia-no-elimina-la-ingenieria/",
-    "date": "2026-09-29",
-    "topics": [
-      "Sistemas de IA",
-      "Ingeniería",
-      "Ingeniería de software",
-      "Gobernanza técnica"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "engineering",
-      "software-engineering",
-      "engineering-governance"
-    ],
-    "cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-es.webp",
-    "cover_alt": "Infografía que relaciona el flujo de ingeniería tradicional con la orquestación de IA, destacando planificación, auditoría, corrección y aceptación técnica humana.",
-    "reading_time": "9 min de lectura"
-  },
-  {
-    "id": "ai-said-done",
-    "translation_key": "ai-said-done",
-    "lang": "en",
-    "title": "AI Said “Done”. The Product Had a Different Opinion",
-    "description": "An agent can complete its plan and pass tests while a feature is still incomplete. How to separate autonomy, validation, and evidence-based acceptance.",
-    "url": "/articles/en/ai-said-done/",
-    "date": "2026-09-29",
-    "topics": [
-      "AI systems",
-      "Agents",
-      "Software engineering",
-      "QA and validation"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "agents",
-      "software-engineering",
-      "qa-validation"
-    ],
-    "cover": "/assets/articles/ai-said-done/reference-en.webp",
-    "cover_alt": "Infographic showing an AI validation cycle from implementation and testing through functional review, correction, and technical acceptance.",
-    "reading_time": "11 min read"
-  },
-  {
-    "id": "ai-said-done",
-    "translation_key": "ai-said-done",
-    "lang": "es",
-    "title": "La IA dijo «terminado». El producto tenía otra opinión",
-    "description": "Un agente puede cerrar su plan y pasar pruebas mientras la funcionalidad sigue incompleta. Cómo separar autonomía, validación y aceptación basada en evidencia.",
-    "url": "/articles/es/la-ia-dijo-terminado/",
-    "date": "2026-09-29",
-    "topics": [
-      "Sistemas de IA",
-      "Agentes",
-      "Ingeniería de software",
-      "QA y validación"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "agents",
-      "software-engineering",
-      "qa-validation"
-    ],
-    "cover": "/assets/articles/ai-said-done/reference-es.webp",
-    "cover_alt": "Infografía sobre el ciclo de validación de trabajo generado por IA, desde implementación y pruebas hasta revisión funcional, corrección y aceptación.",
-    "reading_time": "11 min de lectura"
-  },
-  {
-    "id": "from-idea-to-functional-product",
-    "translation_key": "from-idea-to-functional-product",
-    "lang": "en",
-    "title": "From an Idea to a Functional Product: What I Have Learned Building Software with AI",
-    "description": "AI can turn an idea into a first implementation remarkably fast. What still has to happen before that speed becomes a reliable, maintainable product.",
-    "url": "/articles/en/from-idea-to-functional-product/",
-    "date": "2026-09-29",
-    "topics": [
-      "AI systems",
-      "Software development",
-      "Product development",
-      "Engineering governance"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "software-development",
-      "product-development",
-      "engineering-governance"
-    ],
-    "cover": "/assets/articles/from-idea-to-functional-product/reference-en.webp",
-    "cover_alt": "Infographic showing the path from an idea to a functional product through AI-assisted development, architecture, testing, validation, and deployment.",
-    "reading_time": "10 min read"
-  },
-  {
-    "id": "from-idea-to-functional-product",
-    "translation_key": "from-idea-to-functional-product",
-    "lang": "es",
-    "title": "De una idea a un producto funcional: lo que he aprendido construyendo software con IA",
-    "description": "La IA puede llevar una idea a una primera implementación muy rápido. Qué hace falta después para convertir esa velocidad en un producto confiable y mantenible.",
-    "url": "/articles/es/de-una-idea-a-un-producto-funcional/",
-    "date": "2026-09-29",
-    "topics": [
-      "Sistemas de IA",
-      "Desarrollo de software",
-      "Producto",
-      "Gobernanza técnica"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "software-development",
-      "product-development",
-      "engineering-governance"
-    ],
-    "cover": "/assets/articles/from-idea-to-functional-product/reference-es.webp",
-    "cover_alt": "Infografía sobre el recorrido desde una idea hasta un producto funcional mediante desarrollo asistido por IA, arquitectura, pruebas, validación y despliegue.",
-    "reading_time": "11 min de lectura"
-  },
-  {
     "id": "more-agents-or-better-specifications",
     "translation_key": "more-agents-or-better-specifications",
     "lang": "en",
@@ -237,6 +93,150 @@
     ],
     "cover": "/assets/articles/more-agents-or-better-specifications/reference-es.webp",
     "cover_alt": "Infografía que compara un enfoque multiagente primero con Spec-Driven Development y muestra su posible convergencia para decidir cuándo paralelizar agentes.",
+    "reading_time": "11 min de lectura"
+  },
+  {
+    "id": "ai-does-not-eliminate-engineering",
+    "translation_key": "ai-does-not-eliminate-engineering",
+    "lang": "en",
+    "title": "AI Does Not Eliminate Engineering; It Forces Engineering to Become More Explicit",
+    "description": "AI accelerates execution but does not eliminate engineering. Why specifications, acceptance criteria, audit, and evidence matter more than ever.",
+    "url": "/articles/en/ai-does-not-eliminate-engineering/",
+    "date": "2026-09-28",
+    "topics": [
+      "AI systems",
+      "Engineering",
+      "Software engineering",
+      "Engineering governance"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "engineering",
+      "software-engineering",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp",
+    "cover_alt": "Infographic connecting traditional engineering with AI orchestration through planning, auditing, correction, and final human technical acceptance.",
+    "reading_time": "9 min read"
+  },
+  {
+    "id": "ai-does-not-eliminate-engineering",
+    "translation_key": "ai-does-not-eliminate-engineering",
+    "lang": "es",
+    "title": "La IA no elimina la ingeniería; la obliga a volverse más explícita",
+    "description": "La IA acelera la ejecución, pero no elimina la ingeniería. Por qué especificaciones, criterios de aceptación, auditoría y evidencia importan más que nunca.",
+    "url": "/articles/es/la-ia-no-elimina-la-ingenieria/",
+    "date": "2026-09-28",
+    "topics": [
+      "Sistemas de IA",
+      "Ingeniería",
+      "Ingeniería de software",
+      "Gobernanza técnica"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "engineering",
+      "software-engineering",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-es.webp",
+    "cover_alt": "Infografía que relaciona el flujo de ingeniería tradicional con la orquestación de IA, destacando planificación, auditoría, corrección y aceptación técnica humana.",
+    "reading_time": "9 min de lectura"
+  },
+  {
+    "id": "ai-said-done",
+    "translation_key": "ai-said-done",
+    "lang": "en",
+    "title": "AI Said “Done”. The Product Had a Different Opinion",
+    "description": "An agent can complete its plan and pass tests while a feature is still incomplete. How to separate autonomy, validation, and evidence-based acceptance.",
+    "url": "/articles/en/ai-said-done/",
+    "date": "2026-09-28",
+    "topics": [
+      "AI systems",
+      "Agents",
+      "Software engineering",
+      "QA and validation"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "software-engineering",
+      "qa-validation"
+    ],
+    "cover": "/assets/articles/ai-said-done/reference-en.webp",
+    "cover_alt": "Infographic showing an AI validation cycle from implementation and testing through functional review, correction, and technical acceptance.",
+    "reading_time": "11 min read"
+  },
+  {
+    "id": "ai-said-done",
+    "translation_key": "ai-said-done",
+    "lang": "es",
+    "title": "La IA dijo «terminado». El producto tenía otra opinión",
+    "description": "Un agente puede cerrar su plan y pasar pruebas mientras la funcionalidad sigue incompleta. Cómo separar autonomía, validación y aceptación basada en evidencia.",
+    "url": "/articles/es/la-ia-dijo-terminado/",
+    "date": "2026-09-28",
+    "topics": [
+      "Sistemas de IA",
+      "Agentes",
+      "Ingeniería de software",
+      "QA y validación"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "software-engineering",
+      "qa-validation"
+    ],
+    "cover": "/assets/articles/ai-said-done/reference-es.webp",
+    "cover_alt": "Infografía sobre el ciclo de validación de trabajo generado por IA, desde implementación y pruebas hasta revisión funcional, corrección y aceptación.",
+    "reading_time": "11 min de lectura"
+  },
+  {
+    "id": "from-idea-to-functional-product",
+    "translation_key": "from-idea-to-functional-product",
+    "lang": "en",
+    "title": "From an Idea to a Functional Product: What I Have Learned Building Software with AI",
+    "description": "AI can turn an idea into a first implementation remarkably fast. What still has to happen before that speed becomes a reliable, maintainable product.",
+    "url": "/articles/en/from-idea-to-functional-product/",
+    "date": "2026-09-28",
+    "topics": [
+      "AI systems",
+      "Software development",
+      "Product development",
+      "Engineering governance"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "software-development",
+      "product-development",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/from-idea-to-functional-product/reference-en.webp",
+    "cover_alt": "Infographic showing the path from an idea to a functional product through AI-assisted development, architecture, testing, validation, and deployment.",
+    "reading_time": "10 min read"
+  },
+  {
+    "id": "from-idea-to-functional-product",
+    "translation_key": "from-idea-to-functional-product",
+    "lang": "es",
+    "title": "De una idea a un producto funcional: lo que he aprendido construyendo software con IA",
+    "description": "La IA puede llevar una idea a una primera implementación muy rápido. Qué hace falta después para convertir esa velocidad en un producto confiable y mantenible.",
+    "url": "/articles/es/de-una-idea-a-un-producto-funcional/",
+    "date": "2026-09-28",
+    "topics": [
+      "Sistemas de IA",
+      "Desarrollo de software",
+      "Producto",
+      "Gobernanza técnica"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "software-development",
+      "product-development",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/from-idea-to-functional-product/reference-es.webp",
+    "cover_alt": "Infografía sobre el recorrido desde una idea hasta un producto funcional mediante desarrollo asistido por IA, arquitectura, pruebas, validación y despliegue.",
     "reading_time": "11 min de lectura"
   },
   {
