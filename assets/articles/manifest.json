@@ -263,34 +263,68 @@
       "title_hint_en": "More Agents or Better Specifications?",
       "assets": {
         "es": {
-          "source_filename": "M#U00e1s no siempre es mejor_ agentes optimizados.png",
-          "source_sha256": "cd2444e580de5828005bf8647bd48c57d7bb228a401cb438e937b191096a93c0",
+          "source_filename": "ChatGPT Image Sep 1, 2026, 11_20_41 AM (1).png",
+          "source_sha256": "01c55b24371db20bc20275137a3d19547dd6f054fd6e32669171de8b93354e53",
           "source_dimensions_px": [
             1672,
             941
           ],
+          "production_path": "/assets/articles/more-agents-or-better-specifications/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "009baea30e1dd904e0a5c9acf77fd38da73d8fe820f5d044222f029922e305f6",
           "reference_path": "/assets/articles/more-agents-or-better-specifications/reference-es.webp",
           "reference_dimensions_px": [
             120,
             68
-          ]
+          ],
+          "reference_sha256": "ab1a2cee13f92ea76a9cedf3a4a02d7707013d6a02f48555a9f5ba38cdf0cd75"
         },
         "en": {
-          "source_filename": "More Is Not Always Better.png",
-          "source_sha256": "8ec90ea1cd7571ebf4d1c65b5808c57f33bb02acd0dc984e50a5d6cefd28ff22",
+          "source_filename": "Two Paths to Scaling Code Agents.png",
+          "source_sha256": "166eeced2a3296b6454f0dc1f36dc278e84b024a77798d5265004de78eab9501",
           "source_dimensions_px": [
             1672,
             941
           ],
+          "production_path": "/assets/articles/more-agents-or-better-specifications/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "1cfc784234ebb2fd9232c33adcc171fad7fb0b608e6099f9af7e7a54cf2a8d87",
           "reference_path": "/assets/articles/more-agents-or-better-specifications/reference-en.webp",
           "reference_dimensions_px": [
             120,
             68
-          ]
+          ],
+          "reference_sha256": "d92e64cc22a113da9eb1455b13ecd68971126fe1b9678d18d6f8a7a6c2195300"
         }
       },
-      "mapping_status": "needs_reverification",
-      "mapping_note": "The artwork previously recorded for this family was reassigned to after-8901-commands after the user verified it against the original LinkedIn publication on 2026-09-29. Recover and verify the correct artwork during the #5 editorial pass."
+      "publication": {
+        "status": "published",
+        "published_at": "2026-09-29",
+        "source_masters_recovered": true,
+        "source_dimensions_px": [
+          1672,
+          941
+        ],
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "binary WebP assets committed directly in the repository",
+        "hero_displayed": true,
+        "artwork_status": "Spanish and English masters supplied by the user on 2026-09-29 and used for the production heroes and listing references.",
+        "es_listing_cover": "/assets/articles/more-agents-or-better-specifications/reference-es.webp",
+        "en_listing_cover": "/assets/articles/more-agents-or-better-specifications/reference-en.webp",
+        "es_hero_path": "/assets/articles/more-agents-or-better-specifications/hero-es.webp",
+        "en_hero_path": "/assets/articles/more-agents-or-better-specifications/hero-en.webp",
+        "original_linkedin_en": "https://www.linkedin.com/pulse/more-agents-better-specifications-what-changed-after-franklin-nucie"
+      }
     },
     "working-with-ai": {
       "title_hint_es": "Interactuando con la IA: del “prompt perfecto” a una mejor forma de trabajar",
