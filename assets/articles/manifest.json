@@ -458,13 +458,13 @@
             760,
             428
           ],
-          "production_sha256": "65bd490d1edbef351df0b41e4905b083ec9ea3a5d2a22c1b9ba71072a65277c8",
+          "production_sha256": "03678dddbe27d3a919b2ac2f3c1a0fd688bbf2a15fdc6e06ea285156283f9672",
           "reference_path": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-es.webp",
           "reference_dimensions_px": [
             120,
             68
           ],
-          "reference_sha256": "aabd8080af50afe73ef9e3f2a1e4a780a190b0df9926ec33deebd111c575f281"
+          "reference_sha256": "912430dfcd38189f860e91e5fee9ca6aef21724228850bb8f0265ebb7f7b3a5d"
         },
         "en": {
           "source_filename": "From Black Screen to Reliable Systems.png",
@@ -478,13 +478,13 @@
             760,
             428
           ],
-          "production_sha256": "5d73d3087d6897fb316d0e103a42e12c2429028217d763dde47bacb287e77f33",
+          "production_sha256": "4aa9ff355ece5e745bdd7029ba1f5f9ff5018ee8f10c148363ef8ec3850521dc",
           "reference_path": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-en.webp",
           "reference_dimensions_px": [
             120,
             68
           ],
-          "reference_sha256": "6a606d9a37d91bdef2f577f241dd1ee5d4267fda2738c1233d4cddf926cb6d11"
+          "reference_sha256": "ae4a615448ec601b34f4261bd2938d3a08a2ae748c907e1a2ceec94fb271ced9"
         }
       },
       "publication": {
