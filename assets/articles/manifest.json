@@ -441,6 +441,73 @@
         "storage": "binary WebP assets committed directly in the repository",
         "original_linkedin_article": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7141807641848152064/"
       }
+    },
+    "delegating-too-much-to-ai-black-screen": {
+      "title_hint_es": "¿Le estás delegando demasiado a la IA… solo porque una pantalla negra te intimida?",
+      "title_hint_en": "Are You Delegating Too Much to AI… Just Because a Black Screen Intimidates You?",
+      "assets": {
+        "es": {
+          "source_filename": "De pantalla negra a sistemas confiables.png",
+          "source_sha256": "4eb74190760a497c49907bab3c551235f09e92086714d7a86d5a3ed5c782f6ca",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/delegating-too-much-to-ai-black-screen/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "65bd490d1edbef351df0b41e4905b083ec9ea3a5d2a22c1b9ba71072a65277c8",
+          "reference_path": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-es.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "aabd8080af50afe73ef9e3f2a1e4a780a190b0df9926ec33deebd111c575f281"
+        },
+        "en": {
+          "source_filename": "From Black Screen to Reliable Systems.png",
+          "source_sha256": "9dbf297b74849c8160f7cbc71d4b7f12fa68531bc9e69efd3ad302f8cd8d1e02",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/delegating-too-much-to-ai-black-screen/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "5d73d3087d6897fb316d0e103a42e12c2429028217d763dde47bacb287e77f33",
+          "reference_path": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-en.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "6a606d9a37d91bdef2f577f241dd1ee5d4267fda2738c1233d4cddf926cb6d11"
+        }
+      },
+      "publication": {
+        "status": "published",
+        "published_at": "2026-09-29",
+        "source_masters_recovered": true,
+        "source_dimensions_px": [
+          1672,
+          941
+        ],
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "binary WebP assets committed directly in the repository",
+        "hero_displayed": true,
+        "artwork_status": "Spanish and English source masters supplied by the user on 2026-09-29 and used for matching production heroes and listing references.",
+        "es_listing_cover": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-es.webp",
+        "en_listing_cover": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-en.webp",
+        "es_hero_path": "/assets/articles/delegating-too-much-to-ai-black-screen/hero-es.webp",
+        "en_hero_path": "/assets/articles/delegating-too-much-to-ai-black-screen/hero-en.webp"
+      }
     }
   },
   "pending_articles": {}
