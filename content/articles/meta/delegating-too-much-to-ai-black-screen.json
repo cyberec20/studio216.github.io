@@ -1,0 +1,108 @@
+{
+  "id": "delegating-too-much-to-ai-black-screen",
+  "translation_key": "delegating-too-much-to-ai-black-screen",
+  "status": "published",
+  "provenance": {
+    "relationship": "substantial_update",
+    "source_platform": "LinkedIn",
+    "versions": {
+      "es": {
+        "original_title": "¿Le estás delegando demasiado a la IA… solo porque una pantalla negra te intimida?",
+        "original_published": "2026-09-24"
+      },
+      "en": {
+        "original_title": "Are You Delegating Too Much to AI… Just Because a Black Screen Intimidates You?",
+        "original_published": "2026-09-25"
+      }
+    }
+  },
+  "versions": {
+    "es": {
+      "slug": "delegando-demasiado-a-la-ia-pantalla-negra",
+      "title": "¿Le estás delegando demasiado a la IA… solo porque una pantalla negra te intimida?",
+      "description": "Una pantalla negra puede hacer que delegar todo a la IA parezca más fácil. Cómo convertir resultados útiles en procesos reproducibles, verificables y propios.",
+      "source": "content/articles/es/delegando-demasiado-a-la-ia-pantalla-negra.md",
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "hero": "/assets/articles/delegating-too-much-to-ai-black-screen/hero-es.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Infografía en tres etapas que muestra la transición desde la intimidación ante una terminal, pasando por agentes que reconstruyen un proceso, hasta ejecutar un sistema validado, reutilizable y versionado.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-es.webp",
+      "og_image": "https://studios216.com/assets/articles/delegating-too-much-to-ai-black-screen/hero-es.webp",
+      "topics": [
+        "Sistemas de IA",
+        "Agentes",
+        "Alfabetización en IA",
+        "Gobernanza técnica"
+      ],
+      "topic_ids": [
+        "ai-systems",
+        "agents",
+        "ai-literacy",
+        "engineering-governance"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/delegating-too-much-to-ai-black-screen/es-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/delegating-too-much-to-ai-black-screen/es-full.md",
+          "validated_at": "2026-09-29",
+          "raw_overall": 70.1,
+          "editorial_panel": 90.9
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "idiomatic_spanish_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    },
+    "en": {
+      "slug": "delegating-too-much-to-ai-black-screen",
+      "title": "Are You Delegating Too Much to AI… Just Because a Black Screen Intimidates You?",
+      "description": "A black screen can make delegating everything to AI feel easier. How to turn useful results into reproducible, verifiable capabilities you can keep.",
+      "source": "content/articles/en/delegating-too-much-to-ai-black-screen.md",
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "hero": "/assets/articles/delegating-too-much-to-ai-black-screen/hero-en.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Three-stage infographic showing the transition from an intimidating terminal, through AI agents repeatedly rebuilding a process, to running a validated, reusable, versioned system.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-en.webp",
+      "og_image": "https://studios216.com/assets/articles/delegating-too-much-to-ai-black-screen/hero-en.webp",
+      "topics": [
+        "AI systems",
+        "Agents",
+        "AI literacy",
+        "Engineering governance"
+      ],
+      "topic_ids": [
+        "ai-systems",
+        "agents",
+        "ai-literacy",
+        "engineering-governance"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/delegating-too-much-to-ai-black-screen/en-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/delegating-too-much-to-ai-black-screen/en-full.md",
+          "validated_at": "2026-09-29",
+          "raw_overall": 76.3,
+          "editorial_panel": 91.8
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    }
+  }
+}

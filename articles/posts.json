@@ -48,6 +48,54 @@
     "reading_time": "10 min de lectura"
   },
   {
+    "id": "delegating-too-much-to-ai-black-screen",
+    "translation_key": "delegating-too-much-to-ai-black-screen",
+    "lang": "en",
+    "title": "Are You Delegating Too Much to AI… Just Because a Black Screen Intimidates You?",
+    "description": "A black screen can make delegating everything to AI feel easier. How to turn useful results into reproducible, verifiable capabilities you can keep.",
+    "url": "/articles/en/delegating-too-much-to-ai-black-screen/",
+    "date": "2026-09-29",
+    "topics": [
+      "AI systems",
+      "Agents",
+      "AI literacy",
+      "Engineering governance"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "ai-literacy",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-en.webp",
+    "cover_alt": "Three-stage infographic showing the transition from an intimidating terminal, through AI agents repeatedly rebuilding a process, to running a validated, reusable, versioned system.",
+    "reading_time": "12 min read"
+  },
+  {
+    "id": "delegating-too-much-to-ai-black-screen",
+    "translation_key": "delegating-too-much-to-ai-black-screen",
+    "lang": "es",
+    "title": "¿Le estás delegando demasiado a la IA… solo porque una pantalla negra te intimida?",
+    "description": "Una pantalla negra puede hacer que delegar todo a la IA parezca más fácil. Cómo convertir resultados útiles en procesos reproducibles, verificables y propios.",
+    "url": "/articles/es/delegando-demasiado-a-la-ia-pantalla-negra/",
+    "date": "2026-09-29",
+    "topics": [
+      "Sistemas de IA",
+      "Agentes",
+      "Alfabetización en IA",
+      "Gobernanza técnica"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "ai-literacy",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/delegating-too-much-to-ai-black-screen/reference-es.webp",
+    "cover_alt": "Infografía en tres etapas que muestra la transición desde la intimidación ante una terminal, pasando por agentes que reconstruyen un proceso, hasta ejecutar un sistema validado, reutilizable y versionado.",
+    "reading_time": "12 min de lectura"
+  },
+  {
     "id": "more-agents-or-better-specifications",
     "translation_key": "more-agents-or-better-specifications",
     "lang": "en",
