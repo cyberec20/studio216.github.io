@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More Agents or Better Specifications? What Changed After Trying Both | Studios 216</title>
+  <meta name="description" content="After trying multi-agent workflows and Spec-Driven Development, one conclusion emerged: specify first, then decide when multiple agents truly add value.">
+  <meta name="author" content="Franklin Rodriguez">
+  <link rel="canonical" href="https://studios216.com/articles/en/more-agents-or-better-specifications/">
+  <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/more-agents-or-better-specifications/">
+  <link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/mas-agentes-o-mejores-especificaciones/">
+  <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/en/more-agents-or-better-specifications/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="More Agents or Better Specifications? What Changed After Trying Both">
+  <meta property="og:description" content="After trying multi-agent workflows and Spec-Driven Development, one conclusion emerged: specify first, then decide when multiple agents truly add value.">
+  <meta property="og:url" content="https://studios216.com/articles/en/more-agents-or-better-specifications/">
+  <meta property="og:image" content="https://studios216.com/assets/articles/more-agents-or-better-specifications/hero-en.webp">
+  <meta property="article:published_time" content="2026-09-29">
+  <meta property="article:modified_time" content="2026-09-29">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="More Agents or Better Specifications? What Changed After Trying Both">
+  <meta name="twitter:description" content="After trying multi-agent workflows and Spec-Driven Development, one conclusion emerged: specify first, then decide when multiple agents truly add value.">
+  <meta name="twitter:image" content="https://studios216.com/assets/articles/more-agents-or-better-specifications/hero-en.webp">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"More Agents or Better Specifications? What Changed After Trying Both","description":"After trying multi-agent workflows and Spec-Driven Development, one conclusion emerged: specify first, then decide when multiple agents truly add value.","image":"https://studios216.com/assets/articles/more-agents-or-better-specifications/hero-en.webp","datePublished":"2026-09-29","dateModified":"2026-09-29","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://studios216.com/articles/en/more-agents-or-better-specifications/"},"author":{"@type":"Person","@id":"https://studios216.com/about/founder/#person","name":"Franklin Rodriguez","url":"https://studios216.com/about/founder/"},"publisher":{"@type":"Organization","@id":"https://studios216.com/#organization","name":"Studios 216","url":"https://studios216.com/"}}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/editorial.css">
+</head>
+<body class="min-h-screen">
+  <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/70">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="/" aria-label="Studios 216 Home"><img src="/assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-12 w-auto rounded-md"></a>
+      <nav class="flex items-center gap-5 text-sm">
+        <a href="/about.html" class="text-gray-400 hover:text-white">About</a>
+        <a href="/articles/" class="text-white">Articles</a>
+      </nav>
+    </div>
+  </header>
+  <main class="editorial-shell py-12">
+    <div class="editorial-grid">
+      <aside class="author-rail">
+        <div class="author-rail-card">
+          <p class="text-xs uppercase tracking-[.18em] text-gray-500 mb-3">Written by</p>
+          <h2 class="text-lg font-bold text-white">Franklin Rodriguez</h2>
+          <p class="text-sm text-gray-400 mt-1">Founder &amp; CEO · Engineer · Author · Instructor</p>
+          <div class="mt-5 space-y-2 text-sm">
+            <a class="block" href="/about/founder/">About Franklin</a>
+            <a class="block" href="/articles/">Articles</a>
+          </div>
+          
+          
+        </div>
+      </aside>
+      <article>
+        <header class="mb-8">
+          <div class="language-switch"><span class="active">English</span><a href="https://studios216.com/articles/es/mas-agentes-o-mejores-especificaciones/">Español</a></div>
+          <p class="mt-5 text-xs uppercase tracking-[.18em] text-blue-400">AI systems · Agents · Spec-Driven Development · Engineering governance</p>
+          <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mt-3">More Agents or Better Specifications? What Changed After Trying Both</h1>
+          <p class="text-lg text-gray-400 mt-5">After trying multi-agent workflows and Spec-Driven Development, one conclusion emerged: specify first, then decide when multiple agents truly add value.</p>
+          <p class="text-sm text-gray-500 mt-5">2026-09-29 · 11 min read</p>
+        </header>
+        <figure class="article-hero"><img src="/assets/articles/more-agents-or-better-specifications/hero-en.webp" alt="Infographic comparing a multi-agent-first approach with Spec-Driven Development and showing their possible convergence for deciding when to parallelize agents." width="760" height="428" loading="eager" decoding="async"></figure>
+        <div class="article-body"><p>Once one coding agent starts working well, the next idea feels almost inevitable: if one agent helps, several properly coordinated agents should help even more. The pattern is tempting for teams trying to accelerate a result without losing control; for a while, that was exactly how I worked. I split responsibilities across different roles and let an orchestrator decide who should implement, audit, or review security.</p>
+<p>The logic was attractive, and the early evidence seemed to support it; the problem was not whether agents could produce a result, but whether the intent survived each handoff. The workflow had grown naturally from <a href="https://github.com/RooCodeInc/Roo-Code" class="editorial-link" rel="noopener">Roo Code</a> inside Visual Studio Code; later, more of the work moved into the terminal, PowerShell, <a href="https://github.com/anthropics/claude-code" class="editorial-link" rel="noopener">Claude Code</a>, <a href="https://github.com/openai/codex" class="editorial-link" rel="noopener">Codex</a>, and other models. The interfaces changed, but the underlying instinct stayed the same for a while: specialize agents, delegate, coordinate.</p>
+<p>The deeper issue appeared somewhere less visible than the code: <strong>every handoff moved work, but it also moved an interpretation of the context</strong>. The result could still be good; the risk was that every boundary created another opportunity for intent to drift.</p>
+<p>An agent might spend hours accumulating decisions, corrections, exceptions, and project constraints; when it delegates, it has to reconstruct part of that history for another agent. The second agent receives whatever the first one considered relevant, at the level of detail the first one chose, and then interprets the task again inside a different context window. The result eventually returns to the main agent and goes through yet another interpretation before it is integrated back into the whole.</p>
+<p>That does not mean multi-agent work fails. Sometimes it works extremely well. The uncomfortable part was different: I had built an architecture in which <strong>coordination also meant translation</strong>, and every translation created another place where intent could drift.</p>
+<p>That experience changed the question. It was no longer only about how to distribute work more effectively; it was about how to make the intent survive the distribution.</p>
+<h2>A handoff is not a neutral channel</h2>
+<p>Adding another actor to a multi-agent system does not add only capacity; it adds a boundary. Across that boundary must travel the objective, constraints, dependencies, acceptance criteria, prior decisions, and enough context for the new execution to remain part of the same problem.</p>
+<p>Anthropic describes a related tension from a different domain. In its production multi-agent research system, subagents perform especially well when they can pursue <strong>independent directions in parallel</strong>; at the same time, the architecture introduces coordination, evaluation, and reliability challenges. In separate guidance, Anthropic recommends parallelization when a task can genuinely be divided into independent subtasks or when separate perspectives are useful. (<a href="https://www.anthropic.com/engineering/multi-agent-research-system" class="editorial-link" rel="noopener">How we built our multi-agent research system</a>; <a href="https://www.anthropic.com/engineering/building-effective-agents" class="editorial-link" rel="noopener">Building Effective AI Agents</a>).</p>
+<p>The boundary of that evidence matters: a research system is not a universal benchmark for software development. It does, however, support a useful architectural observation: <strong>parallelism becomes more valuable when task independence is real; when dependencies are dense, coordination stops being an implementation detail and becomes part of the problem itself</strong>.</p>
+<p>That was exactly what I was beginning to see. A large share of software work is not a set of isolated pieces waiting for separate agents; it is a chain of decisions sharing contracts, state, data, conventions, and acceptance criteria. Multiplying executors before understanding those dependencies can accelerate pieces of the work while making the final integration harder.</p>
+<h2>Before I called it SDD, I was already trying to specify</h2>
+<p>The answer did not arrive all at once. Before I adopted an explicitly specification-driven approach, I was already producing fairly detailed plans because I needed agents to keep moving without drifting too far from the goal.</p>
+<p>They worked, but they had a clear weakness: they tended to become monolithic. Getting a plan to the point where I considered it useful required refining it, expanding it, asking what had been missed, correcting dependencies, and checking it again. I had found a direction that worked for me, but not yet a systematic structure for carrying intent, execution, and evidence without concentrating everything in one enormous document.</p>
+<p>In parallel, I explored contracts and approaches that formalized parts of the problem. <a href="https://github.com/OAI/OpenAPI-Specification" class="editorial-link" rel="noopener">OpenAPI</a> provides a standard, machine-readable description for HTTP interfaces; <a href="https://github.com/asyncapi/spec" class="editorial-link" rel="noopener">AsyncAPI</a> plays a similar role for message-driven systems. Neither is meant to solve full product planning, but both reinforced an important idea: <strong>when part of system behavior can be expressed as a verifiable contract, it no longer depends exclusively on a conversation</strong>.</p>
+<p>Later I experimented with tools aimed directly at Spec-Driven Development, including <a href="https://github.com/github/spec-kit" class="editorial-link" rel="noopener">Spec Kit</a> and <a href="https://github.com/Fission-AI/OpenSpec" class="editorial-link" rel="noopener">OpenSpec</a>. I tried them at earlier points in their evolution, so I do not treat that experience as a current assessment of what either project can do today; both have continued to change. What mattered for my own process was the principle they made difficult to ignore: a specification could become more than documentation written before implementation; it could become an active part of the working system.</p>
+<p>Instead of continuing to adapt my process to a particular tool, I began combining principles that already made sense to me: planning, SDD, validation, and a structure I had used for years in engineering—<strong>PDCA: Plan, Do, Check, Act</strong>.</p>
+<p>That is where the pieces started fitting together more naturally.</p>
+<h2>From controlling roles to controlling artifacts</h2>
+<p>In my earlier multi-agent setup, much of the control lived in the assignment of roles:</p>
+<pre><code class="language-text">orchestrator → implementer → auditor
+</code></pre>
+<p>Once specifications moved closer to the center, the sequence began to look more like this:</p>
+<pre><code class="language-text">goal → specification → plan → tasks → implementation → tests → evidence
+</code></pre>
+<p>The difference looks modest until something goes wrong. In the first model, understanding what should have happened may require reconstructing what the orchestrator said, what the implementer understood, and what the auditor checked; in the second, more of that intent is materialized in shared artifacts.</p>
+<p>If a task&rsquo;s purpose becomes unclear, there is a plan to return to; if people disagree about what “done” means, there should be acceptance criteria. Once the work has been executed, tests and evidence provide a way to inspect what actually happened instead of reconstructing closure only from the conversation.</p>
+<p>This does not eliminate the context problem. Long sessions still accumulate decisions, documentation can become stale, and a badly written specification can preserve a bad idea with impressive efficiency. The shift is elsewhere: <strong>context no longer depends only on conversational memory; more of it travels through artifacts that can be reviewed, versioned, and verified</strong>.</p>
+<p>That connects directly with a lesson I described in <a href="/articles/en/ai-said-done/">“AI Said ‘Done’. The Product Had a Different Opinion”</a>: an agent closing a task is not automatically the same thing as the product satisfying the requirement. Specifications help because they create an external reference against which implementation can be checked.</p>
+<h2>Why this felt so familiar</h2>
+<p>I was not trained as a software engineer; I am an electrical engineer, and I spent years working with specifications, data sheets, requisitions, technical bids, vendor-document review, and QA/QC.</p>
+<p>If a project needs a motor control center, a switchgear lineup, or even a cable, the request is not simply “send us a good one.” A technical specification provides the reference for evaluating the bid; even after purchase approval, the process is not over. When the equipment arrives, QA/QC verifies that what was delivered matches what was approved.</p>
+<p>The specification <strong>survives the process</strong>.</p>
+<p>It does not depend on the original author being present for every later conversation and verbally reconstructing what was intended. Different people can compare decisions and deliverables against the same artifact. Real engineering still includes ambiguity, change, and judgment, of course, but a shared reference reduces how much has to be reconstructed during every handoff.</p>
+<p>When I began working with agents in a more specification-driven way, I recognized the same logic. The domain had changed; the principle had changed much less.</p>
+<p>That is probably one reason this approach started feeling more natural to me than a workflow in which too much intent moved through successive interpretations from one agent to another.</p>
+<h2>The agent does not do less; the proof changes</h2>
+<p>Moving control toward specifications did not mean delegating less. In practice, the opposite happened: the agent participates in planning, implements, writes tests, runs them, analyzes failures, fixes what broke, and validates again; it also has to leave enough evidence for the work to be reviewed.</p>
+<p>Human involvement shifts toward different questions:</p>
+<ul>
+<li>Does this actually satisfy the objective?</li>
+<li>Were the relevant dependencies considered?</li>
+<li>Where are the acceptance criteria and tests?</li>
+<li>What observable behavior proves the task is complete?</li>
+<li>Does the evidence prove the feature, or merely that something ran without crashing?</li>
+</ul>
+<p>That shift matters because <strong>not every form of validation needs another agent</strong>. A build system can deterministically report whether the project compiled; a test runner can report whether tests passed; a script can verify invariants, and a validator can prevent an incomplete artifact from being accepted as valid. AI still interprets, implements, and corrects, but it does not need to spend reasoning on decisions the system can already verify more directly.</p>
+<p>The same principle appears in <a href="/articles/en/after-8901-commands/">“After 8,901 Commands, I Changed the Way I Work with AI Agents”</a>: improving an agentic system is not necessarily about adding more capability. Sometimes it is about deciding which context, memory, tools, and rules have actually earned a place in the architecture; subtraction can be an architectural decision too.</p>
+<h2>Specifications can also decide when to use more agents</h2>
+<p>For a while I treated multi-agent work and SDD as competing paths. One distributed work through roles; the other structured it through artifacts. With more experience, that opposition started to feel artificial.</p>
+<p>Maybe the order matters more than the choice.</p>
+<p>First define the goal; then turn the intent into specifications, identify dependencies, establish criteria, and separate work packages. Only then does a much more useful question appear: <strong>which of those tasks are independent enough to run in parallel without forcing every agent to reconstruct the entire project?</strong></p>
+<p>The flow changes:</p>
+<pre><code class="language-text">goal
+→ specification
+→ plan
+→ dependencies
+→ independent tasks
+→ parallel execution where it adds value
+→ integration
+→ tests
+→ evidence
+→ acceptance
+</code></pre>
+<p>At that point, multiple agents stop being an organizational structure applied by default and become an execution decision. There is no requirement to invent a “frontend agent,” a “backend agent,” and an “auditor agent” simply because those labels are convenient; several execution agents can work on packages the planning process has already identified as sufficiently independent.</p>
+<p>Each package should carry what its executor needs: relevant context, objective, boundaries, dependencies, acceptance criteria, and checks. The agent should not have to guess what an orchestrator meant or rebuild the entire project model from scratch; it should solve a unit of work whose relationship to the whole was reasoned about before parallelization began.</p>
+<p>This still does not make parallelism automatic. Two tasks that look separate may touch the same schema, modify shared contracts, or depend on the same state; if that relationship is discovered too late, multiple agents simply produce conflicts faster. Specifications do not eliminate coordination; <strong>they make it easier to decide where coordination is worth paying for and where it is not</strong>.</p>
+<h2>A practical checklist before multiplying agents</h2>
+<p>Before parallelizing work, I would now want at least these questions answered:</p>
+<ol>
+<li>
+<p><strong>Is the objective stable enough to distribute?</strong> If it changes every time it is explained, distribution is premature.</p>
+</li>
+<li>
+<p><strong>Are the dependencies visible?</strong> A task stops being independent as soon as it shares critical state, contracts, or sequencing with another task.</p>
+</li>
+<li>
+<p><strong>Does each work package have its own acceptance criteria?</strong> If two agents can both claim success under different definitions of “done,” integration begins with debt already attached.</p>
+</li>
+<li>
+<p><strong>Is there a shared source of truth?</strong> A specification, plan, contract, tests, or equivalent artifacts must survive the handoffs.</p>
+</li>
+<li>
+<p><strong>Is integration defined before execution starts?</strong> Knowing how results will come back together matters as much as knowing how to split them apart.</p>
+</li>
+<li>
+<p><strong>Can some validation be deterministic?</strong> The more the system can verify through tests, scripts, or validators, the less acceptance depends on another probabilistic interpretation.</p>
+</li>
+<li><strong>Does parallelism provide a measurable benefit?</strong> Speed, coverage, independent exploration, or reduced critical-path time; without a clear gain, extra coordination is simply extra work.</li>
+</ol>
+<p>This is not a universal formula. It is a filter for avoiding a mistake I found expensive: assuming that more agents automatically mean more useful capacity.</p>
+<h2>So, more agents or better specifications?</h2>
+<p>After trying both approaches, the answer that most accurately describes how I prefer to work today is simple: <strong>better specifications first</strong>.</p>
+<p>Not because one agent should do everything, and not because multi-agent systems stopped being interesting. Quite the opposite: the clearer the structure of the work becomes, the more attractive selective parallelization starts to look.</p>
+<p>What changed was the threshold.</p>
+<p>If the objective is defined, dependencies are understood, criteria are verifiable, and a task can be separated without losing intent, multiple agents can be powerful. If it is still unclear what is being distributed, adding agents may simply distribute the uncertainty.</p>
+<p>At first I tried to scale by increasing the number of agents; later I started asking whether I could scale by structuring what those agents receive more carefully. The next step may combine both ideas: <strong>specify first, then decide what deserves to run in parallel</strong>.</p>
+<p>In engineering, the more actors involved, the more valuable it becomes to have a reference the people involved can verify without asking the previous person what they meant. After working with agents, that old lesson came back in a new form.</p>
+<p><strong>Specifications do not compete with agents; they give agents a reference. And a good reference may be exactly what makes it possible to multiply agents without multiplying ambiguity at the same time.</strong></p>
+<hr />
+<h2>References</h2>
+<ul>
+<li>Anthropic, <strong>How we built our multi-agent research system</strong>: <a href="https://www.anthropic.com/engineering/multi-agent-research-system" class="editorial-link" rel="noopener">https://www.anthropic.com/engineering/multi-agent-research-system</a></li>
+<li>Anthropic, <strong>Building Effective AI Agents</strong>: <a href="https://www.anthropic.com/engineering/building-effective-agents" class="editorial-link" rel="noopener">https://www.anthropic.com/engineering/building-effective-agents</a></li>
+<li>GitHub, <strong>Spec Kit</strong>: <a href="https://github.com/github/spec-kit" class="editorial-link" rel="noopener">https://github.com/github/spec-kit</a></li>
+<li>Fission AI, <strong>OpenSpec</strong>: <a href="https://github.com/Fission-AI/OpenSpec" class="editorial-link" rel="noopener">https://github.com/Fission-AI/OpenSpec</a></li>
+<li>OpenAPI Initiative, <strong>OpenAPI Specification</strong>: <a href="https://github.com/OAI/OpenAPI-Specification" class="editorial-link" rel="noopener">https://github.com/OAI/OpenAPI-Specification</a></li>
+<li>AsyncAPI Initiative, <strong>AsyncAPI Specification</strong>: <a href="https://github.com/asyncapi/spec" class="editorial-link" rel="noopener">https://github.com/asyncapi/spec</a></li>
+<li>Roo Code, <strong>Roo-Code</strong> (historical repository, currently archived): <a href="https://github.com/RooCodeInc/Roo-Code" class="editorial-link" rel="noopener">https://github.com/RooCodeInc/Roo-Code</a></li>
+<li>Anthropic, <strong>Claude Code</strong>: <a href="https://github.com/anthropics/claude-code" class="editorial-link" rel="noopener">https://github.com/anthropics/claude-code</a></li>
+<li>OpenAI, <strong>Codex</strong>: <a href="https://github.com/openai/codex" class="editorial-link" rel="noopener">https://github.com/openai/codex</a></li>
+</ul></div>
+      </article>
+    </div>
+  </main>
+  <footer class="border-t border-gray-900 py-8 text-center text-sm text-gray-600 mt-12">&copy; 2025-2026 Studios 216. All rights reserved.</footer>
+</body>
+</html>

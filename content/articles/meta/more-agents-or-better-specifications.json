@@ -1,0 +1,89 @@
+{
+  "id": "more-agents-or-better-specifications",
+  "translation_key": "more-agents-or-better-specifications",
+  "status": "published",
+  "provenance": {
+    "relationship": "substantial_update",
+    "source_platform": "LinkedIn",
+    "versions": {
+      "es": {
+        "original_title": "¿Más agentes o mejores especificaciones? Lo que cambió después de probar ambos enfoques",
+        "original_published": "2026-09-01"
+      },
+      "en": {
+        "original_title": "More Agents or Better Specifications? What Changed After Trying Both",
+        "original_url": "https://www.linkedin.com/pulse/more-agents-better-specifications-what-changed-after-franklin-nucie",
+        "original_published": "2026-09-02"
+      }
+    }
+  },
+  "versions": {
+    "es": {
+      "slug": "mas-agentes-o-mejores-especificaciones",
+      "title": "¿Más agentes o mejores especificaciones? Lo que cambió después de probar ambos enfoques",
+      "description": "Tras probar multiagente y Spec-Driven Development, una conclusión: especificar primero puede decidir mejor cuándo varios agentes realmente aportan valor.",
+      "source": "content/articles/es/mas-agentes-o-mejores-especificaciones.md",
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "hero": "/assets/articles/more-agents-or-better-specifications/hero-es.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Infografía que compara un enfoque multiagente primero con Spec-Driven Development y muestra su posible convergencia para decidir cuándo paralelizar agentes.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/more-agents-or-better-specifications/reference-es.webp",
+      "og_image": "https://studios216.com/assets/articles/more-agents-or-better-specifications/hero-es.webp",
+      "topics": ["Sistemas de IA","Agentes","Spec-Driven Development","Gobernanza técnica"],
+      "topic_ids": ["ai-systems","agents","spec-driven-development","engineering-governance"],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/more-agents-or-better-specifications/es-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/more-agents-or-better-specifications/es-full.md",
+          "validated_at": "2026-09-29",
+          "raw_overall": 68.3,
+          "editorial_panel": 91.2
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "idiomatic_spanish_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    },
+    "en": {
+      "slug": "more-agents-or-better-specifications",
+      "title": "More Agents or Better Specifications? What Changed After Trying Both",
+      "description": "After trying multi-agent workflows and Spec-Driven Development, one conclusion emerged: specify first, then decide when multiple agents truly add value.",
+      "source": "content/articles/en/more-agents-or-better-specifications.md",
+      "published": "2026-09-29",
+      "updated": "2026-09-29",
+      "hero": "/assets/articles/more-agents-or-better-specifications/hero-en.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Infographic comparing a multi-agent-first approach with Spec-Driven Development and showing their possible convergence for deciding when to parallelize agents.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/more-agents-or-better-specifications/reference-en.webp",
+      "og_image": "https://studios216.com/assets/articles/more-agents-or-better-specifications/hero-en.webp",
+      "topics": ["AI systems","Agents","Spec-Driven Development","Engineering governance"],
+      "topic_ids": ["ai-systems","agents","spec-driven-development","engineering-governance"],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/more-agents-or-better-specifications/en-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/more-agents-or-better-specifications/en-full.md",
+          "validated_at": "2026-09-29",
+          "raw_overall": 67.0,
+          "editorial_panel": 91.2
+        },
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    }
+  }
+}

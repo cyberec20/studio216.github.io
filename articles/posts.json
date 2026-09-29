@@ -48,6 +48,54 @@
     "reading_time": "10 min de lectura"
   },
   {
+    "id": "more-agents-or-better-specifications",
+    "translation_key": "more-agents-or-better-specifications",
+    "lang": "en",
+    "title": "More Agents or Better Specifications? What Changed After Trying Both",
+    "description": "After trying multi-agent workflows and Spec-Driven Development, one conclusion emerged: specify first, then decide when multiple agents truly add value.",
+    "url": "/articles/en/more-agents-or-better-specifications/",
+    "date": "2026-09-29",
+    "topics": [
+      "AI systems",
+      "Agents",
+      "Spec-Driven Development",
+      "Engineering governance"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "spec-driven-development",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/more-agents-or-better-specifications/reference-en.webp",
+    "cover_alt": "Infographic comparing a multi-agent-first approach with Spec-Driven Development and showing their possible convergence for deciding when to parallelize agents.",
+    "reading_time": "11 min read"
+  },
+  {
+    "id": "more-agents-or-better-specifications",
+    "translation_key": "more-agents-or-better-specifications",
+    "lang": "es",
+    "title": "¿Más agentes o mejores especificaciones? Lo que cambió después de probar ambos enfoques",
+    "description": "Tras probar multiagente y Spec-Driven Development, una conclusión: especificar primero puede decidir mejor cuándo varios agentes realmente aportan valor.",
+    "url": "/articles/es/mas-agentes-o-mejores-especificaciones/",
+    "date": "2026-09-29",
+    "topics": [
+      "Sistemas de IA",
+      "Agentes",
+      "Spec-Driven Development",
+      "Gobernanza técnica"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "spec-driven-development",
+      "engineering-governance"
+    ],
+    "cover": "/assets/articles/more-agents-or-better-specifications/reference-es.webp",
+    "cover_alt": "Infografía que compara un enfoque multiagente primero con Spec-Driven Development y muestra su posible convergencia para decidir cuándo paralelizar agentes.",
+    "reading_time": "11 min de lectura"
+  },
+  {
     "id": "ai-does-not-eliminate-engineering",
     "translation_key": "ai-does-not-eliminate-engineering",
     "lang": "en",

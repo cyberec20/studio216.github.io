@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Más agentes o mejores especificaciones? Lo que cambió después de probar ambos enfoques | Studios 216</title>
+  <meta name="description" content="Tras probar multiagente y Spec-Driven Development, una conclusión: especificar primero puede decidir mejor cuándo varios agentes realmente aportan valor.">
+  <meta name="author" content="Franklin Rodriguez">
+  <link rel="canonical" href="https://studios216.com/articles/es/mas-agentes-o-mejores-especificaciones/">
+  <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/more-agents-or-better-specifications/">
+  <link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/mas-agentes-o-mejores-especificaciones/">
+  <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/en/more-agents-or-better-specifications/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="¿Más agentes o mejores especificaciones? Lo que cambió después de probar ambos enfoques">
+  <meta property="og:description" content="Tras probar multiagente y Spec-Driven Development, una conclusión: especificar primero puede decidir mejor cuándo varios agentes realmente aportan valor.">
+  <meta property="og:url" content="https://studios216.com/articles/es/mas-agentes-o-mejores-especificaciones/">
+  <meta property="og:image" content="https://studios216.com/assets/articles/more-agents-or-better-specifications/hero-es.webp">
+  <meta property="article:published_time" content="2026-09-29">
+  <meta property="article:modified_time" content="2026-09-29">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="¿Más agentes o mejores especificaciones? Lo que cambió después de probar ambos enfoques">
+  <meta name="twitter:description" content="Tras probar multiagente y Spec-Driven Development, una conclusión: especificar primero puede decidir mejor cuándo varios agentes realmente aportan valor.">
+  <meta name="twitter:image" content="https://studios216.com/assets/articles/more-agents-or-better-specifications/hero-es.webp">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"¿Más agentes o mejores especificaciones? Lo que cambió después de probar ambos enfoques","description":"Tras probar multiagente y Spec-Driven Development, una conclusión: especificar primero puede decidir mejor cuándo varios agentes realmente aportan valor.","image":"https://studios216.com/assets/articles/more-agents-or-better-specifications/hero-es.webp","datePublished":"2026-09-29","dateModified":"2026-09-29","inLanguage":"es","mainEntityOfPage":{"@type":"WebPage","@id":"https://studios216.com/articles/es/mas-agentes-o-mejores-especificaciones/"},"author":{"@type":"Person","@id":"https://studios216.com/about/founder/#person","name":"Franklin Rodriguez","url":"https://studios216.com/about/founder/"},"publisher":{"@type":"Organization","@id":"https://studios216.com/#organization","name":"Studios 216","url":"https://studios216.com/"}}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/editorial.css">
+</head>
+<body class="min-h-screen">
+  <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/70">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="/" aria-label="Studios 216 Home"><img src="/assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-12 w-auto rounded-md"></a>
+      <nav class="flex items-center gap-5 text-sm">
+        <a href="/about.html" class="text-gray-400 hover:text-white">Acerca de</a>
+        <a href="/articles/" class="text-white">Artículos</a>
+      </nav>
+    </div>
+  </header>
+  <main class="editorial-shell py-12">
+    <div class="editorial-grid">
+      <aside class="author-rail">
+        <div class="author-rail-card">
+          <p class="text-xs uppercase tracking-[.18em] text-gray-500 mb-3">Escrito por</p>
+          <h2 class="text-lg font-bold text-white">Franklin Rodriguez</h2>
+          <p class="text-sm text-gray-400 mt-1">Founder &amp; CEO · Engineer · Author · Instructor</p>
+          <div class="mt-5 space-y-2 text-sm">
+            <a class="block" href="/about/founder/">Sobre Franklin</a>
+            <a class="block" href="/articles/">Artículos</a>
+          </div>
+          
+          
+        </div>
+      </aside>
+      <article>
+        <header class="mb-8">
+          <div class="language-switch"><a href="https://studios216.com/articles/en/more-agents-or-better-specifications/">English</a><span class="active">Español</span></div>
+          <p class="mt-5 text-xs uppercase tracking-[.18em] text-blue-400">Sistemas de IA · Agentes · Spec-Driven Development · Gobernanza técnica</p>
+          <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mt-3">¿Más agentes o mejores especificaciones? Lo que cambió después de probar ambos enfoques</h1>
+          <p class="text-lg text-gray-400 mt-5">Tras probar multiagente y Spec-Driven Development, una conclusión: especificar primero puede decidir mejor cuándo varios agentes realmente aportan valor.</p>
+          <p class="text-sm text-gray-500 mt-5">2026-09-29 · 11 min de lectura</p>
+        </header>
+        <figure class="article-hero"><img src="/assets/articles/more-agents-or-better-specifications/hero-es.webp" alt="Infografía que compara un enfoque multiagente primero con Spec-Driven Development y muestra su posible convergencia para decidir cuándo paralelizar agentes." width="760" height="428" loading="eager" decoding="async"></figure>
+        <div class="article-body"><p>Cuando un agente empieza a resolver bien una parte del trabajo, la siguiente idea parece casi inevitable: si uno ayuda, varios coordinados deberían ayudar todavía más. El patrón resulta tentador también para equipos que buscan acelerar un resultado sin perder control; durante un tiempo trabajé justamente así. Distribuía responsabilidades entre agentes con roles distintos y dejaba a un orquestador decidir quién debía implementar, auditar o revisar seguridad.</p>
+<p>La lógica era atractiva y las primeras pruebas parecían confirmarla. Era una evolución natural de lo que ya hacía con <a href="https://github.com/RooCodeInc/Roo-Code" class="editorial-link" rel="noopener">Roo Code</a> dentro de Visual Studio Code; más adelante, una parte creciente del flujo pasó a terminal, PowerShell, <a href="https://github.com/anthropics/claude-code" class="editorial-link" rel="noopener">Claude Code</a>, <a href="https://github.com/openai/codex" class="editorial-link" rel="noopener">Codex</a> y otros modelos. Cambiaron las interfaces, pero durante un tiempo mantuve la misma intuición: especializar agentes, delegar y coordinar.</p>
+<p>El problema apareció en un lugar menos visible que el código: <strong>cada handoff transportaba trabajo, pero también una interpretación del contexto</strong>. El resultado podía seguir siendo bueno; el riesgo estaba en que cada frontera añadía otra oportunidad para desviar la intención.</p>
+<p>Un agente podía llevar horas acumulando decisiones, correcciones, excepciones y restricciones del proyecto; al delegar, tenía que reconstruir una parte de todo eso para otro agente. El segundo recibía lo que el primero consideraba relevante, con el nivel de detalle que había decidido incluir, y volvía a interpretar la tarea desde su propio contexto. Después, el resultado regresaba al agente principal y sufría otra interpretación antes de reintegrarse al conjunto.</p>
+<p>No necesariamente salía mal. De hecho, a veces funcionaba muy bien. Lo incómodo era otra cosa: había creado una arquitectura donde <strong>coordinar también significaba traducir</strong>, y cada traducción podía introducir una pequeña desviación.</p>
+<p>Esa experiencia terminó cambiando la pregunta. Ya no era solamente cómo distribuir mejor el trabajo, sino cómo conseguir que la intención sobreviva a la distribución.</p>
+<h2>El handoff no es un canal neutro</h2>
+<p>En un sistema multiagente, añadir otro actor no añade únicamente capacidad; también añade una frontera. A través de ella deben pasar objetivo, restricciones, dependencias, criterios de aceptación, decisiones previas y suficiente contexto para que la nueva ejecución siga perteneciendo al mismo problema.</p>
+<p>Anthropic describe una tensión parecida desde otro dominio. En su sistema de investigación multiagente, los subagentes funcionan especialmente bien cuando pueden explorar <strong>direcciones independientes en paralelo</strong>; al mismo tiempo, la propia arquitectura introduce retos de coordinación, evaluación y confiabilidad. En otra guía, la compañía recomienda paralelizar cuando una tarea puede dividirse realmente en subtareas independientes o cuando se necesitan perspectivas separadas. (<a href="https://www.anthropic.com/engineering/multi-agent-research-system" class="editorial-link" rel="noopener">How we built our multi-agent research system</a>; <a href="https://www.anthropic.com/engineering/building-effective-agents" class="editorial-link" rel="noopener">Building Effective AI Agents</a>).</p>
+<p>Conviene mantener el límite de esa evidencia: un sistema de investigación no demuestra que el mismo patrón produzca idénticos resultados al desarrollar software. Sí aporta una observación arquitectónica útil: <strong>el paralelismo gana valor cuando la independencia de las tareas es real; si las dependencias son densas, la coordinación deja de ser un detalle y pasa a formar parte del problema</strong>.</p>
+<p>Eso era precisamente lo que empezaba a notar. Muchos trabajos de software no son piezas aisladas esperando un agente; son decisiones encadenadas que comparten contratos, estados, datos, convenciones y criterios de aceptación. Multiplicar ejecutores antes de entender esas dependencias puede acelerar partes del trabajo y, al mismo tiempo, aumentar el costo de volver a unirlas.</p>
+<h2>Antes de hablar de SDD, ya intentaba especificar</h2>
+<p>La respuesta no apareció de golpe. Antes de adoptar un enfoque explícitamente orientado por especificaciones, ya trabajaba con planes bastante detallados; surgieron porque necesitaba que el agente pudiera avanzar sin alejarse demasiado del objetivo.</p>
+<p>Funcionaban, pero tenían un defecto claro: tendían a convertirse en documentos monolíticos. Preparar un plan realmente útil exigía revisarlo, ampliarlo, preguntar qué faltaba, corregir dependencias y volver a verificarlo. Había encontrado una dirección, pero todavía no una estructura suficientemente sistemática para transportar intención, ejecución y evidencia sin concentrarlo todo en un único bloque enorme.</p>
+<p>En paralelo exploré contratos y enfoques que formalizaban partes del problema. <a href="https://github.com/OAI/OpenAPI-Specification" class="editorial-link" rel="noopener">OpenAPI</a> ofrece una descripción estándar y legible por máquinas para interfaces HTTP; <a href="https://github.com/asyncapi/spec" class="editorial-link" rel="noopener">AsyncAPI</a> hace algo equivalente para sistemas orientados a mensajes. Ninguno de los dos pretende resolver por sí solo la planificación completa de un producto, pero ambos reforzaban una idea importante: <strong>cuando una parte del comportamiento puede expresarse como contrato verificable, deja de depender exclusivamente de una conversación</strong>.</p>
+<p>Más adelante probé herramientas orientadas directamente a Spec-Driven Development, entre ellas <a href="https://github.com/github/spec-kit" class="editorial-link" rel="noopener">Spec Kit</a> y <a href="https://github.com/Fission-AI/OpenSpec" class="editorial-link" rel="noopener">OpenSpec</a>. Las probé en etapas anteriores de su evolución, así que no considero aquella experiencia una evaluación actual de lo que ofrecen hoy; ambas han seguido cambiando. Lo relevante fue lo que dejaron claro para el proceso que estaba construyendo: la especificación podía convertirse en algo más que documentación previa; podía ser parte activa del sistema de trabajo.</p>
+<p>En vez de continuar adaptando el proceso a una herramienta concreta, empecé a combinar principios que ya me resultaban familiares: planificación, SDD, validación y una estructura que llevaba años usando en ingeniería, <strong>PDCA: Plan, Do, Check, Act</strong>.</p>
+<p>Ahí empezó a encajar mejor.</p>
+<h2>De controlar roles a controlar artefactos</h2>
+<p>En el enfoque multiagente inicial, buena parte del control vivía en la distribución de responsabilidades:</p>
+<pre><code class="language-text">orquestador → implementador → auditor
+</code></pre>
+<p>Al mover el centro de gravedad hacia las especificaciones, la secuencia empezó a parecerse más a esto:</p>
+<pre><code class="language-text">objetivo → especificación → plan → tareas → implementación → pruebas → evidencia
+</code></pre>
+<p>La diferencia parece pequeña hasta que algo falla. Con el primer esquema, entender qué debía ocurrir puede exigir reconstruir qué dijo el orquestador, qué entendió el implementador y qué revisó el auditor. Con el segundo, una parte mayor de esa intención queda materializada en artefactos compartidos; no desaparece la interpretación, pero existe una referencia común a la que volver.</p>
+<p>Si surge una duda sobre el propósito de una tarea, existe un plan al que volver; si hay discusión sobre qué significa terminarla, deberían existir criterios de aceptación. Cuando la implementación ya ocurrió, las pruebas y la evidencia permiten comprobar qué se hizo realmente, en lugar de reconstruir el cierre solo desde la conversación.</p>
+<p>Esto no elimina el problema del contexto. Las sesiones largas siguen acumulando decisiones, la documentación puede quedar desactualizada y una especificación mal escrita puede preservar con mucha eficiencia una mala idea. El punto no es documentar más por principio, sino transportar mejor la intención: <strong>el contexto deja de depender únicamente de la memoria conversacional y comienza a viajar mediante artefactos que pueden revisarse, versionarse y comprobarse</strong>.</p>
+<p>Ese cambio conecta directamente con algo que ya había aprendido al trabajar sobre producto: como desarrollé en <a href="/articles/es/la-ia-dijo-terminado/">“La IA dijo «terminado». El producto tenía otra opinión”</a>, una tarea cerrada por el agente no equivale automáticamente a una funcionalidad aceptada. La especificación ayuda precisamente porque crea una referencia externa contra la cual contrastar lo implementado.</p>
+<h2>Por qué esto se sintió tan familiar</h2>
+<p>No vengo de ingeniería de software, sino de ingeniería eléctrica; durante años trabajé con especificaciones, hojas de datos, requisiciones, ofertas técnicas, revisión de ingeniería de proveedores y QA/QC.</p>
+<p>Si se necesita comprar un centro de control de motores, un switchgear o un cable, no basta con pedirle al proveedor “uno bueno”. Existe una especificación que define requisitos; la oferta se revisa contra esa referencia y, si el suministro se aprueba, la historia todavía no termina. Cuando el equipo llega, QA/QC verifica que lo entregado corresponda con lo aprobado.</p>
+<p>La especificación <strong>sobrevive al proceso</strong>.</p>
+<p>No depende de que quien redactó el documento pueda acompañar cada conversación posterior y explicar de memoria todo lo que quiso decir; diferentes personas pueden contrastar decisiones y entregables contra un artefacto común. Naturalmente, la ingeniería real también contiene ambigüedades, cambios y criterios que requieren juicio, pero la existencia de una referencia compartida reduce cuánto debe reconstruirse en cada transferencia.</p>
+<p>Al trabajar de una manera más orientada por especificaciones con agentes reconocí la misma lógica. El dominio había cambiado; el principio, mucho menos.</p>
+<p>Eso explica por qué este enfoque terminó resultándome más natural que uno donde demasiada intención debía viajar de agente en agente mediante sucesivas reinterpretaciones.</p>
+<h2>El agente no hace menos; cambia la forma de demostrar lo que hizo</h2>
+<p>Mover el control hacia especificaciones no significó reducir la delegación. En la práctica ocurrió lo contrario: el agente participa en la planificación, implementa, escribe pruebas, las ejecuta, analiza los fallos, corrige y vuelve a validar; además, debe dejar evidencia suficiente para que el trabajo pueda revisarse.</p>
+<p>La intervención humana se desplaza hacia preguntas distintas:</p>
+<ul>
+<li>¿Esto satisface realmente el objetivo?</li>
+<li>¿Las dependencias relevantes fueron consideradas?</li>
+<li>¿Dónde están los criterios de aceptación y las pruebas?</li>
+<li>¿Qué comportamiento demuestra que la tarea está terminada?</li>
+<li>¿La evidencia prueba la funcionalidad o solamente que algo se ejecutó sin error?</li>
+</ul>
+<p>Ese desplazamiento importa porque <strong>no toda validación necesita otro agente</strong>. Un build puede demostrar de manera determinista si compila; un test runner puede informar si las pruebas pasan; un script puede comprobar invariantes y un validador puede impedir que un artefacto incompleto se trate como válido. La IA sigue interpretando, implementando y corrigiendo, pero no necesita gastar razonamiento para decidir aquello que el sistema ya puede comprobar de forma más directa.</p>
+<p>Esa misma idea aparece en <a href="/articles/es/despues-de-8901-comandos/">“Después de 8.901 comandos, cambié mi forma de trabajar con agentes”</a>: mejorar un sistema agentic no necesariamente consiste en añadir más capacidad. A veces consiste en decidir qué contexto, memoria, herramientas y reglas merecen permanecer; la reducción también puede ser una decisión de arquitectura.</p>
+<h2>Las especificaciones también pueden decir cuándo usar más agentes</h2>
+<p>Durante un tiempo traté el multiagente y SDD como caminos alternativos. Uno distribuía trabajo mediante roles; el otro lo estructuraba mediante artefactos. Con más experiencia, esa oposición empezó a parecer artificial.</p>
+<p>Tal vez el orden sea más importante que la elección.</p>
+<p>Primero puede definirse el objetivo; después, convertir la intención en especificaciones, identificar dependencias, establecer criterios y separar paquetes de trabajo. Solo entonces aparece una pregunta mucho más útil: <strong>¿cuáles de esas tareas son realmente independientes y pueden ejecutarse en paralelo sin obligar a cada agente a reconstruir el proyecto completo?</strong></p>
+<p>El flujo cambia:</p>
+<pre><code class="language-text">objetivo
+→ especificación
+→ plan
+→ dependencias
+→ tareas independientes
+→ ejecución paralela cuando aporta valor
+→ integración
+→ pruebas
+→ evidencia
+→ aceptación
+</code></pre>
+<p>En ese punto, varios agentes dejan de ser una estructura organizativa aplicada por defecto y se convierten en una decisión de ejecución. No hace falta inventar un “agente frontend”, un “agente backend” y un “agente auditor” solo porque los nombres resulten cómodos; pueden existir simplemente varios ejecutores trabajando sobre paquetes que el plan ya determinó como suficientemente independientes.</p>
+<p>Cada paquete debería transportar lo necesario para su parte: contexto relevante, objetivo, límites, dependencias, criterios de aceptación y validaciones. El agente no tiene que adivinar qué quiso decir el orquestador ni reconstruir todo el proyecto; tiene que resolver una unidad de trabajo cuyo encaje con el conjunto ya fue razonado antes de paralelizarla.</p>
+<p>Esto tampoco convierte el paralelismo en una solución automática. Dos tareas aparentemente separadas pueden tocar el mismo esquema, modificar contratos compartidos o depender del mismo estado; si esa relación no se descubre a tiempo, varios agentes solo consiguen producir conflictos más rápido. La especificación no elimina la coordinación: <strong>permite decidir con mayor fundamento dónde la coordinación compensa y dónde no</strong>.</p>
+<h2>Un filtro práctico antes de multiplicar agentes</h2>
+<p>Antes de paralelizar trabajo, hoy intentaría responder al menos estas preguntas:</p>
+<ol>
+<li>
+<p><strong>¿El objetivo está suficientemente definido?</strong> Si todavía cambia cada vez que se explica, probablemente no conviene distribuirlo.</p>
+</li>
+<li>
+<p><strong>¿Las dependencias están identificadas?</strong> Una tarea “independiente” deja de serlo en cuanto comparte estado, contrato o secuencia crítica con otra.</p>
+</li>
+<li>
+<p><strong>¿Cada paquete tiene un criterio de aceptación propio?</strong> Si dos agentes pueden declarar éxito usando definiciones diferentes de “terminado”, la integración ya empezó con deuda.</p>
+</li>
+<li>
+<p><strong>¿Existe una fuente común de verdad?</strong> Especificación, plan, contrato, pruebas o artefactos equivalentes deben sobrevivir a los handoffs.</p>
+</li>
+<li>
+<p><strong>¿La integración está definida antes de ejecutar?</strong> Saber cómo volverán a unirse los resultados importa tanto como separarlos.</p>
+</li>
+<li>
+<p><strong>¿Parte de la validación puede ser determinista?</strong> Cuanto más pueda comprobar el sistema mediante tests, scripts o validadores, menos depende la aceptación de otra interpretación probabilística.</p>
+</li>
+<li><strong>¿El paralelismo aporta algo medible?</strong> Velocidad, cobertura, independencia de exploración o reducción de tiempo crítico; si no existe un beneficio claro, añadir coordinación es simplemente añadir trabajo.</li>
+</ol>
+<p>No es una fórmula universal. Es un filtro para evitar una confusión que me resultó costosa: asumir que más agentes implican automáticamente más capacidad útil.</p>
+<h2>Entonces, ¿más agentes o mejores especificaciones?</h2>
+<p>Después de probar ambos enfoques, la respuesta que mejor describe cómo prefiero trabajar hoy es sencilla: <strong>mejores especificaciones primero</strong>.</p>
+<p>No porque un solo agente deba hacerlo todo, ni porque los sistemas multiagente hayan dejado de interesarme. Al contrario: cuanto más clara está la estructura del trabajo, más sentido empieza a tener volver a paralelizar determinadas partes.</p>
+<p>Lo que cambió fue el umbral.</p>
+<p>Si el objetivo está definido, las dependencias se entienden, los criterios son verificables y una tarea puede separarse sin perder intención, varios agentes pueden ser una herramienta poderosa. Si todavía no está claro qué se está distribuyendo, añadir agentes puede terminar distribuyendo la incertidumbre.</p>
+<p>Al principio intentaba escalar aumentando el número de agentes; después empecé a preguntarme si podía escalar estructurando mejor lo que reciben. El siguiente paso probablemente combine ambas ideas: <strong>especificar primero para decidir después qué merece ejecutarse en paralelo</strong>.</p>
+<p>En ingeniería, cuantos más actores participan, más valiosa se vuelve una referencia que las personas involucradas puedan verificar sin preguntar a la persona anterior qué quiso decir. Después de trabajar con agentes, esa vieja lección terminó regresando con una forma nueva.</p>
+<p><strong>La especificación no compite con el agente; le da una referencia. Y una buena referencia puede ser precisamente lo que permita multiplicar agentes sin multiplicar también la ambigüedad.</strong></p>
+<hr />
+<h2>Referencias</h2>
+<ul>
+<li>Anthropic, <strong>How we built our multi-agent research system</strong>: <a href="https://www.anthropic.com/engineering/multi-agent-research-system" class="editorial-link" rel="noopener">https://www.anthropic.com/engineering/multi-agent-research-system</a></li>
+<li>Anthropic, <strong>Building Effective AI Agents</strong>: <a href="https://www.anthropic.com/engineering/building-effective-agents" class="editorial-link" rel="noopener">https://www.anthropic.com/engineering/building-effective-agents</a></li>
+<li>GitHub, <strong>Spec Kit</strong>: <a href="https://github.com/github/spec-kit" class="editorial-link" rel="noopener">https://github.com/github/spec-kit</a></li>
+<li>Fission AI, <strong>OpenSpec</strong>: <a href="https://github.com/Fission-AI/OpenSpec" class="editorial-link" rel="noopener">https://github.com/Fission-AI/OpenSpec</a></li>
+<li>OpenAPI Initiative, <strong>OpenAPI Specification</strong>: <a href="https://github.com/OAI/OpenAPI-Specification" class="editorial-link" rel="noopener">https://github.com/OAI/OpenAPI-Specification</a></li>
+<li>AsyncAPI Initiative, <strong>AsyncAPI Specification</strong>: <a href="https://github.com/asyncapi/spec" class="editorial-link" rel="noopener">https://github.com/asyncapi/spec</a></li>
+<li>Roo Code, <strong>Roo-Code</strong> (repositorio histórico, actualmente archivado): <a href="https://github.com/RooCodeInc/Roo-Code" class="editorial-link" rel="noopener">https://github.com/RooCodeInc/Roo-Code</a></li>
+<li>Anthropic, <strong>Claude Code</strong>: <a href="https://github.com/anthropics/claude-code" class="editorial-link" rel="noopener">https://github.com/anthropics/claude-code</a></li>
+<li>OpenAI, <strong>Codex</strong>: <a href="https://github.com/openai/codex" class="editorial-link" rel="noopener">https://github.com/openai/codex</a></li>
+</ul></div>
+      </article>
+    </div>
+  </main>
+  <footer class="border-t border-gray-900 py-8 text-center text-sm text-gray-600 mt-12">&copy; 2025-2026 Studios 216. All rights reserved.</footer>
+</body>
+</html>
