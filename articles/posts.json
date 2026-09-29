@@ -1,5 +1,53 @@
 [
   {
+    "id": "after-8901-commands",
+    "translation_key": "after-8901-commands",
+    "lang": "en",
+    "title": "After 8,901 Commands, I Changed the Way I Work with AI Agents",
+    "description": "After 8,901 commands, the problem shifted from adding more tools to governing context, memory, caching, and redundancy in AI agent workflows.",
+    "url": "/articles/en/after-8901-commands/",
+    "date": "2026-09-29",
+    "topics": [
+      "AI systems",
+      "Agents",
+      "Context engineering",
+      "Developer tools"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "context-engineering",
+      "developer-tools"
+    ],
+    "cover": "/assets/articles/after-8901-commands/reference-en.webp",
+    "cover_alt": "Infographic about evolving an AI-agent workflow toward a more efficient, governed context architecture.",
+    "reading_time": "10 min read"
+  },
+  {
+    "id": "after-8901-commands",
+    "translation_key": "after-8901-commands",
+    "lang": "es",
+    "title": "Después de 8.901 comandos, cambié mi forma de trabajar con agentes",
+    "description": "Tras 8.901 comandos, el problema dejó de ser añadir herramientas y pasó a gobernar contexto, memoria, caching y redundancia en agentes de IA.",
+    "url": "/articles/es/despues-de-8901-comandos/",
+    "date": "2026-09-29",
+    "topics": [
+      "Sistemas de IA",
+      "Agentes",
+      "Context engineering",
+      "Herramientas de desarrollo"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "agents",
+      "context-engineering",
+      "developer-tools"
+    ],
+    "cover": "/assets/articles/after-8901-commands/reference-es.webp",
+    "cover_alt": "Infografía sobre la evolución de un flujo de trabajo con agentes de IA hacia una arquitectura de contexto más eficiente y gobernada.",
+    "reading_time": "10 min de lectura"
+  },
+  {
     "id": "ai-does-not-eliminate-engineering",
     "translation_key": "ai-does-not-eliminate-engineering",
     "lang": "en",
