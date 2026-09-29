@@ -26,15 +26,25 @@
       "source": "content/articles/es/despues-de-8901-comandos.md",
       "published": "2026-09-29",
       "updated": "2026-09-29",
-      "hero": "/assets/articles/after-8901-commands/reference-es.webp",
-      "hero_width": 120,
-      "hero_height": 68,
+      "hero": "/assets/articles/after-8901-commands/hero-es.webp",
+      "hero_width": 760,
+      "hero_height": 428,
       "hero_alt": "Infografía sobre la evolución de un flujo de trabajo con agentes de IA hacia una arquitectura de contexto más eficiente y gobernada.",
-      "show_hero": false,
+      "show_hero": true,
       "listing_cover": "/assets/articles/after-8901-commands/reference-es.webp",
-      "og_image": "https://studios216.com/assets/articles/after-8901-commands/reference-es.webp",
-      "topics": ["Sistemas de IA","Agentes","Context engineering","Herramientas de desarrollo"],
-      "topic_ids": ["ai-systems","agents","context-engineering","developer-tools"],
+      "og_image": "https://studios216.com/assets/articles/after-8901-commands/hero-es.webp",
+      "topics": [
+        "Sistemas de IA",
+        "Agentes",
+        "Context engineering",
+        "Herramientas de desarrollo"
+      ],
+      "topic_ids": [
+        "ai-systems",
+        "agents",
+        "context-engineering",
+        "developer-tools"
+      ],
       "editorial": {
         "profile": "thought-leadership",
         "desire_driven_copy": {
@@ -60,15 +70,25 @@
       "source": "content/articles/en/after-8901-commands.md",
       "published": "2026-09-29",
       "updated": "2026-09-29",
-      "hero": "/assets/articles/after-8901-commands/reference-en.webp",
-      "hero_width": 120,
-      "hero_height": 68,
+      "hero": "/assets/articles/after-8901-commands/hero-en.webp",
+      "hero_width": 760,
+      "hero_height": 428,
       "hero_alt": "Infographic about evolving an AI-agent workflow toward a more efficient, governed context architecture.",
-      "show_hero": false,
+      "show_hero": true,
       "listing_cover": "/assets/articles/after-8901-commands/reference-en.webp",
-      "og_image": "https://studios216.com/assets/articles/after-8901-commands/reference-en.webp",
-      "topics": ["AI systems","Agents","Context engineering","Developer tools"],
-      "topic_ids": ["ai-systems","agents","context-engineering","developer-tools"],
+      "og_image": "https://studios216.com/assets/articles/after-8901-commands/hero-en.webp",
+      "topics": [
+        "AI systems",
+        "Agents",
+        "Context engineering",
+        "Developer tools"
+      ],
+      "topic_ids": [
+        "ai-systems",
+        "agents",
+        "context-engineering",
+        "developer-tools"
+      ],
       "editorial": {
         "profile": "thought-leadership",
         "desire_driven_copy": {
