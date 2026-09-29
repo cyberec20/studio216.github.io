@@ -34,6 +34,6 @@
 
 ## SEO + AI Discoverability
 
-Pre-build review: **15 PASS · 0 WARN · 0 FAIL · 2 INFO**. The INFO items are how/AI disclosure and structured-data truthfulness; the latter will be closed against final generated HTML.
+Pre-build review: **15 PASS · 0 WARN · 0 FAIL · 2 INFO**. Post-build review: **16 PASS · 0 WARN · 0 FAIL · 1 INFO**. `structured-data truthfulness` is **PASS** after verifying canonical, ES/EN/x-default hreflang, `BlogPosting` JSON-LD, author, dates, `mainEntityOfPage`, image, and contextual links in final HTML. The only remaining INFO item is how/AI disclosure.
 
 Anthropic contextual links, internal Studios216 links, and the official Roo Code, Claude Code, Codex, OpenAPI, AsyncAPI, Spec Kit, and OpenSpec repository links are part of the canonical source and must survive into generated HTML.
