@@ -23,11 +23,18 @@
             1280,
             719
           ],
+          "production_path": "/assets/articles/ai-does-not-eliminate-engineering/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "488c5fac8c1777f328a7b482d05b25fb13ebe37ef1841c27d7b90c1fc2865db3",
           "reference_path": "/assets/articles/ai-does-not-eliminate-engineering/reference-es.webp",
           "reference_dimensions_px": [
             120,
-            67
-          ]
+            68
+          ],
+          "reference_sha256": "ed368a79f509b2f92923590ef8b1eb19a9c65f7b459120d4db289fa520b176e7"
         },
         "en": {
           "source_filename": "AI orchestration and engineering workflow.png",
@@ -36,22 +43,37 @@
             1672,
             941
           ],
+          "production_path": "/assets/articles/ai-does-not-eliminate-engineering/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "cec5556f7b4ce6f02721242bdf34c238f2bda3a7e3a884b527fc0f5d459bb68a",
           "reference_path": "/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp",
           "reference_dimensions_px": [
             120,
             68
-          ]
+          ],
+          "reference_sha256": "b2cfde538dcd81b063c01d10e566aaf90792197bc4ed8eb8cab1074a2702136b"
         }
       },
       "publication": {
         "status": "published",
         "published_at": "2026-09-28",
-        "source_masters_recovered": false,
-        "hero_displayed": false,
-        "artwork_status": "listing references preserved; source-master recovery deferred to a dedicated artwork pass",
+        "source_masters_recovered": true,
+        "hero_displayed": true,
+        "artwork_status": "Verified source masters supplied in Images_Articles.zip on 2026-09-29; hero and listing derivatives synchronized from the same language-specific master.",
         "es_listing_cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-es.webp",
         "en_listing_cover": "/assets/articles/ai-does-not-eliminate-engineering/reference-en.webp",
-        "original_linkedin_es": "https://es.linkedin.com/pulse/la-ia-elimina-ingenier%C3%ADa-obliga-volverse-m%C3%A1s-rodriguez-acosta-o3ihe"
+        "original_linkedin_es": "https://es.linkedin.com/pulse/la-ia-elimina-ingenier%C3%ADa-obliga-volverse-m%C3%A1s-rodriguez-acosta-o3ihe",
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "binary WebP assets committed directly in the repository",
+        "es_hero_path": "/assets/articles/ai-does-not-eliminate-engineering/hero-es.webp",
+        "en_hero_path": "/assets/articles/ai-does-not-eliminate-engineering/hero-en.webp"
       }
     },
     "ai-said-done": {
@@ -59,17 +81,24 @@
       "title_hint_en": "AI Said Done",
       "assets": {
         "es": {
-          "source_filename": "La IA en el ciclo de validaci#U00f3n.png",
+          "source_filename": "La IA en el ciclo de validación.png",
           "source_sha256": "7bdf9b9a148232ae85391920dca7867386c8d9af8b8738f470e1a3046a6ae718",
           "source_dimensions_px": [
             1672,
             941
           ],
+          "production_path": "/assets/articles/ai-said-done/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "8e5d1496810c0d47eb8351270d01b7de342e29e33be9c60b59e757ee8b8b7c64",
           "reference_path": "/assets/articles/ai-said-done/reference-es.webp",
           "reference_dimensions_px": [
             120,
             68
-          ]
+          ],
+          "reference_sha256": "f3e80386a3fd9c52d49534a6f8ff0862992384c3effbae6acbec7a5c4a9a96c5"
         },
         "en": {
           "source_filename": "AI workflow and validation stages.png",
@@ -78,22 +107,37 @@
             1672,
             941
           ],
+          "production_path": "/assets/articles/ai-said-done/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "e4074beb75f2335261e47aa71d889a0a655b10594dfafcd8dddb3ae7a3a060eb",
           "reference_path": "/assets/articles/ai-said-done/reference-en.webp",
           "reference_dimensions_px": [
             120,
             68
-          ]
+          ],
+          "reference_sha256": "3754548c28c648ff34521035a6c4ef3021343a28faa375dcdf62437299d362ea"
         }
       },
       "publication": {
         "status": "published",
         "published_at": "2026-09-28",
-        "source_masters_recovered": false,
-        "hero_displayed": false,
-        "artwork_status": "Spanish source master recovered in Library; English master not recovered in this pass. Listing references preserved; hero deferred for visual parity.",
+        "source_masters_recovered": true,
+        "hero_displayed": true,
+        "artwork_status": "Verified source masters supplied in Images_Articles.zip on 2026-09-29; hero and listing derivatives synchronized from the same language-specific master.",
         "es_listing_cover": "/assets/articles/ai-said-done/reference-es.webp",
         "en_listing_cover": "/assets/articles/ai-said-done/reference-en.webp",
-        "original_linkedin_en": "https://www.linkedin.com/pulse/ai-said-done-product-had-different-opinion-franklin-rodriguez-acosta-orqhe"
+        "original_linkedin_en": "https://www.linkedin.com/pulse/ai-said-done-product-had-different-opinion-franklin-rodriguez-acosta-orqhe",
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "binary WebP assets committed directly in the repository",
+        "es_hero_path": "/assets/articles/ai-said-done/hero-es.webp",
+        "en_hero_path": "/assets/articles/ai-said-done/hero-en.webp"
       }
     },
     "from-idea-to-functional-product": {
@@ -107,11 +151,18 @@
             1280,
             719
           ],
+          "production_path": "/assets/articles/from-idea-to-functional-product/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "87d726f761aaa833f91fd30cc53d54c75ad805b83b3e04f7193f7e14cac81834",
           "reference_path": "/assets/articles/from-idea-to-functional-product/reference-es.webp",
           "reference_dimensions_px": [
             120,
-            67
-          ]
+            68
+          ],
+          "reference_sha256": "c9b811b105e5a9fc1f04aca8de49ab215c96deb8dee38d6181cbe8cb278ac02f"
         },
         "en": {
           "source_filename": "AI-powered software development roadmap.png",
@@ -120,22 +171,37 @@
             1672,
             941
           ],
+          "production_path": "/assets/articles/from-idea-to-functional-product/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "8c2ad2721c42e8ec98db508b29db8eda76024ff7e924189bfdf65b2877bd8cdf",
           "reference_path": "/assets/articles/from-idea-to-functional-product/reference-en.webp",
           "reference_dimensions_px": [
             120,
             68
-          ]
+          ],
+          "reference_sha256": "4fee7204acbda8c05fd7d82379c640c1af771ba1079a2e214b7bdf33ef2a6d99"
         }
       },
       "publication": {
         "status": "published",
         "published_at": "2026-09-28",
-        "source_masters_recovered": false,
-        "hero_displayed": false,
-        "artwork_status": "listing references preserved; source-master recovery deferred to a dedicated artwork pass",
+        "source_masters_recovered": true,
+        "hero_displayed": true,
+        "artwork_status": "Verified source masters supplied in Images_Articles.zip on 2026-09-29; hero and listing derivatives synchronized from the same language-specific master.",
         "es_listing_cover": "/assets/articles/from-idea-to-functional-product/reference-es.webp",
         "en_listing_cover": "/assets/articles/from-idea-to-functional-product/reference-en.webp",
-        "original_linkedin_es": "https://es.linkedin.com/pulse/de-una-idea-un-producto-funcional-lo-que-he-aprendido-franklin-cuyne"
+        "original_linkedin_es": "https://es.linkedin.com/pulse/de-una-idea-un-producto-funcional-lo-que-he-aprendido-franklin-cuyne",
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "binary WebP assets committed directly in the repository",
+        "es_hero_path": "/assets/articles/from-idea-to-functional-product/hero-es.webp",
+        "en_hero_path": "/assets/articles/from-idea-to-functional-product/hero-en.webp"
       }
     },
     "do-we-really-need-another-agent": {
@@ -195,43 +261,43 @@
       "assets": {
         "es": {
           "source_filename": "Más no siempre es mejor_ agentes optimizados.png",
-          "source_sha256": "40047070cd52a56b5c55422804be331517c5845ca050855b80b2df735030f831",
+          "source_sha256": "cd2444e580de5828005bf8647bd48c57d7bb228a401cb438e937b191096a93c0",
           "source_dimensions_px": [
             1672,
             941
-          ],
-          "reference_path": "/assets/articles/after-8901-commands/reference-es.webp",
-          "reference_dimensions_px": [
-            120,
-            68
           ],
           "production_path": "/assets/articles/after-8901-commands/hero-es.webp",
           "production_dimensions_px": [
             760,
             428
           ],
-          "production_sha256": "16083dabbcc23e36df401133e9faab09633e7df7b4c511a2e8ee7c87e741ffcb",
-          "reference_sha256": "9ae7161a960915d2f39a7000ea3a8312242d5a8771f51c34aa5bcd0d2011639c"
-        },
-        "en": {
-          "source_filename": "More Is Not Always Better.png",
-          "source_sha256": "422988fb122a8783d1809843fc4f394e5d45a84b67715da38383d43bc3485e09",
-          "source_dimensions_px": [
-            1672,
-            941
-          ],
-          "reference_path": "/assets/articles/after-8901-commands/reference-en.webp",
+          "production_sha256": "51d02d993b38f4d422634725c807c4249c01d9ea031cf3ed9b1c8af86ca38a79",
+          "reference_path": "/assets/articles/after-8901-commands/reference-es.webp",
           "reference_dimensions_px": [
             120,
             68
+          ],
+          "reference_sha256": "1eb2e29f2e10876a16aabe724b74f09788d963b20090403c372f95a73168bb8c"
+        },
+        "en": {
+          "source_filename": "More Is Not Always Better.png",
+          "source_sha256": "8ec90ea1cd7571ebf4d1c65b5808c57f33bb02acd0dc984e50a5d6cefd28ff22",
+          "source_dimensions_px": [
+            1672,
+            941
           ],
           "production_path": "/assets/articles/after-8901-commands/hero-en.webp",
           "production_dimensions_px": [
             760,
             428
           ],
-          "production_sha256": "de5c2cc4054309d1f0559d653e40f3b5c576787c1bcf148cf132e6f0fbed104d",
-          "reference_sha256": "0f7e2dd01653bd12c6f1a5608648434bcb6dd5895b12de81db034716357f04c0"
+          "production_sha256": "ca868524e8b63b08f39ffbcebba25687e5323ef34faf1ace8054638005b6ec6d",
+          "reference_path": "/assets/articles/after-8901-commands/reference-en.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "3c1f14e5ece46ce13db23da3a38c43c637016f365508d1a5e7bc7200d829b7e7"
         }
       },
       "publication": {
@@ -239,7 +305,7 @@
         "published_at": "2026-09-29",
         "source_masters_recovered": true,
         "hero_displayed": true,
-        "artwork_status": "Verified against the original LinkedIn publication by the user on 2026-09-29; production heroes and listing references updated from the supplied masters.",
+        "artwork_status": "Verified source masters supplied in Images_Articles.zip on 2026-09-29; hero and listing derivatives synchronized from the same language-specific master.",
         "es_listing_cover": "/assets/articles/after-8901-commands/reference-es.webp",
         "en_listing_cover": "/assets/articles/after-8901-commands/reference-en.webp",
         "original_linkedin_es": "https://es.linkedin.com/pulse/m%C3%A1s-memoria-herramientas-contexto-y-necesariamente-rodriguez-acosta-hkl8e",
