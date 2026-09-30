@@ -1,0 +1,29 @@
+{
+  "skill": "seo-ai-discoverability",
+  "version": "0.4.0",
+  "validated_at": "2026-09-30",
+  "targeted": {
+    "pass": 22,
+    "info": 2,
+    "warn": 0,
+    "fail": 0
+  },
+  "rules": {
+    "pass": 149,
+    "warn": 0,
+    "fail": 0
+  },
+  "ci_run_id": 36778714927,
+  "ci_conclusion": "success",
+  "artifact_id": 11126307445,
+  "analytics": {
+    "global_contract": "passed",
+    "consent_required": true,
+    "default": "denied",
+    "providers": [
+      "ga4",
+      "meta_pixel",
+      "clarity"
+    ]
+  }
+}

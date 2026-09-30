@@ -25,34 +25,5 @@
     "cover_alt": "DiffDocs case-study cover.",
     "reading_time": "8 min read",
     "legacy": true
-  },
-  {
-    "id": "local-ai-engineering-lab",
-    "translation_key": "local-ai-engineering-lab",
-    "lang": "en",
-    "title": "From “Local LLM” to Agentic Systems: A Hands-On Lab You Can Actually Run",
-    "description": "A local-first AI engineering lab progressing from a clean LLM API to research operators, multi-agent orchestration, observability and an MT5-connected MCP trading desk.",
-    "url": "/blog/local-ai-engineering-lab.html",
-    "date": "2025-12-26",
-    "topics": [
-      "AI systems",
-      "Agents",
-      "Local AI",
-      "MCP",
-      "Observability",
-      "Trading systems"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "agents",
-      "local-ai",
-      "mcp",
-      "observability",
-      "trading-systems"
-    ],
-    "cover": "/blog/assets/covers/local-ai-engineering-lab.svg",
-    "cover_alt": "Local AI engineering lab cover.",
-    "reading_time": "7 min read",
-    "legacy": true
   }
 ]

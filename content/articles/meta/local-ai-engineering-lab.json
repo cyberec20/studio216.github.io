@@ -1,0 +1,123 @@
+{
+  "id": "local-ai-engineering-lab",
+  "translation_key": "local-ai-engineering-lab",
+  "status": "published",
+  "provenance": {
+    "relationship": "substantial_update",
+    "source_platform": "Studios216 legacy blog",
+    "original_url": "https://studios216.com/blog/local-ai-engineering-lab.html",
+    "original_published": "2025-12-26",
+    "original_title": "The Local AI Engineering Lab: From Local LLMs to Agentic Systems",
+    "original_source_archive": "editorial/legacy/local-ai-engineering-lab/local-ai-engineering-lab-2025-12-26.html.snapshot.txt",
+    "historic_artwork": "blog/assets/covers/local-ai-engineering-lab.svg",
+    "project_repository": "https://github.com/cyberec20/ai-engineering-lab",
+    "versions": {
+      "en": {
+        "original_published": "2025-12-26",
+        "original_language": "en"
+      },
+      "es": {
+        "new_adaptation": "2026-09-30"
+      }
+    }
+  },
+  "versions": {
+    "es": {
+      "slug": "laboratorio-local-ingenieria-ia",
+      "title": "Un LLM local no es un laboratorio: ¿cómo construir un sistema de IA que puedas repetir, medir y auditar?",
+      "description": "Del primer endpoint local a RAG, agentes, observabilidad y MCP: qué enseñó un laboratorio de IA diseñado para repetir, medir y auditar cada capa.",
+      "source": "content/articles/es/laboratorio-local-ingenieria-ia.md",
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "hero": "/assets/articles/local-ai-engineering-lab/hero-es.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Blueprint técnico de un laboratorio local de ingeniería de IA con estación de trabajo, GPU, modelos, inferencia, RAG, agentes, observabilidad, seguridad y backups.",
+      "hero_caption": "Blueprint conceptual del laboratorio: muestra las capas técnicas tratadas en el artículo —cómputo local, modelos, inferencia, conocimiento recuperable, agentes, evaluación, observabilidad, seguridad y versionado—; no representa una única topología obligatoria.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/local-ai-engineering-lab/reference-es.webp",
+      "og_image": "https://studios216.com/assets/articles/local-ai-engineering-lab/hero-es.webp",
+      "topics": [
+        "IA local",
+        "Ingeniería de IA",
+        "Agentes",
+        "Observabilidad",
+        "MCP"
+      ],
+      "topic_ids": [
+        "local-ai",
+        "ai-engineering",
+        "agents",
+        "observability",
+        "mcp"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "version": "0.14.1",
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/local-ai-engineering-lab/es-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/local-ai-engineering-lab/es-full.md",
+          "validated_at": "2026-09-30",
+          "raw_overall": 66.5,
+          "contextual_global": 93
+        },
+        "seo_skill_version": "0.4.0",
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved",
+        "idiomatic_spanish_review": "passed"
+      }
+    },
+    "en": {
+      "slug": "local-ai-engineering-lab",
+      "title": "A Local LLM Is Not a Lab: How Do You Build an AI System You Can Repeat, Measure, and Audit?",
+      "description": "From a local endpoint to RAG, agents, observability, and MCP: lessons from an AI lab designed to make every layer repeatable, measurable, and auditable.",
+      "source": "content/articles/en/local-ai-engineering-lab.md",
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "hero": "/assets/articles/local-ai-engineering-lab/hero-en.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Technical blueprint of a local AI engineering lab with workstation, GPU, local models, inference, RAG, agents, observability, security, and backups.",
+      "hero_caption": "Conceptual lab blueprint showing the layers discussed in the article—local compute, models, inference, retrievable knowledge, agents, evaluation, observability, security and versioning. It is not a mandatory single topology.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/local-ai-engineering-lab/reference-en.webp",
+      "og_image": "https://studios216.com/assets/articles/local-ai-engineering-lab/hero-en.webp",
+      "topics": [
+        "Local AI",
+        "AI engineering",
+        "Agents",
+        "Observability",
+        "MCP"
+      ],
+      "topic_ids": [
+        "local-ai",
+        "ai-engineering",
+        "agents",
+        "observability",
+        "mcp"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "version": "0.14.1",
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/local-ai-engineering-lab/en-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/local-ai-engineering-lab/en-full.md",
+          "validated_at": "2026-09-30",
+          "raw_overall": 67,
+          "contextual_global": 94.9
+        },
+        "seo_skill_version": "0.4.0",
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    }
+  }
+}
