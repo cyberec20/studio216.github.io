@@ -1,0 +1,1045 @@
+[
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-001",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-002",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-ELIG-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-003",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-004",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-005",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-MEASURE-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "CONTENT-PEOPLE-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "CONTENT-ORIGINAL-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "CONTENT-AUTHOR-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "CONTENT-AI-DISCLOSURE-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "CONTENT-SPAM-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-002",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-003",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-004",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-005",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-006",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-007",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-008",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-009",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-010",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-AI-011",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DUP-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-MEASURE-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-MEASURE-002",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOV-THIRD-PARTY-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-LINK-001",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-LINK-002",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-001",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-SITEMAP-001",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-SITEMAP-002",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-SITEMAP-003",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-ROBOTS-001",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-I18N-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-I18N-002",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-I18N-003",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SNIPPET-CTRL-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-GROUND-CTRL-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-GROUND-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-GROUND-002",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-GROUND-003",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-GROUND-004",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-GROUND-005",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-URL-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-URL-002",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-CRAWL-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-FRESH-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-MULTIMODAL-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ABUSE-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-MEASURE-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-MEASURE-002",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-JSONLD-001",
+    "message": "Evidence freshness OK: 5/365 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-VISIBLE-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-DISC-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AGENT-ARIA-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "INDEXNOW-001",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "INDEXNOW-002",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "INDEXNOW-003",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "INDEXNOW-004",
+    "message": "Evidence freshness OK: 5/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "VERTICAL-LOCAL-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "VERTICAL-COMMERCE-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "VERTICAL-AGENTIC-001",
+    "message": "Evidence freshness OK: 5/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-CORE-001",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-SEARCH-001",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-SEARCH-002",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-TITLE-001",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-TITLE-002",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-TITLE-003",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-DESC-001",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-DESC-002",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-DESC-003",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-DESC-004",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-DESC-005",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-DESC-006",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-DESC-007",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-KEY-001",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-KEY-002",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-KEY-003",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-KEY-004",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-KEY-005",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-CAT-001",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-CAT-002",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-CAT-003",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-AUD-001",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-AUD-002",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-AUD-003",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-FMT-001",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-FMT-002",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-FMT-003",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-PRINT-001",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-COVER-001",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-COVER-002",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-APLUS-001",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-APLUS-002",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-APLUS-003",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-APLUS-004",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-KINDLE-001",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-KINDLE-002",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-EVID-001",
+    "message": "Evidence freshness OK: 4/180 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-SEARCH-003",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-TITLE-004",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "AMZ-KDP-DESC-008",
+    "message": "Evidence freshness OK: 4/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-ROUTE-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-SCHEMA-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-SCHEMA-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-TITLE-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-DESC-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-DESC-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-DESC-003",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-CLAIM-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-FEAT-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-FEAT-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-FEAT-003",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-KEY-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-KEY-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-CAT-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-CAT-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-LOC-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-LOC-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-LOC-003",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-VIS-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-VIS-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-VIS-003",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-VIS-004",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-CUSTOM-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-EXP-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-EXP-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-EXP-003",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-PERF-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-PERF-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-WEB-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-CORE-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-EVID-001",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GP-PLAY-TITLE-002",
+    "message": "Evidence freshness OK: 0/90 days",
+    "path": null,
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "REGISTRY",
+    "message": "Rule/source registry integrity passed.",
+    "path": null,
+    "details": null
+  }
+]

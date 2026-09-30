@@ -1,0 +1,170 @@
+[
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-SITEMAP-002",
+    "message": "Sitemap parsed with 31 loc(s).",
+    "path": "/mnt/data/local_ai_public_site/sitemap.xml",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-ROBOTS-001",
+    "message": "robots.txt parsed for crawler-policy checks.",
+    "path": "/mnt/data/local_ai_public_site/robots.txt",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/local-ai-engineering-lab/",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/local-ai-engineering-lab/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/local-ai-engineering-lab/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/laboratorio-local-ingenieria-ia/",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/laboratorio-local-ingenieria-ia/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/laboratorio-local-ingenieria-ia/index.html",
+    "details": null
+  }
+]
