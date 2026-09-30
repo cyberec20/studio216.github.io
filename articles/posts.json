@@ -1,5 +1,57 @@
 [
   {
+    "id": "local-ai-engineering-lab",
+    "translation_key": "local-ai-engineering-lab",
+    "lang": "en",
+    "title": "A Local LLM Is Not a Lab: How Do You Build an AI System You Can Repeat, Measure, and Audit?",
+    "description": "From a local endpoint to RAG, agents, observability, and MCP: lessons from an AI lab designed to make every layer repeatable, measurable, and auditable.",
+    "url": "/articles/en/local-ai-engineering-lab/",
+    "date": "2026-09-30",
+    "topics": [
+      "Local AI",
+      "AI engineering",
+      "Agents",
+      "Observability",
+      "MCP"
+    ],
+    "topic_ids": [
+      "local-ai",
+      "ai-engineering",
+      "agents",
+      "observability",
+      "mcp"
+    ],
+    "cover": "/assets/articles/local-ai-engineering-lab/reference-en.webp",
+    "cover_alt": "Technical blueprint of a local AI engineering lab with workstation, GPU, local models, inference, RAG, agents, observability, security, and backups.",
+    "reading_time": "8 min read"
+  },
+  {
+    "id": "local-ai-engineering-lab",
+    "translation_key": "local-ai-engineering-lab",
+    "lang": "es",
+    "title": "Un LLM local no es un laboratorio: ¿cómo construir un sistema de IA que puedas repetir, medir y auditar?",
+    "description": "Del primer endpoint local a RAG, agentes, observabilidad y MCP: qué enseñó un laboratorio de IA diseñado para repetir, medir y auditar cada capa.",
+    "url": "/articles/es/laboratorio-local-ingenieria-ia/",
+    "date": "2026-09-30",
+    "topics": [
+      "IA local",
+      "Ingeniería de IA",
+      "Agentes",
+      "Observabilidad",
+      "MCP"
+    ],
+    "topic_ids": [
+      "local-ai",
+      "ai-engineering",
+      "agents",
+      "observability",
+      "mcp"
+    ],
+    "cover": "/assets/articles/local-ai-engineering-lab/reference-es.webp",
+    "cover_alt": "Blueprint técnico de un laboratorio local de ingeniería de IA con estación de trabajo, GPU, modelos, inferencia, RAG, agentes, observabilidad, seguridad y backups.",
+    "reading_time": "9 min de lectura"
+  },
+  {
     "id": "power-triangle-bidirectional",
     "translation_key": "power-triangle-bidirectional",
     "lang": "en",
@@ -500,35 +552,6 @@
     "cover": "/blog/assets/covers/diffdocs-zero-to-production.svg",
     "cover_alt": "DiffDocs case-study cover.",
     "reading_time": "8 min read",
-    "legacy": true
-  },
-  {
-    "id": "local-ai-engineering-lab",
-    "translation_key": "local-ai-engineering-lab",
-    "lang": "en",
-    "title": "From “Local LLM” to Agentic Systems: A Hands-On Lab You Can Actually Run",
-    "description": "A local-first AI engineering lab progressing from a clean LLM API to research operators, multi-agent orchestration, observability and an MT5-connected MCP trading desk.",
-    "url": "/blog/local-ai-engineering-lab.html",
-    "date": "2025-12-26",
-    "topics": [
-      "AI systems",
-      "Agents",
-      "Local AI",
-      "MCP",
-      "Observability",
-      "Trading systems"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "agents",
-      "local-ai",
-      "mcp",
-      "observability",
-      "trading-systems"
-    ],
-    "cover": "/blog/assets/covers/local-ai-engineering-lab.svg",
-    "cover_alt": "Local AI engineering lab cover.",
-    "reading_time": "7 min read",
     "legacy": true
   }
 ]
