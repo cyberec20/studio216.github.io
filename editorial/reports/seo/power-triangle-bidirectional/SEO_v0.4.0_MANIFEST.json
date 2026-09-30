@@ -1,0 +1,53 @@
+{
+  "family": "power-triangle-bidirectional",
+  "date": "2026-09-30",
+  "pr": 29,
+  "source_commit": "40e263b5a5925197ec23d1f49d22eaec56a56b9b",
+  "source_ci_run": 36754437742,
+  "source_artifact_id": 11115303058,
+  "skill": "seo-ai-discoverability",
+  "skill_version": "0.4.0",
+  "tests": {
+    "package_validation": "PASS",
+    "unit_tests": {
+      "passed": 72,
+      "total": 72
+    }
+  },
+  "runs": {
+    "targeted": {
+      "INFO": 2,
+      "PASS": 22
+    },
+    "article_library": {
+      "INFO": 22,
+      "PASS": 223
+    },
+    "indexnow": {
+      "INFO": 1
+    }
+  },
+  "live_verification": "PENDING_DEPLOY",
+  "artifacts": [
+    {
+      "file": "SEO_v0.4.0_RELEASE_REPORT.md",
+      "sha256": "c61aea0ebdffc6dd7c01fa10de6f2533aa61d5780b42de04eeaf14b248030692",
+      "size_bytes": 5572
+    },
+    {
+      "file": "seo-v0.4.0-article-library.json",
+      "sha256": "c806a7c34ad6cff6168b16426dcae3ae6e30ee7cb4f916ccd43022e65cd72b37",
+      "size_bytes": 56615
+    },
+    {
+      "file": "seo-v0.4.0-indexnow.json",
+      "sha256": "cfdba7a9e0d2c1ac0e82bf860b6fae361761d55f1668b6682698718c74051e18",
+      "size_bytes": 160
+    },
+    {
+      "file": "seo-v0.4.0-targeted.json",
+      "sha256": "c739be09665981889479e2afb1c936d4ae188eeb9bf3b6a878ff90e30ce352ca",
+      "size_bytes": 5640
+    }
+  ]
+}

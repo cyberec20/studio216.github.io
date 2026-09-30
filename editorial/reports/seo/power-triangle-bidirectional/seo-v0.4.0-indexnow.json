@@ -1,0 +1,9 @@
+[
+  {
+    "severity": "INFO",
+    "rule_id": "INDEXNOW-001",
+    "message": "IndexNow disabled; this is optional.",
+    "path": null,
+    "details": null
+  }
+]

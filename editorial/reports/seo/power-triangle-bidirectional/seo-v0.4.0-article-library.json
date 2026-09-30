@@ -1,0 +1,1717 @@
+[
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-SITEMAP-002",
+    "message": "Sitemap parsed with 30 loc(s).",
+    "path": "/mnt/data/powertriangle_release/public-pr29/sitemap.xml",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-ROBOTS-001",
+    "message": "robots.txt parsed for crawler-policy checks.",
+    "path": "/mnt/data/powertriangle_release/public-pr29/robots.txt",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/after-8901-commands/",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/after-8901-commands/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/after-8901-commands/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/ai-does-not-eliminate-engineering/",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/ai-does-not-eliminate-engineering/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/ai-does-not-eliminate-engineering/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/ai-said-done/",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/ai-said-done/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/ai-said-done/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/bidirectional-power-triangle/",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/bidirectional-power-triangle/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/bidirectional-power-triangle/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/delegating-too-much-to-ai-black-screen/",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/delegating-too-much-to-ai-black-screen/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/delegating-too-much-to-ai-black-screen/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/do-we-really-need-another-agent/",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/do-we-really-need-another-agent/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/do-we-really-need-another-agent/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/from-idea-to-functional-product/",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/from-idea-to-functional-product/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/from-idea-to-functional-product/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/from-spreadsheets-to-wattswise-in-216-hours/",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/from-spreadsheets-to-wattswise-in-216-hours/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/",
+    "path": "articles/en/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/more-agents-or-better-specifications/",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/more-agents-or-better-specifications/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/more-agents-or-better-specifications/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/en/working-with-ai/",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/en/working-with-ai/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/en/working-with-ai/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/de-excel-a-wattswise-en-216-horas/",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/de-excel-a-wattswise-en-216-horas/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/de-una-idea-a-un-producto-funcional/",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/de-una-idea-a-un-producto-funcional/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/de-una-idea-a-un-producto-funcional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/delegando-demasiado-a-la-ia-pantalla-negra/",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/delegando-demasiado-a-la-ia-pantalla-negra/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/delegando-demasiado-a-la-ia-pantalla-negra/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/despues-de-8901-comandos/",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/despues-de-8901-comandos/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/despues-de-8901-comandos/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/",
+    "path": "articles/es/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/interactuando-con-la-ia/",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/interactuando-con-la-ia/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/interactuando-con-la-ia/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/la-ia-dijo-terminado/",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/la-ia-dijo-terminado/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/la-ia-dijo-terminado/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/la-ia-no-elimina-la-ingenieria/",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/la-ia-no-elimina-la-ingenieria/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/la-ia-no-elimina-la-ingenieria/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/mas-agentes-o-mejores-especificaciones/",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/mas-agentes-o-mejores-especificaciones/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/mas-agentes-o-mejores-especificaciones/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/realmente-necesitamos-otro-agente/",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/realmente-necesitamos-otro-agente/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/realmente-necesitamos-otro-agente/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/es/triangulo-de-potencia-bidireccional/",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "GOOGLE-ELIG-003",
+    "message": "No noindex directive detected for configured Google-indexable page.",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "BING-ELIG-002",
+    "message": "No noindex directive detected for configured Bing-indexable page.",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "OPENAI-DISC-006",
+    "message": "No noindex directive detected for configured ChatGPT Search-discoverable page.",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "INFO",
+    "rule_id": "OPENAI-DISC-002",
+    "message": "GPTBot training crawler is allowed for /articles/es/triangulo-de-potencia-bidireccional/; this is independent from OAI-SearchBot Search policy.",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "STRUCT-ARTICLE-001",
+    "message": "Article-type JSON-LD found.",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "ENTITY-STABLE-001",
+    "message": "Article author has a stable URL/@id or matches configured identity.",
+    "path": "articles/es/triangulo-de-potencia-bidireccional/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-TITLE-001",
+    "message": "Title present.",
+    "path": "articles/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-DESC-001",
+    "message": "Meta description present.",
+    "path": "articles/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-CANON-002",
+    "message": "Canonical declared: https://studios216.com/articles/",
+    "path": "articles/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "SEO-MAIN-001",
+    "message": "One H1 detected.",
+    "path": "articles/index.html",
+    "details": null
+  },
+  {
+    "severity": "PASS",
+    "rule_id": "IMG-ALT-001",
+    "message": "All img elements include an alt attribute (empty alt may be valid for decorative images).",
+    "path": "articles/index.html",
+    "details": null
+  }
+]
