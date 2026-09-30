@@ -39,7 +39,7 @@ Pero aquí está el detalle que justifica todo el recorrido: **si mañana el dat
 
 La propuesta práctica de WattsWise traslada esa lógica a la interfaz. Permite editar distintas entradas válidas del módulo de potencia y recalcular las magnitudes relacionadas sin copiar manualmente cada resultado entre formularios. La animación de la publicación original muestra cambios de tensión, potencia reactiva y factor de potencia. Conviene observarla con una pregunta concreta: **¿qué datos deberían cambiar y cuáles deberían mantenerse cuando se modifica una entrada?**
 
-![Demostración animada original del módulo de potencia de WattsWise al modificar variables interrelacionadas.](/blog/assets/power/power-demo.gif)
+<img class="article-demo-gif" src="/blog/assets/power/power-demo.gif" alt="Demostración animada original del módulo de potencia de WattsWise al modificar variables interrelacionadas.">
 
 *Demostración conservada del artículo original. La interfaz actual puede haber evolucionado; la animación ilustra el flujo de uso, no una certificación independiente de exactitud.*
 
