@@ -54,30 +54,5 @@
     "cover_alt": "Local AI engineering lab cover.",
     "reading_time": "7 min read",
     "legacy": true
-  },
-  {
-    "id": "power-triangle-calculator",
-    "translation_key": "power-triangle-calculator",
-    "lang": "en",
-    "title": "Power Triangle Calculator (1φ/3φ): kW, kVAR, kVA, PF & Current",
-    "description": "A bidirectional power-triangle workflow for kW, kVAR, kVA, power factor, voltage and current, including efficiency and engineering-use examples.",
-    "url": "/blog/power-triangle-calculator-kw-kvar-kva-pf-current.html",
-    "date": "2025-12-13",
-    "topics": [
-      "Electrical engineering",
-      "Power systems",
-      "Engineering software",
-      "WattsWise"
-    ],
-    "topic_ids": [
-      "electrical-engineering",
-      "power-systems",
-      "engineering-software",
-      "wattswise"
-    ],
-    "cover": "/blog/assets/covers/power-triangle-calculator-cover.svg",
-    "cover_alt": "Power triangle calculator cover.",
-    "reading_time": "7 min read",
-    "legacy": true
   }
 ]

@@ -1,0 +1,68 @@
+{
+  "calibration": "CROSS_AUTHOR_RULE_BASED_V1",
+  "context": {
+    "artifact_type": "editorial_or_educational",
+    "persuasive_job": "education_editorial",
+    "campaign_role": "standalone",
+    "source_mode": "text_ready",
+    "visual_authority_reviewed": "false"
+  },
+  "profile_used": "education_editorial",
+  "raw_global": 66.1,
+  "contextual_global": 91.4,
+  "weighted_dimensions": {
+    "editorial_value_first": {
+      "score": 87,
+      "weight": 0.18,
+      "contribution": 15.66
+    },
+    "proof": {
+      "score": 94,
+      "weight": 0.17,
+      "contribution": 15.98
+    },
+    "specificity": {
+      "score": 100.0,
+      "weight": 0.14,
+      "contribution": 14.0
+    },
+    "comprehension": {
+      "score": 78,
+      "weight": 0.16,
+      "contribution": 12.48
+    },
+    "inference_ownership": {
+      "score": 97,
+      "weight": 0.13,
+      "contribution": 12.61
+    },
+    "message_sequence": {
+      "score": 100,
+      "weight": 0.12,
+      "contribution": 12.0
+    },
+    "messenger_trust": {
+      "score": 87,
+      "weight": 0.1,
+      "contribution": 8.7
+    }
+  },
+  "hard_constraints_separate": true,
+  "integrity_gate_statuses": {
+    "authority_integrity": "PASS",
+    "reciprocity_integrity": "PASS",
+    "interaction_reinforcement_integrity": "PASS",
+    "community_fit_integrity": "PASS",
+    "risk_communication_integrity": "PASS",
+    "context_cue_integrity": "PASS",
+    "time_attention_transparency": "PASS",
+    "privacy_discovery_integrity": "PASS",
+    "semantic_repetition_integrity": "PASS",
+    "audience_language_integrity": "PASS"
+  },
+  "blocked_gates": [],
+  "review_gates": [],
+  "score_status": "DIAGNOSTIC_READY",
+  "status": "PASS",
+  "note": "Contextual global is a job-routed diagnostic. It does not replace raw validators, hard constraints, factual verification, or conversion evidence."
+}
