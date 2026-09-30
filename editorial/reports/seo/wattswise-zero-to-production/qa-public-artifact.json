@@ -1,0 +1,62 @@
+{
+  "new_articles": {
+    "es": {
+      "url": "/articles/es/de-excel-a-wattswise-en-216-horas/",
+      "hrefs_md": 10,
+      "hrefs_html": 10,
+      "external": 7,
+      "assets": [
+        {
+          "kind": "hero",
+          "dims": [
+            760,
+            428
+          ],
+          "sha256": "6bd59c791c267dc5da709b4112f9c7ccec0d47585be65ea01b3b2d44aba51955"
+        },
+        {
+          "kind": "reference",
+          "dims": [
+            120,
+            68
+          ],
+          "sha256": "0d46bba6b105130e68f32bb7b50936e2ac5c06b8ba417b3b880d9b543abd7627"
+        }
+      ],
+      "canonical": true,
+      "hreflang": true,
+      "jsonld": true,
+      "analytics": true
+    },
+    "en": {
+      "url": "/articles/en/from-spreadsheets-to-wattswise-in-216-hours/",
+      "hrefs_md": 8,
+      "hrefs_html": 8,
+      "external": 5,
+      "assets": [
+        {
+          "kind": "hero",
+          "dims": [
+            760,
+            428
+          ],
+          "sha256": "a41ce6fd0d6263ccb8a653b493b131475da39abbc10f23cd09f487b5badf3949"
+        },
+        {
+          "kind": "reference",
+          "dims": [
+            120,
+            68
+          ],
+          "sha256": "535f43ab98cf9db7053d00bacd9b0c3f02f4afed234541fb63ef73b5bb992089"
+        }
+      ],
+      "canonical": true,
+      "hreflang": true,
+      "jsonld": true,
+      "analytics": true
+    }
+  },
+  "legacy_redirect": true,
+  "sitemap_old_removed": true
+}
