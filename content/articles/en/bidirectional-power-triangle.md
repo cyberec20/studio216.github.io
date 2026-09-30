@@ -39,7 +39,7 @@ Now change the starting point without changing the motor. Given `P = 33.33 kW` a
 
 WattsWise applies this approach to its power module: eligible input fields can be edited while related quantities are recalculated, avoiding repeated manual entry across isolated forms. The demonstration retained from the original article shows voltage, reactive power, and power-factor changes. Watch it with one question in mind: **when a value changes, which other quantities should move, and which assumptions must stay put?** That simple test separates a connected workflow from a screen that merely changes numbers.
 
-![Original animated demonstration of the WattsWise power module as related input variables change.](/blog/assets/power/power-demo.gif)
+<img class="article-demo-gif" src="/blog/assets/power/power-demo.gif" alt="Original animated demonstration of the WattsWise power module as related input variables change.">
 
 *Original product demonstration retained from the legacy article. The current interface may differ; the animation illustrates a workflow rather than providing independent validation of calculation accuracy.*
 
