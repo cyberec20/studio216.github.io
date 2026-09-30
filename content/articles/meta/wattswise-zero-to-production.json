@@ -1,0 +1,123 @@
+{
+  "id": "wattswise-zero-to-production",
+  "translation_key": "wattswise-zero-to-production",
+  "status": "published",
+  "provenance": {
+    "relationship": "substantial_update",
+    "source_platform": "Studios216 legacy blog",
+    "original_published": "2025-12-06",
+    "original_url": "https://studios216.com/blog/WattsWise-zero-to-production.html",
+    "original_source_archive": "editorial/legacy/wattswise/WattsWise-zero-to-production_2025-12-06.html.snapshot.txt",
+    "historic_artwork": "blog/assets/covers/wattswise-zero-to-production.svg",
+    "versions": {
+      "en": {
+        "original_title": "Zero to Production: The Blueprint Behind WattsWise",
+        "original_published": "2025-12-06"
+      },
+      "es": {
+        "original_title": null,
+        "original_published": null,
+        "note": "New Spanish editorial adaptation dated 2026-09-30"
+      }
+    }
+  },
+  "versions": {
+    "es": {
+      "slug": "de-excel-a-wattswise-en-216-horas",
+      "title": "De Excel a WattsWise en 216 horas: lo que la IA aceleró y lo que exigió ingeniería",
+      "description": "Del problema de repetir cálculos en Excel a la primera versión de WattsWise: 216 horas de trabajo y decisiones de ingeniería que la IA no podía tomar sola.",
+      "source": "content/articles/es/de-excel-a-wattswise-en-216-horas.md",
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "hero": "/assets/articles/wattswise-zero-to-production/hero-es.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Ilustración conceptual: hojas de cálculo dispersas, arquitectura asistida por IA con ejecutor y auditor, y un panel ilustrativo de WattsWise. Las cifras comparativas hipotéticas se explican al pie.",
+      "hero_caption": "Imagen conceptual. Las cifras de 800 horas, USD 50.000 y seis personas proceden de una comparación hipotética del planteamiento original; los porcentajes ilustrados no constituyen ahorros medidos frente a proyectos equivalentes. USD 0 se refiere al capital externo, no al coste total. Las 216 horas terminan con el envío de la primera versión a revisión.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/wattswise-zero-to-production/reference-es.webp",
+      "og_image": "https://studios216.com/assets/articles/wattswise-zero-to-production/hero-es.webp",
+      "topics": [
+        "Ingeniería eléctrica",
+        "Desarrollo con IA",
+        "Arquitectura de software",
+        "WattsWise"
+      ],
+      "topic_ids": [
+        "electrical-engineering",
+        "ai-augmented-development",
+        "software-architecture",
+        "wattswise"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "version": "0.14.0",
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/wattswise-zero-to-production/es-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/wattswise-zero-to-production/es-full.md",
+          "raw_report": "editorial/reports/desire-driven-copy/wattswise-zero-to-production/es-validation.json",
+          "contextual_report": "editorial/reports/desire-driven-copy/wattswise-zero-to-production/es-contextual.json",
+          "validated_at": "2026-09-30",
+          "raw_overall": 66.4,
+          "contextual_global": 78.9
+        },
+        "seo_skill_version": "0.3.0",
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved",
+        "idiomatic_spanish_review": "passed"
+      }
+    },
+    "en": {
+      "slug": "from-spreadsheets-to-wattswise-in-216-hours",
+      "title": "From Spreadsheets to WattsWise in 216 Hours: Where AI Helped—and Engineering Still Mattered",
+      "description": "From repeated spreadsheet calculations to the first WattsWise submission: 216 hours of active work, AI-assisted implementation, and engineering decisions that still needed an owner.",
+      "source": "content/articles/en/from-spreadsheets-to-wattswise-in-216-hours.md",
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "hero": "/assets/articles/wattswise-zero-to-production/hero-en.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Concept illustration: scattered spreadsheets, AI-augmented architecture with executor and auditor, and an illustrative WattsWise interface. Hypothetical comparison figures are explained below.",
+      "hero_caption": "Concept illustration. The 800-hour, $50,000 and six-person figures come from an illustrative scenario in the original planning exercise; the displayed percentages are not measured savings against equivalent projects. $0 refers to outside capital, not total project cost. The 216-hour milestone ends at the first submission for review.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/wattswise-zero-to-production/reference-en.webp",
+      "og_image": "https://studios216.com/assets/articles/wattswise-zero-to-production/hero-en.webp",
+      "topics": [
+        "Electrical engineering",
+        "AI-augmented development",
+        "Software architecture",
+        "WattsWise"
+      ],
+      "topic_ids": [
+        "electrical-engineering",
+        "ai-augmented-development",
+        "software-architecture",
+        "wattswise"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "version": "0.14.0",
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/wattswise-zero-to-production/en-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/wattswise-zero-to-production/en-full.md",
+          "raw_report": "editorial/reports/desire-driven-copy/wattswise-zero-to-production/en-validation.json",
+          "contextual_report": "editorial/reports/desire-driven-copy/wattswise-zero-to-production/en-contextual.json",
+          "validated_at": "2026-09-30",
+          "raw_overall": 69.1,
+          "contextual_global": 77.9
+        },
+        "seo_skill_version": "0.3.0",
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    }
+  }
+}

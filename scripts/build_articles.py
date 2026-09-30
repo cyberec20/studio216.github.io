@@ -220,7 +220,9 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         hero_src = version["hero"]
         hero_width = int(version.get("hero_width", 760))
         hero_height = int(version.get("hero_height", 428))
-        hero_block = f'<figure class="article-hero"><img src="{html.escape(hero_src, quote=True)}" alt="{html.escape(version["hero_alt"], quote=True)}" width="{hero_width}" height="{hero_height}" loading="eager" decoding="async"></figure>'
+        hero_caption = str(version.get("hero_caption") or "").strip()
+        caption_html = f'<figcaption>{html.escape(hero_caption)}</figcaption>' if hero_caption else ""
+        hero_block = f'<figure class="article-hero"><img src="{html.escape(hero_src, quote=True)}" alt="{html.escape(version["hero_alt"], quote=True)}" width="{hero_width}" height="{hero_height}" loading="eager" decoding="async">{caption_html}</figure>'
     explore_links, social_links = optional_link_sections(site)
     rendered = replace_tokens(template, {
         "HTML_LANG": lang,

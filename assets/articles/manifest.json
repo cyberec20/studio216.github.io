@@ -508,6 +508,72 @@
         "es_hero_path": "/assets/articles/delegating-too-much-to-ai-black-screen/hero-es.webp",
         "en_hero_path": "/assets/articles/delegating-too-much-to-ai-black-screen/hero-en.webp"
       }
+    },
+    "wattswise-zero-to-production": {
+      "title_hint_es": "De Excel a WattsWise en 216 horas: lo que la IA aceleró y lo que exigió ingeniería",
+      "title_hint_en": "From Spreadsheets to WattsWise in 216 Hours: Where AI Helped—and Engineering Still Mattered",
+      "assets": {
+        "es": {
+          "source_filename": "ChatGPT Image Sep 30, 2026, 08_08_22 AM.png",
+          "source_sha256": "86d0c1bd8f492c4785ab580b81a5a69d8a69b37046cb11d92d8b492c1920cec8",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/wattswise-zero-to-production/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "6bd59c791c267dc5da709b4112f9c7ccec0d47585be65ea01b3b2d44aba51955",
+          "reference_path": "/assets/articles/wattswise-zero-to-production/reference-es.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "0d46bba6b105130e68f32bb7b50936e2ac5c06b8ba417b3b880d9b543abd7627"
+        },
+        "en": {
+          "source_filename": "ChatGPT Image Sep 30, 2026, 08_18_23 AM.png",
+          "source_sha256": "11f2ef2ec2f002bd93ac433889cc7774cb6501cac3fcd96e1adfa4b81e358e8a",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/wattswise-zero-to-production/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "a41ce6fd0d6263ccb8a653b493b131475da39abbc10f23cd09f487b5badf3949",
+          "reference_path": "/assets/articles/wattswise-zero-to-production/reference-en.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "535f43ab98cf9db7053d00bacd9b0c3f02f4afed234541fb63ef73b5bb992089"
+        }
+      },
+      "publication": {
+        "status": "published",
+        "published_at": "2026-09-30",
+        "source_masters_recovered": true,
+        "hero_displayed": true,
+        "artwork_status": "Approved ES/EN concept artwork; historical comparison figures are visibly qualified by hero captions.",
+        "original_legacy_url": "/blog/WattsWise-zero-to-production.html",
+        "legacy_source_archive": "editorial/legacy/wattswise/WattsWise-zero-to-production_2025-12-06.html.snapshot.txt",
+        "legacy_svg": "/blog/assets/covers/wattswise-zero-to-production.svg",
+        "es_listing_cover": "/assets/articles/wattswise-zero-to-production/reference-es.webp",
+        "en_listing_cover": "/assets/articles/wattswise-zero-to-production/reference-en.webp",
+        "es_hero_path": "/assets/articles/wattswise-zero-to-production/hero-es.webp",
+        "en_hero_path": "/assets/articles/wattswise-zero-to-production/hero-en.webp",
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "binary WebP assets committed directly in the repository"
+      }
     }
   },
   "pending_articles": {}

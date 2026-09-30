@@ -1,54 +1,65 @@
 [
-	{
-	  "title": "From Idea to Production: Building DiffDocs with Agentic AI",
-	  "url": "./diffdocs-zero-to-production.html",
-	  "date": "2026-03-23",
-	  "minutes": 8,
-	  "category": "build",
-	  "categoryLabel": "Build Notes",
-	  "badge": "Case Study",
-	  "excerpt": "How one person built a production-grade document comparison SaaS in 3.5 months using AI-augmented development—vs. the traditional $400k, 8-12 month route.",
-	  "cover": "./assets/covers/diffdocs-zero-to-production.svg",
-	  "tags": ["DiffDocs", "AI-Augmented", "SaaS", "Case Study", "Agentic AI", "MCP"]
-	},
-	{
-	"title": "Zero to Production: The Blueprint Behind WattsWise",
-	"url": "./WattsWise-zero-to-production.html",
-	"date": "2025-12-06",
-	"minutes": 5,
-	"category": "build",
-	"categoryLabel": "Build Notes",
-	"badge": "Case Study",
-	"excerpt": "How we architected a complex engineering tool in just 216 hours using AI-driven development.",
-	"cover": "./assets/covers/wattswise-zero-to-production.svg",
-	"tags": [
-	  "WattsWise",
-	  "Architecture",
-	  "AI-Augmented"
-	]
-	},
-	{
-	  "title": "Power Triangle Calculator (1φ/3φ): kW, kVAR, kVA, PF & Current — Bidirectional + Efficiency (η)",
-	  "url": "./power-triangle-calculator-kw-kvar-kva-pf-current.html",
-	  "date": "2025-12-13",
-	  "minutes": 7,
-	  "category": "wattswise",
-	  "categoryLabel": "Use Cases",
-	  "badge": "Use Case",
-	  "excerpt": "A bidirectional power triangle workflow: edit kW, kVAR, kVA, PF, V or I and everything updates instantly — including efficiency (η) and Excel formulas.",
-	  "cover": "./assets/covers/power-triangle-calculator-cover.svg",
-	  "tags": ["WattsWise", "Power Triangle", "kW", "kVAR", "kVA", "Power Factor", "3-Phase", "Single-Phase", "Efficiency", "Current"]
-	},
-	{
-	  "title": "From “Local LLM” to Agentic Systems: A Hands-On Lab You Can Actually Run",
-	  "url": "./local-ai-engineering-lab.html",
-	  "date": "2025-12-26",
-	  "minutes": 7,
-	  "category": "build",
-	  "categoryLabel": "Build Notes",
-	  "badge": "Build Notes",
-	  "excerpt": "A local-first AI engineering lab that progresses from a clean LLM API to research operators, multi-agent orchestration, and an MT5-connected MCP Trading Desk—built to run, inspect, and iterate.",
-	  "cover": "./assets/covers/local-ai-engineering-lab.svg",
-	  "tags": ["AI Engineering", "Local LLMs", "Agents", "LangGraph", "Observability", "MCP", "MetaTrader 5", "RAG"]
-	}
+  {
+    "title": "From Idea to Production: Building DiffDocs with Agentic AI",
+    "url": "./diffdocs-zero-to-production.html",
+    "date": "2026-03-23",
+    "minutes": 8,
+    "category": "build",
+    "categoryLabel": "Build Notes",
+    "badge": "Case Study",
+    "excerpt": "How one person built a production-grade document comparison SaaS in 3.5 months using AI-augmented development—vs. the traditional $400k, 8-12 month route.",
+    "cover": "./assets/covers/diffdocs-zero-to-production.svg",
+    "tags": [
+      "DiffDocs",
+      "AI-Augmented",
+      "SaaS",
+      "Case Study",
+      "Agentic AI",
+      "MCP"
+    ]
+  },
+  {
+    "title": "Power Triangle Calculator (1φ/3φ): kW, kVAR, kVA, PF & Current — Bidirectional + Efficiency (η)",
+    "url": "./power-triangle-calculator-kw-kvar-kva-pf-current.html",
+    "date": "2025-12-13",
+    "minutes": 7,
+    "category": "wattswise",
+    "categoryLabel": "Use Cases",
+    "badge": "Use Case",
+    "excerpt": "A bidirectional power triangle workflow: edit kW, kVAR, kVA, PF, V or I and everything updates instantly — including efficiency (η) and Excel formulas.",
+    "cover": "./assets/covers/power-triangle-calculator-cover.svg",
+    "tags": [
+      "WattsWise",
+      "Power Triangle",
+      "kW",
+      "kVAR",
+      "kVA",
+      "Power Factor",
+      "3-Phase",
+      "Single-Phase",
+      "Efficiency",
+      "Current"
+    ]
+  },
+  {
+    "title": "From “Local LLM” to Agentic Systems: A Hands-On Lab You Can Actually Run",
+    "url": "./local-ai-engineering-lab.html",
+    "date": "2025-12-26",
+    "minutes": 7,
+    "category": "build",
+    "categoryLabel": "Build Notes",
+    "badge": "Build Notes",
+    "excerpt": "A local-first AI engineering lab that progresses from a clean LLM API to research operators, multi-agent orchestration, and an MT5-connected MCP Trading Desk—built to run, inspect, and iterate.",
+    "cover": "./assets/covers/local-ai-engineering-lab.svg",
+    "tags": [
+      "AI Engineering",
+      "Local LLMs",
+      "Agents",
+      "LangGraph",
+      "Observability",
+      "MCP",
+      "MetaTrader 5",
+      "RAG"
+    ]
+  }
 ]

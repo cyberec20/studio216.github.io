@@ -147,3 +147,5 @@ body {
   .article-toolbar { top:5.75rem; }
   .article-pagination { justify-content:space-between; }
 }
+
+.article-hero figcaption { margin-top:.65rem; color:#9ca3af; font-size:.82rem; line-height:1.55; }

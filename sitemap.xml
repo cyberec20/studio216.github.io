@@ -18,11 +18,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://studios216.com/blog/WattsWise-zero-to-production.html</loc>
-    <lastmod>2025-12-06</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://studios216.com/blog/power-triangle-calculator-kw-kvar-kva-pf-current.html</loc>
     <lastmod>2025-12-13</lastmod>
     <priority>0.8</priority>
@@ -49,17 +44,17 @@
   </url>
   <url>
     <loc>https://studios216.com/articles/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://studios216.com/articles/es/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://studios216.com/articles/en/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -93,6 +88,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://studios216.com/articles/en/from-spreadsheets-to-wattswise-in-216-hours/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://studios216.com/articles/en/more-agents-or-better-specifications/</loc>
     <lastmod>2026-09-29</lastmod>
     <priority>0.8</priority>
@@ -100,6 +100,11 @@
   <url>
     <loc>https://studios216.com/articles/en/working-with-ai/</loc>
     <lastmod>2026-09-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://studios216.com/articles/es/de-excel-a-wattswise-en-216-horas/</loc>
+    <lastmod>2026-09-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>

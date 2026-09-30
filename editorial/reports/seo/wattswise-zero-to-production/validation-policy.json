@@ -1,0 +1,49 @@
+{
+  "site_name": "Studios216",
+  "canonical_host": "https://studios216.com",
+  "html_globs": [
+    "**/*.html",
+    "*.html"
+  ],
+  "exclude_globs": [
+    "blog/WattsWise-zero-to-production.html"
+  ],
+  "indexable_globs": [
+    "articles/es/de-excel-a-wattswise-en-216-horas/index.html",
+    "articles/en/from-spreadsheets-to-wattswise-in-216-hours/index.html"
+  ],
+  "robots_path": "robots.txt",
+  "sitemap_paths": [
+    "sitemap.xml"
+  ],
+  "goals": {
+    "google_search": true,
+    "google_ai": true,
+    "bing_search": true,
+    "bing_ai": true,
+    "openai_search": true,
+    "multilingual": true,
+    "agent_readiness": false
+  },
+  "checks": {
+    "sitemap_membership": true,
+    "sitemap_lastmod": true,
+    "internal_links": true,
+    "hreflang_reciprocity": true,
+    "article_jsonld": true
+  },
+  "article_url_markers": [
+    "/articles/es/de-excel-a-wattswise-en-216-horas/",
+    "/articles/en/from-spreadsheets-to-wattswise-in-216-hours/"
+  ],
+  "expected_languages": [],
+  "expected_author": {
+    "name": "Franklin Rodriguez",
+    "url": "https://studios216.com/about/founder/",
+    "id": "https://studios216.com/about/founder/#person"
+  },
+  "severity_overrides": {},
+  "live": {
+    "expect_html": true
+  }
+}
