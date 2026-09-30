@@ -1,5 +1,53 @@
 [
   {
+    "id": "wattswise-zero-to-production",
+    "translation_key": "wattswise-zero-to-production",
+    "lang": "en",
+    "title": "From Spreadsheets to WattsWise in 216 Hours: Where AI Helped—and Engineering Still Mattered",
+    "description": "From repeated spreadsheet calculations to the first WattsWise submission: 216 hours of active work, AI-assisted implementation, and engineering decisions that still needed an owner.",
+    "url": "/articles/en/from-spreadsheets-to-wattswise-in-216-hours/",
+    "date": "2026-09-30",
+    "topics": [
+      "Electrical engineering",
+      "AI-augmented development",
+      "Software architecture",
+      "WattsWise"
+    ],
+    "topic_ids": [
+      "electrical-engineering",
+      "ai-augmented-development",
+      "software-architecture",
+      "wattswise"
+    ],
+    "cover": "/assets/articles/wattswise-zero-to-production/reference-en.webp",
+    "cover_alt": "Concept illustration: scattered spreadsheets, AI-augmented architecture with executor and auditor, and an illustrative WattsWise interface. Hypothetical comparison figures are explained below.",
+    "reading_time": "7 min read"
+  },
+  {
+    "id": "wattswise-zero-to-production",
+    "translation_key": "wattswise-zero-to-production",
+    "lang": "es",
+    "title": "De Excel a WattsWise en 216 horas: lo que la IA aceleró y lo que exigió ingeniería",
+    "description": "Del problema de repetir cálculos en Excel a la primera versión de WattsWise: 216 horas de trabajo y decisiones de ingeniería que la IA no podía tomar sola.",
+    "url": "/articles/es/de-excel-a-wattswise-en-216-horas/",
+    "date": "2026-09-30",
+    "topics": [
+      "Ingeniería eléctrica",
+      "Desarrollo con IA",
+      "Arquitectura de software",
+      "WattsWise"
+    ],
+    "topic_ids": [
+      "electrical-engineering",
+      "ai-augmented-development",
+      "software-architecture",
+      "wattswise"
+    ],
+    "cover": "/assets/articles/wattswise-zero-to-production/reference-es.webp",
+    "cover_alt": "Ilustración conceptual: hojas de cálculo dispersas, arquitectura asistida por IA con ejecutor y auditor, y un panel ilustrativo de WattsWise. Las cifras comparativas hipotéticas se explican al pie.",
+    "reading_time": "7 min de lectura"
+  },
+  {
     "id": "after-8901-commands",
     "translation_key": "after-8901-commands",
     "lang": "en",
@@ -458,33 +506,6 @@
     "cover": "/blog/assets/covers/power-triangle-calculator-cover.svg",
     "cover_alt": "Power triangle calculator cover.",
     "reading_time": "7 min read",
-    "legacy": true
-  },
-  {
-    "id": "wattswise-zero-to-production",
-    "translation_key": "wattswise-zero-to-production",
-    "lang": "en",
-    "title": "Zero to Production: The Blueprint Behind WattsWise",
-    "description": "How WattsWise was architected as a production engineering tool using AI-augmented development and domain-driven engineering decisions.",
-    "url": "/blog/WattsWise-zero-to-production.html",
-    "date": "2025-12-06",
-    "topics": [
-      "Engineering software",
-      "AI-augmented development",
-      "Software architecture",
-      "Electrical engineering",
-      "WattsWise"
-    ],
-    "topic_ids": [
-      "engineering-software",
-      "ai-augmented-development",
-      "software-architecture",
-      "electrical-engineering",
-      "wattswise"
-    ],
-    "cover": "/blog/assets/covers/wattswise-zero-to-production.svg",
-    "cover_alt": "WattsWise zero-to-production case-study cover.",
-    "reading_time": "5 min read",
     "legacy": true
   }
 ]
