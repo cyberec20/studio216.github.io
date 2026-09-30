@@ -1,5 +1,53 @@
 [
   {
+    "id": "power-triangle-bidirectional",
+    "translation_key": "power-triangle-bidirectional",
+    "lang": "en",
+    "title": "Bidirectional Power Triangle: Why Should Every Calculation Start with the Same Input?",
+    "description": "54.1 A or 60.1 A for one motor? See how efficiency and bidirectional power-triangle calculations connect kW, kVA, kVAR, PF and current.",
+    "url": "/articles/en/bidirectional-power-triangle/",
+    "date": "2026-09-30",
+    "topics": [
+      "Electrical engineering",
+      "Power triangle",
+      "Power factor",
+      "WattsWise"
+    ],
+    "topic_ids": [
+      "electrical-engineering",
+      "power-systems",
+      "power-factor",
+      "wattswise"
+    ],
+    "cover": "/assets/articles/power-triangle-bidirectional/reference-en.webp",
+    "cover_alt": "Three-panel conceptual infographic: fragmented calculations, bidirectional power triangle and coherent WattsWise three-phase results.",
+    "reading_time": "7 min read"
+  },
+  {
+    "id": "power-triangle-bidirectional",
+    "translation_key": "power-triangle-bidirectional",
+    "lang": "es",
+    "title": "Triángulo de potencia bidireccional: ¿por qué empezar siempre por el mismo dato?",
+    "description": "Dos resultados de corriente para un mismo motor: cómo calcular en ambos sentidos kW, kVA, kVAR, factor de potencia y amperios sin perder las hipótesis.",
+    "url": "/articles/es/triangulo-de-potencia-bidireccional/",
+    "date": "2026-09-30",
+    "topics": [
+      "Ingeniería eléctrica",
+      "Triángulo de potencia",
+      "Factor de potencia",
+      "WattsWise"
+    ],
+    "topic_ids": [
+      "electrical-engineering",
+      "power-systems",
+      "power-factor",
+      "wattswise"
+    ],
+    "cover": "/assets/articles/power-triangle-bidirectional/reference-es.webp",
+    "cover_alt": "Infografía conceptual en tres pasos: cálculos fragmentados, triángulo de potencia bidireccional y resultados coherentes de WattsWise para un sistema trifásico.",
+    "reading_time": "7 min de lectura"
+  },
+  {
     "id": "wattswise-zero-to-production",
     "translation_key": "wattswise-zero-to-production",
     "lang": "en",
@@ -480,31 +528,6 @@
     ],
     "cover": "/blog/assets/covers/local-ai-engineering-lab.svg",
     "cover_alt": "Local AI engineering lab cover.",
-    "reading_time": "7 min read",
-    "legacy": true
-  },
-  {
-    "id": "power-triangle-calculator",
-    "translation_key": "power-triangle-calculator",
-    "lang": "en",
-    "title": "Power Triangle Calculator (1φ/3φ): kW, kVAR, kVA, PF & Current",
-    "description": "A bidirectional power-triangle workflow for kW, kVAR, kVA, power factor, voltage and current, including efficiency and engineering-use examples.",
-    "url": "/blog/power-triangle-calculator-kw-kvar-kva-pf-current.html",
-    "date": "2025-12-13",
-    "topics": [
-      "Electrical engineering",
-      "Power systems",
-      "Engineering software",
-      "WattsWise"
-    ],
-    "topic_ids": [
-      "electrical-engineering",
-      "power-systems",
-      "engineering-software",
-      "wattswise"
-    ],
-    "cover": "/blog/assets/covers/power-triangle-calculator-cover.svg",
-    "cover_alt": "Power triangle calculator cover.",
     "reading_time": "7 min read",
     "legacy": true
   }

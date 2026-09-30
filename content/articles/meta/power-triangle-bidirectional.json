@@ -1,0 +1,123 @@
+{
+  "id": "power-triangle-bidirectional",
+  "translation_key": "power-triangle-bidirectional",
+  "status": "published",
+  "provenance": {
+    "relationship": "substantial_update",
+    "source_platform": "Studios216 legacy blog",
+    "original_url": "https://studios216.com/blog/power-triangle-calculator-kw-kvar-kva-pf-current.html",
+    "original_published": "2025-12-13",
+    "original_title": "The Engineer's Dilemma: Why Bidirectional Power Triangle Analysis (kW, kVAR, kVA) is Essential",
+    "original_source_archive": "editorial/legacy/power-triangle/power-triangle-2025-12-13.html.snapshot.txt",
+    "historic_artwork": "blog/assets/covers/power-triangle-calculator-cover.svg",
+    "original_animated_demo": "blog/assets/power/power-demo.gif",
+    "versions": {
+      "en": {
+        "original_published": "2025-12-13",
+        "original_language": "en"
+      },
+      "es": {
+        "new_adaptation": "2026-09-30"
+      }
+    }
+  },
+  "versions": {
+    "es": {
+      "slug": "triangulo-de-potencia-bidireccional",
+      "title": "Triángulo de potencia bidireccional: ¿por qué empezar siempre por el mismo dato?",
+      "description": "Dos resultados de corriente para un mismo motor: cómo calcular en ambos sentidos kW, kVA, kVAR, factor de potencia y amperios sin perder las hipótesis.",
+      "source": "content/articles/es/triangulo-de-potencia-bidireccional.md",
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "hero": "/assets/articles/power-triangle-bidirectional/hero-es.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Infografía conceptual en tres pasos: cálculos fragmentados, triángulo de potencia bidireccional y resultados coherentes de WattsWise para un sistema trifásico.",
+      "hero_caption": "Ilustración conceptual distinta del ejemplo de 30 kW del texto. Aquí se representan 350 kW mecánicos, rendimiento 0,92, FP 0,85 y 480 V trifásicos: entrada ≈380,4 kW, S ≈447,6 kVA, |Q| ≈235,8 kVAR e I ≈538,3 A. Las pantallas dibujadas no son capturas reales de la aplicación.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/power-triangle-bidirectional/reference-es.webp",
+      "og_image": "https://studios216.com/assets/articles/power-triangle-bidirectional/hero-es.webp",
+      "topics": [
+        "Ingeniería eléctrica",
+        "Triángulo de potencia",
+        "Factor de potencia",
+        "WattsWise"
+      ],
+      "topic_ids": [
+        "electrical-engineering",
+        "power-systems",
+        "power-factor",
+        "wattswise"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "version": "0.14.1",
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/power-triangle-bidirectional/es-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/power-triangle-bidirectional/es-full.md",
+          "raw_report": "editorial/reports/desire-driven-copy/power-triangle-bidirectional/es-validation.json",
+          "contextual_report": "editorial/reports/desire-driven-copy/power-triangle-bidirectional/es-contextual.json",
+          "validated_at": "2026-09-30",
+          "raw_overall": 71.3,
+          "contextual_global": 90.8
+        },
+        "seo_skill_version": "0.4.0",
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved",
+        "idiomatic_spanish_review": "passed"
+      }
+    },
+    "en": {
+      "slug": "bidirectional-power-triangle",
+      "title": "Bidirectional Power Triangle: Why Should Every Calculation Start with the Same Input?",
+      "description": "54.1 A or 60.1 A for one motor? See how efficiency and bidirectional power-triangle calculations connect kW, kVA, kVAR, PF and current.",
+      "source": "content/articles/en/bidirectional-power-triangle.md",
+      "published": "2026-09-30",
+      "updated": "2026-09-30",
+      "hero": "/assets/articles/power-triangle-bidirectional/hero-en.webp",
+      "hero_width": 760,
+      "hero_height": 428,
+      "hero_alt": "Three-panel conceptual infographic: fragmented calculations, bidirectional power triangle and coherent WattsWise three-phase results.",
+      "hero_caption": "Concept illustration, separate from the article's 30 kW worked example: 350 kW mechanical output, efficiency 0.92, PF 0.85, and a 480 V balanced three-phase system give electrical input ≈380.4 kW, S ≈447.6 kVA, |Q| ≈235.8 kVAR and I ≈538.3 A. The illustrated controls are not actual app screenshots.",
+      "show_hero": true,
+      "listing_cover": "/assets/articles/power-triangle-bidirectional/reference-en.webp",
+      "og_image": "https://studios216.com/assets/articles/power-triangle-bidirectional/hero-en.webp",
+      "topics": [
+        "Electrical engineering",
+        "Power triangle",
+        "Power factor",
+        "WattsWise"
+      ],
+      "topic_ids": [
+        "electrical-engineering",
+        "power-systems",
+        "power-factor",
+        "wattswise"
+      ],
+      "editorial": {
+        "profile": "thought-leadership",
+        "desire_driven_copy": {
+          "version": "0.14.1",
+          "status": "passed",
+          "report": "editorial/reports/desire-driven-copy/power-triangle-bidirectional/en-editorial.md",
+          "full_report": "editorial/reports/desire-driven-copy/power-triangle-bidirectional/en-full.md",
+          "raw_report": "editorial/reports/desire-driven-copy/power-triangle-bidirectional/en-validation.json",
+          "contextual_report": "editorial/reports/desire-driven-copy/power-triangle-bidirectional/en-contextual.json",
+          "validated_at": "2026-09-30",
+          "raw_overall": 66.1,
+          "contextual_global": 91.4
+        },
+        "seo_skill_version": "0.4.0",
+        "seo_review": "passed",
+        "punctuation_review": "passed",
+        "redundancy_review": "passed",
+        "human_read_aloud_review": "passed",
+        "human_approval": "approved"
+      }
+    }
+  }
+}

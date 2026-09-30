@@ -574,6 +574,52 @@
         "production_format": "webp",
         "storage": "binary WebP assets committed directly in the repository"
       }
+    },
+    "power-triangle-bidirectional": {
+      "title_hint_es": "Triángulo de potencia bidireccional",
+      "title_hint_en": "Bidirectional power triangle",
+      "assets": {
+        "es": {
+          "source_filename": "ChatGPT Image Sep 30, 2026, 12_33_52 PM.png",
+          "source_sha256": "495b03dc0633be9da31699f52b81799c55dc97e43768464ac2ae28d3d605eea6",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/power-triangle-bidirectional/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "db94ff4f4c783ce75fe411b1047c37b7984bd290db0f4c2f31e03c2a31755639",
+          "reference_path": "/assets/articles/power-triangle-bidirectional/reference-es.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "6d5b1ffe1fe283d4266ff544dca8cf261fb6199d2043b5342c275c130bb0bb40"
+        },
+        "en": {
+          "source_filename": "ChatGPT Image Sep 30, 2026, 12_34_05 PM.png",
+          "source_sha256": "1f3862a72009e9e26a2174e50d9df4a4a671bf96137281b8aa8f70bcaa3e3c1c",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/power-triangle-bidirectional/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "474b459c4dd80cc755226aaa727bedd2cd0e68cb4b4bf8728aae29435478f293",
+          "reference_path": "/assets/articles/power-triangle-bidirectional/reference-en.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "ca89c8dded0c1a698ba9a10865e15cc49657d35ab15bb98888dee2a83758d44f"
+        }
+      }
     }
   },
   "pending_articles": {}

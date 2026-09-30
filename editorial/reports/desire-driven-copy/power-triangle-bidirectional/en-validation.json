@@ -1,0 +1,1081 @@
+{
+  "scorecard": {
+    "language": "en",
+    "word_count": 1515,
+    "paragraph_count": 30,
+    "sentence_count": 84,
+    "raw": {
+      "reader_terms": 0,
+      "seller_terms": 6,
+      "reader_seller_ratio": 0.14,
+      "benefit_signals": 11,
+      "future_pacing_signals": 1,
+      "curiosity_signals": 13,
+      "proof_signals": 12,
+      "specificity_signals": 48,
+      "cta_occurrences": 8,
+      "early_cta_occurrences": 4
+    },
+    "scores": {
+      "reader_orientation": 37.0,
+      "wiifm_benefit": 90.8,
+      "future_experience": 14.7,
+      "curiosity": 100.0,
+      "proof_credibility": 100.0,
+      "specificity": 100.0,
+      "readability": 100.0,
+      "cta_timing": 0.0,
+      "self_cta_readiness": 58.1,
+      "overall": 66.1
+    },
+    "notes": [
+      "Heuristic lexical diagnostics only; human judgment and conversion data outrank this score.",
+      "Low proof score may be appropriate when the format does not require explicit proof."
+    ]
+  },
+  "self_cta": {
+    "level": 2,
+    "label": "Curiosity",
+    "score": 58.1,
+    "weakest_dimensions": [
+      [
+        "cta_timing",
+        0.0
+      ],
+      [
+        "future_experience",
+        14.7
+      ],
+      [
+        "reader_orientation",
+        37.0
+      ]
+    ],
+    "human_test": "Remove the CTA and link. Would a qualified reader already want to ask how to get, see, try, continue, or learn more?"
+  },
+  "truthfulness": {
+    "status": "REVIEW",
+    "flag_count": 6,
+    "hard_verify_count": 6,
+    "flags": [
+      {
+        "type": "verify_claim",
+        "match": "1",
+        "position": 94,
+        "message": "Verify that this absolute, guarantee, superiority, scarcity, or urgency claim is factually supported."
+      },
+      {
+        "type": "verify_claim",
+        "match": "1",
+        "position": 104,
+        "message": "Verify that this absolute, guarantee, superiority, scarcity, or urgency claim is factually supported."
+      },
+      {
+        "type": "verify_claim",
+        "match": "1",
+        "position": 4421,
+        "message": "Verify that this absolute, guarantee, superiority, scarcity, or urgency claim is factually supported."
+      },
+      {
+        "type": "verify_claim",
+        "match": "1",
+        "position": 4496,
+        "message": "Verify that this absolute, guarantee, superiority, scarcity, or urgency claim is factually supported."
+      },
+      {
+        "type": "verify_claim",
+        "match": "1",
+        "position": 5480,
+        "message": "Verify that this absolute, guarantee, superiority, scarcity, or urgency claim is factually supported."
+      },
+      {
+        "type": "verify_claim",
+        "match": "1",
+        "position": 5582,
+        "message": "Verify that this absolute, guarantee, superiority, scarcity, or urgency claim is factually supported."
+      }
+    ],
+    "principle": "Flags are verification prompts, not automatic findings of falsehood."
+  },
+  "claim_proof_alignment": {
+    "language": "en",
+    "claim_count": 2,
+    "claims_with_nearby_proof_signal": 0,
+    "alignment_score": 0.0,
+    "claims": [
+      {
+        "sentence_index": 29,
+        "claim": "Restore that continuity and the next verification becomes easier; assumptions are less likely to get lost in transit.",
+        "nearby_proof_signal": false
+      },
+      {
+        "sentence_index": 76,
+        "claim": "A useful calculator makes the arithmetic faster; sound engineering keeps its assumptions open to inspection.",
+        "nearby_proof_signal": false
+      }
+    ],
+    "note": "Lexical proximity heuristic only. Human review must determine whether the evidence actually supports the magnitude, population, timeframe, and causal meaning of the claim."
+  },
+  "believability": {
+    "score": 25.0,
+    "status": "WEAK",
+    "claims": [
+      {
+        "match": "Only",
+        "proof_nearby": false,
+        "mechanism_nearby": false,
+        "condition_nearby": false
+      }
+    ],
+    "note": "Heuristic. A nearby proof word does not establish factual support; inspect the actual evidence."
+  },
+  "specificity": {
+    "score": 100.0,
+    "concrete_signals": 66,
+    "numeric_signals": 48,
+    "generic_hype_signals": 1,
+    "status": "STRONG",
+    "note": "Specificity is not automatically truth. Verify all concrete claims and numbers."
+  },
+  "offer_transition": {
+    "language": "en",
+    "first_offer_position": 0.487,
+    "offer_mentions": 3,
+    "bridge_mentions": 0,
+    "early_offer": false,
+    "bridge_near_offer": false,
+    "score": 80,
+    "human_test": "Does the paragraph before the offer create a genuine, truthful next-step need that the offer resolves?"
+  },
+  "comparison_truth": {
+    "status": "VERIFY",
+    "comparison_count": 1,
+    "unsupported_count": 1,
+    "items": [
+      {
+        "comparison": "faster",
+        "evidence_signal_nearby": false
+      }
+    ],
+    "note": "A nearby evidence signal is not proof. Verify scope, equivalence, time period, and source."
+  },
+  "scarcity_truth": {
+    "status": "PASS",
+    "count": 0,
+    "flags": [],
+    "principle": "Scarcity is allowed only when it is real, material, and externally/operationally grounded."
+  },
+  "risk_reversal": {
+    "language": "en",
+    "risk_reversal_signals": 0,
+    "status": "ABSENT",
+    "note": "Absence is not automatically a problem. Use risk reversal only when decision friction is material and the underlying terms are real."
+  },
+  "pressure_budget": {
+    "score": 6.0,
+    "label": "LOW",
+    "mechanism_groups_present": 1,
+    "details": {
+      "urgency_scarcity": 0,
+      "fear_pain": 0,
+      "loss": 0,
+      "authority": 0,
+      "social_proof": 1,
+      "identity_commitment": 0,
+      "aggressive_cta": 0,
+      "price_anchor": 0,
+      "consistency_pressure": 0,
+      "pain_amplification": 0,
+      "penalty_status": 0,
+      "repeated_close": 0
+    },
+    "note": "Truth and context outrank the score. Real deadlines are information, but repeated pressure can still harm trust."
+  },
+  "glanceability": {
+    "score": 70,
+    "status": "OK",
+    "headings": 7,
+    "bullets": 0,
+    "long_paragraphs": 3,
+    "avg_sentence_words": 18.0,
+    "note": "A short personal email may not need headings/bullets. Use channel judgment; avoid both walls of text and artificial one-line stacking."
+  },
+  "post_purchase_clarity": {
+    "score": 15,
+    "status": "ABSENT",
+    "signals": [],
+    "action_context_detected": true,
+    "note": "Not every format needs post-purchase detail. Use for offers where uncertainty after action may create friction."
+  },
+  "sales_letter_coverage": {
+    "language": "en",
+    "checks": {
+      "attention_or_relevance": true,
+      "reader_orientation": false,
+      "benefit": true,
+      "future_experience": true,
+      "proof": true,
+      "offer": true,
+      "cta": true,
+      "risk_reversal": false,
+      "ps": false
+    },
+    "core_coverage_score": 83.3,
+    "note": "Risk reversal and P.S. are optional. Coverage detects presence, not quality."
+  },
+  "narrative_profile": {
+    "score": 100,
+    "label": "NARRATIVE-HEAVY",
+    "signals": {
+      "temporal": 17,
+      "change": 4,
+      "obstacle": 11,
+      "character": 6,
+      "quoted_dialogue": 0
+    },
+    "note": "Narrative presence is descriptive, not a quality score. Low narrative is valid."
+  },
+  "narrative_overload": {
+    "score": 100,
+    "status": "OVERLOADED",
+    "seller_reader_ratio": 6.0,
+    "long_paragraphs": 3,
+    "delayed_reader_relevance": true,
+    "narrative_profile": "NARRATIVE-HEAVY",
+    "note": "High narrative density is not automatically bad; this flags story that may be crowding out reader relevance or momentum."
+  },
+  "objection_specificity": {
+    "vague_objection_signals": 0,
+    "specificity_signals": 9,
+    "score": 100,
+    "status": "PASS"
+  },
+  "decision_balance": {
+    "desire_motive_signals": 3,
+    "logical_permission_signals": 6,
+    "decision_friction_signals": 1,
+    "score": 100,
+    "status": "BALANCED"
+  },
+  "reader_reason": {
+    "language": "en",
+    "reader_signals": 0,
+    "seller_signals": 6,
+    "seller_reason_flags": 0,
+    "score": 55,
+    "status": "REVIEW"
+  },
+  "reframe_integrity": {
+    "flag_count": 0,
+    "flags": [],
+    "status": "PASS"
+  },
+  "values_alignment": {
+    "value_signals": 3,
+    "proof_signals": 3,
+    "shame_flags": 0,
+    "score": 100,
+    "status": "PASS"
+  },
+  "false_dichotomy": {
+    "count": 0,
+    "matches": [],
+    "status": "PASS"
+  },
+  "question_quality": {
+    "question_count": 8,
+    "diagnostic_question_signals": 0,
+    "leading_question_flags": 0,
+    "score": 50,
+    "status": "REVIEW"
+  },
+  "objection_evidence": {
+    "objection_signals": 0,
+    "evidence_signals": 4,
+    "score": 100,
+    "status": "PASS"
+  },
+  "internal_dialogue": {
+    "dialogue_signals": 1,
+    "mind_reading_flags": 0,
+    "score": 57,
+    "status": "PASS"
+  },
+  "autonomy": {
+    "coercion_flags": 0,
+    "choice_signals": 2,
+    "score": 86,
+    "status": "PASS"
+  },
+  "certainty_coverage": {
+    "score": 76,
+    "status": "STRONG",
+    "weakest_surface": "provider",
+    "surfaces": {
+      "offer": {
+        "mechanism_signals": 0,
+        "proof_signals": 4,
+        "limit_signals": 5,
+        "unsupported_certainty_flags": 0,
+        "score": 75,
+        "status": "STRONG"
+      },
+      "messenger": {
+        "trust_signals": 2,
+        "trust_debt_flags": 0,
+        "score": 75,
+        "status": "STRONG"
+      },
+      "provider": {
+        "provider_trust_topics": [
+          "data"
+        ],
+        "topic_count": 1,
+        "score": 35,
+        "status": "LOW",
+        "note": "Low score is not automatically a defect when provider operations are not material to the copy."
+      },
+      "action_friction": {
+        "friction_signals": 1,
+        "clarity_reduction_signals": 4,
+        "hidden_effort_flags": 0,
+        "score": 92,
+        "status": "CLEAR"
+      },
+      "prospect_fit": {
+        "fit_signals": 1,
+        "disqualification_or_boundary_signals": 2,
+        "universal_fit_flags": 0,
+        "score": 81,
+        "status": "PASS"
+      }
+    }
+  },
+  "offer_certainty": {
+    "mechanism_signals": 0,
+    "proof_signals": 4,
+    "limit_signals": 5,
+    "unsupported_certainty_flags": 0,
+    "score": 75,
+    "status": "STRONG"
+  },
+  "messenger_trust": {
+    "trust_signals": 2,
+    "trust_debt_flags": 0,
+    "score": 75,
+    "status": "STRONG"
+  },
+  "provider_trust": {
+    "provider_trust_topics": [
+      "data"
+    ],
+    "topic_count": 1,
+    "score": 35,
+    "status": "LOW",
+    "note": "Low score is not automatically a defect when provider operations are not material to the copy."
+  },
+  "action_friction": {
+    "friction_signals": 1,
+    "clarity_reduction_signals": 4,
+    "hidden_effort_flags": 0,
+    "score": 92,
+    "status": "CLEAR"
+  },
+  "prospect_fit": {
+    "fit_signals": 1,
+    "disqualification_or_boundary_signals": 2,
+    "universal_fit_flags": 0,
+    "score": 81,
+    "status": "PASS"
+  },
+  "first_screen": {
+    "scope_words": 120,
+    "relevance": true,
+    "outcome": true,
+    "credibility_signal": true,
+    "hype_flags": 0,
+    "score": 90,
+    "status": "STRONG"
+  },
+  "information_pacing": {
+    "paragraphs": 30,
+    "benefit_opening_share": 0.17,
+    "proof_opening_share": 0.43,
+    "frontloaded": false,
+    "score": 80,
+    "status": "PASS"
+  },
+  "certainty_loop": {
+    "gap_signals": 1,
+    "new_information_signals": 3,
+    "pressure_repetition_flags": 0,
+    "score": 85,
+    "status": "PASS"
+  },
+  "effort_value": {
+    "effort_signals": 3,
+    "value_signals": 3,
+    "score": 75,
+    "status": "BALANCED"
+  },
+  "self_persuasion_simulation": {
+    "future_signals": 1,
+    "action_signals": 7,
+    "observable_change_signals": 3,
+    "reader_reference_count": 0,
+    "score": 95,
+    "status": "STRONG"
+  },
+  "inference_ownership": {
+    "inference_prompts": 8,
+    "evidence_signals": 7,
+    "forced_conclusion_flags": 0,
+    "score": 97,
+    "status": "STRONG"
+  },
+  "experience_friction": {
+    "friction_signals": 3,
+    "clarity_signals": 2,
+    "score": 61,
+    "status": "REVIEW"
+  },
+  "consequence_efficacy": {
+    "consequence_signals": 5,
+    "efficacy_signals": 6,
+    "efficacy_ratio": 1.2,
+    "score": 77,
+    "status": "PASS"
+  },
+  "covert_manipulation": {
+    "flags": [],
+    "count": 0,
+    "score": 100,
+    "status": "PASS"
+  },
+  "repetition_discipline": {
+    "repeated_sentence_groups": 0,
+    "repeats": [],
+    "score": 100,
+    "status": "PASS"
+  },
+  "message_sequence": {
+    "cta_position": 0.49,
+    "proof_position": 0.04,
+    "desire_position": 0.01,
+    "issues": [],
+    "score": 100,
+    "status": "PASS"
+  },
+  "audience_calibration": {
+    "reader_state_signals": 3,
+    "generic_audience_flags": 0,
+    "score": 75,
+    "status": "OK"
+  },
+  "argument_order": {
+    "claim_signals": 1,
+    "proof_signals": 3,
+    "issues": [],
+    "score": 100,
+    "status": "PASS"
+  },
+  "belief_compatibility": {
+    "bridge_signals": 1,
+    "proof_signals": 7,
+    "absolute_flags": 0,
+    "score": 72,
+    "status": "OK"
+  },
+  "attention_load": {
+    "opening_relevance_signals": 2,
+    "opening_jargon_signals": 0,
+    "avg_sentence_words": 17.0,
+    "overload_flags": 0,
+    "score": 71,
+    "status": "PASS"
+  },
+  "comprehension": {
+    "avg_sentence_words": 17.0,
+    "explanation_signals": 3,
+    "vague_claims": 0,
+    "very_long_sentences": 1,
+    "score": 78,
+    "status": "CLEAR"
+  },
+  "memory_anchor": {
+    "anchor_signals": 1,
+    "proof_anchor_signals": 7,
+    "next_step_signals": 24,
+    "score": 88,
+    "status": "STRONG"
+  },
+  "message_retention": {
+    "dimensions": {
+      "core": 1,
+      "differentiator": 6,
+      "proof": 7,
+      "next_step": 23
+    },
+    "present_dimensions": 4,
+    "score": 100,
+    "status": "READY"
+  },
+  "meaning_compression": {
+    "compression_signals": 5,
+    "short_retrievable_sentences": 23,
+    "hype_flags": 0,
+    "score": 98,
+    "status": "STRONG"
+  },
+  "language_function_mix": {
+    "functions": {
+      "recognize": 0,
+      "explain": 2,
+      "show": 5,
+      "prove": 3,
+      "evoke": 1,
+      "invite": 2
+    },
+    "function_count": 5,
+    "score": 90,
+    "status": "RICH"
+  },
+  "behavioral_model": {
+    "context": 3,
+    "action": 1,
+    "result": 4,
+    "boundary": 2,
+    "fabrication_flags": 0,
+    "score": 90,
+    "status": "COMPLETE"
+  },
+  "trial_bridge": {
+    "trial_signal": 5,
+    "evaluation_signal": 4,
+    "support_signal": 3,
+    "score": 100,
+    "status": "READY"
+  },
+  "adoption_path": {
+    "stages": {
+      "need": 9,
+      "deliberation": 4,
+      "trial": 5,
+      "evaluation": 4,
+      "adoption": 7
+    },
+    "covered_stages": 5,
+    "score": 100,
+    "status": "COMPLETE"
+  },
+  "internalization": {
+    "reader_owned_signals": 0,
+    "seller_reason_flags": 0,
+    "forced_conclusion_flags": 0,
+    "score": 45,
+    "status": "REVIEW"
+  },
+  "motive_evidence": {
+    "evidence_signals": 0,
+    "motive_assumption_flags": 0,
+    "score": 55,
+    "status": "REVIEW"
+  },
+  "current_conversation": {
+    "observed_language_signals": 0,
+    "mind_reading_flags": 0,
+    "score": 50,
+    "status": "REVIEW"
+  },
+  "perception_objective": {
+    "frame_signals": 2,
+    "proof_signals": 4,
+    "limitation_signals": 4,
+    "score": 100,
+    "status": "STRONG"
+  },
+  "editorial_value_first": {
+    "standalone_value_signals": 4,
+    "early_hard_cta_flags": 0,
+    "score": 87,
+    "status": "PASS"
+  },
+  "narrative_economy": {
+    "setup_signals": 1,
+    "payoff_signals": 1,
+    "dialogue_segments": 0,
+    "overlong_paragraphs": 0,
+    "score": 80,
+    "status": "PASS"
+  },
+  "data_story_proof": {
+    "numeric_signals": 48,
+    "context_signals": 2,
+    "limitation_signals": 0,
+    "score": 94,
+    "status": "PASS"
+  },
+  "dignity_validation": {
+    "validation_signals": 0,
+    "shame_flags": 0,
+    "score": 65,
+    "status": "PASS"
+  },
+  "dual_certainty": {
+    "logical_certainty": 100,
+    "felt_certainty": 45,
+    "score": 72,
+    "status": "IMBALANCED"
+  },
+  "messenger_trust_decomposition": {
+    "dimensions": {
+      "expertise": 1,
+      "sincerity": 1,
+      "clarity": 1,
+      "history": 0,
+      "common_ground": 1
+    },
+    "dimension_count": 4,
+    "score": 87,
+    "status": "STRONG"
+  },
+  "recognition_novelty": {
+    "recognition_signals": 2,
+    "novelty_signals": 0,
+    "unsupported_novelty_flags": 0,
+    "score": 75,
+    "status": "PASS"
+  },
+  "story_transmissibility": {
+    "sentence_count": 84,
+    "compact_sentence_ratio": 0.68,
+    "retrieval_signals": 1,
+    "score": 67,
+    "status": "OK"
+  },
+  "belief_formation_trace": {
+    "trace_signals": 1,
+    "mind_reading_flags": 0,
+    "score": 45,
+    "status": "REVIEW"
+  },
+  "root_proxy_objection": {
+    "mapping_signals": 0,
+    "assumption_flags": 0,
+    "score": 40,
+    "status": "REVIEW"
+  },
+  "protective_intent": {
+    "protected_value_signals": 1,
+    "pressure_flags": 0,
+    "score": 63,
+    "status": "PASS"
+  },
+  "decision_history": {
+    "past": 1,
+    "present": 2,
+    "future": 1,
+    "score": 100,
+    "status": "PASS"
+  },
+  "belief_provenance": {
+    "provenance_signals": 1,
+    "dismissal_flags": 0,
+    "score": 60,
+    "status": "REVIEW"
+  },
+  "constraint_type": {
+    "constraint_type_signals": 1,
+    "premature_reframe_flags": 0,
+    "score": 55,
+    "status": "REVIEW"
+  },
+  "symmetry_consistency": {
+    "symmetry_signals": 0,
+    "shame_flags": 0,
+    "score": 50,
+    "status": "REVIEW"
+  },
+  "emotional_trajectory": {
+    "trajectory_signals": 1,
+    "distress_flags": 0,
+    "score": 45,
+    "status": "REVIEW"
+  },
+  "post_purchase_reinforcement": {
+    "reinforcement_signals": 0,
+    "commitment_pressure_flags": 0,
+    "score": 35,
+    "status": "REVIEW"
+  },
+  "micro_mechanism_integrity": {
+    "integrity_signals": 3,
+    "fabrication_risk_flags": 0,
+    "score": 76,
+    "status": "PASS"
+  },
+  "presupposition_integrity": {
+    "safe_grounding_signals": 0,
+    "premise_flags": [],
+    "score": 100,
+    "status": "PASS",
+    "note": "Flags identify premises requiring evidence/context review; they are not automatic proof of manipulation."
+  },
+  "question_form": {
+    "question_count": 8,
+    "forms": {
+      "open": 1,
+      "closed": 2,
+      "conditional": 0,
+      "criteria": 0,
+      "future_or_simulation": 0,
+      "presuppositional": 0
+    },
+    "compliance_tag_flags": 0,
+    "status": "PASS",
+    "note": "Form diversity is descriptive, not a target. Use the least-leading form that does the job."
+  },
+  "behavioral_cue_evidence": {
+    "deterministic_cue_flags": [],
+    "contextual_verification_signals": 2,
+    "score": 100,
+    "status": "PASS"
+  },
+  "commitment_consistency_integrity": {
+    "pressure_flags": [],
+    "revision_signals": 0,
+    "score": 100,
+    "status": "PASS",
+    "note": "A prior yes or micro-commitment is context to verify, not an obligation to remain consistent."
+  },
+  "problem_definition_integrity": {
+    "inflation_flags": [],
+    "inevitability_flags": [],
+    "grounding_signals": 0,
+    "score": 100,
+    "status": "PASS",
+    "note": "Define and evidence the problem before dramatizing it; do not enlarge it to make the offer inevitable."
+  },
+  "refusal_boundary": {
+    "explicit_refusal_signals": 0,
+    "persistence_flags": [],
+    "respect_signals": 1,
+    "score": 100,
+    "status": "PASS",
+    "note": "A stable refusal, opt-out, or poor-fit signal ends persuasion unless the person explicitly reopens the conversation."
+  },
+  "decision_criteria_integrity": {
+    "criteria_signals": 2,
+    "emotion_signals": 0,
+    "displacement_flags": [],
+    "score": 93,
+    "status": "PASS",
+    "note": "Emotion may make relevance vivid, but it must not displace the criteria, evidence, trade-offs, or constraints that should govern the decision."
+  },
+  "rapport_integrity": {
+    "exploitation_flags": [],
+    "genuine_rapport_signals": 0,
+    "score": 100,
+    "status": "PASS",
+    "note": "Rapport, similarity, and mirroring may support understanding; they must not be used as concealed resistance-lowering devices."
+  },
+  "material_information_transparency": {
+    "material_withholding_flags": [],
+    "post_commitment_curiosity_flags": [],
+    "disclosure_signals": 0,
+    "score": 100,
+    "status": "PASS",
+    "note": "Curiosity may delay non-material detail; price, terms, constraints, risks, and decision-critical facts must be available before commitment."
+  },
+  "cumulative_pressure_sequence": {
+    "pressure_stack_score": 0,
+    "mechanism_groups_present": 0,
+    "details": {
+      "pain_amplification": 0,
+      "loss_penalty": 0,
+      "identity_shame": 0,
+      "scarcity_urgency": 0,
+      "consistency": 0,
+      "repeated_close": 0,
+      "aggressive_cta": 0
+    },
+    "status": "PASS",
+    "note": "Pressure compounds across a page, conversation, and sequence. Review the stack, not only individual sentences."
+  },
+  "objection_legitimacy": {
+    "delegitimization_flags": [],
+    "legitimacy_signals": 0,
+    "score": 100,
+    "status": "PASS",
+    "note": "An objection may be reflex, uncertainty, a real constraint, or a disqualifier. Do not assume resistance by default."
+  },
+  "buyer_story_elicitation_integrity": {
+    "score": 90,
+    "status": "PASS",
+    "safe_discovery_signals": 1,
+    "coercive_elicitation_flags": [],
+    "note": "Elicit event/context voluntarily; disclosure is not a debt and vulnerability is not a conversion target."
+  },
+  "narrative_causal_integrity": {
+    "score": 98,
+    "status": "PASS",
+    "causal_language_signals": 0,
+    "support_signals": 4,
+    "unsupported_causal_flags": [],
+    "note": "Narrative sequence is not causal proof. Match causal language to mechanism/evidence and state conditions/limits."
+  },
+  "narrative_inference_gap": {
+    "score": 98,
+    "status": "PASS",
+    "material_inference_gap_flags": [],
+    "grounding_signals": 3,
+    "note": "Readers fill narrative gaps from prior knowledge. Surface missing links when a likely inference could materially overstate cause, outcome, fit, or guarantee."
+  },
+  "narrative_resolution_space": {
+    "score": 96,
+    "status": "PASS",
+    "emotional_peak_signals": [],
+    "cta_signals": [],
+    "decision_space_signals": [
+      "consider",
+      "compare"
+    ],
+    "peak_to_cta_flags": [],
+    "note": "Do not use a high emotional resolution as a shortcut to immediate commitment. Restore decision space for consequential choices."
+  },
+  "abstraction_concreteness": {
+    "abstract_signals": 13,
+    "concrete_or_process_signals": 64,
+    "score": 100,
+    "status": "PASS",
+    "note": "Heuristic only. Metaphor/example should clarify structure; it does not replace evidence."
+  },
+  "proof_architecture": {
+    "type_count": 3,
+    "type_total": 9,
+    "breadth_score": 33.3,
+    "types": {
+      "mechanism_reason_why": {
+        "count": 4,
+        "examples": [
+          "formula",
+          "formula",
+          "formula",
+          "method"
+        ]
+      },
+      "demonstration_comparison": {
+        "count": 7,
+        "examples": [
+          "demonstration",
+          "demonstration",
+          "demo",
+          "demonstration",
+          "compare"
+        ]
+      },
+      "trial_sample_self_test": {
+        "count": 0,
+        "examples": []
+      },
+      "story_case_experience": {
+        "count": 0,
+        "examples": []
+      },
+      "provenance_source": {
+        "count": 0,
+        "examples": []
+      },
+      "institutional_process": {
+        "count": 0,
+        "examples": []
+      },
+      "authority_expertise": {
+        "count": 4,
+        "examples": [
+          "engineer",
+          "engineer",
+          "engineer",
+          "engineer"
+        ]
+      },
+      "social_adoption": {
+        "count": 0,
+        "examples": []
+      },
+      "quantitative_specificity": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "status": "MIXED",
+    "note": "Proof architecture describes support modes only. It does not verify that claims are factually true."
+  },
+  "authority_integrity": {
+    "status": "PASS",
+    "score": 100,
+    "fabricated_authority_flags": [],
+    "deference_substitution_flags": [],
+    "evidence_context_present": true,
+    "note": "Authority is legitimate only when relevant, verifiable, and bounded; it must not substitute for independent evaluation."
+  },
+  "reciprocity_integrity": {
+    "status": "PASS",
+    "score": 100,
+    "obligation_flags": [],
+    "voluntary_exchange_context_present": false,
+    "note": "Value may be offered freely; it must not manufacture felt debt or commercial compliance."
+  },
+  "interaction_reinforcement_integrity": {
+    "status": "PASS",
+    "score": 100,
+    "agreement_conditioning_flags": [],
+    "progress_learning_signals": 1,
+    "note": "Reinforce learning/progress, not agreement with the seller."
+  },
+  "community_fit_integrity": {
+    "status": "PASS",
+    "score": 100,
+    "exclusion_pressure_flags": [],
+    "fabricated_community_flags": [],
+    "fit_signals": 1,
+    "note": "Truthful fit/community is allowed; exclusion anxiety and fabricated belonging are not."
+  },
+  "risk_communication_integrity": {
+    "status": "PASS",
+    "score": 100,
+    "risk_signals": 0,
+    "evidence_or_uncertainty_signals": 13,
+    "alternative_choice_signals": 2,
+    "manufactured_fear_relief_flags": [],
+    "note": "Material risk may be vivid only when evidenced, proportionate and compatible with real alternatives."
+  },
+  "context_cue_integrity": {
+    "status": "PASS",
+    "score": 100,
+    "deceptive_context_cue_flags": [],
+    "truthful_context_signals": 0,
+    "note": "Environment, display, time and attention cues must represent real conditions."
+  },
+  "time_attention_transparency": {
+    "status": "PASS",
+    "score": 100,
+    "deceptive_time_or_attention_flags": [],
+    "transparent_time_or_exit_signals": 0,
+    "note": "Time, deadlines, waiting, attention capture and exit controls must reflect real conditions and preserve a genuine ability to disengage."
+  },
+  "privacy_discovery_integrity": {
+    "status": "PASS",
+    "score": 100,
+    "privacy_or_susceptibility_flags": [],
+    "permission_signals": 0,
+    "note": "Progressive discovery must remain permission-based, relevant and non-exploitative."
+  },
+  "semantic_repetition_integrity": {
+    "status": "PASS",
+    "score": 100,
+    "covert_repetition_intent_flags": [],
+    "clarity_or_recall_signals": 0,
+    "note": "Restatement is allowed for comprehension/recall; unnoticed conditioning is not."
+  },
+  "audience_language_integrity": {
+    "status": "PASS",
+    "score": 95,
+    "covert_pacing_flags": [],
+    "grounding_signals": 0,
+    "note": "Audience-native language should be evidence-grounded and used for comprehension, never resistance-lowering mirroring."
+  },
+  "contextual_quality": {
+    "calibration": "CROSS_AUTHOR_RULE_BASED_V1",
+    "context": {
+      "artifact_type": "long_form_sales",
+      "persuasive_job": "story_persuasion",
+      "campaign_role": "unknown",
+      "source_mode": "text_ready",
+      "context_source": "INFERRED_LOW_CONFIDENCE"
+    },
+    "profile_used": "story_persuasion",
+    "raw_global": 66.1,
+    "contextual_global": 86.5,
+    "weighted_dimensions": {
+      "narrative_self_cta": {
+        "score": 79.5,
+        "weight": 0.18,
+        "contribution": 14.31
+      },
+      "self_persuasion": {
+        "score": 95,
+        "weight": 0.18,
+        "contribution": 17.1
+      },
+      "inference_ownership": {
+        "score": 97,
+        "weight": 0.14,
+        "contribution": 13.58
+      },
+      "proof": {
+        "score": 94,
+        "weight": 0.14,
+        "contribution": 13.16
+      },
+      "message_sequence": {
+        "score": 100,
+        "weight": 0.12,
+        "contribution": 12.0
+      },
+      "internalization": {
+        "score": 45,
+        "weight": 0.14,
+        "contribution": 6.3
+      },
+      "specificity": {
+        "score": 100.0,
+        "weight": 0.1,
+        "contribution": 10.0
+      }
+    },
+    "hard_constraints_separate": true,
+    "integrity_gate_statuses": {
+      "authority_integrity": "PASS",
+      "reciprocity_integrity": "PASS",
+      "interaction_reinforcement_integrity": "PASS",
+      "community_fit_integrity": "PASS",
+      "risk_communication_integrity": "PASS",
+      "context_cue_integrity": "PASS",
+      "time_attention_transparency": "PASS",
+      "privacy_discovery_integrity": "PASS",
+      "semantic_repetition_integrity": "PASS",
+      "audience_language_integrity": "PASS"
+    },
+    "blocked_gates": [],
+    "review_gates": [],
+    "score_status": "DIAGNOSTIC_READY",
+    "status": "PASS",
+    "note": "Contextual global is a job-routed diagnostic. It does not replace raw validators, hard constraints, factual verification, or conversion evidence."
+  },
+  "narrative_self_cta": {
+    "score": 79.5,
+    "level": 3,
+    "label": "STRONG",
+    "cgo_score": 66.7,
+    "offer_bridge_score": 65,
+    "note": "Use only when a narrative is intentionally present. Direct copy should not be penalized for a low narrative score."
+  },
+  "character_goal_obstacle": {
+    "score": 66.7,
+    "status": "PARTIAL",
+    "signals": {
+      "character": 6,
+      "goal": 0,
+      "obstacle": 11
+    },
+    "note": "A missing BIG Three element does not make copy bad; it means the passage may function as an incident/example rather than a full story."
+  },
+  "story_offer_bridge": {
+    "score": 65,
+    "status": "REVIEW",
+    "bridge_near_offer": false,
+    "story_resolution_before_offer": true,
+    "first_offer_position": 0.49
+  }
+}
