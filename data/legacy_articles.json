@@ -79,32 +79,5 @@
     "cover_alt": "Power triangle calculator cover.",
     "reading_time": "7 min read",
     "legacy": true
-  },
-  {
-    "id": "wattswise-zero-to-production",
-    "translation_key": "wattswise-zero-to-production",
-    "lang": "en",
-    "title": "Zero to Production: The Blueprint Behind WattsWise",
-    "description": "How WattsWise was architected as a production engineering tool using AI-augmented development and domain-driven engineering decisions.",
-    "url": "/blog/WattsWise-zero-to-production.html",
-    "date": "2025-12-06",
-    "topics": [
-      "Engineering software",
-      "AI-augmented development",
-      "Software architecture",
-      "Electrical engineering",
-      "WattsWise"
-    ],
-    "topic_ids": [
-      "engineering-software",
-      "ai-augmented-development",
-      "software-architecture",
-      "electrical-engineering",
-      "wattswise"
-    ],
-    "cover": "/blog/assets/covers/wattswise-zero-to-production.svg",
-    "cover_alt": "WattsWise zero-to-production case-study cover.",
-    "reading_time": "5 min read",
-    "legacy": true
   }
 ]
