@@ -27,27 +27,6 @@ jobs:
       - name: Rebuild article library
         run: python scripts/build_articles.py
 
-      - name: Temporary power-triangle output capture (remove before merge)
-        run: |
-          python - <<'PY'
-          import base64
-          from pathlib import Path
-          paths = [
-            "articles/es/triangulo-de-potencia-bidireccional/index.html",
-            "articles/en/bidirectional-power-triangle/index.html",
-            "articles/index.html",
-            "articles/es/index.html",
-            "articles/en/index.html",
-            "articles/posts.json",
-            "sitemap.xml",
-          ]
-          for file in paths:
-              path = Path(file)
-              data = base64.b64encode(path.read_bytes()).decode("ascii")
-              for offset in range(0, len(data), 2048):
-                  print(f"EDITORIAL_CAPTURE|{file}|{offset//2048:05d}|{data[offset:offset+2048]}", flush=True)
-          PY
-
       - name: Verify all generated editorial outputs are committed
         run: git diff --exit-code -- articles sitemap.xml
 
