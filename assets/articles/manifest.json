@@ -620,6 +620,69 @@
           "reference_sha256": "ca89c8dded0c1a698ba9a10865e15cc49657d35ab15bb98888dee2a83758d44f"
         }
       }
+    },
+    "local-ai-engineering-lab": {
+      "title_hint_es": "Un LLM local no es un laboratorio",
+      "title_hint_en": "A Local LLM Is Not a Lab",
+      "assets": {
+        "es": {
+          "source_filename": "ChatGPT Image Sep 30, 2026, 03_34_43 PM.png",
+          "source_sha256": "ad287da47bf754adbb61ed8f225235c0bffc68d76d565b8c2fdbed45247fdb02",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/local-ai-engineering-lab/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "40beff4d0da67eb48a04843729ad26b528263fdfa3dfcd46e4ad950c1048f91b",
+          "reference_path": "/assets/articles/local-ai-engineering-lab/reference-es.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "39c9e523d88195dc1dcfe962e3b25c7003bdd196bebc85c474e738a9626124a6"
+        },
+        "en": {
+          "source_filename": "ChatGPT Image Sep 30, 2026, 03_34_48 PM.png",
+          "source_sha256": "b79b61bbf784174bc9ab8b576e9e8aab208381fce97f04fd1420f36016f79fad",
+          "source_dimensions_px": [
+            1672,
+            941
+          ],
+          "production_path": "/assets/articles/local-ai-engineering-lab/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "1ba5ac7281b8ac060fd7fd5858cd60aae401972d0ed896af4d7a28b082bb95eb",
+          "reference_path": "/assets/articles/local-ai-engineering-lab/reference-en.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "83c22b2548c7413b7713d88fff319c6d64a342268ea4fe93f9151676aff19e91"
+        }
+      },
+      "publication": {
+        "status": "published",
+        "published_at": "2026-09-30",
+        "source_masters_recovered": true,
+        "hero_displayed": true,
+        "artwork_status": "Approved bilingual blueprint artwork generated in ChatGPT and synchronized as language-specific hero/listing derivatives.",
+        "es_listing_cover": "/assets/articles/local-ai-engineering-lab/reference-es.webp",
+        "en_listing_cover": "/assets/articles/local-ai-engineering-lab/reference-en.webp",
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "binary WebP assets committed directly in the repository",
+        "es_hero_path": "/assets/articles/local-ai-engineering-lab/hero-es.webp",
+        "en_hero_path": "/assets/articles/local-ai-engineering-lab/hero-en.webp"
+      }
     }
   },
   "pending_articles": {}
