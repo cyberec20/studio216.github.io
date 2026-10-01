@@ -23,28 +23,23 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://studios216.com/blog/diffdocs-zero-to-production.html</loc>
-    <lastmod>2026-03-23</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://studios216.com/about/founder/</loc>
     <lastmod>2026-09-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://studios216.com/articles/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://studios216.com/articles/es/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://studios216.com/articles/en/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -70,6 +65,11 @@
   <url>
     <loc>https://studios216.com/articles/en/delegating-too-much-to-ai-black-screen/</loc>
     <lastmod>2026-09-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://studios216.com/articles/en/diffdocs-3-5-months-ai-engineering/</loc>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -120,6 +120,11 @@
   <url>
     <loc>https://studios216.com/articles/es/despues-de-8901-comandos/</loc>
     <lastmod>2026-09-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://studios216.com/articles/es/diffdocs-35-meses-ia-ingenieria/</loc>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>

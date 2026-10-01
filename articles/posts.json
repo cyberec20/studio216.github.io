@@ -1,5 +1,57 @@
 [
   {
+    "id": "diffdocs-zero-to-production",
+    "translation_key": "diffdocs-zero-to-production",
+    "lang": "en",
+    "title": "DiffDocs in 3.5 Months: What AI Accelerated—and What Still Required Engineering",
+    "description": "How DiffDocs became a functioning SaaS in 3.5 months: what AI accelerated and which architecture, security, and validation decisions still required engineering.",
+    "url": "/articles/en/diffdocs-3-5-months-ai-engineering/",
+    "date": "2026-10-01",
+    "topics": [
+      "AI systems",
+      "AI-augmented development",
+      "SaaS",
+      "Software architecture",
+      "Document intelligence"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "ai-augmented-development",
+      "saas",
+      "software-architecture",
+      "document-intelligence"
+    ],
+    "cover": "assets/articles/diffdocs-zero-to-production/reference-en.webp",
+    "cover_alt": "Infographic of the DiffDocs flow: file upload, extraction and normalization, diff engine, and auditable results and delivery.",
+    "reading_time": "10 min read"
+  },
+  {
+    "id": "diffdocs-zero-to-production",
+    "translation_key": "diffdocs-zero-to-production",
+    "lang": "es",
+    "title": "DiffDocs en 3,5 meses: qué aceleró la IA y qué siguió exigiendo ingeniería",
+    "description": "Cómo DiffDocs llegó a un SaaS funcional en 3,5 meses: qué aceleró la IA y qué decisiones de arquitectura, seguridad y validación exigieron ingeniería.",
+    "url": "/articles/es/diffdocs-35-meses-ia-ingenieria/",
+    "date": "2026-10-01",
+    "topics": [
+      "Sistemas de IA",
+      "Desarrollo con IA",
+      "SaaS",
+      "Arquitectura de software",
+      "Inteligencia documental"
+    ],
+    "topic_ids": [
+      "ai-systems",
+      "ai-augmented-development",
+      "saas",
+      "software-architecture",
+      "document-intelligence"
+    ],
+    "cover": "assets/articles/diffdocs-zero-to-production/reference-es.webp",
+    "cover_alt": "Infografía del flujo de DiffDocs: carga de archivos, extracción y normalización, motor Diff, y resultados y entrega auditables.",
+    "reading_time": "10 min de lectura"
+  },
+  {
     "id": "local-ai-engineering-lab",
     "translation_key": "local-ai-engineering-lab",
     "lang": "en",
@@ -526,32 +578,5 @@
     "cover": "/assets/articles/working-with-ai/hero-es.webp",
     "cover_alt": "Infografía titulada Anatomía de un prompt útil, con objetivo, contexto, audiencia, formato esperado y restricciones conectados a un ejemplo de prompt.",
     "reading_time": "9 min de lectura"
-  },
-  {
-    "id": "diffdocs-zero-to-production",
-    "translation_key": "diffdocs-zero-to-production",
-    "lang": "en",
-    "title": "From Idea to Production: Building DiffDocs with Agentic AI",
-    "description": "How one person built a production-grade document comparison SaaS in 3.5 months using AI-augmented development.",
-    "url": "/blog/diffdocs-zero-to-production.html",
-    "date": "2026-03-23",
-    "topics": [
-      "AI systems",
-      "Agentic AI",
-      "SaaS",
-      "Software architecture",
-      "Document intelligence"
-    ],
-    "topic_ids": [
-      "ai-systems",
-      "agentic-ai",
-      "saas",
-      "software-architecture",
-      "document-intelligence"
-    ],
-    "cover": "/blog/assets/covers/diffdocs-zero-to-production.svg",
-    "cover_alt": "DiffDocs case-study cover.",
-    "reading_time": "8 min read",
-    "legacy": true
   }
 ]
