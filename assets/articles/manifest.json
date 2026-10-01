@@ -683,6 +683,67 @@
         "es_hero_path": "/assets/articles/local-ai-engineering-lab/hero-es.webp",
         "en_hero_path": "/assets/articles/local-ai-engineering-lab/hero-en.webp"
       }
+    },
+    "diffdocs-zero-to-production": {
+      "title_hint_es": "DiffDocs en 3,5 meses",
+      "title_hint_en": "DiffDocs in 3.5 Months",
+      "assets": {
+        "es": {
+          "source_filename": "1000499642.png",
+          "source_dimensions_px": [
+            1536,
+            864
+          ],
+          "production_path": "/assets/articles/diffdocs-zero-to-production/hero-es.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "02131f7d61143305a9eef1273b9a66254dccf5902a5ccc81f8cbafc6fb447cd7",
+          "reference_path": "/assets/articles/diffdocs-zero-to-production/reference-es.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "26ef2acf770059f582c5d6ae5edcc6f679bc7eb382022200b665b148678a6045"
+        },
+        "en": {
+          "source_filename": "1000499643.png",
+          "source_dimensions_px": [
+            1536,
+            864
+          ],
+          "production_path": "/assets/articles/diffdocs-zero-to-production/hero-en.webp",
+          "production_dimensions_px": [
+            760,
+            428
+          ],
+          "production_sha256": "28692c4650da59062edca3d6faf04f9ecf4bcef664df58f66dd153d116e5eb91",
+          "reference_path": "/assets/articles/diffdocs-zero-to-production/reference-en.webp",
+          "reference_dimensions_px": [
+            120,
+            68
+          ],
+          "reference_sha256": "3a07ad0d682da949863736a63c758b328c9d8b5d47e0eb66611122230de31ffa"
+        }
+      },
+      "publication": {
+        "status": "published",
+        "published_at": "2026-10-01",
+        "source_masters_recovered": true,
+        "hero_displayed": true,
+        "artwork_status": "Approved bilingual clean-background flow infographic supplied in ChatGPT and synchronized as language-specific hero/listing derivatives.",
+        "es_listing_cover": "/assets/articles/diffdocs-zero-to-production/reference-es.webp",
+        "en_listing_cover": "/assets/articles/diffdocs-zero-to-production/reference-en.webp",
+        "production_derivative_dimensions_px": [
+          760,
+          428
+        ],
+        "production_format": "webp",
+        "storage": "binary WebP assets committed directly in the repository",
+        "es_hero_path": "/assets/articles/diffdocs-zero-to-production/hero-es.webp",
+        "en_hero_path": "/assets/articles/diffdocs-zero-to-production/hero-en.webp"
+      }
     }
   },
   "pending_articles": {}
