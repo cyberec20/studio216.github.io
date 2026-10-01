@@ -21,7 +21,7 @@
       "software-architecture",
       "document-intelligence"
     ],
-    "cover": "assets/articles/diffdocs-zero-to-production/reference-en.webp",
+    "cover": "/assets/articles/diffdocs-zero-to-production/reference-en.webp",
     "cover_alt": "Infographic of the DiffDocs flow: file upload, extraction and normalization, diff engine, and auditable results and delivery.",
     "reading_time": "10 min read"
   },
@@ -47,7 +47,7 @@
       "software-architecture",
       "document-intelligence"
     ],
-    "cover": "assets/articles/diffdocs-zero-to-production/reference-es.webp",
+    "cover": "/assets/articles/diffdocs-zero-to-production/reference-es.webp",
     "cover_alt": "Infografía del flujo de DiffDocs: carga de archivos, extracción y normalización, motor Diff, y resultados y entrega auditables.",
     "reading_time": "10 min de lectura"
   },
