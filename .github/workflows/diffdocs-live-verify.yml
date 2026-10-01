@@ -1,0 +1,76 @@
+name: Temporary DiffDocs live verification
+
+on:
+  push:
+    branches:
+      - publish/diffdocs-rev2
+
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify deployed DiffDocs routes and assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          EN="https://studios216.com/articles/en/diffdocs-3-5-months-ai-engineering/"
+          ES="https://studios216.com/articles/es/diffdocs-35-meses-ia-ingenieria/"
+          LEGACY="https://studios216.com/blog/diffdocs-zero-to-production.html"
+          SITEMAP="https://studios216.com/sitemap.xml"
+          ROBOTS="https://studios216.com/robots.txt"
+          HERO_EN="https://studios216.com/assets/articles/diffdocs-zero-to-production/hero-en.webp"
+          HERO_ES="https://studios216.com/assets/articles/diffdocs-zero-to-production/hero-es.webp"
+          REF_EN="https://studios216.com/assets/articles/diffdocs-zero-to-production/reference-en.webp"
+          REF_ES="https://studios216.com/assets/articles/diffdocs-zero-to-production/reference-es.webp"
+
+          fetch_retry() {
+            local url="$1" out="$2"
+            for i in $(seq 1 12); do
+              code=$(curl -sS -L --max-time 20 -o "$out" -w '%{http_code}' "$url" || true)
+              if [ "$code" = "200" ]; then
+                echo "PASS 200 $url"
+                return 0
+              fi
+              echo "WAIT attempt=$i code=$code $url"
+              sleep 10
+            done
+            echo "FAIL could not fetch $url" >&2
+            return 1
+          }
+
+          fetch_retry "$EN" /tmp/en.html
+          fetch_retry "$ES" /tmp/es.html
+          fetch_retry "$LEGACY" /tmp/legacy.html
+          fetch_retry "$SITEMAP" /tmp/sitemap.xml
+          fetch_retry "$ROBOTS" /tmp/robots.txt
+
+          grep -Fq '<link rel="canonical" href="https://studios216.com/articles/en/diffdocs-3-5-months-ai-engineering/">' /tmp/en.html
+          grep -Fq '<link rel="canonical" href="https://studios216.com/articles/es/diffdocs-35-meses-ia-ingenieria/">' /tmp/es.html
+          ! grep -Eiq '<meta[^>]+name="robots"[^>]+noindex' /tmp/en.html
+          ! grep -Eiq '<meta[^>]+name="robots"[^>]+noindex' /tmp/es.html
+
+          grep -Fq '/assets/articles/diffdocs-zero-to-production/hero-en.webp' /tmp/en.html
+          grep -Fq '/assets/articles/diffdocs-zero-to-production/hero-es.webp' /tmp/es.html
+          grep -Fq 'studios216.analytics.consent.v1' /tmp/en.html
+          grep -Fq 'studios216.analytics.consent.v1' /tmp/es.html
+          grep -Fq 'G-9F4QMVWNPC' /tmp/en.html
+          grep -Fq '1210026194345632' /tmp/en.html
+          grep -Fq 'vgak93wo90' /tmp/en.html
+
+          grep -Fq 'noindex,follow' /tmp/legacy.html
+          grep -Fq 'https://studios216.com/articles/en/diffdocs-3-5-months-ai-engineering/' /tmp/legacy.html
+          grep -Fq 'http-equiv="refresh"' /tmp/legacy.html
+
+          grep -Fq 'https://studios216.com/articles/en/diffdocs-3-5-months-ai-engineering/' /tmp/sitemap.xml
+          grep -Fq 'https://studios216.com/articles/es/diffdocs-35-meses-ia-ingenieria/' /tmp/sitemap.xml
+          ! grep -Fq 'https://studios216.com/blog/diffdocs-zero-to-production.html' /tmp/sitemap.xml
+          grep -Fq 'User-agent: *' /tmp/robots.txt
+          grep -Fq 'Allow: /' /tmp/robots.txt
+
+          for asset in "$HERO_EN" "$HERO_ES" "$REF_EN" "$REF_ES"; do
+            code=$(curl -sS --max-time 20 -o /dev/null -w '%{http_code}' "$asset")
+            test "$code" = "200"
+            echo "PASS asset 200 $asset"
+          done
+
+          echo "LIVE_VERIFICATION_PASS"
