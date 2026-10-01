@@ -1,0 +1,49 @@
+{
+  "skill": "seo-ai-discoverability",
+  "version": "0.4.0",
+  "validated_at": "2026-10-01",
+  "scope": "final GitHub Actions explicit-public-site artifact for DiffDocs ES/EN",
+  "targeted": {
+    "pass": 22,
+    "info": 2,
+    "warn": 0,
+    "fail": 0
+  },
+  "rules": {
+    "pass": 149,
+    "warn": 0,
+    "fail": 0
+  },
+  "tests": {
+    "passed": 72,
+    "total": 72
+  },
+  "package_validation": "pass",
+  "release_manifest_validation": "pass",
+  "indexnow": "info_disabled_optional",
+  "ci_run_id": 36880083183,
+  "ci_conclusion": "success",
+  "artifact_id": 11170204455,
+  "routes": {
+    "en": "/articles/en/diffdocs-3-5-months-ai-engineering/",
+    "es": "/articles/es/diffdocs-35-meses-ia-ingenieria/",
+    "legacy": "/blog/diffdocs-zero-to-production.html"
+  },
+  "analytics": {
+    "global_contract": "passed",
+    "consent_required": true,
+    "default": "denied",
+    "providers": [
+      "ga4",
+      "meta_pixel",
+      "clarity"
+    ]
+  },
+  "migration": {
+    "legacy_noindex_follow": true,
+    "legacy_canonical_to_new_en": true,
+    "legacy_removed_from_sitemap": true,
+    "new_routes_in_sitemap": true,
+    "historic_svg_preserved": true
+  }
+}
