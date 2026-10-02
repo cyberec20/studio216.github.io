@@ -28,6 +28,10 @@
   "navigation": {
     "primary": [
       {
+        "label": "Products",
+        "href": "/products/"
+      },
+      {
         "label": "About",
         "href": "/about.html"
       },

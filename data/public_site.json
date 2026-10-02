@@ -13,7 +13,8 @@
     "assets",
     "blog",
     "diffdocs",
-    "wattswise"
+    "wattswise",
+    "products"
   ],
   "excluded_names": [
     "README.md",

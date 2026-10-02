@@ -1,179 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- =========================
-         Meta Pixel + Google Analytics (GA4)
-         Place inside <head> on EVERY HTML page
-    ========================= -->
-
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="_OTmU6KgLnYbdoWM7DuFy1yc5dB1qFjY5fk_T5_hDzA" />
-    
-    <title>Studios 216 | High-Precision Engineering Software</title>
-    <meta name="description" content="We build high-precision engineering software tools. Home of WattsWise. Combining deep domain expertise with modern AI software architecture.">
-
-    <meta property="og:title" content="Studios 216: High-Precision Engineering Software">
-    <meta property="og:description" content="Eliminating technical inefficiencies through expert domain knowledge and AI architecture.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://studios216.com/">
-    <meta property="og:image" content="https://studios216.com/assets/logo.jpg">
-    <meta property="og:site_name" content="Studios 216">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Studios 216 | High-Precision Engineering Software">
-    <meta name="twitter:description" content="Engineering software and AI-augmented products built from deep domain expertise.">
-    <meta name="twitter:image" content="https://studios216.com/assets/logo.jpg">    
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="canonical" href="https://studios216.com/" />
-
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #050505; }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        .glass-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 85, 255, 0.5);
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: #3b82f6;
-            transition: width 0.3s;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://studios216.com/#organization",
-      "name": "Studios 216",
-      "url": "https://studios216.com/",
-      "founder": {
-        "@type": "Person",
-        "@id": "https://studios216.com/about/founder/#person",
-        "name": "Franklin Rodriguez",
-        "url": "https://studios216.com/about/founder/"
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="_OTmU6KgLnYbdoWM7DuFy1yc5dB1qFjY5fk_T5_hDzA">
+  <title>Studios 216 | Engineering Software, AI Systems & Practical Learning</title>
+  <meta name="description" content="Studios 216 builds engineering software, AI-assisted products, practical courses, books, audio, and long-form articles from real technical work.">
+  <link rel="canonical" href="https://studios216.com/">
+  <meta property="og:title" content="Studios 216 | Engineering Software, AI Systems & Practical Learning">
+  <meta property="og:description" content="Tools and knowledge for better technical work: engineering software, AI-assisted products, practical learning, books, audio, and articles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://studios216.com/">
+  <meta property="og:image" content="https://studios216.com/assets/studio_logo.jpeg">
+  <meta property="og:site_name" content="Studios 216">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Studios 216 | Engineering Software, AI Systems & Practical Learning">
+  <meta name="twitter:description" content="Tools and knowledge for better technical work: software, AI systems, courses, books, audio, and articles.">
+  <meta name="twitter:image" content="https://studios216.com/assets/studio_logo.jpeg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #050505; }
+    .glass-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(10px);
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
     }
-    </script>
+    .glass-card:hover, .glass-card:focus-visible {
+      transform: translateY(-4px);
+      border-color: rgba(59,130,246,.58);
+      background: rgba(255,255,255,.05);
+      outline: none;
+    }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background: #3b82f6;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after, .nav-link:focus-visible::after { width: 100%; }
+    .article-cover { aspect-ratio: 16 / 9; width: 100%; object-fit: cover; }
+    .pillar-card {
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding-top: 1.25rem;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "@id":"https://studios216.com/#organization",
+    "name":"Studios 216",
+    "url":"https://studios216.com/",
+    "founder":{
+      "@type":"Person",
+      "@id":"https://studios216.com/about/founder/#person",
+      "name":"Franklin Rodriguez",
+      "url":"https://studios216.com/about/founder/"
+    }
+  }
+  </script>
 </head>
-    
 <body class="text-gray-300 min-h-screen flex flex-col">
+  <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/70">
+    <div class="max-w-6xl mx-auto flex justify-between items-center gap-6">
+      <a href="/" aria-label="Studios 216 Home">
+        <img src="/assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-14 w-auto rounded-md object-contain hover:opacity-80 transition-opacity">
+      </a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/products/" class="nav-link text-sm font-medium hover:text-white transition-colors">Products</a>
+        <a href="/articles/" class="nav-link text-sm font-medium hover:text-white transition-colors">Articles</a>
+        <a href="/about.html" class="nav-link text-sm font-medium hover:text-white transition-colors">About</a>
+        <a href="mailto:contact@studios216.com" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">Contact</a>
+      </nav>
+      <div class="md:hidden flex items-center gap-4 text-sm">
+        <a href="/products/" class="text-gray-400 hover:text-white">Products</a>
+        <a href="/articles/" class="text-gray-400 hover:text-white">Articles</a>
+        <a href="/about.html" class="text-gray-400 hover:text-white">About</a>
+      </div>
+    </div>
+  </header>
 
-    <header class="p-6 border-b border-gray-900 sticky top-0 z-50 backdrop-blur-md bg-black/50">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="/">
-                    <img src="./assets/studio_logo.jpeg" alt="Studios 216 Logo" class="h-16 w-auto rounded-md object-contain hover:opacity-80 transition-opacity">
-                </a>
-            </div>
-            
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="/about.html" class="nav-link text-sm font-medium hover:text-white transition-colors">About Us</a>
-                <a href="/articles/" class="nav-link text-sm font-medium hover:text-white transition-colors">Articles</a>
-                <a href="mailto:contact@studios216.com" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">Contact</a>
-            </nav>
+  <main class="flex-grow px-6 py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto space-y-24">
+      <section class="max-w-3xl space-y-6" aria-labelledby="home-heading">
+        <p class="text-xs font-bold text-blue-400 uppercase tracking-[.22em]">Studios216</p>
+        <h1 id="home-heading" class="text-5xl sm:text-6xl font-black text-white tracking-tight leading-tight">
+          We build tools and knowledge for <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-orange-500">better technical work.</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl">
+          Engineering software, AI-assisted products, practical learning, and long-form ideas shaped by real projects—not abstract demos.
+        </p>
+      </section>
 
-            <div class="md:hidden flex space-x-4">
-                <a href="/articles/" class="text-sm font-medium text-gray-400">Articles</a>
-                <a href="/about.html" class="text-sm font-medium text-gray-400">About</a>
-            </div>
+      <section id="products" aria-labelledby="products-heading">
+        <div class="flex items-end justify-between gap-6 mb-8">
+          <div>
+            <p class="text-xs font-bold text-gray-600 uppercase tracking-widest">Featured</p>
+            <h2 id="products-heading" class="text-3xl font-black text-white mt-2">Our Products</h2>
+          </div>
+          <a href="/products/" class="hidden sm:inline text-sm font-semibold text-blue-400 hover:text-blue-300">Explore all products →</a>
         </div>
-    </header>
 
-    <main class="flex-grow px-6 py-20">
-        <div class="max-w-5xl mx-auto space-y-16">
-            
-            <div class="max-w-2xl space-y-6">
-                <h1 class="text-5xl sm:text-6xl font-black text-white tracking-tight leading-tight">
-                    We build tools for <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-orange-500">high-precision</span> engineering.
-                </h1>
-                <p class="text-lg text-gray-500">
-                    Our mission is to eliminate inefficiency in technical workflows. We combine deep domain expertise with modern AI software architecture.
-                </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a href="/wattswise/" class="glass-card rounded-2xl p-7 group flex flex-col min-h-full"
+             data-analytics-impression="product_impression" data-analytics-event="product_click"
+             data-product-id="wattswise" data-product-name="WattsWise: Electric Calculator"
+             data-analytics-placement="home_featured" data-analytics-destination="/wattswise/">
+            <div class="flex items-start justify-between mb-6">
+              <img src="/assets/logo.jpg" alt="WattsWise icon" class="w-16 h-16 rounded-2xl shadow-lg object-cover">
+              <span class="px-3 py-1 text-xs font-bold text-blue-400 bg-blue-400/10 rounded-full">APP</span>
             </div>
+            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">WattsWise</h3>
+            <p class="text-gray-400 mt-3 leading-relaxed">An electrical calculator for professionals that brings voltage drop, power, and diagnostics together in one tool.</p>
+            <span class="mt-7 text-sm font-semibold text-blue-400">View product →</span>
+          </a>
 
-            <div>
-                <h2 class="text-xs font-bold text-gray-600 uppercase tracking-widest mb-8">Our Products</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-					<div class="glass-card block rounded-2xl p-8 group">
-						<div class="flex items-start justify-between mb-6">
-							<img src="assets/logo.jpg" alt="WattsWise Icon" class="w-16 h-16 rounded-2xl shadow-lg group-hover:shadow-blue-900/20 transition-all">
-							<span class="px-3 py-1 text-xs font-bold text-blue-400 bg-blue-400/10 rounded-full">APP</span>
-						</div>
-						<h3 class="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">WattsWise: Electric Calculator</h3>
-						<p class="text-gray-400 mb-6">
-							The comprehensive electrical calculator for professionals. Voltage Drop, Power, and Diagnostics in one ecosystem.
-						</p>
-						<div class="flex flex-col gap-3 mt-auto">
-							<a href="/wattswise/" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
-								View Product →
-							</a>
-						</div>
-					</div>
-
-                    <div class="glass-card block rounded-2xl p-8 group">
-                        <div class="flex items-start justify-between mb-6">
-                            <img src="./assets/diff_docs_logo.png" alt="DIF Docs Icon" class="w-16 h-16 rounded-2xl shadow-lg group-hover:shadow-orange-900/20 transition-all">
-                            <span class="px-3 py-1 text-xs font-bold text-orange-400 bg-orange-400/10 rounded-full">SaaS</span>
-                        </div>
-
-                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">DIFF Docs</h3>
-
-                        <p class="text-gray-400 mb-6">
-                            Self-serve document comparison SaaS. Visual diffs for additions, deletions, modifications, and moved content.
-                        </p>
-
-                        <div class="flex flex-col gap-3 mt-auto">
-                            <a href="https://diffdocs.studios216.com" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
-                                View Product →
-                            </a>
-
-                            <a href="https://diffdocs.studios216.com/pricing" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-white/10 rounded-lg hover:bg-white/15 transition-colors">
-                                Pricing
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="border border-dashed border-gray-800 rounded-2xl p-8 flex flex-col justify-center items-center text-center opacity-50">
-                        <span class="text-4xl mb-4">🚀</span>
-                        <h3 class="text-lg font-bold text-gray-500">Next Project</h3>
-                        <p class="text-sm text-gray-600">In development...</p>
-                    </div>
-                </div>
+          <a href="https://diffdocs.studios216.com" class="glass-card rounded-2xl p-7 group flex flex-col min-h-full"
+             data-analytics-impression="product_impression" data-analytics-event="product_click"
+             data-product-id="diffdocs" data-product-name="DiffDocs"
+             data-analytics-placement="home_featured" data-analytics-destination="https://diffdocs.studios216.com">
+            <div class="flex items-start justify-between mb-6">
+              <img src="/assets/diff_docs_logo.png" alt="DiffDocs icon" class="w-16 h-16 rounded-2xl shadow-lg object-cover">
+              <span class="px-3 py-1 text-xs font-bold text-orange-400 bg-orange-400/10 rounded-full">SAAS</span>
             </div>
+            <h3 class="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">DiffDocs</h3>
+            <p class="text-gray-400 mt-3 leading-relaxed">Compare document versions and spot additions, deletions, edits, and moved content through visual results that are easy to review.</p>
+            <span class="mt-7 text-sm font-semibold text-blue-400">View product →</span>
+          </a>
 
+          <a href="https://www.udemy.com/course/storytelling-con-datos/?referralCode=5A0293F65838AF1E2391"
+             class="glass-card rounded-2xl p-7 group flex flex-col min-h-full"
+             data-analytics-impression="product_impression" data-analytics-event="external_product_visit"
+             data-product-id="SCD" data-product-name="Storytelling con datos"
+             data-analytics-placement="home_featured" data-analytics-destination="udemy">
+            <div class="flex items-start justify-between mb-6">
+              <img src="/assets/products/storytelling-con-datos.webp" alt="Storytelling con datos course cover" class="w-16 h-16 rounded-2xl shadow-lg object-cover">
+              <span class="px-3 py-1 text-xs font-bold text-emerald-400 bg-emerald-400/10 rounded-full">COURSE · ES</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Storytelling con datos</h3>
+            <p class="text-gray-400 mt-3 leading-relaxed">Turn data, charts, and conclusions into clear, structured presentations that are easier to follow through applied storytelling.</p>
+            <span class="mt-7 text-sm font-semibold text-blue-400">View course →</span>
+          </a>
         </div>
-    </main>
+        <a href="/products/" class="sm:hidden inline-block mt-6 text-sm font-semibold text-blue-400 hover:text-blue-300">Explore all products →</a>
+      </section>
 
-    <footer class="border-t border-gray-900 py-8 text-center text-sm text-gray-600">
-        &copy; 2025-2026 Studios 216. All rights reserved.
-    </footer>
+      <section aria-labelledby="lab-heading">
+        <div class="flex items-end justify-between gap-6 mb-8">
+          <div>
+            <p class="text-xs font-bold text-gray-600 uppercase tracking-widest">Latest thinking</p>
+            <h2 id="lab-heading" class="text-3xl font-black text-white mt-2">From the Lab</h2>
+          </div>
+          <a href="/articles/" class="hidden sm:inline text-sm font-semibold text-blue-400 hover:text-blue-300">Explore all articles →</a>
+        </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a href="/articles/en/diffdocs-3-5-months-ai-engineering/" class="glass-card rounded-2xl overflow-hidden group">
+            <img src="/assets/articles/diffdocs-zero-to-production/reference-en.webp" alt="DiffDocs flow from file upload to auditable results" class="article-cover" loading="lazy">
+            <div class="p-6">
+              <p class="text-xs uppercase tracking-wider text-blue-400">AI systems · SaaS · 10 min</p>
+              <h3 class="text-xl font-bold text-white mt-3 group-hover:text-blue-400 transition-colors">DiffDocs in 3.5 Months: What AI Accelerated—and What Still Required Engineering</h3>
+              <p class="text-sm text-gray-400 mt-3">What AI accelerated, and which architecture, security, and validation decisions still needed engineering.</p>
+            </div>
+          </a>
+
+          <a href="/articles/en/local-ai-engineering-lab/" class="glass-card rounded-2xl overflow-hidden group">
+            <img src="/assets/articles/local-ai-engineering-lab/reference-en.webp" alt="Blueprint of a local AI engineering lab" class="article-cover" loading="lazy">
+            <div class="p-6">
+              <p class="text-xs uppercase tracking-wider text-blue-400">Local AI · Agents · 8 min</p>
+              <h3 class="text-xl font-bold text-white mt-3 group-hover:text-blue-400 transition-colors">A Local LLM Is Not a Lab</h3>
+              <p class="text-sm text-gray-400 mt-3">How to turn a local endpoint into a repeatable, measurable, and auditable AI engineering system.</p>
+            </div>
+          </a>
+
+          <a href="/articles/en/bidirectional-power-triangle/" class="glass-card rounded-2xl overflow-hidden group">
+            <img src="/assets/articles/power-triangle-bidirectional/reference-en.webp" alt="Conceptual bidirectional power triangle and coherent electrical results" class="article-cover" loading="lazy">
+            <div class="p-6">
+              <p class="text-xs uppercase tracking-wider text-blue-400">Electrical engineering · 7 min</p>
+              <h3 class="text-xl font-bold text-white mt-3 group-hover:text-blue-400 transition-colors">Bidirectional Power Triangle</h3>
+              <p class="text-sm text-gray-400 mt-3">Why power calculations should not always force you to start from the same input.</p>
+            </div>
+          </a>
+        </div>
+        <a href="/articles/" class="sm:hidden inline-block mt-6 text-sm font-semibold text-blue-400 hover:text-blue-300">Explore all articles →</a>
+      </section>
+
+      <section aria-labelledby="ecosystem-heading">
+        <p class="text-xs font-bold text-gray-600 uppercase tracking-widest">Studios216 ecosystem</p>
+        <h2 id="ecosystem-heading" class="text-3xl font-black text-white mt-2 mb-8">Build · Teach · Publish</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="pillar-card">
+            <p class="text-sm font-bold text-blue-400 uppercase tracking-widest">Build</p>
+            <h3 class="text-xl font-bold text-white mt-3">Software & AI systems</h3>
+            <p class="text-gray-400 mt-3 leading-relaxed">Tools designed around real technical workflows, with engineering decisions made explicit and testable.</p>
+          </div>
+          <div class="pillar-card">
+            <p class="text-sm font-bold text-orange-400 uppercase tracking-widest">Teach</p>
+            <h3 class="text-xl font-bold text-white mt-3">Practical learning</h3>
+            <p class="text-gray-400 mt-3 leading-relaxed">Courses that turn data, communication, and technical ideas into skills people can apply in real work.</p>
+          </div>
+          <div class="pillar-card">
+            <p class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Publish</p>
+            <h3 class="text-xl font-bold text-white mt-3">Books, audio & articles</h3>
+            <p class="text-gray-400 mt-3 leading-relaxed">Long-form ideas and guided resources for subjects that deserve more space than a feature list or a quick post.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="glass-card rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6" aria-labelledby="founder-heading">
+        <div>
+          <p class="text-xs font-bold text-gray-600 uppercase tracking-widest">Built by</p>
+          <h2 id="founder-heading" class="text-2xl font-black text-white mt-2">Franklin Rodriguez</h2>
+          <p class="text-gray-400 mt-2">Electrical engineer · Author · Instructor · AI systems builder</p>
+        </div>
+        <a href="/about/founder/" class="inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-white bg-white/10 rounded-lg hover:bg-white/15 transition-colors">About Franklin →</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="border-t border-gray-900 py-8 text-center text-sm text-gray-600">
+    &copy; 2025-2026 Studios 216. All rights reserved.
+  </footer>
 </body>
 </html>
-
-
-
-
