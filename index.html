@@ -54,17 +54,32 @@
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"Organization",
-    "@id":"https://studios216.com/#organization",
-    "name":"Studios 216",
-    "url":"https://studios216.com/",
-    "description":"Studios 216 creates engineering software, AI products, practical courses, books, audio, and articles grounded in real projects and applied experience.",
-    "founder":{
-      "@type":"Person",
-      "@id":"https://studios216.com/about/founder/#person",
-      "name":"Franklin Rodriguez",
-      "url":"https://studios216.com/about/founder/"
-    }
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://studios216.com/#organization",
+        "name":"Studios 216",
+        "url":"https://studios216.com/",
+        "description":"Studios 216 creates engineering software, AI products, practical courses, books, audio, and articles grounded in real projects and applied experience.",
+        "founder":{"@id":"https://studios216.com/about/founder/#person"}
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://studios216.com/#website",
+        "url":"https://studios216.com/",
+        "name":"Studios 216",
+        "inLanguage":"en",
+        "publisher":{"@id":"https://studios216.com/#organization"}
+      },
+      {
+        "@type":"Person",
+        "@id":"https://studios216.com/about/founder/#person",
+        "name":"Franklin Rodriguez",
+        "url":"https://studios216.com/about/founder/",
+        "jobTitle":"Founder & CEO",
+        "worksFor":{"@id":"https://studios216.com/#organization"}
+      }
+    ]
   }
   </script>
 </head>
