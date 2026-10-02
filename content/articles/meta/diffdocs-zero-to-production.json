@@ -37,7 +37,7 @@
       "hero_alt": "Infographic of the DiffDocs flow: file upload, extraction and normalization, diff engine, and auditable results and delivery.",
       "show_hero": true,
       "listing_cover": "/assets/articles/diffdocs-zero-to-production/reference-en.webp",
-      "og_image": "/assets/articles/diffdocs-zero-to-production/hero-en.webp",
+      "og_image": "https://studios216.com/assets/articles/diffdocs-zero-to-production/hero-en.webp",
       "topics": [
         "AI systems",
         "AI-augmented development",
@@ -84,7 +84,7 @@
       "hero_alt": "Infografía del flujo de DiffDocs: carga de archivos, extracción y normalización, motor Diff, y resultados y entrega auditables.",
       "show_hero": true,
       "listing_cover": "/assets/articles/diffdocs-zero-to-production/reference-es.webp",
-      "og_image": "/assets/articles/diffdocs-zero-to-production/hero-es.webp",
+      "og_image": "https://studios216.com/assets/articles/diffdocs-zero-to-production/hero-es.webp",
       "topics": [
         "Sistemas de IA",
         "Desarrollo con IA",

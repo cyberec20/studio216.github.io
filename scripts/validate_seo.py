@@ -54,6 +54,14 @@ def canonical_links(text: str) -> list[str]:
         flags=re.I,
     )
 
+def property_content(text: str, prop: str) -> list[str]:
+    pattern = rf'<meta\s+[^>]*property=["\']{re.escape(prop)}["\'][^>]*content=["\']([^"\']*)["\'][^>]*>'
+    values = re.findall(pattern, text, flags=re.I)
+    if values:
+        return values
+    reverse = rf'<meta\s+[^>]*content=["\']([^"\']*)["\'][^>]*property=["\']{re.escape(prop)}["\'][^>]*>'
+    return re.findall(reverse, text, flags=re.I)
+
 def has_noindex(text: str) -> bool:
     return any("noindex" in value.lower() for value in meta_content(text, "robots"))
 
@@ -116,6 +124,36 @@ for path in HTML_FILES:
         parsed = urlparse(canonicals[0])
         if parsed.scheme != "https" or not parsed.netloc:
             fail(relative, f"canonical must be an absolute HTTPS URL: {canonicals[0]}")
+
+    # Studios216 project policy: indexable public pages carry a complete,
+    # internally consistent social/structured metadata package.
+    required_og = ("og:title", "og:description", "og:url", "og:type", "og:image")
+    for prop in required_og:
+        values = property_content(text, prop)
+        if len(values) != 1 or not values[0].strip():
+            fail(relative, f"indexable page requires exactly one non-empty {prop}")
+    required_twitter = ("twitter:card", "twitter:title", "twitter:description", "twitter:image")
+    for name in required_twitter:
+        values = meta_content(text, name)
+        if len(values) != 1 or not values[0].strip():
+            fail(relative, f"indexable page requires exactly one non-empty {name}")
+
+    if len(canonicals) == 1:
+        og_urls = property_content(text, "og:url")
+        if len(og_urls) == 1 and og_urls[0] != canonicals[0]:
+            fail(relative, f"og:url must match canonical URL: {og_urls[0]} != {canonicals[0]}")
+
+    for label, values in (
+        ("og:image", property_content(text, "og:image")),
+        ("twitter:image", meta_content(text, "twitter:image")),
+    ):
+        if len(values) == 1:
+            parsed_image = urlparse(values[0])
+            if parsed_image.scheme != "https" or not parsed_image.netloc:
+                fail(relative, f"{label} must be an absolute HTTPS URL: {values[0]}")
+
+    if not blocks:
+        fail(relative, "indexable page requires at least one JSON-LD block for entity/page clarity")
 
 # Founder identity is a stable SEO/entity contract.
 founder = ROOT / "about" / "founder" / "index.html"

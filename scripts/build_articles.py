@@ -56,6 +56,10 @@ def validate_version(meta_path: Path, lang: str, version: dict, published: bool)
         hero = version.get("hero")
         if isinstance(hero, str) and hero.startswith("/") and not (ROOT / hero.lstrip("/")).exists():
             raise BuildError(f"{meta_path}: published {lang}.hero asset not found: {hero}")
+        og_image = str(version.get("og_image") or "")
+        parsed_og_image = urlparse(og_image)
+        if parsed_og_image.scheme != "https" or parsed_og_image.netloc != "studios216.com":
+            raise BuildError(f"{meta_path}: published {lang}.og_image must be an absolute https://studios216.com URL")
         editorial = version.get("editorial") or {}
         ddc = editorial.get("desire_driven_copy") or {}
         if editorial.get("profile") != "thought-leadership":
