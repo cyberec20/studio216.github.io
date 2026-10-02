@@ -313,7 +313,7 @@ def render_topic_options(posts: list[dict], all_label: str) -> str:
     return "".join(options)
 
 
-def render_indexes(posts: list[dict]) -> None:
+def render_indexes(posts: list[dict], site: dict) -> None:
     template = INDEX_TEMPLATE.read_text(encoding="utf-8")
     hreflang_links = '<link rel="alternate" hreflang="es" href="https://studios216.com/articles/es/">\n  <link rel="alternate" hreflang="en" href="https://studios216.com/articles/en/">\n  <link rel="alternate" hreflang="x-default" href="https://studios216.com/articles/">'
     pages = [
@@ -329,9 +329,35 @@ def render_indexes(posts: list[dict]) -> None:
             language_filters = '<div class="filter-chips" aria-label="Language filters"><button class="filter-chip active" data-lang="">All</button><button class="filter-chip" data-lang="es">Español</button><button class="filter-chip" data-lang="en">English</button></div>'
         else:
             language_filters = '<div class="language-switch"><a href="/articles/">All</a>' + ('<span class="active">Español</span><a href="/articles/en/">English</a>' if filter_lang=="es" else '<a href="/articles/es/">Español</a><span class="active">English</span>') + '</div>'
+        base_url = str(site["site"]["url"]).rstrip("/")
+        json_ld = {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "@id": canonical + "#collection",
+            "url": canonical,
+            "name": title,
+            "description": desc,
+            "inLanguage": lang,
+            "isPartOf": {"@id": base_url + "/#website"},
+            "publisher": {"@id": site["organization"]["id"]},
+            "mainEntity": {
+                "@type": "ItemList",
+                "numberOfItems": len(page_posts),
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": index,
+                        "url": base_url + str(post["url"]),
+                        "name": post["title"],
+                    }
+                    for index, post in enumerate(page_posts, 1)
+                ],
+            },
+        }
         rendered = replace_tokens(template, {
             "HTML_LANG":lang,"PAGE_TITLE":html.escape(title),"META_DESCRIPTION":html.escape(desc,quote=True),
             "ROBOTS":page_robots,"CANONICAL":canonical,"HREFLANG_LINKS":hreflang_links,
+            "JSON_LD":json.dumps(json_ld, ensure_ascii=False, separators=(",", ":")),
             "HEADING":html.escape(heading),"INTRO":html.escape(intro),"FILTER_LANG_JSON":json.dumps(filter_lang),
             "LANGUAGE_FILTERS":language_filters,"SEARCH_PLACEHOLDER":html.escape(search_label,quote=True),
             "ALL_TOPICS_LABEL":html.escape(topics_label),"ALL_TOPICS_LABEL_JSON":json.dumps(topics_label, ensure_ascii=False),
@@ -421,7 +447,7 @@ def main() -> int:
             posts.append(render_article(meta,lang,version,site))
     posts.sort(key=lambda p:p["date"],reverse=True)
     POSTS_JSON.write_text(json.dumps(posts,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    render_indexes(posts)
+    render_indexes(posts,site)
     update_sitemap(posts)
     print(f"Built {len(posts)} published article versions.")
     return 0
