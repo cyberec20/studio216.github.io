@@ -196,12 +196,11 @@ def optional_link_sections(site: dict) -> tuple[str, str]:
         social = '<div class="mt-6"><p class="text-xs uppercase tracking-[.16em] text-gray-600 mb-2">Social</p><div class="space-y-2 text-sm">' + "".join(social_items) + "</div></div>"
     return explore, social
 
-def render_product_promo(version: dict, placement: str) -> str:
+def render_product_promo(version: dict) -> str:
     promo = version.get("promotion") or {}
     if not promo:
         return ""
-    modifier = "rail" if placement == "rail" else "mobile"
-    analytics_placement = "article_left_rail" if placement == "rail" else "article_inline_mobile"
+    analytics_placement = "article_related_tool"
     attrs = (
         f'data-analytics-impression="product_impression" '
         f'data-product-id="{html.escape(str(promo["product_id"]), quote=True)}" '
@@ -217,27 +216,21 @@ def render_product_promo(version: dict, placement: str) -> str:
         f'data-analytics-destination="{html.escape(str(promo["href"]), quote=True)}"'
     )
     return (
-        f'<aside class="article-product-promo article-product-promo--{modifier}" {attrs} '
+        f'<aside class="article-product-promo article-product-promo--rail border border-blue-400/30 '
+        f'rounded-2xl bg-slate-900/80 p-4 shadow-xl" {attrs} '
         f'aria-label="{html.escape(str(promo["product_name"]), quote=True)}">'
-        f'<div class="article-product-promo__header">'
-        f'<img class="article-product-promo__image" src="{html.escape(str(promo["image"]), quote=True)}" '
+        f'<div class="article-product-promo__header flex items-start gap-3 mb-3">'
+        f'<img class="article-product-promo__image w-14 h-14 lg:w-16 lg:h-16 flex-none rounded-xl '
+        f'object-cover border border-white/10" src="{html.escape(str(promo["image"]), quote=True)}" '
         f'alt="{html.escape(str(promo["image_alt"]), quote=True)}" width="72" height="72" loading="lazy" decoding="async">'
-        f'<div class="article-product-promo__heading">'
+        f'<div class="article-product-promo__heading min-w-0">'
         f'<p class="article-product-promo__eyebrow">{html.escape(str(promo["eyebrow"]))}</p>'
         f'<h3>{html.escape(str(promo["title"]))}</h3>'
         f'</div></div>'
-        f'<p>{html.escape(str(promo["body"]))}</p>'
+        f'<p class="article-product-promo__body">{html.escape(str(promo["body"]))}</p>'
         f'<a class="article-product-promo__cta" href="{html.escape(str(promo["href"]), quote=True)}" {link_attrs}>'
         f'{html.escape(str(promo["cta"]))} <span aria-hidden="true">→</span></a></aside>'
     )
-
-
-def inject_mobile_product_promo(article_body: str, promo_html: str) -> str:
-    if not promo_html:
-        return article_body
-    if "</p>" not in article_body:
-        raise BuildError("Promoted article must contain at least one paragraph")
-    return article_body.replace("</p>", "</p>" + promo_html, 1)
 
 
 def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
@@ -285,9 +278,7 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         hero_block = f'<figure class="article-hero"><img src="{html.escape(hero_src, quote=True)}" alt="{html.escape(version["hero_alt"], quote=True)}" width="{hero_width}" height="{hero_height}" loading="eager" decoding="async">{caption_html}</figure>'
     explore_links, social_links = optional_link_sections(site)
     article_body = markdown_to_html(source)
-    rail_promo = render_product_promo(version, "rail")
-    mobile_promo = render_product_promo(version, "mobile")
-    article_body = inject_mobile_product_promo(article_body, mobile_promo)
+    rail_promo = render_product_promo(version)
     rendered = replace_tokens(template, {
         "HTML_LANG": lang,
         "PAGE_TITLE": html.escape(version["title"] + " | Studios 216"),
