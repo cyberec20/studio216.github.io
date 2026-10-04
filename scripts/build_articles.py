@@ -78,6 +78,13 @@ def validate_version(meta_path: Path, lang: str, version: dict, published: bool)
             raise BuildError(f"{meta_path}: published {lang} version requires human_read_aloud_review=passed")
         if editorial.get("human_approval") != "approved":
             raise BuildError(f"{meta_path}: published {lang} version requires human_approval=approved")
+    promotion = version.get("promotion")
+    if promotion:
+        for key in ("product_id", "product_name", "href", "eyebrow", "title", "body", "cta"):
+            if not promotion.get(key):
+                raise BuildError(f"{meta_path}: {lang}.promotion.{key} is required")
+        if not str(promotion["href"]).startswith("/"):
+            raise BuildError(f"{meta_path}: {lang}.promotion.href must be an internal Studios216 path")
 
 def metadata_files() -> list[Path]:
     return sorted(p for p in META_DIR.glob("*.json") if p.is_file())
@@ -184,6 +191,45 @@ def optional_link_sections(site: dict) -> tuple[str, str]:
         social = '<div class="mt-6"><p class="text-xs uppercase tracking-[.16em] text-gray-600 mb-2">Social</p><div class="space-y-2 text-sm">' + "".join(social_items) + "</div></div>"
     return explore, social
 
+def render_product_promo(version: dict, placement: str) -> str:
+    promo = version.get("promotion") or {}
+    if not promo:
+        return ""
+    modifier = "rail" if placement == "rail" else "mobile"
+    analytics_placement = "article_left_rail" if placement == "rail" else "article_inline_mobile"
+    attrs = (
+        f'data-analytics-impression="product_impression" '
+        f'data-product-id="{html.escape(str(promo["product_id"]), quote=True)}" '
+        f'data-product-name="{html.escape(str(promo["product_name"]), quote=True)}" '
+        f'data-analytics-placement="{analytics_placement}" '
+        f'data-analytics-destination="{html.escape(str(promo["href"]), quote=True)}"'
+    )
+    link_attrs = (
+        f'data-analytics-event="product_click" '
+        f'data-product-id="{html.escape(str(promo["product_id"]), quote=True)}" '
+        f'data-product-name="{html.escape(str(promo["product_name"]), quote=True)}" '
+        f'data-analytics-placement="{analytics_placement}" '
+        f'data-analytics-destination="{html.escape(str(promo["href"]), quote=True)}"'
+    )
+    return (
+        f'<aside class="article-product-promo article-product-promo--{modifier}" {attrs} '
+        f'aria-label="{html.escape(str(promo["product_name"]), quote=True)}">'
+        f'<p class="article-product-promo__eyebrow">{html.escape(str(promo["eyebrow"]))}</p>'
+        f'<h3>{html.escape(str(promo["title"]))}</h3>'
+        f'<p>{html.escape(str(promo["body"]))}</p>'
+        f'<a class="article-product-promo__cta" href="{html.escape(str(promo["href"]), quote=True)}" {link_attrs}>'
+        f'{html.escape(str(promo["cta"]))} <span aria-hidden="true">→</span></a></aside>'
+    )
+
+
+def inject_mobile_product_promo(article_body: str, promo_html: str) -> str:
+    if not promo_html:
+        return article_body
+    if "</p>" not in article_body:
+        raise BuildError("Promoted article must contain at least one paragraph")
+    return article_body.replace("</p>", "</p>" + promo_html, 1)
+
+
 def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
     template = TEMPLATE.read_text(encoding="utf-8")
     source = ROOT / version["source"]
@@ -228,6 +274,10 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         caption_html = f'<figcaption>{html.escape(hero_caption)}</figcaption>' if hero_caption else ""
         hero_block = f'<figure class="article-hero"><img src="{html.escape(hero_src, quote=True)}" alt="{html.escape(version["hero_alt"], quote=True)}" width="{hero_width}" height="{hero_height}" loading="eager" decoding="async">{caption_html}</figure>'
     explore_links, social_links = optional_link_sections(site)
+    article_body = markdown_to_html(source)
+    rail_promo = render_product_promo(version, "rail")
+    mobile_promo = render_product_promo(version, "mobile")
+    article_body = inject_mobile_product_promo(article_body, mobile_promo)
     rendered = replace_tokens(template, {
         "HTML_LANG": lang,
         "PAGE_TITLE": html.escape(version["title"] + " | Studios 216"),
@@ -251,8 +301,13 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         "DATE_LINE": html.escape(version["updated"]),
         "READING_TIME": reading_time(source, lang),
         "HERO_BLOCK": hero_block,
-        "ARTICLE_BODY": markdown_to_html(source),
+        "ARTICLE_BODY": article_body,
     })
+    if rail_promo:
+        rail_marker = '        </div>\n      </aside>'
+        if rendered.count(rail_marker) != 1:
+            raise BuildError("Article template rail marker changed; cannot insert product promotion safely")
+        rendered = rendered.replace(rail_marker, '        </div>\n        ' + rail_promo + '\n      </aside>', 1)
     target = ROOT / "articles" / lang / version["slug"] / "index.html"
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(rendered, encoding="utf-8")
