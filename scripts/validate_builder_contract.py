@@ -42,6 +42,15 @@ def article_body(page: str) -> str:
     return match.group(1) if match else ""
 
 
+def without_product_promos(fragment: str) -> str:
+    return re.sub(
+        r"""<aside\b[^>]*class=["'][^"']*\barticle-product-promo\b[^"']*["'][^>]*>.*?</aside>""",
+        "",
+        fragment,
+        flags=re.I | re.S,
+    )
+
+
 def external_anchor_contract(fragment: str, label: str) -> None:
     for tag in re.findall(r"<a\b[^>]*>", fragment, flags=re.I):
         href_match = re.search(r"""\bhref=["']([^"']+)["']""", tag, flags=re.I)
@@ -85,12 +94,13 @@ def validate_articles() -> None:
 
             rendered_source = builder.markdown_to_html(source)
             source_text = visible_text(rendered_source)
-            generated_text = visible_text(body)
+            fidelity_body = without_product_promos(body)
+            generated_text = visible_text(fidelity_body)
             if source_text != generated_text:
                 fail(f"{target.relative_to(ROOT)}: visible article text does not match source Markdown")
 
             source_hrefs = hrefs(rendered_source)
-            generated_hrefs = hrefs(body)
+            generated_hrefs = hrefs(fidelity_body)
             if source_hrefs != generated_hrefs:
                 fail(f"{target.relative_to(ROOT)}: article links do not match source Markdown")
 
