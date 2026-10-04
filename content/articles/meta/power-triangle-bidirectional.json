@@ -77,7 +77,9 @@
         "eyebrow": "Herramienta relacionada",
         "title": "Pon el cálculo conectado a trabajar",
         "body": "WattsWise te permite cambiar el dato que conoces, revisar valores relacionados de potencia y corriente y llevar ese contexto a la comprobación de caída de tensión sin reconstruir el mismo planteamiento.",
-        "cta": "Explorar WattsWise"
+        "cta": "Explorar WattsWise",
+        "image": "/assets/logo.jpg",
+        "image_alt": "Logotipo de la app WattsWise"
       }
     },
     "en": {
@@ -134,7 +136,9 @@
         "eyebrow": "Related tool",
         "title": "Put the connected calculation to work",
         "body": "WattsWise lets you change the value you know, review related power and current values, and carry that context into voltage-drop checks without rebuilding the same setup.",
-        "cta": "Explore WattsWise"
+        "cta": "Explore WattsWise",
+        "image": "/assets/logo.jpg",
+        "image_alt": "WattsWise app logo"
       }
     }
   }
