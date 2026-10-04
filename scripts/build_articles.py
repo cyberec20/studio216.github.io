@@ -148,7 +148,9 @@ def load_product_promotion_catalog() -> dict:
     return catalog
 
 
-def load_metadata(promotion_catalog: dict) -> list[tuple[Path, dict]]:
+def load_metadata(promotion_catalog: dict | None = None) -> list[tuple[Path, dict]]:
+    if promotion_catalog is None:
+        promotion_catalog = load_product_promotion_catalog()
     loaded = []
     for path in metadata_files():
         data = load_json(path)
