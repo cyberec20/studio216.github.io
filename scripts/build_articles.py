@@ -330,7 +330,7 @@ def render_indexes(posts: list[dict], site: dict) -> None:
         page_robots = "index, follow" if page_posts else "noindex, follow"
         language_filters = ""
         if not filter_lang:
-            language_filters = '<div class="filter-chips" aria-label="Language filters"><button class="filter-chip active" data-lang="">All</button><button class="filter-chip" data-lang="es">Español</button><button class="filter-chip" data-lang="en">English</button></div>'
+            language_filters = '<div class="filter-chips" aria-label="Language filters"><button class="filter-chip active" data-lang="">All</button><button class="filter-chip" data-lang="es">Español</button><button class="filter-chip" data-lang="en">English</button></div><div class="language-switch" aria-label="Language editions"><a href="/articles/es/">Español</a><a href="/articles/en/">English</a></div>'
         else:
             language_filters = '<div class="language-switch"><a href="/articles/">All</a>' + ('<span class="active">Español</span><a href="/articles/en/">English</a>' if filter_lang=="es" else '<a href="/articles/es/">Español</a><span class="active">English</span>') + '</div>'
         base_url = str(site["site"]["url"]).rstrip("/")
