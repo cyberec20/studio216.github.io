@@ -20,6 +20,7 @@ SITEMAP = ROOT / "sitemap.xml"
 SITE_CONFIG = ROOT / "data" / "site.json"
 LEGACY_POSTS_JSON = ROOT / "data" / "legacy_articles.json"
 SITEMAP_CONFIG = ROOT / "data" / "sitemap.json"
+PRODUCT_PROMOTIONS_CONFIG = ROOT / "data" / "product-promotions.json"
 
 VALID_LANGS = {"es", "en"}
 VALID_STATUS = {"draft", "ready", "published"}
@@ -38,7 +39,7 @@ def parse_iso(value: str | None, field: str, source: Path) -> None:
     except ValueError as exc:
         raise BuildError(f"{source}: invalid {field}: {value}") from exc
 
-def validate_version(meta_path: Path, lang: str, version: dict, published: bool) -> None:
+def validate_version(meta_path: Path, lang: str, version: dict, published: bool, promotion_catalog: dict) -> None:
     if lang not in VALID_LANGS:
         raise BuildError(f"{meta_path}: unsupported language {lang}")
     for key in ("slug", "title", "description", "source", "topics"):
@@ -78,23 +79,76 @@ def validate_version(meta_path: Path, lang: str, version: dict, published: bool)
             raise BuildError(f"{meta_path}: published {lang} version requires human_read_aloud_review=passed")
         if editorial.get("human_approval") != "approved":
             raise BuildError(f"{meta_path}: published {lang} version requires human_approval=approved")
-    promotion = version.get("promotion")
-    if promotion:
-        for key in ("product_id", "product_name", "href", "image", "image_alt", "eyebrow", "title", "body", "cta"):
-            if not promotion.get(key):
-                raise BuildError(f"{meta_path}: {lang}.promotion.{key} is required")
-        if not str(promotion["href"]).startswith("/"):
-            raise BuildError(f"{meta_path}: {lang}.promotion.href must be an internal Studios216 path")
-        promo_image = str(promotion["image"])
-        if not promo_image.startswith("/"):
-            raise BuildError(f"{meta_path}: {lang}.promotion.image must be an internal asset path")
-        if not (ROOT / promo_image.lstrip("/")).exists():
-            raise BuildError(f"{meta_path}: {lang}.promotion.image asset not found: {promo_image}")
+    if "promotion" in version:
+        raise BuildError(f"{meta_path}: {lang}.promotion is legacy; use {lang}.promotions[]")
+    promotions = version.get("promotions")
+    if promotions is not None:
+        if not isinstance(promotions, list):
+            raise BuildError(f"{meta_path}: {lang}.promotions must be an array")
+        policy = promotion_catalog.get("policy") or {}
+        minimum = int(policy.get("min_per_configured_article", 1))
+        maximum = int(policy.get("max_per_article", 3))
+        if not minimum <= len(promotions) <= maximum:
+            raise BuildError(
+                f"{meta_path}: {lang}.promotions must contain between {minimum} and {maximum} items"
+            )
+        products = promotion_catalog.get("products") or {}
+        seen_products: set[str] = set()
+        for index, promotion in enumerate(promotions, 1):
+            if not isinstance(promotion, dict):
+                raise BuildError(f"{meta_path}: {lang}.promotions[{index}] must be an object")
+            product_id = str(promotion.get("product_id") or "")
+            if not product_id:
+                raise BuildError(f"{meta_path}: {lang}.promotions[{index}].product_id is required")
+            if product_id in seen_products:
+                raise BuildError(f"{meta_path}: {lang}.promotions contains duplicate product_id={product_id}")
+            seen_products.add(product_id)
+            product = products.get(product_id)
+            if not isinstance(product, dict):
+                raise BuildError(f"{meta_path}: {lang}.promotions[{index}] references unknown product_id={product_id}")
+            if product.get("status") != "active":
+                raise BuildError(f"{meta_path}: {lang}.promotions[{index}] references inactive product_id={product_id}")
+            locale = (product.get("locales") or {}).get(lang)
+            if not isinstance(locale, dict):
+                raise BuildError(f"{meta_path}: product {product_id} has no {lang} locale")
+            for key in ("name", "image"):
+                if not product.get(key):
+                    raise BuildError(f"{PRODUCT_PROMOTIONS_CONFIG}: products.{product_id}.{key} is required")
+            for key in ("href", "image_alt", "eyebrow", "cta"):
+                if not locale.get(key):
+                    raise BuildError(f"{PRODUCT_PROMOTIONS_CONFIG}: products.{product_id}.locales.{lang}.{key} is required")
+            for key in ("title", "body"):
+                if not promotion.get(key):
+                    raise BuildError(f"{meta_path}: {lang}.promotions[{index}].{key} is required")
+            href = str(locale["href"])
+            if not href.startswith("/"):
+                raise BuildError(f"{PRODUCT_PROMOTIONS_CONFIG}: products.{product_id}.locales.{lang}.href must be internal")
+            landing = ROOT / href.lstrip("/")
+            if href.endswith("/"):
+                landing = landing / "index.html"
+            if not landing.exists():
+                raise BuildError(f"{PRODUCT_PROMOTIONS_CONFIG}: product landing not found for {product_id}/{lang}: {href}")
+            promo_image = str(product["image"])
+            if not promo_image.startswith("/"):
+                raise BuildError(f"{PRODUCT_PROMOTIONS_CONFIG}: products.{product_id}.image must be an internal asset path")
+            if not (ROOT / promo_image.lstrip("/")).exists():
+                raise BuildError(f"{PRODUCT_PROMOTIONS_CONFIG}: product image not found: {promo_image}")
 
 def metadata_files() -> list[Path]:
     return sorted(p for p in META_DIR.glob("*.json") if p.is_file())
 
-def load_metadata() -> list[tuple[Path, dict]]:
+def load_product_promotion_catalog() -> dict:
+    if not PRODUCT_PROMOTIONS_CONFIG.exists():
+        raise BuildError(f"Product promotion registry not found: {PRODUCT_PROMOTIONS_CONFIG}")
+    catalog = load_json(PRODUCT_PROMOTIONS_CONFIG)
+    if catalog.get("schema_version") != "1.0":
+        raise BuildError(f"{PRODUCT_PROMOTIONS_CONFIG}: unsupported schema_version")
+    if not isinstance(catalog.get("products"), dict):
+        raise BuildError(f"{PRODUCT_PROMOTIONS_CONFIG}: products must be an object")
+    return catalog
+
+
+def load_metadata(promotion_catalog: dict) -> list[tuple[Path, dict]]:
     loaded = []
     for path in metadata_files():
         data = load_json(path)
@@ -107,7 +161,7 @@ def load_metadata() -> list[tuple[Path, dict]]:
             raise BuildError(f"{path}: at least one language version is required")
         published = data["status"] == "published"
         for lang, version in versions.items():
-            validate_version(path, lang, version, published)
+            validate_version(path, lang, version, published, promotion_catalog)
         loaded.append((path, data))
     return loaded
 
@@ -196,10 +250,28 @@ def optional_link_sections(site: dict) -> tuple[str, str]:
         social = '<div class="mt-6"><p class="text-xs uppercase tracking-[.16em] text-gray-600 mb-2">Social</p><div class="space-y-2 text-sm">' + "".join(social_items) + "</div></div>"
     return explore, social
 
-def render_product_promo(version: dict) -> str:
-    promo = version.get("promotion") or {}
-    if not promo:
-        return ""
+def resolve_promotions(version: dict, lang: str, promotion_catalog: dict) -> list[dict]:
+    resolved: list[dict] = []
+    products = promotion_catalog.get("products") or {}
+    for promotion in version.get("promotions") or []:
+        product_id = str(promotion["product_id"])
+        product = products[product_id]
+        locale = product["locales"][lang]
+        resolved.append({
+            "product_id": product_id,
+            "product_name": product["name"],
+            "href": locale["href"],
+            "image": product["image"],
+            "image_alt": locale["image_alt"],
+            "eyebrow": promotion.get("eyebrow") or locale["eyebrow"],
+            "title": promotion["title"],
+            "body": promotion["body"],
+            "cta": promotion.get("cta") or locale["cta"],
+        })
+    return resolved
+
+
+def render_product_promo(promo: dict) -> str:
     analytics_placement = "article_related_tool"
     attrs = (
         f'data-analytics-impression="product_impression" '
@@ -233,7 +305,14 @@ def render_product_promo(version: dict) -> str:
     )
 
 
-def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
+def render_product_promos(version: dict, lang: str, promotion_catalog: dict) -> str:
+    return "\n        ".join(
+        render_product_promo(promo)
+        for promo in resolve_promotions(version, lang, promotion_catalog)
+    )
+
+
+def render_article(meta: dict, lang: str, version: dict, site: dict, promotion_catalog: dict) -> dict:
     template = TEMPLATE.read_text(encoding="utf-8")
     source = ROOT / version["source"]
     versions = meta["versions"]
@@ -278,7 +357,7 @@ def render_article(meta: dict, lang: str, version: dict, site: dict) -> dict:
         hero_block = f'<figure class="article-hero"><img src="{html.escape(hero_src, quote=True)}" alt="{html.escape(version["hero_alt"], quote=True)}" width="{hero_width}" height="{hero_height}" loading="eager" decoding="async">{caption_html}</figure>'
     explore_links, social_links = optional_link_sections(site)
     article_body = markdown_to_html(source)
-    rail_promo = render_product_promo(version)
+    rail_promo = render_product_promos(version, lang, promotion_catalog)
     rendered = replace_tokens(template, {
         "HTML_LANG": lang,
         "PAGE_TITLE": html.escape(version["title"] + " | Studios 216"),
@@ -494,7 +573,8 @@ def main() -> int:
     parser.add_argument("--check",action="store_true",help="Validate article metadata without writing output")
     args=parser.parse_args()
     site=load_json(SITE_CONFIG)
-    loaded=load_metadata()
+    promotion_catalog=load_product_promotion_catalog()
+    loaded=load_metadata(promotion_catalog)
     if args.check:
         print(f"Editorial metadata check passed ({len(loaded)} article families).")
         return 0
@@ -504,7 +584,7 @@ def main() -> int:
             continue
         for lang in sorted(meta["versions"]):
             version = meta["versions"][lang]
-            posts.append(render_article(meta,lang,version,site))
+            posts.append(render_article(meta,lang,version,site,promotion_catalog))
     posts.sort(key=lambda p:p["date"],reverse=True)
     POSTS_JSON.write_text(json.dumps(posts,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     render_indexes(posts,site)
