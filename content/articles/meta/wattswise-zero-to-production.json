@@ -77,7 +77,9 @@
         "eyebrow": "Herramienta relacionada",
         "title": "La herramienta que nació de este flujo",
         "body": "WattsWise fue creado para reducir la configuración repetida de cálculos descrita en este artículo, manteniendo las entradas visibles y ajustables manualmente.",
-        "cta": "Explorar WattsWise"
+        "cta": "Explorar WattsWise",
+        "image": "/assets/logo.jpg",
+        "image_alt": "Logotipo de la app WattsWise"
       }
     },
     "en": {
@@ -134,7 +136,9 @@
         "eyebrow": "Related tool",
         "title": "The tool that grew out of this workflow",
         "body": "WattsWise was built to reduce the repeated calculation setup described in this article while keeping inputs visible and manually adjustable.",
-        "cta": "Explore WattsWise"
+        "cta": "Explore WattsWise",
+        "image": "/assets/logo.jpg",
+        "image_alt": "WattsWise app logo"
       }
     }
   }
