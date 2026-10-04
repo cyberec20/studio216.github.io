@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "policy": {
+    "min_per_configured_article": 1,
+    "max_per_article": 3,
+    "require_for_all_published_articles": false,
+    "display_order": "array_order",
+    "language_fallback": null
+  },
+  "products": {
+    "wattswise": {
+      "status": "active",
+      "name": "WattsWise: Electric Calculator",
+      "image": "/assets/logo.jpg",
+      "locales": {
+        "en": {
+          "href": "/wattswise/",
+          "image_alt": "WattsWise app logo",
+          "eyebrow": "Related tool",
+          "cta": "Explore WattsWise"
+        },
+        "es": {
+          "href": "/wattswise/es/",
+          "image_alt": "Logotipo de la app WattsWise",
+          "eyebrow": "Herramienta relacionada",
+          "cta": "Explorar WattsWise"
+        }
+      }
+    }
+  }
+}
