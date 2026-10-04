@@ -127,6 +127,22 @@ body {
 }
 .article-product-promo--rail { margin-top: 1rem; }
 .article-product-promo--mobile { display: none; }
+.article-product-promo__header {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: .8rem;
+}
+.article-product-promo__image {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  object-fit: cover;
+  border-radius: .9rem;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 10px 28px rgba(0,0,0,.24);
+}
+.article-product-promo__heading { min-width: 0; }
 .article-product-promo__eyebrow {
   margin: 0 0 .45rem !important;
   color: #60a5fa !important;
@@ -164,6 +180,8 @@ body {
   .author-rail { position: static; order: 2; }
   .article-product-promo--rail { display: none; }
   .article-product-promo--mobile { display: block; margin: 1.5rem 0 1.9rem; }
+  .article-product-promo--mobile .article-product-promo__image { width: 56px; height: 56px; }
+  .article-product-promo--mobile .article-product-promo__header { align-items: flex-start; gap: .75rem; }
 }
 
 .article-hero { margin: 1.5rem 0 2.25rem; }
