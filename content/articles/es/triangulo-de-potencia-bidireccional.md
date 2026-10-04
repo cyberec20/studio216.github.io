@@ -6,7 +6,7 @@ La ficha indica un rendimiento del **90 %**, el proyecto trabaja a **400 V** y e
 
 Ahí aparece un problema habitual en ingeniería: **el dato conocido no siempre coincide con la casilla que espera la herramienta**. Una memoria de cargas proporciona kW; la placa de un transformador indica kVA; una medición de campo entrega amperios. Cambia el punto de partida, no la física. ¿Por qué, entonces, reconstruir el mismo análisis cada vez?
 
-El [módulo de potencia de WattsWise](/wattswise/) nació de esa necesidad: permitir distintos recorridos de cálculo válidos, conservar las hipótesis y actualizar las magnitudes dependientes. El triángulo sigue siendo el de siempre; lo que cambia es la forma de trabajar con él.
+El [módulo de potencia de WattsWise](/wattswise/es/) nació de esa necesidad: permitir distintos recorridos de cálculo válidos, conservar las hipótesis y actualizar las magnitudes dependientes. El triángulo sigue siendo el de siempre; lo que cambia es la forma de trabajar con él.
 
 
 ## El problema no es Excel: es perder el contexto entre cálculos
@@ -55,4 +55,4 @@ Así que `FP = P/S` conserva su definición, pero identificarlo sin más con `co
 
 La ecuación `S² = P² + Q²` cabe en una línea; el trabajo alrededor de ella, no. La próxima vez que una ficha entregue kVA o una medición proporcione amperios, no hará falta inventar otra fórmula. Si un motor obliga a distinguir potencia mecánica de eléctrica, el reto seguirá siendo el mismo: **comenzar con la información disponible sin perder el contexto**.
 
-Ese es el sentido del análisis bidireccional: menos transcripciones, más continuidad entre cálculos y espacio para comprobar las decisiones que ninguna calculadora debería tomar por cuenta propia. Es una guía sencilla para revisar cualquier calculadora: **¿facilita comprobar las hipótesis o solo entrega más resultados?** Quien quiera observar este enfoque en una herramienta puede [explorar WattsWise](/wattswise/) y comparar el flujo con su procedimiento habitual. La pregunta útil no es cuántas operaciones puede resolver una aplicación, sino cuántas veces obliga a reconstruirlas.
+Ese es el sentido del análisis bidireccional: menos transcripciones, más continuidad entre cálculos y espacio para comprobar las decisiones que ninguna calculadora debería tomar por cuenta propia. Es una guía sencilla para revisar cualquier calculadora: **¿facilita comprobar las hipótesis o solo entrega más resultados?** Quien quiera observar este enfoque en una herramienta puede [explorar WattsWise](/wattswise/es/) y comparar el flujo con su procedimiento habitual. La pregunta útil no es cuántas operaciones puede resolver una aplicación, sino cuántas veces obliga a reconstruirlas.
