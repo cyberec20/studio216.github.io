@@ -21,6 +21,14 @@ body {
   top: 7rem;
   align-self: start;
 }
+@media (min-width: 901px) {
+  .author-rail {
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    padding-right: .25rem;
+    scrollbar-width: thin;
+  }
+}
 .author-rail-card,
 .editorial-card {
   background: rgba(255,255,255,.025);
