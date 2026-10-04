@@ -80,11 +80,16 @@ def validate_version(meta_path: Path, lang: str, version: dict, published: bool)
             raise BuildError(f"{meta_path}: published {lang} version requires human_approval=approved")
     promotion = version.get("promotion")
     if promotion:
-        for key in ("product_id", "product_name", "href", "eyebrow", "title", "body", "cta"):
+        for key in ("product_id", "product_name", "href", "image", "image_alt", "eyebrow", "title", "body", "cta"):
             if not promotion.get(key):
                 raise BuildError(f"{meta_path}: {lang}.promotion.{key} is required")
         if not str(promotion["href"]).startswith("/"):
             raise BuildError(f"{meta_path}: {lang}.promotion.href must be an internal Studios216 path")
+        promo_image = str(promotion["image"])
+        if not promo_image.startswith("/"):
+            raise BuildError(f"{meta_path}: {lang}.promotion.image must be an internal asset path")
+        if not (ROOT / promo_image.lstrip("/")).exists():
+            raise BuildError(f"{meta_path}: {lang}.promotion.image asset not found: {promo_image}")
 
 def metadata_files() -> list[Path]:
     return sorted(p for p in META_DIR.glob("*.json") if p.is_file())
@@ -214,8 +219,13 @@ def render_product_promo(version: dict, placement: str) -> str:
     return (
         f'<aside class="article-product-promo article-product-promo--{modifier}" {attrs} '
         f'aria-label="{html.escape(str(promo["product_name"]), quote=True)}">'
+        f'<div class="article-product-promo__header">'
+        f'<img class="article-product-promo__image" src="{html.escape(str(promo["image"]), quote=True)}" '
+        f'alt="{html.escape(str(promo["image_alt"]), quote=True)}" width="72" height="72" loading="lazy" decoding="async">'
+        f'<div class="article-product-promo__heading">'
         f'<p class="article-product-promo__eyebrow">{html.escape(str(promo["eyebrow"]))}</p>'
         f'<h3>{html.escape(str(promo["title"]))}</h3>'
+        f'</div></div>'
         f'<p>{html.escape(str(promo["body"]))}</p>'
         f'<a class="article-product-promo__cta" href="{html.escape(str(promo["href"]), quote=True)}" {link_attrs}>'
         f'{html.escape(str(promo["cta"]))} <span aria-hidden="true">→</span></a></aside>'
