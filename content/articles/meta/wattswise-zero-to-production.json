@@ -70,17 +70,13 @@
         "human_approval": "approved",
         "idiomatic_spanish_review": "passed"
       },
-      "promotion": {
-        "product_id": "wattswise",
-        "product_name": "WattsWise: Electric Calculator",
-        "href": "/wattswise/es/",
-        "eyebrow": "Herramienta relacionada",
-        "title": "La herramienta que nació de este flujo",
-        "body": "WattsWise fue creado para reducir la configuración repetida de cálculos descrita en este artículo, manteniendo las entradas visibles y ajustables manualmente.",
-        "cta": "Explorar WattsWise",
-        "image": "/assets/logo.jpg",
-        "image_alt": "Logotipo de la app WattsWise"
-      }
+      "promotions": [
+        {
+          "product_id": "wattswise",
+          "title": "La herramienta que nació de este flujo",
+          "body": "WattsWise fue creado para reducir la configuración repetida de cálculos descrita en este artículo, manteniendo las entradas visibles y ajustables manualmente."
+        }
+      ]
     },
     "en": {
       "slug": "from-spreadsheets-to-wattswise-in-216-hours",
@@ -129,17 +125,13 @@
         "human_read_aloud_review": "passed",
         "human_approval": "approved"
       },
-      "promotion": {
-        "product_id": "wattswise",
-        "product_name": "WattsWise: Electric Calculator",
-        "href": "/wattswise/",
-        "eyebrow": "Related tool",
-        "title": "The tool that grew out of this workflow",
-        "body": "WattsWise was built to reduce the repeated calculation setup described in this article while keeping inputs visible and manually adjustable.",
-        "cta": "Explore WattsWise",
-        "image": "/assets/logo.jpg",
-        "image_alt": "WattsWise app logo"
-      }
+      "promotions": [
+        {
+          "product_id": "wattswise",
+          "title": "The tool that grew out of this workflow",
+          "body": "WattsWise was built to reduce the repeated calculation setup described in this article while keeping inputs visible and manually adjustable."
+        }
+      ]
     }
   }
 }
