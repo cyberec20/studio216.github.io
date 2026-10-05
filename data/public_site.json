@@ -14,7 +14,8 @@
     "blog",
     "diffdocs",
     "wattswise",
-    "products"
+    "products",
+    "tecnicas-visualizacion-datos"
   ],
   "excluded_names": [
     "README.md",
