@@ -33,6 +33,10 @@
     {
       "source": "/assets/products/impulsador-confianza-hipnotica.png",
       "target": "/assets/products/web/impulsador-confianza-hipnotica.webp"
+    },
+    {
+      "source": "/assets/products/lenny-kind-en.jpg",
+      "target": "/assets/products/web/lenny-kind-en.webp"
     }
   ]
 }
