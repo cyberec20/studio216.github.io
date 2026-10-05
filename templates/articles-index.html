@@ -38,7 +38,14 @@
     </div>
     <section class="article-toolbar mt-9" aria-label="Article filters">
       <input id="article-search" class="article-search" type="search" placeholder="{{SEARCH_PLACEHOLDER}}" autocomplete="off">
-      <select id="topic-filter" class="topic-select" aria-label="{{ALL_TOPICS_LABEL}}">{{TOPIC_OPTIONS}}</select>
+      <select id="topic-filter" class="topic-select topic-select-native" aria-label="{{ALL_TOPICS_LABEL}}">{{TOPIC_OPTIONS}}</select>
+      <div id="topic-picker" class="topic-picker">
+        <button id="topic-picker-button" class="topic-picker-button" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="topic-picker-menu">
+          <span id="topic-picker-label">{{ALL_TOPICS_LABEL}}</span>
+          <span class="topic-picker-chevron" aria-hidden="true">⌄</span>
+        </button>
+        <div id="topic-picker-menu" class="topic-picker-menu" role="listbox" tabindex="-1" hidden></div>
+      </div>
       {{LANGUAGE_FILTERS}}
     </section>
     <div class="article-results-meta mt-5">
@@ -59,6 +66,12 @@
     const PAGE_SIZE=10;
     const search=document.getElementById("article-search");
     const topic=document.getElementById("topic-filter");
+    const topicPicker=document.getElementById("topic-picker");
+    const topicButton=document.getElementById("topic-picker-button");
+    const topicMenu=document.getElementById("topic-picker-menu");
+    const topicLabel=document.getElementById("topic-picker-label");
+    const allTopicsLabel={{ALL_TOPICS_LABEL_JSON}};
+    let activeTopic="";
     const list=document.getElementById("article-list");
     const empty=document.getElementById("empty-state");
     const summary=document.getElementById("article-results-summary");
@@ -76,19 +89,61 @@
         ? {previous:"Anterior",next:"Siguiente",page:"Página",of:"de",showing:"Mostrando",results:"resultados",total:"en total"}
         : {previous:"Previous",next:"Next",page:"Page",of:"of",showing:"Showing",results:"results",total:"total"};
     };
+    function closeTopicMenu({focusButton=false}={}){
+      topicMenu.hidden=true;
+      topicButton.setAttribute("aria-expanded","false");
+      if(focusButton) topicButton.focus();
+    }
+    function syncTopicControls(){
+      topic.value=activeTopic;
+      topicLabel.textContent=activeTopic||allTopicsLabel;
+      topicMenu.querySelectorAll(".topic-picker-option").forEach(option=>{
+        const selected=option.dataset.value===activeTopic;
+        option.setAttribute("aria-selected",selected?"true":"false");
+        option.classList.toggle("selected",selected);
+      });
+    }
+    function selectTopic(value){
+      activeTopic=value;
+      syncTopicControls();
+      closeTopicMenu();
+      resetAndRender();
+    }
     function rebuildTopics(){
-      const labels=[...new Set(cards
+      const topicValues=[...new Set(cards
         .filter(card=>!activeLanguage||card.dataset.lang===activeLanguage)
         .flatMap(card=>cardTopics(card)))].sort((a,b)=>a.localeCompare(b));
-      const current=topic.value;
+
+      if(activeTopic&&!topicValues.includes(activeTopic)) activeTopic="";
+
       topic.replaceChildren();
-      const all=document.createElement("option"); all.value=""; all.textContent={{ALL_TOPICS_LABEL_JSON}}; topic.appendChild(all);
-      labels.forEach(label=>{const opt=document.createElement("option");opt.value=label;opt.textContent=label;topic.appendChild(opt);});
-      if(labels.includes(current)) topic.value=current;
+      const nativeAll=document.createElement("option");
+      nativeAll.value="";
+      nativeAll.textContent=allTopicsLabel;
+      topic.appendChild(nativeAll);
+      topicValues.forEach(value=>{
+        const opt=document.createElement("option");
+        opt.value=value;
+        opt.textContent=value;
+        topic.appendChild(opt);
+      });
+
+      topicMenu.replaceChildren();
+      [["",allTopicsLabel],...topicValues.map(value=>[value,value])].forEach(([value,label])=>{
+        const option=document.createElement("button");
+        option.type="button";
+        option.className="topic-picker-option";
+        option.dataset.value=value;
+        option.setAttribute("role","option");
+        option.textContent=label;
+        option.addEventListener("click",()=>selectTopic(value));
+        topicMenu.appendChild(option);
+      });
+      syncTopicControls();
     }
     function matchingCards(){
       const q=normalize(search.value);
-      const t=topic.value;
+      const t=activeTopic;
       return cards.filter(card=>{
         const languageOK=!activeLanguage||card.dataset.lang===activeLanguage;
         const topicOK=!t||cardTopics(card).includes(t);
@@ -135,7 +190,52 @@
       rebuildTopics(); resetAndRender();
     }));
     search.addEventListener("input",resetAndRender);
-    topic.addEventListener("change",resetAndRender);
+    topic.addEventListener("change",()=>{
+      activeTopic=topic.value;
+      syncTopicControls();
+      resetAndRender();
+    });
+    topicButton.addEventListener("click",()=>{
+      const opening=topicMenu.hidden;
+      topicMenu.hidden=!opening;
+      topicButton.setAttribute("aria-expanded",opening?"true":"false");
+      if(opening){
+        const selected=topicMenu.querySelector('.topic-picker-option[aria-selected="true"]')||topicMenu.querySelector(".topic-picker-option");
+        selected?.focus();
+      }
+    });
+    topicButton.addEventListener("keydown",event=>{
+      if(["ArrowDown","Enter"," "].includes(event.key)){
+        event.preventDefault();
+        topicMenu.hidden=false;
+        topicButton.setAttribute("aria-expanded","true");
+        const selected=topicMenu.querySelector('.topic-picker-option[aria-selected="true"]')||topicMenu.querySelector(".topic-picker-option");
+        selected?.focus();
+      }
+    });
+    topicMenu.addEventListener("keydown",event=>{
+      const options=[...topicMenu.querySelectorAll(".topic-picker-option")];
+      const index=options.indexOf(document.activeElement);
+      if(event.key==="Escape"){
+        event.preventDefault();
+        closeTopicMenu({focusButton:true});
+      }else if(event.key==="ArrowDown"){
+        event.preventDefault();
+        options[(index+1+options.length)%options.length]?.focus();
+      }else if(event.key==="ArrowUp"){
+        event.preventDefault();
+        options[(index-1+options.length)%options.length]?.focus();
+      }else if(event.key==="Home"){
+        event.preventDefault();
+        options[0]?.focus();
+      }else if(event.key==="End"){
+        event.preventDefault();
+        options.at(-1)?.focus();
+      }
+    });
+    document.addEventListener("click",event=>{
+      if(!topicPicker.contains(event.target)) closeTopicMenu();
+    });
     prev.addEventListener("click",()=>goToPage(-1));
     next.addEventListener("click",()=>goToPage(1));
     rebuildTopics(); render();
