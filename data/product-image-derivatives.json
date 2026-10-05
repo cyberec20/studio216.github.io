@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "defaults": {
+    "max_width": 720,
+    "quality": 82,
+    "format": "webp"
+  },
+  "images": [
+    {
+      "source": "/assets/logo.jpg",
+      "target": "/assets/products/web/wattswise.webp"
+    },
+    {
+      "source": "/assets/diff_docs_logo.png",
+      "target": "/assets/products/web/diffdocs.webp"
+    },
+    {
+      "source": "/assets/products/storytelling-con-datos.jpg",
+      "target": "/assets/products/web/storytelling-con-datos.webp"
+    },
+    {
+      "source": "/assets/products/tecnicas-visualizacion-datos.png",
+      "target": "/assets/products/web/tecnicas-visualizacion-datos.webp"
+    },
+    {
+      "source": "/assets/products/storytelling-tactics-exciting-speeches.png",
+      "target": "/assets/products/web/storytelling-tactics-exciting-speeches.webp"
+    },
+    {
+      "source": "/assets/products/maxima-relajacion.png",
+      "target": "/assets/products/web/maxima-relajacion.webp"
+    },
+    {
+      "source": "/assets/products/impulsador-confianza-hipnotica.png",
+      "target": "/assets/products/web/impulsador-confianza-hipnotica.webp"
+    }
+  ]
+}
