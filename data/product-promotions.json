@@ -26,6 +26,25 @@
           "cta": "Explorar WattsWise"
         }
       }
+    },
+    "scd": {
+      "status": "active",
+      "name": "Storytelling con datos",
+      "image": "/assets/products/storytelling-con-datos.jpg",
+      "locales": {
+        "en": {
+          "href": "/storytelling-con-datos/",
+          "image_alt": "Storytelling con datos course cover",
+          "eyebrow": "Related course",
+          "cta": "Explore Storytelling con datos"
+        },
+        "es": {
+          "href": "/storytelling-con-datos/es/",
+          "image_alt": "Portada del curso Storytelling con datos",
+          "eyebrow": "Curso relacionado",
+          "cta": "Explorar Storytelling con datos"
+        }
+      }
     }
   }
 }
