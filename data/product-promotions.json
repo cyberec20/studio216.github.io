@@ -45,6 +45,25 @@
           "cta": "Explorar Storytelling con datos"
         }
       }
+    },
+    "STMES": {
+      "status": "active",
+      "name": "Storytelling Tactics to Make Exciting Speeches",
+      "image": "/assets/products/storytelling-tactics-exciting-speeches.png",
+      "locales": {
+        "en": {
+          "href": "/storytelling-tactics-exciting-speeches/",
+          "image_alt": "Storytelling Tactics to Make Exciting Speeches course cover",
+          "eyebrow": "Related course",
+          "cta": "Explore Storytelling Tactics"
+        },
+        "es": {
+          "href": "/storytelling-tactics-exciting-speeches/es/",
+          "image_alt": "Portada del curso Storytelling Tactics to Make Exciting Speeches",
+          "eyebrow": "Curso relacionado",
+          "cta": "Explorar Storytelling Tactics"
+        }
+      }
     }
   }
 }
