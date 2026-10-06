@@ -15,7 +15,8 @@
     "diffdocs",
     "wattswise",
     "products",
-    "tecnicas-visualizacion-datos"
+    "tecnicas-visualizacion-datos",
+    "storytelling-con-datos"
   ],
   "excluded_names": [
     "README.md",
