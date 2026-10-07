@@ -37,6 +37,14 @@
     {
       "source": "/assets/products/lenny-kind-en.jpg",
       "target": "/assets/products/web/lenny-kind-en.webp"
+    },
+    {
+      "source": "/assets/products/email-motivacion-hipnotica.png",
+      "target": "/assets/products/web/email-motivacion-hipnotica.webp"
+    },
+    {
+      "source": "/assets/products/email-hypnotic-motivation.png",
+      "target": "/assets/products/web/email-hypnotic-motivation.webp"
     }
   ]
 }
