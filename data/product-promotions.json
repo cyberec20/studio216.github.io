@@ -128,6 +128,25 @@
           "cta": "Explorar Máxima relajación"
         }
       }
+    },
+    "IDC": {
+      "status": "active",
+      "name": "Impulsador de confianza hipnótica",
+      "image": "/assets/products/impulsador-confianza-hipnotica.png",
+      "locales": {
+        "en": {
+          "href": "/impulsador-confianza-hipnotica/",
+          "image_alt": "Impulsador de confianza hipnótica guided audio cover",
+          "eyebrow": "Related audio",
+          "cta": "Explore Impulsador de confianza"
+        },
+        "es": {
+          "href": "/impulsador-confianza-hipnotica/es/",
+          "image_alt": "Portada del audio Impulsador de confianza hipnótica",
+          "eyebrow": "Audio relacionado",
+          "cta": "Explorar Impulsador de confianza"
+        }
+      }
     }
   }
 }
