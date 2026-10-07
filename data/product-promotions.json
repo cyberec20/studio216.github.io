@@ -68,7 +68,7 @@
     "Mail_ES": {
       "status": "active",
       "name": "Un e-mail de motivación hipnótica",
-      "image": "/assets/products/email-motivacion-hipnotica.webp",
+      "image": "/assets/products/email-motivacion-hipnotica.png",
       "locales": {
         "es": {
           "href": "/email-motivacion-hipnotica/",
@@ -81,7 +81,7 @@
     "Mail_EN": {
       "status": "active",
       "name": "An e-mail of hypnotic motivation",
-      "image": "/assets/products/email-hypnotic-motivation.webp",
+      "image": "/assets/products/email-hypnotic-motivation.png",
       "locales": {
         "en": {
           "href": "/email-hypnotic-motivation/",
