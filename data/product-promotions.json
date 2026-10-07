@@ -64,6 +64,32 @@
           "cta": "Explorar Storytelling Tactics"
         }
       }
+    },
+    "Mail_ES": {
+      "status": "active",
+      "name": "Un e-mail de motivación hipnótica",
+      "image": "/assets/products/email-motivacion-hipnotica.webp",
+      "locales": {
+        "es": {
+          "href": "/email-motivacion-hipnotica/",
+          "image_alt": "Portada del libro Un e-mail de motivación hipnótica",
+          "eyebrow": "Libro relacionado",
+          "cta": "Explorar Un e-mail de motivación hipnótica"
+        }
+      }
+    },
+    "Mail_EN": {
+      "status": "active",
+      "name": "An e-mail of hypnotic motivation",
+      "image": "/assets/products/email-hypnotic-motivation.webp",
+      "locales": {
+        "en": {
+          "href": "/email-hypnotic-motivation/",
+          "image_alt": "Cover of An e-mail of hypnotic motivation",
+          "eyebrow": "Related book",
+          "cta": "Explore An e-mail of hypnotic motivation"
+        }
+      }
     }
   }
 }
