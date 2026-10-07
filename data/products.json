@@ -87,14 +87,14 @@
       "category": "Book",
       "language": "ES",
       "slug": "email-motivacion-hipnotica",
-      "image": "/assets/products/email-motivacion-hipnotica.webp",
-      "short_copy_es": "Un recorrido de 28 días sobre motivación inconsciente, patrones de pensamiento y constancia para avanzar hacia objetivos personales.",
+      "image": "/assets/products/email-motivacion-hipnotica.png",
+      "short_copy_es": "28 mensajes breves para cuando la motivación baja y necesitas volver a escuchar con claridad lo que de verdad te mueve.",
       "short_copy_en": "A 28-day journey exploring unconscious motivation, thought patterns, and consistency as tools for progressing toward personal goals.",
       "featured_home": false,
       "show_in_catalog": true,
       "sort_priority": 60,
       "detail_mode": "studios216_detail",
-      "primary_url": "https://www.amazon.com/dp/B01HSJQG9O"
+      "primary_url": "/email-motivacion-hipnotica/"
     },
     {
       "id": "Mail_EN",
@@ -102,14 +102,14 @@
       "category": "Book",
       "language": "EN",
       "slug": "email-hypnotic-motivation",
-      "image": "/assets/products/email-hypnotic-motivation.webp",
+      "image": "/assets/products/email-hypnotic-motivation.png",
       "short_copy_es": "Edición en inglés de un recorrido de 28 días sobre motivación inconsciente, patrones de pensamiento y constancia hacia objetivos personales.",
-      "short_copy_en": "An English-language 28-day journey exploring unconscious motivation, thought patterns, and consistency in pursuing personal goals.",
+      "short_copy_en": "28 short messages for the moments when motivation fades and you want to reconnect with what still matters.",
       "featured_home": false,
       "show_in_catalog": true,
       "sort_priority": 70,
       "detail_mode": "studios216_detail",
-      "primary_url": "https://www.amazon.com/dp/B07TQDSBWS"
+      "primary_url": "/email-hypnotic-motivation/"
     },
     {
       "id": "MR",
