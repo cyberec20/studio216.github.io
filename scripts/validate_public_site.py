@@ -47,6 +47,8 @@ required_files = {
     "lenny-the-little-sea-lion-learns-kindness/es/index.html",
     "maxima-relajacion/index.html",
     "maxima-relajacion/es/index.html",
+    "impulsador-confianza-hipnotica/index.html",
+    "impulsador-confianza-hipnotica/es/index.html",
     "articles/index.html",
     "articles/es/index.html",
     "articles/en/index.html",
