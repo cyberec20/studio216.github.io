@@ -90,6 +90,25 @@
           "cta": "Explore An e-mail of hypnotic motivation"
         }
       }
+    },
+    "LENNY_KIND_EN": {
+      "status": "active",
+      "name": "Lenny the Little Sea Lion Learns Kindness",
+      "image": "/assets/products/lenny-kind-en.jpg",
+      "locales": {
+        "en": {
+          "href": "/lenny-the-little-sea-lion-learns-kindness/",
+          "image_alt": "Cover of Lenny the Little Sea Lion Learns Kindness",
+          "eyebrow": "Related book",
+          "cta": "Explore Lenny"
+        },
+        "es": {
+          "href": "/lenny-the-little-sea-lion-learns-kindness/es/",
+          "image_alt": "Portada de Lenny the Little Sea Lion Learns Kindness",
+          "eyebrow": "Libro relacionado",
+          "cta": "Conocer a Lenny"
+        }
+      }
     }
   }
 }

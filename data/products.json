@@ -112,6 +112,21 @@
       "primary_url": "/email-hypnotic-motivation/"
     },
     {
+      "id": "LENNY_KIND_EN",
+      "name": "Lenny the Little Sea Lion Learns Kindness",
+      "category": "Book",
+      "language": "EN",
+      "slug": "lenny-the-little-sea-lion-learns-kindness",
+      "image": "/assets/products/lenny-kind-en.jpg",
+      "short_copy_es": "Un cuento rimado en inglés, inspirado en Galápagos, sobre un pequeño lobo marino, sus tesoros y el espacio que la amistad puede llegar a ocupar.",
+      "short_copy_en": "A rhyming Galápagos-inspired picture book about a little sea lion, treasured shells, and making room for kindness and friendship.",
+      "featured_home": false,
+      "show_in_catalog": true,
+      "sort_priority": 75,
+      "detail_mode": "studios216_detail",
+      "primary_url": "/lenny-the-little-sea-lion-learns-kindness/"
+    },
+    {
       "id": "MR",
       "name": "Máxima relajación: relájate y elimina el estrés de tu cuerpo y mente",
       "category": "Audio",
