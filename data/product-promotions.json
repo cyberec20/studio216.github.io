@@ -109,6 +109,25 @@
           "cta": "Conocer a Lenny"
         }
       }
+    },
+    "MR": {
+      "status": "active",
+      "name": "Máxima relajación: relájate y elimina el estrés de tu cuerpo y mente",
+      "image": "/assets/products/maxima-relajacion.png",
+      "locales": {
+        "en": {
+          "href": "/maxima-relajacion/",
+          "image_alt": "Máxima relajación guided audio cover",
+          "eyebrow": "Related audio",
+          "cta": "Explore Máxima relajación"
+        },
+        "es": {
+          "href": "/maxima-relajacion/es/",
+          "image_alt": "Portada del audio Máxima relajación",
+          "eyebrow": "Audio relacionado",
+          "cta": "Explorar Máxima relajación"
+        }
+      }
     }
   }
 }
