@@ -43,6 +43,8 @@ required_files = {
     "about/founder/index.html",
     "email-motivacion-hipnotica/index.html",
     "email-hypnotic-motivation/index.html",
+    "lenny-the-little-sea-lion-learns-kindness/index.html",
+    "lenny-the-little-sea-lion-learns-kindness/es/index.html",
     "articles/index.html",
     "articles/es/index.html",
     "articles/en/index.html",
