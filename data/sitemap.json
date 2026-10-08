@@ -8,7 +8,7 @@
     },
     {
       "loc": "https://studios216.com/products/",
-      "lastmod": "2026-10-07",
+      "lastmod": "2026-10-08",
       "changefreq": "weekly",
       "priority": "0.9"
     },
@@ -100,6 +100,16 @@
     {
       "loc": "https://studios216.com/impulsador-confianza-hipnotica/es/",
       "lastmod": "2026-10-07",
+      "priority": "0.9"
+    },
+    {
+      "loc": "https://studios216.com/diffdocs/",
+      "lastmod": "2026-10-08",
+      "priority": "0.9"
+    },
+    {
+      "loc": "https://studios216.com/diffdocs/es/",
+      "lastmod": "2026-10-08",
       "priority": "0.9"
     }
   ],
