@@ -69,7 +69,19 @@
         "human_read_aloud_review": "passed",
         "human_approval": "approved",
         "idiomatic_spanish_review": "passed"
-      }
+      },
+      "promotions": [
+        {
+          "product_id": "TVD",
+          "title": "Antes de interpretar métricas, elige bien el gráfico",
+          "body": "Técnicas de Visualización de Datos trabaja selección, limpieza y uso del color. Útil al convertir resultados de pruebas en información legible."
+        },
+        {
+          "product_id": "SCD",
+          "title": "Cuando los resultados deben convertirse en una presentación",
+          "body": "Storytelling con datos amplía el recorrido desde los gráficos hacia el mensaje, las diapositivas y la exposición de resultados. Curso en español."
+        }
+      ]
     },
     "en": {
       "slug": "local-ai-engineering-lab",
@@ -117,7 +129,19 @@
         "redundancy_review": "passed",
         "human_read_aloud_review": "passed",
         "human_approval": "approved"
-      }
+      },
+      "promotions": [
+        {
+          "product_id": "TVD",
+          "title": "Make the lab's charts easier to read",
+          "body": "Técnicas de Visualización de Datos covers chart selection, cleanup and color when test results need to become readable evidence. Taught in Spanish."
+        },
+        {
+          "product_id": "SCD",
+          "title": "Present the findings, not just the plots",
+          "body": "Storytelling con datos connects a clear message with charts, slides and delivery when findings need to be explained. Taught in Spanish."
+        }
+      ]
     }
   }
 }
