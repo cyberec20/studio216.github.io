@@ -41,7 +41,14 @@
       },
       "hero_width": 760,
       "hero_height": 428,
-      "listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-es.webp"
+      "listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-es.webp",
+      "promotions": [
+        {
+          "product_id": "diffdocs",
+          "title": "Cuando comparar versiones deja de exigir un agente",
+          "body": "DiffDocs presenta adiciones, eliminaciones, modificaciones y contenido movido entre documentos. Un ejemplo de software especializado para una tarea repetible."
+        }
+      ]
     },
     "en": {
       "slug": "do-we-really-need-another-agent",
@@ -81,7 +88,14 @@
       },
       "hero_width": 760,
       "hero_height": 428,
-      "listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-en.webp"
+      "listing_cover": "/assets/articles/do-we-really-need-another-agent/reference-en.webp",
+      "promotions": [
+        {
+          "product_id": "diffdocs",
+          "title": "When document comparison becomes a repeatable tool",
+          "body": "DiffDocs highlights additions, deletions, edits and moved content across document versions. A concrete example of specialized software for recurring work."
+        }
+      ]
     }
   }
 }
