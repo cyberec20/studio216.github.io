@@ -58,7 +58,19 @@
         "punctuation_review": "passed",
         "human_read_aloud_review": "passed",
         "human_approval": "approved"
-      }
+      },
+      "promotions": [
+        {
+          "product_id": "diffdocs",
+          "title": "De una idea a un SaaS que puedes probar",
+          "body": "DiffDocs permite revisar diferencias entre versiones de documentos desde el navegador. Un producto con un problema y un flujo concretos."
+        },
+        {
+          "product_id": "wattswise",
+          "title": "Una necesidad técnica convertida en aplicación",
+          "body": "WattsWise reúne cálculos eléctricos relacionados y mantiene las entradas visibles para revisar las hipótesis."
+        }
+      ]
     },
     "en": {
       "slug": "from-idea-to-functional-product",
@@ -100,7 +112,19 @@
         "punctuation_review": "passed",
         "human_read_aloud_review": "passed",
         "human_approval": "approved"
-      }
+      },
+      "promotions": [
+        {
+          "product_id": "diffdocs",
+          "title": "From an idea to a SaaS you can try",
+          "body": "DiffDocs lets you review differences between document versions in your browser. A product with a specific problem and workflow."
+        },
+        {
+          "product_id": "wattswise",
+          "title": "An engineering need turned into an app",
+          "body": "WattsWise connects related electrical calculations while keeping inputs visible for engineering review."
+        }
+      ]
     }
   }
 }

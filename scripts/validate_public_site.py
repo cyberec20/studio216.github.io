@@ -45,6 +45,8 @@ required_files = {
     "email-hypnotic-motivation/index.html",
     "lenny-the-little-sea-lion-learns-kindness/index.html",
     "lenny-the-little-sea-lion-learns-kindness/es/index.html",
+    "diffdocs/index.html",
+    "diffdocs/es/index.html",
     "maxima-relajacion/index.html",
     "maxima-relajacion/es/index.html",
     "impulsador-confianza-hipnotica/index.html",

@@ -27,6 +27,44 @@
         }
       }
     },
+    "diffdocs": {
+      "status": "active",
+      "name": "DiffDocs",
+      "image": "/assets/diff_docs_logo.png",
+      "locales": {
+        "en": {
+          "href": "/diffdocs/",
+          "image_alt": "DiffDocs document comparison logo",
+          "eyebrow": "Related SaaS",
+          "cta": "Explore DiffDocs"
+        },
+        "es": {
+          "href": "/diffdocs/es/",
+          "image_alt": "Logotipo de DiffDocs para comparación documental",
+          "eyebrow": "SaaS relacionado",
+          "cta": "Explorar DiffDocs"
+        }
+      }
+    },
+    "TVD": {
+      "status": "active",
+      "name": "Técnicas de Visualización de Datos",
+      "image": "/assets/products/tecnicas-visualizacion-datos.png",
+      "locales": {
+        "en": {
+          "href": "/tecnicas-visualizacion-datos/",
+          "image_alt": "Técnicas de Visualización de Datos course cover",
+          "eyebrow": "Spanish-language course",
+          "cta": "Explore data visualization course"
+        },
+        "es": {
+          "href": "/tecnicas-visualizacion-datos/es/",
+          "image_alt": "Portada de Técnicas de Visualización de Datos",
+          "eyebrow": "Curso relacionado",
+          "cta": "Explorar Técnicas de Visualización de Datos"
+        }
+      }
+    },
     "SCD": {
       "status": "active",
       "name": "Storytelling con datos",

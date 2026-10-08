@@ -69,7 +69,14 @@
         "redundancy_review": "passed",
         "human_read_aloud_review": "passed",
         "human_approval": "approved"
-      }
+      },
+      "promotions": [
+        {
+          "product_id": "diffdocs",
+          "title": "Explore the product behind this engineering story",
+          "body": "DiffDocs compares versions of DOCX, PDF, XLSX and CSV documents and displays changes for review. Explore the SaaS discussed here."
+        }
+      ]
     },
     "es": {
       "slug": "diffdocs-35-meses-ia-ingenieria",
@@ -117,7 +124,14 @@
         "human_read_aloud_review": "passed",
         "idiomatic_spanish_review": "passed",
         "human_approval": "approved"
-      }
+      },
+      "promotions": [
+        {
+          "product_id": "diffdocs",
+          "title": "Explora el producto detrás de esta historia",
+          "body": "DiffDocs permite comparar versiones de DOCX, PDF, XLSX y CSV y revisar diferencias visuales. Conoce el SaaS descrito en este artículo."
+        }
+      ]
     }
   }
 }

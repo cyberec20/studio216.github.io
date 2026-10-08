@@ -58,7 +58,19 @@
         "punctuation_review": "passed",
         "human_read_aloud_review": "passed",
         "human_approval": "approved"
-      }
+      },
+      "promotions": [
+        {
+          "product_id": "diffdocs",
+          "title": "Una comparación también necesita criterio",
+          "body": "DiffDocs muestra cambios documentales para facilitar su revisión. Localizarlos es tarea del software; interpretar sus consecuencias sigue siendo humano."
+        },
+        {
+          "product_id": "wattswise",
+          "title": "Cálculos conectados; criterio técnico intacto",
+          "body": "WattsWise recalcula magnitudes eléctricas relacionadas. Las hipótesis y la aceptación técnica siguen dependiendo del profesional."
+        }
+      ]
     },
     "en": {
       "slug": "ai-does-not-eliminate-engineering",
@@ -100,7 +112,19 @@
         "punctuation_review": "passed",
         "human_read_aloud_review": "passed",
         "human_approval": "approved"
-      }
+      },
+      "promotions": [
+        {
+          "product_id": "diffdocs",
+          "title": "A document comparison still needs judgment",
+          "body": "DiffDocs displays changes between documents for review. Finding a difference is software work; deciding what it means is human work."
+        },
+        {
+          "product_id": "wattswise",
+          "title": "Connected calculations still need engineering judgment",
+          "body": "WattsWise recalculates related electrical values while assumptions and technical acceptance remain with the professional."
+        }
+      ]
     }
   }
 }
