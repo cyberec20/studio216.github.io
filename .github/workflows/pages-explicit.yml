@@ -40,6 +40,9 @@ jobs:
       - name: Validate builder source fidelity and sitemap contract
         run: python scripts/validate_builder_contract.py
 
+      - name: Validate institutional brand (source)
+        run: python scripts/validate_institutional_brand.py
+
       - name: Validate source SEO
         run: python scripts/validate_seo.py
 
@@ -51,6 +54,9 @@ jobs:
 
       - name: Validate publication boundary
         run: python scripts/validate_public_site.py --root _site --require-nojekyll
+
+      - name: Validate institutional brand (published artifact)
+        run: python scripts/validate_institutional_brand.py --root _site
 
       - name: Validate global analytics and consent
         run: python scripts/validate_analytics.py --root _site
