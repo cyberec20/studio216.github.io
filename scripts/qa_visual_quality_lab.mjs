@@ -23,3 +23,24 @@ const firstCritical=active.find(r=>r.critical);assert(firstCritical);
 answers[firstCritical.id]=0;const rated=calculate(ctx,answers);
 assert(rated.critical.includes(firstCritical.id));assert(rated.pct<100);
 console.log('PASS: 56/56 unique rules, 8 dimensions, 420/420 context combinations, score and critical gates.');
+
+import {readFileSync,existsSync} from 'node:fs';
+const relatedCoursesForLab=[
+ {id:'course-tvd',image:'/assets/products/tecnicas-visualizacion-datos.png',es:'/tecnicas-visualizacion-datos/es/',en:'/tecnicas-visualizacion-datos/'},
+ {id:'course-scd',image:'/assets/products/storytelling-con-datos.jpg',es:'/storytelling-con-datos/es/',en:'/storytelling-con-datos/'}
+];
+for(const [locale,path] of [['es','es/herramientas/visualizacion-datos/index.html'],['en','tools/data-visualization/checklist/index.html']]){
+ const source=readFileSync(new URL('../'+path,import.meta.url),'utf8');
+ for(const card of relatedCoursesForLab){
+  const pattern=new RegExp('<a\\b[^>]*id="'+card.id+'"[^>]*>[\\s\\S]*?<\\/a>','g');
+  const found=[...source.matchAll(pattern)];assert.equal(found.length,1,locale+' '+card.id);
+  const body=found[0][0];
+  assert(body.includes('article-product-promo__image'));
+  assert(body.includes('src="'+card.image+'"'));
+  assert(body.includes('alt="')&&body.includes('loading="lazy"'));
+  assert(body.includes('data-analytics-impression="product_impression"'));
+  assert(body.includes('data-analytics-destination="'+card[locale]+'"'));
+  assert(existsSync(new URL('..'+card.image,import.meta.url)),card.image);
+ }
+}
+console.log('PASS: course promotion images and localized metadata (4 cards).');

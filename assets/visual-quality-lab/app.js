@@ -28,12 +28,22 @@ function textStatic(){document.documentElement.lang=state.lang;$('main-title').t
  'rail-notice':['Los recursos complementan la evaluación gratuita.','Resources complement the free assessment.'],
  'rail-data-title':['Técnicas de Visualización de Datos','Data Visualization Techniques'],
  'rail-story-title':['Storytelling con datos','Storytelling with Data'],
+ 'rail-course-cta':['Explorar curso →','Explore course →'],
  'rail-articles-title':['Otros artículos sobre datos e ingeniería','More articles on data and engineering'],
  'rail-article-text':['Ejemplos y análisis para profundizar.','Examples and deeper analysis.'],
  'footer-notice':['Autoevaluación educativa orientativa, no inspección automática ni certificación técnica.','Educational self-assessment, not automatic visual inspection or technical certification.'],
  'privacy-label':['Privacidad','Privacy']
  };
  document.querySelectorAll('[data-localize]').forEach(e=>{let pair=bits[e.dataset.localize];if(pair)e.textContent=pair[state.lang==='es'?0:1];});
+ for(const [id,alts,labels] of [
+  ['course-tvd',['Portada del curso Técnicas de Visualización de Datos','Técnicas de Visualización de Datos course cover'],['Técnicas de Visualización de Datos','Data Visualization Techniques']],
+  ['course-scd',['Portada del curso Storytelling con datos','Storytelling con datos course cover'],['Storytelling con datos','Storytelling with Data']]
+ ]){
+   const node=$(id),langIndex=state.lang==='es'?0:1;
+   node.querySelector('img').alt=alts[langIndex];
+   node.setAttribute('aria-label',labels[langIndex]);
+   node.dataset.analyticsDestination=node.getAttribute('href');
+ }
  $('head-tools').textContent=state.lang==='es'?'Herramientas':'Tools';
  $('head-tools').href='/tools/';
  $('site-nav').setAttribute('aria-label',state.lang==='es'?'Navegación principal':'Main navigation');
