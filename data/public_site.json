@@ -22,7 +22,9 @@
     "email-hypnotic-motivation",
     "lenny-the-little-sea-lion-learns-kindness",
     "maxima-relajacion",
-    "impulsador-confianza-hipnotica"
+    "impulsador-confianza-hipnotica",
+    "tools",
+    "es"
   ],
   "excluded_names": [
     "README.md",
