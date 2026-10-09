@@ -44,3 +44,20 @@ for(const [locale,path] of [['es','es/herramientas/visualizacion-datos/index.htm
  }
 }
 console.log('PASS: course promotion images and localized metadata (4 cards).');
+
+const localizedArticleTitlesForLab=[
+ ['rail-articles','Artículos de Studios216 →','Studios216 articles →'],
+ ['rail-article-1','De Excel a WattsWise →','From Spreadsheets to WattsWise →'],
+ ['rail-article-2','Triángulo de potencia →','Bidirectional Power Triangle →']
+];
+const localizeAppSource=readFileSync(new URL('../assets/visual-quality-lab/app.js',import.meta.url),'utf8');
+for(const [locale,file] of [['es','es/herramientas/visualizacion-datos/index.html'],['en','tools/data-visualization/checklist/index.html']]){
+ const markup=readFileSync(new URL('../'+file,import.meta.url),'utf8');
+ for(const [id,es,en] of localizedArticleTitlesForLab){
+  const label=locale==='es'?es:en;
+  assert(markup.includes('data-localize="'+id+'"'),locale+' missing localization: '+id);
+  assert(markup.includes('>'+label+'</a>'),locale+' wrong article title: '+id);
+  assert(localizeAppSource.includes("'"+id+"':['"+es+"','"+en+"']"),'translation missing: '+id);
+ }
+}
+console.log('PASS: three article-rail links have ES/EN initial and dynamic labels.');
