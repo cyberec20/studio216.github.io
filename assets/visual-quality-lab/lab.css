@@ -53,3 +53,38 @@
   color:#bfdbfe;font-size:13px;font-weight:800}
 .rail .lab-course-promo:hover .article-product-promo__cta{color:#fff}
 @media(max-width:900px){.rail .lab-course-promo .article-product-promo__image{width:60px;height:60px}}
+
+
+/* v0.4.0: external AI handoff, download guidance and responsive layout */
+.ai-handoff{margin-top:30px;padding:24px;border:1px solid #39516d;border-radius:18px;
+ background:linear-gradient(135deg,#121f32,#0e1622);color:#dce7f3}
+.ai-handoff__eyebrow{color:#60a5fa;letter-spacing:.11em;font-size:11px;font-weight:800;margin-bottom:9px}
+.ai-handoff h3{font-size:23px;line-height:1.25;color:white;margin:0 0 13px}
+.ai-handoff__intro{color:#bacbdf;font-size:15px;line-height:1.65;margin:0 0 20px}
+.handoff-items{display:grid;gap:0;border:1px solid #334155;border-radius:13px;overflow:hidden;background:#101925}
+.handoff-item{display:flex;align-items:flex-start;gap:15px;padding:17px 18px}
+.handoff-item+.handoff-item{border-top:1px solid #334155}
+.handoff-item__icon{display:flex;flex:none;align-items:center;justify-content:center;width:38px;height:38px;
+ border-radius:10px;background:#1f3b5d;color:#a9d2ff;font-weight:800;font-size:13px}
+.handoff-item h4{color:#f6faff;font-size:15px;margin:0 0 5px}
+.handoff-item p{color:#aebfd2;font-size:13px;line-height:1.55;margin:0}
+.handoff-guide{background:#17263c;border:1px solid #365374;border-radius:12px;margin-top:18px;padding:16px 18px}
+.handoff-guide h4{color:#ecf5ff;font-size:15px;margin:0 0 8px}
+.handoff-guide p{font-size:13px;line-height:1.6;margin:0;color:#d3e2f5}
+.handoff-guide p+p{margin-top:10px}
+.handoff-guide__caution{color:#b9cbe1!important}
+.handoff-no-upload{color:#9fb1c7;font-size:12px;margin:14px 0 0}
+.handoff-download-panel{margin:22px 0 12px}
+.handoff-download-panel h3{color:#fff;font-size:19px;margin:0 0 14px}
+.handoff-download-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.handoff-download{min-height:50px;padding:12px 14px;border:1px solid #40516a;background:#152132;
+ border-radius:11px;color:#ddecff;font-size:14px;font-weight:700;cursor:pointer;text-align:left}
+.handoff-download:hover{border-color:#7dbaff;background:#1c304a}
+.handoff-download:focus-visible{outline:2px solid #60a5fa;outline-offset:3px}
+.handoff-download--primary{background:#194a88;border-color:#4b98ff;color:#fff}
+.handoff-download--primary:hover{background:#1c5fa9}
+.handoff-download--secondary{opacity:.85}
+@media(max-width:600px){.ai-handoff{padding:16px}.ai-handoff h3{font-size:20px}
+ .handoff-item{padding:13px;gap:10px}.handoff-download-grid{grid-template-columns:1fr}
+ .handoff-download{min-height:48px}}
+@media print{.ai-handoff,.handoff-download-panel{display:none!important}}
