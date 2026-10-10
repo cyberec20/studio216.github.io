@@ -49,6 +49,11 @@ jobs:
       - name: Validate editorial foundation
         run: python scripts/validate_editorial.py
 
+      - name: QA Visual Quality Lab (rules and AI handoff ES/EN)
+        run: |
+          node scripts/qa_visual_quality_lab.mjs
+          node scripts/qa_visual_quality_handoff.mjs
+
       - name: Build explicit public artifact
         run: python scripts/build_public_site.py --destination _site
 

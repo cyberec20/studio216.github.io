@@ -58,6 +58,7 @@ required_files = {
     "tools/data-visualization/checklist/index.html",
     "es/herramientas/visualizacion-datos/index.html",
     "assets/visual-quality-lab/app.js",
+    "assets/visual-quality-lab/handoff.js",
     "assets/visual-quality-lab/rules.js",
     "assets/visual-quality-lab/lab.css",
     "robots.txt",

@@ -1,4 +1,5 @@
 import {SCHEMA, dimensions, rules, CHARTS, TASKS, SUBTYPES, DASH_COMPONENTS, compatibility, applies, selectedRules, groupQuestions, calculate} from './rules.js';
+import {enrichAssessment, buildAIMarkdown} from './handoff.js';
 const $=id=>document.getElementById(id);
 const STORAGE='studios216.visual-quality-lab.public.v0.3';
 const i18n={
@@ -13,6 +14,7 @@ const options={
  medium:[['slides','Presentación','Presentation'],['report','Informe / documento','Report / document'],['web','Web / interactivo','Web / interactive']],
  audience:[['general','Público general','General audience'],['technical','Equipo técnico','Technical team'],['executive','Dirección / gerencia','Executives / management']]
 };
+let assessmentIdentity=null;
 const state={lang:document.body.dataset.initialLang==='en'?'en':'es',phase:'setup',step:0,context:{chart:'bar',subtype:'simple',components:[],task:'compare',purpose:'inform',medium:'slides',audience:'general',depth:'quick'},answers:{}};
 const t=k=>i18n[state.lang][k]||k;
 const valLabel=(field,v)=>{const x=(options[field]||[]).find(o=>o[0]===v);return x?(state.lang==='es'?x[1]:x[2]):v};
@@ -156,17 +158,80 @@ function renderQuestions(){
 }
 
 function fmt(v){return v===null?t('none'):`${v}%`;}
-function reportPayload(){const result=calculate(state.context,state.answers);return {schema:SCHEMA,created_at:new Date().toISOString(),language:state.lang,context:{...state.context,components:[...state.context.components]},chart_task_advisory:compatibility(state.context),answers:{...state.answers},result:{selected_count:result.selectedCount,answered_count:result.answered,not_applicable:result.na,not_evaluable:result.unknown,points_earned:result.score,points_possible_evaluated:result.max,observed_percentage:result.pct,coverage_percentage:result.coverage,critical_rule_ids:result.critical,critical_unverified_ids:result.criticalUnverified,by_dimension:result.byDimension},disclaimer:'Self-assessment using pilot rules, not an independent visual verification or measured effectiveness.'};}
+function reportPayload(){
+ const result=calculate(state.context,state.answers);
+ if(result.remaining)throw new Error('Assessment incomplete');
+ if(!assessmentIdentity){
+  const id=typeof crypto!=='undefined'&&crypto.randomUUID?crypto.randomUUID():
+   'vql-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,11);
+  assessmentIdentity={id,created_at:new Date().toISOString()};
+ }
+ const base={schema:SCHEMA,assessment_id:assessmentIdentity.id,created_at:assessmentIdentity.created_at,language:state.lang,
+  context:{...state.context,components:[...state.context.components]},
+  chart_task_advisory:compatibility(state.context),answers:{...state.answers},
+  result:{selected_count:result.selectedCount,answered_count:result.answered,not_applicable:result.na,
+    not_evaluable:result.unknown,points_earned:result.score,points_possible_evaluated:result.max,
+    observed_percentage:result.pct,coverage_percentage:result.coverage,
+    critical_rule_ids:result.critical,critical_unverified_ids:result.criticalUnverified,
+    by_dimension:result.byDimension}};
+ const labels={chart:valLabel('chart',state.context.chart),task:valLabel('task',state.context.task),
+  purpose:valLabel('purpose',state.context.purpose),medium:valLabel('medium',state.context.medium),
+  audience:valLabel('audience',state.context.audience),depth:valLabel('depth',state.context.depth)};
+ if((SUBTYPES[state.context.chart]||[]).includes(state.context.subtype))
+  labels.subtype=subtypeLabels[state.context.subtype]?.[state.lang==='es'?0:1]||state.context.subtype;
+ if(state.context.chart==='dashboard')labels.components=state.context.components.map(chartLabel);
+ return enrichAssessment(base,selectedRules(state.context),dimensions,state.lang,labels);
+}
+
+const handoffText={
+ es:{
+  title:'Convierte tu diagnóstico en mejoras reales',
+  description:'Descarga una guía con instrucciones y hallazgos específicos de tu evaluación. Puedes utilizarla en ChatGPT, Claude, Gemini u otra IA compatible. Son herramientas externas; esta página no incluye una IA que edite gráficos.',
+  first:'1. Prompt de mejora (.md)',firstDescription:'Guía autosuficiente con todos los hallazgos, prioridades, recomendaciones y comprobaciones.',
+  second:'2. Resultados de evaluación (.json)',secondDescription:'Respuestas y puntuaciones estructuradas que comparten el ID del archivo Markdown.',
+  third:'3. Tu gráfico o archivo original',thirdDescription:'Adjunta a tu IA el Excel, dashboard, presentación, gráfico, código o dataset cuando quieras que trabaje sobre la visualización. No se sube nada aquí.',
+  flow:'¿Cómo utilizarlos?',flowText:'Abre ChatGPT, Claude, Gemini u otra IA compatible y comparte el Markdown. Puedes añadir el JSON para mayor detalle. Para editar un gráfico, adjunta el archivo original directamente a esa IA. Pide una copia mejorada que conserve datos, fórmulas y funcionalidades.',
+  caution:'Sin gráfico ni datos, la IA puede orientar, pero no debería afirmar que corrigió el archivo. Evita compartir información confidencial sin autorización.',
+  downloads:'Descargas de tu evaluación',md:'Prompt IA · MD',json:'Resultados · JSON',pdf:'Informe · PDF',txt:'Resumen · TXT',
+  noUpload:'Studios216 no recibe tu archivo original ni envía las respuestas a una IA.'
+ },
+ en:{
+  title:'Turn your assessment into real improvements',
+  description:'Download a guide with instructions and findings specific to your assessment. Use it with ChatGPT, Claude, Gemini, or another compatible AI. These services are external; this page does not include an AI that edits charts.',
+  first:'1. Improvement prompt (.md)',firstDescription:'Self-contained guide with every finding, priority, recommendation, and verification step.',
+  second:'2. Assessment results (.json)',secondDescription:'Structured answers and scores with the same assessment ID as the Markdown.',
+  third:'3. Your original chart or file',thirdDescription:'Attach your Excel workbook, dashboard, presentation, chart, code, or dataset directly to your AI if you want changes to the visualization. Nothing is uploaded here.',
+  flow:'How to use them',flowText:'Open ChatGPT, Claude, Gemini, or another compatible AI and share the Markdown. You can add the JSON for more detail. To edit a chart, attach the original file directly to that AI. Request an improved copy that preserves data, formulas, and features.',
+  caution:'Without the chart or data, the AI can guide you but should not claim it edited your file. Avoid sharing confidential information without authorization.',
+  downloads:'Your assessment downloads',md:'AI prompt · MD',json:'Results · JSON',pdf:'Report · PDF',txt:'Summary · TXT',
+  noUpload:'Studios216 does not receive your original file or send answers to any AI.'
+ }
+};
+function renderHandoffPanel(){
+ const c=handoffText[state.lang];
+ const item=(number,title,description)=>'<div class="handoff-item"><span class="handoff-item__icon" aria-hidden="true">'+number+'</span><div><h4>'+title+'</h4><p>'+description+'</p></div></div>';
+ const option=(id,label,extra='')=>'<button type="button" id="'+id+'" class="handoff-download '+extra+'">'+label+'</button>';
+ return '<section class="ai-handoff" aria-labelledby="ai-handoff-title">'+
+  '<div class="ai-handoff__eyebrow">STUDIOS216 · VISUAL QUALITY LAB</div>'+
+  '<h3 id="ai-handoff-title">'+c.title+'</h3><p class="ai-handoff__intro">'+c.description+'</p>'+
+  '<div class="handoff-items">'+item('01',c.first,c.firstDescription)+item('02',c.second,c.secondDescription)+item('03',c.third,c.thirdDescription)+'</div>'+
+  '<div class="handoff-guide"><h4>'+c.flow+'</h4><p>'+c.flowText+'</p><p class="handoff-guide__caution">'+c.caution+'</p></div>'+
+  '<p class="handoff-no-upload">'+c.noUpload+'</p></section>'+
+  '<section class="handoff-download-panel" aria-labelledby="handoff-download-title"><h3 id="handoff-download-title">'+c.downloads+'</h3>'+
+  '<div class="handoff-download-grid">'+option('md',c.md,'handoff-download--primary')+option('json',c.json)+option('pdf',c.pdf)+option('txt',c.txt,'handoff-download--secondary')+'</div></section>';
+}
+
 function renderResults(){const res=calculate(state.context,state.answers);if(res.remaining){state.phase='questions';state.step=0;render();return;}
 navBar(t('report'),'STUDIOS216 · DATA QUALITY REPORT',groupQuestions(state.context).length,groupQuestions(state.context).length,100);
 const scoreLabel=res.pct===null?t('none'):fmt(res.pct);let top=res.recommendations.slice(0,7);
 let rows=dimensions.map(d=>{const x=res.byDimension[d.id];if(x.answered===0)return '';const val=x.total?Math.round(x.scored/x.total*100):null;return `<div class="dimension-row"><span>${d.title[state.lang]}</span><div class="scorebar"><span style="width:${val??0}%"></span></div><strong>${fmt(val)}</strong></div>`;}).join('');
 let recs=top.map(a=>`<article class="finding"><p class="key">${a.critical?'⚑ '+t('critical')+' · ':''}${a.id}</p><h4>${a.rule.title[state.lang]}</h4>${a.rule.problem?`<p><strong>${t('why')}:</strong> ${a.rule.problem[state.lang]}</p>`:''}<p><strong>${t('action')}:</strong> ${a.rule.tip[state.lang]}</p>${a.rule.verify?`<p><strong>${t('verify')}:</strong> ${a.rule.verify[state.lang]}</p>`:''}</article>`).join('')||`<p class="muted">${t('noIssues')}</p>`;
 $('screen').innerHTML=`<div class="report-content"><div class="report-only"><h1 class="report-print-title">Studios216 — ${t('report')}</h1><p>${t('reportIntro')}</p></div><p class="screen-intro">${t('reportIntro')}</p><div class="stats"><div class="stat"><strong>${scoreLabel}</strong><span>${t('score')}</span></div><div class="stat"><strong>${fmt(res.coverage)}</strong><span>${t('coverage')}</span></div><div class="stat"><strong>${res.critical.length}</strong><span>${t('risk')}</span></div></div>${res.critical.length?`<div class="alert">${t('severe')} (${res.critical.join(', ')})</div>`:''}${res.unknown?`<div class="notice">${t('unknown')}</div>`:''}${res.criticalUnverified.length?`<div class="alert">${t('unverified')}: ${res.criticalUnverified.join(', ')}.</div>`:''}${compatibility(state.context)?`<div class="advice"><strong>${t('taskMismatch')}</strong><p>${compatibility(state.context).alternatives.map(chartLabel).join(' · ')}</p></div>`:''}<h3 class="result-title">${t('barTitle')}</h3>${rows}<h3 class="result-title">${t('needs')}</h3>${recs}<div class="notice">${t('naNote')}<br>${t('downloadDetails')}</div></div>`;
-$('actions').innerHTML=`<div class="small-actions">${button(t('json'),'json')}${button(t('txt'),'txt')}${button(t('pdf'),'pdf')}</div>${button(t('again'),'reset')}`;
+$('screen').insertAdjacentHTML('beforeend',renderHandoffPanel());
+$('actions').innerHTML=button(t('again'),'reset');$('md').addEventListener('click',()=>download('studios216-ai-improvement-prompt.md',buildAIMarkdown(reportPayload()),'text/markdown'));
 $('json').addEventListener('click',()=>download('studios216-visual-diagnostic.json',JSON.stringify(reportPayload(),null,2),'application/json'));
-$('txt').addEventListener('click',()=>{const result=reportPayload();let lines=[`STUDIOS216 — ${t('report')}`,`${t('score')}: ${scoreLabel}`,`${t('coverage')}: ${fmt(res.coverage)}`,`${t('risk')}: ${res.critical.length}`,`${t('unverified')}: ${res.criticalUnverified.length}`,`${t('naNote')}`,'',t('needs'),...top.map((a,i)=>`${i+1}. [${a.id}] ${a.rule.title[state.lang]} — ${t('action')}: ${a.rule.tip[state.lang]}${a.rule.verify?' — '+t('verify')+': '+a.rule.verify[state.lang]:''}`),'',JSON.stringify(result.context,null,2)];download('studios216-improvement-plan.txt',lines.join('\n'),'text/plain');});
-$('pdf').addEventListener('click',()=>window.print());$('reset').addEventListener('click',()=>{if(window.confirm(t('resetConfirm'))){try{localStorage.removeItem(STORAGE);}catch(_){}state.phase='setup';state.step=0;state.answers={};render();}});}
+$('txt').addEventListener('click',()=>{const result=reportPayload();let lines=['ID: '+result.assessment_id,`STUDIOS216 — ${t('report')}`,`${t('score')}: ${scoreLabel}`,`${t('coverage')}: ${fmt(res.coverage)}`,`${t('risk')}: ${res.critical.length}`,`${t('unverified')}: ${res.criticalUnverified.length}`,`${t('naNote')}`,'',t('needs'),...top.map((a,i)=>`${i+1}. [${a.id}] ${a.rule.title[state.lang]} — ${t('action')}: ${a.rule.tip[state.lang]}${a.rule.verify?' — '+t('verify')+': '+a.rule.verify[state.lang]:''}`),'',JSON.stringify(result.context,null,2)];download('studios216-improvement-plan.txt',lines.join('\n'),'text/plain');});
+$('pdf').addEventListener('click',()=>window.print());$('reset').addEventListener('click',()=>{if(window.confirm(t('resetConfirm'))){try{localStorage.removeItem(STORAGE);}catch(_){}state.phase='setup';state.step=0;state.answers={};assessmentIdentity=null;render();}});}
 function download(name,content,mime){const blob=new Blob([content],{type:mime+';charset=utf-8'});const href=URL.createObjectURL(blob);const a=document.createElement('a');a.href=href;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(href),1000);}
 function readDraft(){try{const x=JSON.parse(localStorage.getItem(STORAGE)||'null');if(!x||x.schema!==SCHEMA||!['es','en'].includes(x.lang)||!['setup','questions','results'].includes(x.phase))return null;if(!x.context||!Object.keys(options).every(k=>options[k].some(o=>o[0]===x.context[k])))return null;if(!Array.isArray(x.context.components)||x.context.components.some(c=>!DASH_COMPONENTS.includes(c)))return null;if(!x.context.subtype||typeof x.context.subtype!=='string')return null;if(!x.answers||Object.values(x.answers).some(v=>![0,1,2,'na','ne'].includes(v)))return null;return {lang:x.lang,phase:x.phase,step:Number.isInteger(x.step)?x.step:0,context:x.context,answers:x.answers};}catch(_){return null;}}
 function render(){textStatic();document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===state.lang)));if(state.phase==='setup')renderSetup();else if(state.phase==='results')renderResults();else renderQuestions();}
