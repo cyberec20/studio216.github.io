@@ -88,3 +88,5 @@
  .handoff-item{padding:13px;gap:10px}.handoff-download-grid{grid-template-columns:1fr}
  .handoff-download{min-height:48px}}
 @media print{.ai-handoff,.handoff-download-panel{display:none!important}}
+/* Index cards use regular body-sized text; editorial sidebar captions remain compact. */
+.rail-card .tools-card-description{font-size:16px;line-height:1.6}
