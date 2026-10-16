@@ -48,6 +48,7 @@ required_files = {
     "diffdocs/index.html",
     "diffdocs/es/index.html",
     "dentitrace/index.html",
+    "dentitrace/faq.html",
     "dentitrace/pricing.html",
     "dentitrace/privacy.html",
     "dentitrace/terms.html",

@@ -15,3 +15,12 @@ h1,h2,h3{color:var(--deep);letter-spacing:-.045em;line-height:1.14}h1{font-size:
 @media(max-width:1000px){.head-inner{flex-direction:column;align-items:flex-start;padding-top:16px;padding-bottom:16px}.hero-grid{gap:24px}.pricing-cards,.features{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.shell{padding:0 20px}.navlinks{justify-content:flex-start;gap:10px 17px}.navlinks a{font-size:12px}.hero{padding:50px 0}.hero-grid,.split,.features,.steps,.pricing-cards{grid-template-columns:1fr}.hero h1{font-size:clamp(2.55rem,11vw,4rem)}.hero-art{margin-top:16px}.section{padding:54px 0}.pagehero{padding:48px 0 28px}.pricing-cards{max-width:440px;margin:auto}.foot-grid{flex-direction:column}.plan-body{padding:22px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+
+/* Complete canonical DentiTrace FAQ, grouped by topic */
+.faq-index{display:flex;flex-wrap:wrap;gap:9px;margin:27px 0 45px}
+.faq-index a{display:inline-block;padding:8px 12px;border-radius:8px;border:1px solid #d9e8ee;background:#fff;color:#095372;text-decoration:none;font-size:13px;font-weight:700}
+.faq-index a:hover{background:#e4f5f8}
+.faq-category{margin:40px 0 50px;scroll-margin-top:20px}
+.faq-category h2{font-size:clamp(1.35rem,2vw,1.8rem);margin-bottom:20px}
+.faq-category .faq:last-child{border-bottom:1px solid #d7e6ed}
+.faq details[id]{scroll-margin-top:25px}
