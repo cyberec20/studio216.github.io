@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gate the public DentiTrace pre-launch site against v1.0 plus approved pricing-copy exceptions."""
+"""Gate the public DentiTrace pre-launch site against locked, current FAQ and commercial content."""
 from __future__ import annotations
 import argparse,hashlib,html,json,re,sys
 from html.parser import HTMLParser
@@ -7,15 +7,11 @@ from pathlib import Path
 from urllib.parse import urlsplit,unquote
 
 EXPECTED={
-    "faq.html":(44,7,"ff7869568a20adfd3f0e5525d308ee6fefb55e5f21b3598f9c8d48d1d30f76ba"),
-    "pricing.html":(16,3,"360fade0e10fe58a9aaa77f97709d6efa3be50995dde28fd790378ea3e5f3459"),
+    "faq.html":(51,7,"320eb53593d47ec4a1888a9f970acb45114ee766d1e8e5aff5522120f2baf97f"),
+    "pricing.html":(16,3,"3cdd51532fef3e14027b179649a19b180b9f8007f43cc00378df9598e5839dc2"),
 }
-# TEMPORARY APPROVED EDITORIAL DIFFERENCE FROM DentalChart content/pricing-faq/v1.0/en.json.
-# The legal Terms v1.0 are untouched. Restore canonical parity when app FAQ is updated.
-# The other 12 pricing questions remain byte/text equivalent to their canonical v1.0 baseline.
-CANONICAL_PRICING_FAQ_SHA256 = "865550ba80b721af2a6474ae650ee21cb3e92424523aba22e12b79e4acfb2ade"
-UNCHANGED_PRICING_FAQ_12_SHA256 = "dab145ce4beb258b4144595fd4d4d97f0c4750cfd83fddccf20f59e23fbf669b"
-APPROVED_PRICING_FAQ_4 = {'lifetime_availability': 'Not necessarily. Lifetime may be offered at our discretion and may not always be available. When offered, the applicable conditions are established in our Terms and Conditions.', 'lifetime_one_time': 'Yes. Lifetime, when available, is a one-time purchase without recurring renewals. It grants access under the conditions established in our Terms and Conditions and does not transfer ownership of the software.', 'plan_changes': 'The pricing page presents the plans, prices, storage allowances, and availability currently offered. If a price or plan condition changes, affected customers will be informed before the change applies to a future renewal. Existing paid periods remain subject to their agreed conditions. Lifetime purchases, when offered, remain subject to the conditions accepted at purchase and are not changed retroactively by subsequent offers.', 'service_discontinuation': 'We will provide notice through email or other appropriate channels. New purchases and renewals will stop. Existing paid subscriptions and any Lifetime purchases will be handled according to our Terms and Conditions and applicable law. Information about available data export options will also be provided.'}
+# Exact SHA-256 checks retain the full current FAQ content and order.
+# Updated to the current DentalChart v1.0 general 51 / pricing 16 entries.
 PAGES=("index.html","faq.html","pricing.html","terms.html","privacy.html","refund-policy.html")
 LEGAL_COUNTS={"terms.html":23,"privacy.html":16,"refund-policy.html":8}
 CONTACT="dentitrace@studios216.com"
@@ -84,6 +80,7 @@ def assert_site(root:Path):
         content=p.read_text(encoding="utf-8")
         check('name="robots" content="noindex,follow"' in content,f"{file}: prelaunch noindex/follow marker missing")
         check(CONTACT in content,f"{file}: wrong or missing contact address")
+        check(not re.search(r"(?i)\b(?:fastspring|lemon\s*squeezy|paddle)\b",content),f"{file}: named Merchant of Record must not appear in pre-launch copy")
         check("contact@studios216.com" not in content,f"{file}: old generic contact email present")
         check("{{" not in content,f"{file}: unresolved interpolation")
         check("/dentitrace<a " not in content,f"{file}: malformed refund-link replacement")
@@ -110,22 +107,12 @@ def assert_site(root:Path):
         check(len({record[1] for record in data})==len(data),f"{filename}: duplicate keys")
         checksum=hashlib.sha256(json.dumps(data,ensure_ascii=False,separators=(",",":")).encode("utf-8")).hexdigest()
         check(checksum==digest,f"{filename}: FAQ content/order deviates from approved reference ({checksum})")
-        if filename=="pricing.html":
-            baseline=[entry for entry in data if entry[1] not in APPROVED_PRICING_FAQ_4]
-            baseline_digest=hashlib.sha256(json.dumps(baseline,ensure_ascii=False,separators=(",",":")).encode("utf-8")).hexdigest()
-            check(baseline_digest==UNCHANGED_PRICING_FAQ_12_SHA256,
-                  "pricing.html: one of the 12 unmodified v1.0 FAQs was altered")
-            changed=[entry for entry in data if entry[1] in APPROVED_PRICING_FAQ_4]
-            check(len(changed)==4,"pricing.html: expected exactly four editorial exceptions")
-            for category,key,question,answer in changed:
-                check(answer==APPROVED_PRICING_FAQ_4[key],
-                      f"pricing.html: answer {key} deviates from approved copy")
 
     main=(site/"index.html")
     if main.is_file():
         t=main.read_text("utf-8")
         check(t.count('<details class="faq"')==4,"index.html: expected 4 general highlights")
-        check('Browse all 44 product FAQs' in t,"index.html: link to full general FAQ absent")
+        check('Browse all 51 product FAQs' in t,"index.html: link to full general FAQ absent")
         check("Treatment budgets" in t and "Clinical notes and diagnoses" in t,"index.html: clinical capabilities absent")
     pricing=(site/"pricing.html")
     if pricing.is_file():
@@ -144,7 +131,7 @@ def assert_site(root:Path):
     if errors:
         for error in errors:print("FAIL",error,file=sys.stderr)
         raise SystemExit(1)
-    print(f"PASS DentiTrace FAQ {EXPECTED['faq.html'][0]} canonical general + {EXPECTED['pricing.html'][0]} pricing (12 canonical, 4 approved temporary copy exceptions); legal sections, contact, links and commercial copy ({root})")
+    print(f"PASS DentiTrace FAQ {EXPECTED['faq.html'][0]} locked general + {EXPECTED['pricing.html'][0]} locked pricing; legal sections, contact, links and commercial copy ({root})")
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--root",default=".",help="repository or built-site root")
