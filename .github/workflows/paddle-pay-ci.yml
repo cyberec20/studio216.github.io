@@ -1,0 +1,35 @@
+name: Paddle Pay Bridge CI (no deployment)
+
+on:
+  pull_request:
+    paths:
+      - edge/paddle-pay/**
+      - .github/workflows/paddle-pay-ci.yml
+      - data/public_site.json
+  push:
+    paths:
+      - edge/paddle-pay/**
+      - .github/workflows/paddle-pay-ci.yml
+      - data/public_site.json
+
+permissions:
+  contents: read
+
+jobs:
+  bridge-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: edge/paddle-pay
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: edge/paddle-pay/package-lock.json
+      - name: Install Worker-local dependencies
+        run: npm ci --ignore-scripts
+      - name: Syntax, independent tests and Worker dry-run bundle
+        run: npm run check
+      # No wrangler deploy, secrets, Pages upload, DNS or production writes.

@@ -1,0 +1,11 @@
+# Project-local knowledge and build artifacts
+/.venv/
+/.cocoindex_code/
+/graphify-out/
+/_site/
+/edge/paddle-pay/node_modules/
+/edge/paddle-pay/.wrangler/
+/edge/paddle-pay/.dev.vars
+/edge/paddle-pay/.env
+/edge/paddle-pay/.env.*
+!/edge/paddle-pay/.dev.vars.example

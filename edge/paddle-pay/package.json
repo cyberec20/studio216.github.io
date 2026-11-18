@@ -1,0 +1,19 @@
+{
+  "name": "@studios216/paddle-pay-bridge",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Optional Paddle payment-link adapter, independent from SaaS entitlements",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check:syntax": "node --check src/worker.js && node --check src/providerRegistry.js && node --check src/adapters/paddle.js && node --check public/app.js",
+    "check:bundle": "wrangler deploy --dry-run --outdir .wrangler/dryrun",
+    "check": "npm run check:syntax && npm test && npm run check:bundle"
+  },
+  "devDependencies": {
+    "wrangler": "4.164.0"
+  }
+}
