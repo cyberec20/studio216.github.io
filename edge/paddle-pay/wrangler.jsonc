@@ -1,0 +1,15 @@
+{
+  // Deliberately no routes, zone IDs, credentials or production bindings.
+  // Phase 3 will attach only studios216.com/pay/* after DNS review.
+  "name": "studios216-paddle-pay",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-11-18",
+  "workers_dev": false,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none",
+    "not_found_handling": "none"
+  }
+}

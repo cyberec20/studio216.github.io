@@ -1,0 +1,6 @@
+# Example only. Copy to .dev.vars privately if needed for local Wrangler preview.
+# Never commit actual tokens or API keys. These are PUBLIC Paddle.js tokens only.
+PAY_BRIDGE_PROVIDER=paddle
+PADDLE_CLIENT_TOKEN_SANDBOX=test_REPLACE_ME_WITH_PUBLIC_CLIENT_TOKEN
+PADDLE_CLIENT_TOKEN_LIVE=live_REPLACE_ME_WITH_PUBLIC_CLIENT_TOKEN
+PADDLE_LIVE_ENABLED=false
