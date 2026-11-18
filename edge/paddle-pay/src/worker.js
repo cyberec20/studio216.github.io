@@ -15,8 +15,8 @@ const CSP = [
   "connect-src 'self' https://*.paddle.com https://*.paddlecdn.com",
   "frame-src https://*.paddle.com https://*.paddlecdn.com",
   "img-src 'self' data: https://*.paddle.com https://*.paddlecdn.com",
-  "style-src 'self' 'unsafe-inline' https://*.paddle.com https://*.paddlecdn.com",
-  "font-src 'self' data: https://*.paddle.com https://*.paddlecdn.com",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.paddle.com https://*.paddlecdn.com",
+  "font-src 'self' data: https://fonts.gstatic.com https://*.paddle.com https://*.paddlecdn.com",
   "frame-ancestors 'none'",
   "upgrade-insecure-requests",
 ].join('; ');

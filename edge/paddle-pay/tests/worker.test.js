@@ -56,11 +56,15 @@ test('sandbox link returns neutral HTML, validated public token and strict heade
   assert.match(html, /test_a{32}/);
   assert.ok(!html.includes('live_' + 'b'.repeat(32)));
   assert.ok(html.includes('/pay/app.js'));
-  assert.ok(html.includes('DentiTrace terms'));
-  assert.ok(html.includes('DiffDocs terms'));
+  assert.ok(html.includes('https://dentitrace.studios216.com/terms'));
+  assert.ok(html.includes('https://diffdocs.studios216.com/terms'));
+  assert.ok(html.includes('/assets/studio_logo.jpeg'));
+  assert.ok(html.includes('studio-brand-wordmark'));
   assert.equal(response.headers.get('Referrer-Policy'), 'no-referrer');
   assert.match(response.headers.get('Cache-Control'), /no-store/);
   assert.match(response.headers.get('Content-Security-Policy'), /frame-ancestors 'none'/);
+  assert.match(response.headers.get('Content-Security-Policy'), /style-src[^;]*fonts.googleapis.com/);
+  assert.match(response.headers.get('Content-Security-Policy'), /font-src[^;]*fonts.gstatic.com/);
   assert.equal(response.headers.get('X-Robots-Tag'), 'noindex, nofollow, noarchive');
   assert.equal(response.headers.get('Set-Cookie'), null);
   assert.equal(response.headers.get('Content-Type'), 'text/html; charset=utf-8');

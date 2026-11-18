@@ -39,19 +39,29 @@ test('bridge never embeds keys, signing secrets, webhooks, or production checkou
   assert.equal(existsSync(path.join(bridge, '.env')), false);
 });
 
-test('the neutral page exposes all product legal terms without marketing loaders', () => {
+test('neutral payment page uses canonical brand and individual SaaS policies', () => {
   const html = read(path.join(bridge, 'public/index.html'));
-  assert.match(html, /dentitrace\/terms\.html/);
-  assert.match(html, /dentitrace\/refund-policy\.html/);
-  assert.match(html, /diffdocs\/terms\.html/);
-  assert.match(html, /diffdocs\/refund-policy\.html/);
-  assert.match(html, /studios216\.com\/privacy\.html/);
+  assert.match(html, /\/assets\/studio_logo\.jpeg/);
+  assert.match(html, /\/assets\/css\/institutional-brand\.css/);
+  assert.match(html, /STUDIOS<span class="studio-brand-wordmark__number">216<\/span>/);
+  assert.doesNotMatch(html, /class="brand-mark"|View Studios216 products|href="https:\/\/studios216\.com\/products\/"/);
+  for (const host of ['dentitrace', 'diffdocs']) {
+    for (const route of ['terms', 'privacy', 'refund-policy']) {
+      assert.ok(html.includes('https://' + host + '.studios216.com/' + route), host + '/' + route);
+    }
+  }
   assert.doesNotMatch(html, /googletagmanager|facebook\.net|clarity\.ms|analytics/i);
+  const style = read(path.join(bridge, 'public/styles.css'));
+  assert.match(style, /#050505/);
+  assert.match(style, /#3b82f6/);
+  assert.match(style, /font-family:Inter/);
+  assert.match(style, /@media\(max-width:520px\)/);
 });
 
 test('worker cannot be deployed to the production route by its checked-in config', () => {
   const cfg = read(path.join(bridge, 'wrangler.jsonc'));
   assert.match(cfg, /"workers_dev": false/);
+  assert.match(cfg, /"keep_vars": true/, 'dashboard-configured runtime vars must survive version upload');
   assert.doesNotMatch(cfg, /"routes"\s*:/);
   assert.doesNotMatch(cfg, /"zone_id"\s*:/);
   const scripts = JSON.parse(read(path.join(bridge, 'package.json'))).scripts;

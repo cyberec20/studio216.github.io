@@ -4,33 +4,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Secure payment | Studios216</title>
-  <meta name="description" content="A neutral payment-link destination for Studios216 products.">
+  <title>Secure payment | Studios 216</title>
+  <meta name="description" content="Secure Paddle checkout for Studios 216 applications. Payment status is confirmed by your application.">
+  <!-- Font stylesheet is approved by the Worker CSP; no third-party marketing scripts. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/institutional-brand.css">
   <link rel="stylesheet" href="/pay/styles.css">
   <script defer src="/pay/app.js"></script>
 </head>
 <body>
   <main class="container">
-    <header class="brand">
-      <span class="brand-mark" aria-hidden="true">S216</span>
-      <div><strong>STUDIOS216</strong><span>Secure payment gateway</span></div>
+    <header class="brand" aria-label="Studios 216 payment gateway">
+      <a href="https://studios216.com/" class="studio-brand-lockup" aria-label="Studios 216 home">
+        <img src="/assets/studio_logo.jpeg" width="56" height="56" alt="Studios 216 official logo">
+        <span class="studio-brand-wordmark" aria-hidden="true">STUDIOS<span class="studio-brand-wordmark__number">216</span></span>
+      </a>
+      <span class="brand-context">Secure payment gateway</span>
     </header>
+
     <section class="panel" aria-labelledby="heading">
-      <p class="eyebrow">PAYMENT LINK</p>
-      <h1 id="heading">Complete your payment securely</h1>
-      <p id="status" aria-live="polite" role="status">Validating your payment link…</p>
-      <p class="hint">The checkout is provided by Paddle. Studios216 never receives or stores card details on this page.</p>
-      <p class="hint">Your product's application confirms access after the payment provider verifies the transaction. This page cannot activate a subscription or grant access.</p>
-      <a class="return-link" href="https://studios216.com/products/">View Studios216 products</a>
+      <p class="eyebrow">SECURE CHECKOUT</p>
+      <h1 id="heading">Checking your payment link</h1>
+      <p id="status" aria-live="polite" role="status">Checking whether a payment was requested…</p>
+      <p class="hint">Paddle provides the secure checkout. Studios 216 does not collect or store card details on this page.</p>
+      <p class="hint">Already purchased? Check your order or subscription status in the application where you started. Only that application can confirm payment and access.</p>
     </section>
-    <footer class="legal" aria-label="Legal information">
-      <p>Purchases are governed by the terms of the applicable product.</p>
-      <nav aria-label="Policies">
-        <a href="https://studios216.com/privacy.html">Studios216 privacy</a>
-        <a href="https://studios216.com/dentitrace/terms.html">DentiTrace terms</a>
-        <a href="https://studios216.com/dentitrace/refund-policy.html">DentiTrace refunds</a>
-        <a href="https://studios216.com/diffdocs/terms.html">DiffDocs terms</a>
-        <a href="https://studios216.com/diffdocs/refund-policy.html">DiffDocs refunds</a>
+
+    <footer class="legal" aria-label="Product legal information">
+      <p>Terms, privacy and refunds are governed by the application you purchased from.</p>
+      <nav class="legal-grid" aria-label="Product policies">
+        <div class="legal-group">
+          <h2>DentiTrace</h2>
+          <a href="https://dentitrace.studios216.com/terms">Terms</a>
+          <a href="https://dentitrace.studios216.com/privacy">Privacy</a>
+          <a href="https://dentitrace.studios216.com/refund-policy">Refund policy</a>
+        </div>
+        <div class="legal-group">
+          <h2>DiffDocs</h2>
+          <a href="https://diffdocs.studios216.com/terms">Terms</a>
+          <a href="https://diffdocs.studios216.com/privacy">Privacy</a>
+          <a href="https://diffdocs.studios216.com/refund-policy">Refund policy</a>
+        </div>
       </nav>
     </footer>
   </main>

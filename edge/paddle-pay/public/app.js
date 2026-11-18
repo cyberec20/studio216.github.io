@@ -3,18 +3,22 @@
   'use strict';
 
   const status = document.getElementById('status');
+  const heading = document.getElementById('heading');
   const configScript = document.getElementById('s216-bridge-config');
-  const report = (message) => { if (status) status.textContent = message; };
+  const report = (title, message) => {
+    if (heading) heading.textContent = title;
+    if (status) status.textContent = message;
+  };
   const query = new URLSearchParams(window.location.search);
   const transactions = query.getAll('_ptxn');
 
-  // A valid payment link is the only way to initiate this checkout.
+  // Only a valid payment-link transaction may initiate Paddle.js.
   if (!configScript || !status) return;
   let config;
   try {
     config = JSON.parse(configScript.textContent || 'null');
   } catch {
-    report('This checkout is currently unavailable.');
+    report('Checkout unavailable', 'The payment page could not be prepared. Please return to your application and try again later.');
     return;
   }
   const sandbox = window.location.pathname === '/pay/sandbox/'
@@ -24,32 +28,33 @@
   if (!config || config.provider !== 'paddle' || config.environment !== environment
       || typeof config.clientToken !== 'string'
       || !config.clientToken.startsWith(prefix)) {
-    report('The payment environment is not available.');
+    report('Checkout unavailable', 'This payment environment is not available. Please return to your application.');
     return;
   }
 
   if (transactions.length === 0) {
-    report('No payment link was supplied. Return to the application that issued your link.');
+    report('Payment link required', 'No payment request was included in this page. If you have not purchased, return to your application, choose a plan and start checkout there. If you already purchased, check your billing status in the application before paying again.');
     return;
   }
   if (transactions.length !== 1 || !/^txn_[a-z0-9]{26}$/.test(transactions[0])) {
-    report('The payment link is invalid. Request a new link from your application.');
+    report('Invalid payment link', 'This payment link is invalid or incomplete. Please request a new checkout link from your application; do not enter payment details here.');
     return;
   }
 
-  report('Opening the secure Paddle checkout…');
+  report('Opening secure checkout', 'Paddle is loading your payment form. Complete it only if the selected plan and amount are correct.');
   const sdkScript = document.createElement('script');
   sdkScript.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
   sdkScript.async = true;
-  sdkScript.onerror = () => report('The secure checkout could not be loaded. Please retry later.');
+  sdkScript.onerror = () => report('Checkout could not open', 'The secure payment form could not load. Please check your application’s billing status before trying again.');
   sdkScript.onload = () => {
     const paddle = window.Paddle;
     if (!paddle?.Initialize || !paddle?.Checkout) {
-      report('The payment provider is unavailable. Please retry later.');
+      report('Checkout unavailable', 'Paddle is not responding. Please return to your application and try again later.');
       return;
     }
     try {
       if (sandbox) paddle.Environment.set('sandbox');
+      let checkoutFinished = false;
       paddle.Initialize({
         token: config.clientToken,
         checkout: {
@@ -57,18 +62,19 @@
         },
         eventCallback: (event) => {
           if (event?.name === 'checkout.completed') {
-            report('Checkout finished. Your application will verify payment before enabling access.');
-          } else if (event?.name === 'checkout.closed') {
-            report('Checkout closed. If you submitted payment, check its status in your application before retrying.');
-          } else if (event?.name === 'checkout.error') {
-            report('Paddle could not complete the checkout. Review your payment status in your application.');
+            checkoutFinished = true;
+            report('Checkout finished — verify your purchase', 'Paddle reported that the checkout finished. This page cannot confirm settlement or activate access. Return to your application to verify your order or subscription status before paying again.');
+          } else if (event?.name === 'checkout.closed' && !checkoutFinished) {
+            report('Payment window closed', 'You closed the checkout. This page cannot confirm whether a payment was made. If you entered payment information, check your application’s billing status before trying again.');
+          } else if (event?.name === 'checkout.error' && !checkoutFinished) {
+            report('Checkout encountered a problem', 'Paddle could not finish this checkout. No successful payment is confirmed here. Check your application’s billing status before retrying.');
           }
         },
       });
-      // Official Paddle.js automatically opens the transaction in ?_ptxn=txn_...
-      // Do NOT call Checkout.open() here; that would risk opening it twice.
+      // Official Paddle.js automatically opens ?_ptxn=txn_...
+      // Do not invoke Checkout.open(): doing so may open the same transaction twice.
     } catch {
-      report('Unable to initialize the payment provider. Please retry later.');
+      report('Checkout unavailable', 'The payment form could not be initialized. Please return to your application and try again later.');
     }
   };
   document.head.appendChild(sdkScript);
